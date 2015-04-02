@@ -4,7 +4,7 @@
 
 В това хранилище ще бъде публикуван кодът на проекта АИСКАО.
 
-[Материали по проекта](http://www.strategy.bg/Publications/View.aspx?lang=bg-BG&categoryId=&Id=173&y=&m=&d=)
+[Резултати от проект “Въвеждане на комплексно административно обслужване за предоставяне на качествени услуги на гражданите и бизнеса“](http://www.strategy.bg/Publications/View.aspx?lang=bg-BG&categoryId=&Id=173&y=&m=&d=)
 
 [Информация за АИСКАО](http://www.opac.government.bg/bg/topical/news/view/528)
 
