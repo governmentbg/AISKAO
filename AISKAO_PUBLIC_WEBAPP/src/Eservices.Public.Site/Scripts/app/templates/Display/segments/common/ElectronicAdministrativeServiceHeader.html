@@ -1,0 +1,61 @@
+﻿<fieldset>
+    <legend>Данни за услуга</legend>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Административна услуга:</span>
+            <span class="uneditable-input span9" data-bind="text: sunauServiceName"></span>
+        </label>
+    </div>
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Наименование на тип документ:</span>
+            <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Вид на заявлението:</span>
+            <span class="uneditable-input span9" data-bind="text: applicationType.displayValue().name">
+            </span>
+        </label>
+    </div>
+
+    <!-- ko if: applicationType() !== '0006-000121' -->
+        <!-- ko with: documentURI()-->
+            <!-- ko compose: { view: 'segments/common/DocumentURI', area: 'Display' } -->
+            <!-- /ko -->
+        <!-- /ko -->
+    <!-- /ko -->
+
+</fieldset>
+
+<fieldset>
+    <legend>Доставчик на електронни административни услуги</legend>
+    <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+    <!-- /ko -->
+</fieldset>
+
+<fieldset>
+    <legend>Заявител на електронна административна услуга</legend>
+    <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+    <!-- /ko -->
+</fieldset>
+
+<fieldset>
+    <legend>Данни за контакт</legend>
+    <!-- ko compose: { model: electronicServiceApplicantContactData, view: 'segments/common/ElectronicServiceApplicantContactData', area: 'Display' } -->
+    <!-- /ko -->
+</fieldset>
+
+<fieldset>
+    <legend>Изпращане на „Потвърждаване за получаване”</legend>
+    <div class="row">
+        <div class="control-group span12">
+            <label class="checkbox">
+                <span>Изпращане на електронния документ и приложените към него документи заедно с документа „Потвърждаване за получаване”</span>
+                <input type="checkbox" disabled data-bind="checked: sendApplicationWithReceiptAcknowledgedMessage" />                
+            </label>
+        </div>
+    </div>
+</fieldset>

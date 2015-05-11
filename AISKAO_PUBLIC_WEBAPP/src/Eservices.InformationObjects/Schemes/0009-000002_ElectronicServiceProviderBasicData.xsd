@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000002"
+      xmlns="http://ereg.egov.bg/segment/0009-000002"
+      xmlns:ebd="http://ereg.egov.bg/segment/0009-000013"
+      xmlns:espt="http://ereg.egov.bg/value/0008-000034"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000013" schemaLocation="0009-000013_EntityBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000034" schemaLocation="0008-000034_ElectronicServiceProviderType.xsd"/>
+
+
+    <xsd:complexType name="ElectronicServiceProviderBasicData">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Доставчик на електронни административни услуги</xsd:documentation>
+        </xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="EntityBasicData" type="ebd:EntityBasicData"/>
+			<xsd:element name="ElectronicServiceProviderType" type="espt:ElectronicServiceProviderType"/>
+		</xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

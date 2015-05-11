@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://egov.bg/RegiX/GRAO/NBD" xmlns="http://egov.bg/RegiX/GRAO/NBD/ValidPersonResponse" targetNamespace="http://egov.bg/RegiX/GRAO/NBD/ValidPersonResponse" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://egov.bg/RegiX/GRAO/NBD" schemaLocation="NBDCommon.xsd"/>
+	<xs:complexType name="ValidPersonResponseType">
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собствено име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SurName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Бащино име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилно име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthDate" type="common:BirthDate" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на раждане</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeathDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на смърт</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ValidPersonResponse" type="ValidPersonResponseType">
+		<xs:annotation>
+			<xs:documentation>Справка за физическо лице</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

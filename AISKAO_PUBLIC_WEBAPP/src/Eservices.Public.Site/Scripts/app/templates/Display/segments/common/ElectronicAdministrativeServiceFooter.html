@@ -1,0 +1,16 @@
+﻿<div>
+    <!-- ko if: _settings.isSigned -->
+    <fieldset>
+        <legend>Данни за подписване на заявление</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Време на създаване на заявлението:</span>
+                <span class="uneditable-input span9" data-bind="formattedDate: applicationSigningTime"></span>
+            </label>
+        </div>
+        <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+</div>
+

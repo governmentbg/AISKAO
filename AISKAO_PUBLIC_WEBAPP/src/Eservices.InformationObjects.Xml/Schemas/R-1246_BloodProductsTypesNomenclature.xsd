@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1246" xmlns="http://ereg.egov.bg/nomenclature/R-1246" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="BloodProductsTypesNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове кръвни продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове кръвни продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - хемоглобин-->
+      <xsd:enumeration value="R-1244" />
+      <!--Видове кръвни продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - кръвна плазма-->
+      <xsd:enumeration value="R-1243" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

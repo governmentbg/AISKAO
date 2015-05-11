@@ -1,0 +1,26 @@
+﻿<div>
+    <fieldset>
+        <legend>Производство на комбинирани фуражи по видове животни и приблизителни количества в тонове за месец
+            <!-- ko with: forageCombinedProducedQTYMonthlyByAnimalTypes -->
+            <button type="button" class="btn btn-default" data-bind="click: addForageCombinedProducedQTYMonthlyByAnimalType">Добави</button>
+            <!-- /ko -->
+        </legend>
+        <div class="row">
+            <div class="span6" data-bind="with: forageCombinedProducedQTYMonthlyByAnimalTypes">
+                <div class="span6" data-bind="foreach: forageCombinedProducedQTYMonthlyByAnimalType()">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span12">Данни за произведени комбинирани фуражи на месец по вид животни
+                                  <button class="btn btn-danger" type="button" data-bind="click: $parent.removeForageCombinedProducedQTYMonthlyByAnimalType.bind($parent)">Изтрий</button>
+                                </span>
+                            </span>
+                        </legend>
+                        <!-- ko compose: { model: $data, view: 'segments/babh/ForageCombinedProducedQTYMonthlyByAnimalType', area: 'Editor' } -->
+                        <!-- /ko -->
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

@@ -1,0 +1,171 @@
+﻿@using TechnoLogica.Eservices.Public.Site.Resources
+@model TechnoLogica.Eservices.Public.Site.Models.ElectronicService.GetEServiceDetailsViewModel
+@{
+    ViewBag.Title = ViewTitles.ElectronicService;
+}
+@section scripts
+ {
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.text-center').tooltip({
+                selector: "i[data-toggle=tooltip]"
+            });
+        });
+    </script>
+}
+<br />
+<table class="table table-condensed table-striped">
+    <tr>
+        <td><b>@ElectronicService.InitialDocumentName</b></td>
+        <td>@Model.InitialDocumentName</td>
+    </tr>
+    <tr>
+        <td><b>@ElectronicService.InitialDocumentURI</b></td>
+        <td>@Model.InitialDocumentURI</td>
+    </tr>
+    <tr>
+        <td><b>@ElectronicService.ServiceTypeName</b> </td>
+        <td>@Model.ServiceTypeName</td>
+    </tr>
+    <tr>
+        <td><b>@ElectronicService.ServiceTypeDescription</b></td>
+        <td>@Model.ServiceTypeDescription</td>
+    </tr>
+</table>
+
+<h3 style="text-decoration:underline">@ElectronicService.Completed</h3>
+
+@if (Model.Stages.Where(s => s.ServiceStageType.Equals(1)).Count() > 0)
+{
+    <table class="table table-condensed">
+
+        <thead>
+            <tr>
+                <th class="span5">@ElectronicService.ServiceStageTypeName</th>   
+                <th>@ElectronicService.CompletedOn</th>             
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model.Stages.Where(s => s.ServiceStageType.Equals(1)))
+            {        
+                <tr>
+                    <td>@item.ServiceStageTypeName</td>
+                    <td>@item.CompletedOn</td>
+                </tr>
+            }
+        </tbody>
+
+    </table>
+}
+else
+{
+    <div>Няма текущи изпълнени етапи</div>
+    <br />
+}
+
+<h3 style="text-decoration:underline">@ElectronicService.Incompleted</h3>
+
+@if (Model.Stages.Where(s => s.ServiceStageType.Equals(0)).Count() > 0)
+{
+<table class="table table-condensed">
+
+    <thead>
+        <tr>
+            <th>@ElectronicService.ServiceStageTypeName</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model.Stages.Where(s => s.ServiceStageType.Equals(0)))
+        {      
+            <tr>
+                <td>@item.ServiceStageTypeName</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+}
+else
+{
+    
+    <div>Няма текущи неизпълнени етапи</div>
+    <br />
+}
+
+<h3 style="text-decoration:underline">@ElectronicService.Canceled</h3>
+
+@if (Model.Stages.Where(s => s.ServiceStageType.Equals(2)).Count() > 0)
+{
+<table class="table table-condensed">
+
+    <thead>
+        <tr>
+            <th>@ElectronicService.ServiceStageTypeName</th>
+
+        </tr>
+    </thead>
+    @foreach (var item in Model.Stages.Where(s => s.ServiceStageType.Equals(2)))
+    {
+        <tr>
+            <td>@item.ServiceStageTypeName</td>
+
+        </tr>
+    }
+
+</table>
+}
+else
+{
+    <div>Няма текущи отменени етапи</div>
+    <br />
+}
+
+<h3 style="text-decoration:underline">@ElectronicService.OfficialDocuments</h3>
+<br />
+<table class="table table-condensed">
+
+    <thead>
+        <tr>
+            <th class="span3"></th>
+            <th>@ElectronicService.DocumentName</th>
+            <th>@ElectronicService.URI</th>           
+            <th>@ElectronicService.CreatedOn</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var docs in Model.OfficialDocuments)
+        {
+            <tr>
+                <td>
+                    @if (@docs.IsXMLDoc == 1)
+                    {
+                        <a class="btn btn-inverse btn-small tableBtn"
+                           href="@Url.Action("GetDocumentContent", "ElectronicService", new { contentId = @docs.ContentId })">
+                            <i class="icon-zoom-in icon-white"></i>&nbsp;Виж
+                        </a>
+                    }
+                    else
+                    {
+                        <button disabled="disabled" class="btn btn-small btn-inverse tableBtn">
+                            <i class="icon-ban-circle icon-white"></i>&nbsp;Виж
+                        </button>
+                    }
+                    <a href="@Url.Action("DownloadDocument", "ElectronicService",
+                                new { contentId = @docs.ContentId, docName = @docs.DocumentName, mimeType = @docs.ContentMIMEType, isXml = @docs.IsXMLDoc })"
+                       class="btn btn-small btn-inverse tableBtn">
+                        <i class="icon-download icon-white"></i>&nbsp;Свали
+                    </a>
+                </td>
+
+                <td>@docs.DocumentName</td>
+                <td>@docs.URI</td>              
+                <td>@docs.DocumentCreatedOn</td>
+            </tr> 
+        }
+    </tbody>
+</table>
+
+@Html.ActionLink("Добави нов документ", "ManageAdditionalDocument", "Request",
+                                    null, new { @class="btn btn-inverse" })

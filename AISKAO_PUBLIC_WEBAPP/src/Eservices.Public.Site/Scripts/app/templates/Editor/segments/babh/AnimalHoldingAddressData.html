@@ -1,0 +1,65 @@
+﻿<div>
+    <!-- ko compose: { model: EKATTEAddress, view: 'segments/common/EKATTEAddress', area: 'Editor' } -->
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">GPS координати по X:</span>
+                <input class="span3" type="text" data-bind="value: animalHoldingAddressGPSCoordinateX" />
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">GPS координати по Y:</span>
+                <input class="span3" type="text" data-bind="value: animalHoldingAddressGPSCoordinateY" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6" data-bind="with: animalHoldingPhones">
+            <label class="row">
+                <span class="span3 text-left">Нов телефонен номер:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: animalHoldingPhone.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addAnimalHoldingPhone, attr: { 'class': (animalHoldingPhone.itemToAdd() && ko.utils.arrayIndexOf(animalHoldingPhone(), animalHoldingPhone.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }">Добави</button>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <!-- ko with: animalHoldingPhones -->
+        <div class="span6">
+            <!-- ko if: animalHoldingPhone().length > 0 -->
+            Списък с добавени телефонни номера:
+        <!-- /ko -->
+            <div class="span6" data-bind="foreach: animalHoldingPhone">
+                <div class="row">
+                    <span class="span3 text-left">Tелефонен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                        <button class="btn btn-danger" data-bind="click: $parent.removeAnimalHoldingPhone.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Номер на факс:</span>
+                <input class="span9" type="text" data-bind="value: animalHoldingFax" />
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Адрес на електронна поща:</span>
+                <input class="span9" type="text" data-bind="value: animalHoldingEMail, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+</div>

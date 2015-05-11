@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jnlp href="launch.jnlp" spec="1.0+">
+   <information>
+      <title>xml.singer.v2</title>
+      <vendor>cstoykov</vendor>
+      <homepage href=""/>
+      <description>xml.singer.v2</description>
+      <description kind="short">xml.singer.v2</description>
+      
+      
+   </information>
+   <update check="always"/>
+   
+   <resources>
+      <j2se java-vm-args="-Djava.security.policy=applet.policy" version="1.5+"/>
+      <jar href="xml.singer.v2.jar" main="true"/>
+      
+      
+   <jar href="lib/xmlsec-2.0.jar"/>
+<jar href="lib/junit-4.10.jar"/>
+</resources>
+   <applet-desc height="300" main-class="main.GoApplet" name="xml.singer.v2" width="300">
+      
+   </applet-desc>
+</jnlp>

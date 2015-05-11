@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000015"
+      xmlns="http://ereg.egov.bg/segment/0009-000015"
+      xmlns:pbd="http://ereg.egov.bg/segment/0009-000008"
+      xmlns:ebd="http://ereg.egov.bg/segment/0009-000013"
+      xmlns:fcbd="http://ereg.egov.bg/segment/0009-000011"
+      xmlns:febd="http://ereg.egov.bg/segment/0009-000014"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000008" schemaLocation="0009-000008_PersonBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000013" schemaLocation="0009-000013_EntityBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000011" schemaLocation="0009-000011_ForeignCitizenBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000014" schemaLocation="0009-000014_ForeignEntityBasicData.xsd"/>
+
+
+    <xsd:complexType name="ElectronicServiceRecipient">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Получател на електронната административна услуга</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="Person" type="pbd:PersonBasicData" />
+            <xsd:element name="Entity" type="ebd:EntityBasicData"/>
+        	<xsd:element name="ForeignPerson" type="fcbd:ForeignCitizenBasicData"/>
+			<xsd:element name="ForeignEntity" type="febd:ForeignEntityBasicData"/>
+        </xsd:choice>
+    </xsd:complexType>
+
+
+</xsd:schema>

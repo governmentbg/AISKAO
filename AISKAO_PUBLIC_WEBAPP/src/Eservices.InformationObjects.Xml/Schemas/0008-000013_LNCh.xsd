@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000013"
+      xmlns="http://ereg.egov.bg/value/0008-000013"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="LNCh">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">ЛНЧ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string" />
+    </xsd:simpleType>
+
+
+</xsd:schema>

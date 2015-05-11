@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1206" xmlns="http://ereg.egov.bg/segment/R-1206" xmlns:fctt="http://ereg.egov.bg/value/R-1204" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1204" schemaLocation="R-1204_ForageCombinedTradingType.xsd" />
+  <xsd:complexType name="ForageCombinedTradingData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Търговия с комбинирани фуражи</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageCombinedTradingTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageCombinedTradingType" type="fctt:ForageCombinedTradingType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000021"
+      xmlns="http://ereg.egov.bg/segment/0009-000021"
+      xmlns:duri="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:std="http://ereg.egov.bg/value/0008-000042"
+      xmlns:etd="http://ereg.egov.bg/value/0008-000043"
+      xmlns:td="http://ereg.egov.bg/segment/0009-000020"
+      xmlns:xdsig="http://ereg.egov.bg/segment/0009-000004"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import schemaLocation="0009-000001_DocumentURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000001"/>
+    <xsd:import schemaLocation="0008-000042_ShortTransferDescription.xsd" namespace="http://ereg.egov.bg/value/0008-000042"/>
+    <xsd:import schemaLocation="0008-000043_ExpandedTransferDescription.xsd" namespace="http://ereg.egov.bg/value/0008-000043"/>
+    <xsd:import schemaLocation="0009-000020_TransferredDocument.xsd" namespace="http://ereg.egov.bg/segment/0009-000020"/>
+    <xsd:import schemaLocation="0009-000004_XMLDigitalSignature.xsd" namespace="http://ereg.egov.bg/segment/0009-000004"/>
+
+
+    <xsd:element name="TransferContainer" type="TransferContainer"/>
+
+    <xsd:complexType name="TransferContainer">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Контейнер за пренос</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentURI" type="duri:DocumentURI" minOccurs="0"/>
+            <xsd:element name="ShortTransferDescription" type="std:ShortTransferDescription" minOccurs="0"/>
+            <xsd:element name="ExpandedTransferDescription" type="etd:ExpandedTransferDescription" minOccurs="0"/>
+            <xsd:element name="TransferredDocuments" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Document" type="td:TransferredDocument" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Signature" type="xdsig:XMLDigitalSignature" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema> 

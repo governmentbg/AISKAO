@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1228" xmlns="http://ereg.egov.bg/segment/R-1228" xmlns:at="http://ereg.egov.bg/value/R-1224" xmlns:fcpqtym="http://ereg.egov.bg/value/R-1226" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1224" schemaLocation="R-1224_AnimalType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1226" schemaLocation="R-1226_ForageCombinedProducedQTYMonthly.xsd" />
+  <xsd:complexType name="ForageCombinedProducedQTYMonthlyByAnimalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за произведени комбинирани фуражи на месец по вид животни</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalType" type="at:AnimalType" minOccurs="0" />
+      <xsd:element name="ForageCombinedProducedQTYMonthly" type="fcpqtym:ForageCombinedProducedQTYMonthly" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/MVR/MPS/MotorVehicleRegistrationRequest"  targetNamespace="http://egov.bg/RegiX/MVR/MPS/MotorVehicleRegistrationRequest" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="MotorVehicleRegistrationRequestType">
+		<xs:annotation>
+			<xs:documentation>Входни данни за справка от свидетелство за регистрация на МПС (част 2)</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Identifier" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Регистрационен номер (без разделители)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MotorVehicleRegistrationRequest" type="MotorVehicleRegistrationRequestType">
+		<xs:annotation>
+			<xs:documentation>Входни данни за справка от свидетелство за регистрация на МПС (част 2)</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

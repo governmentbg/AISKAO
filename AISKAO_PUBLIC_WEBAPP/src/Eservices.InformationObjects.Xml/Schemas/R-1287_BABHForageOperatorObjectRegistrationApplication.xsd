@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1287" xmlns="http://ereg.egov.bg/segment/R-1287" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stt="http://ereg.egov.bg/value/0008-000143" xmlns:edx="http://ereg.egov.bg/segment/0009-000092" xmlns:ad="http://ereg.egov.bg/segment/0009-000139" xmlns:sard="http://ereg.egov.bg/segment/0009-000141" xmlns:eash="http://ereg.egov.bg/segment/0009-000152" xmlns:easf="http://ereg.egov.bg/segment/0009-000153" xmlns:babhrdc="http://ereg.egov.bg/value/R-1002" xmlns:babhrdn="http://ereg.egov.bg/value/R-1004" xmlns:r="http://ereg.egov.bg/segment/0009-000142" xmlns:foa="http://ereg.egov.bg/segment/R-1110" xmlns:foad="http://ereg.egov.bg/segment/R-1283" xmlns:fcpqtymatd="http://ereg.egov.bg/segment/R-1230" xmlns:fovt="http://ereg.egov.bg/value/R-1122" xmlns:fod="http://ereg.egov.bg/value/R-1112" xmlns:forfd="http://ereg.egov.bg/value/R-1114" xmlns:fonwd="http://ereg.egov.bg/value/R-1116" xmlns:ccd="http://ereg.egov.bg/value/R-1285" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_BABHRegionalDirectionCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_BABHRegionalDirectionName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000142" schemaLocation="0009-000142_Residence.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1110" schemaLocation="R-1110_ForageObjectAddress.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1283" schemaLocation="R-1283_ForageOperatorActivitiesData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1230" schemaLocation="R-1230_ForageCombinedProducesQTYMonthlyAnimalTypeData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1122" schemaLocation="R-1122_ForageObjectVechicleType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1112" schemaLocation="R-1112_ForageOperatorDeclaration.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1114" schemaLocation="R-1114_ForageOperatorRegulationFulfillmentDeclaration.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1116" schemaLocation="R-1116_ForageOperatorNoWarehouseDeclaration.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1285" schemaLocation="R-1285_CommissioningCertificateData.xsd" />
+  <xsd:element name="BABHForageOperatorObjectRegistrationApplication" type="BABHForageOperatorObjectRegistrationApplication" />
+  <xsd:complexType name="BABHForageOperatorObjectRegistrationApplication">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за регистрация или промяна на обстоятелства по регистрация на обекти и оператори във фуражния сектор</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" />
+      <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+      <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" />
+      <xsd:element name="BABHRegionalDirectionCode" type="babhrdc:BABHRegionalDirectionCode" minOccurs="1" />
+      <xsd:element name="BABHRegionalDirectionName" type="babhrdn:BABHRegionalDirectionName" minOccurs="1" />
+      <xsd:element name="Residence" type="r:Residence" minOccurs="0" />
+      <xsd:element name="ForageObjectAddress" type="foa:ForageObjectAddress" minOccurs="0" />
+      <xsd:element name="ForageOperatorActivitiesData" type="foad:ForageOperatorActivitiesData" minOccurs="0" />
+      <xsd:element name="ForageCombinedProducesQTYMonthlyAnimalTypeData" type="fcpqtymatd:ForageCombinedProducesQTYMonthlyAnimalTypeData" minOccurs="0" />
+      <xsd:element name="ForageObjectVechicleTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageObjectVechicleType" type="fovt:ForageObjectVechicleType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ForageOperatorDeclaration" type="fod:ForageOperatorDeclaration" minOccurs="0" />
+      <xsd:element name="ForageOperatorRegulationFulfillmentDeclaration" type="forfd:ForageOperatorRegulationFulfillmentDeclaration" minOccurs="0" />
+      <xsd:element name="ForageOperatorNoWarehouseDeclaration" type="fonwd:ForageOperatorNoWarehouseDeclaration" minOccurs="0" />
+      <xsd:element name="CommissioningCertificateData" type="ccd:CommissioningCertificateData" minOccurs="0" />
+      <xsd:element name="AttachedDocuments" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

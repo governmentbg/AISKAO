@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1301" xmlns="http://ereg.egov.bg/value/R-1301" xmlns:fftn="http://ereg.egov.bg/nomenclature/R-1299" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1299" schemaLocation="R-1299_ForageFormTypeNomenclature.xsd" />
+  <xsd:simpleType name="ForageFormType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Форма на фуражи</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fftn:ForageFormTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

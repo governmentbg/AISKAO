@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1293" xmlns="http://ereg.egov.bg/segment/R-1293" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:drsd="http://ereg.egov.bg/value/0008-000004" xmlns:dtn="http://ereg.egov.bg/value/0008-000007" xmlns:du="http://ereg.egov.bg/segment/0009-000001" xmlns:espbd="http://ereg.egov.bg/segment/0009-000002" xmlns:dtu="http://ereg.egov.bg/segment/0009-000003" xmlns:xds="http://ereg.egov.bg/segment/0009-000004" xmlns:pn="http://ereg.egov.bg/segment/0009-000005" xmlns:fcn="http://ereg.egov.bg/segment/0009-000007" xmlns:esa="http://ereg.egov.bg/segment/0009-000016" xmlns:babhrdc="http://ereg.egov.bg/value/R-1002" xmlns:babhrdn="http://ereg.egov.bg/value/R-1004" xmlns:foad="http://ereg.egov.bg/segment/R-1283" xmlns:fcpqtymatd="http://ereg.egov.bg/segment/R-1230" xmlns:foa="http://ereg.egov.bg/segment/R-1110" xmlns:foorn="http://ereg.egov.bg/value/R-1291" xmlns:r="http://ereg.egov.bg/segment/0009-000142" xmlns:acu="http://ereg.egov.bg/segment/0009-000073" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000004" schemaLocation="0008-000004_DocumentReceiptOrSigningDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000005" schemaLocation="0009-000005_PersonNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000007" schemaLocation="0009-000007_ForeignCitizenNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000016" schemaLocation="0009-000016_ElectronicServiceApplicant.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_BABHRegionalDirectionCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_BABHRegionalDirectionName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1283" schemaLocation="R-1283_ForageOperatorActivitiesData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1230" schemaLocation="R-1230_ForageCombinedProducesQTYMonthlyAnimalTypeData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1110" schemaLocation="R-1110_ForageObjectAddress.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1291" schemaLocation="R-1291_ForageOperatorObjectRegistrationNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000142" schemaLocation="0009-000142_Residence.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000073" schemaLocation="0009-000073_AISCaseURI.xsd"/>
+  <xsd:element name="BABHForageOperatorObjectRegistrationCertificate" type="BABHForageOperatorObjectRegistrationCertificate" />
+  <xsd:complexType name="BABHForageOperatorObjectRegistrationCertificate">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Удостоверение за регистрация на обекти и оператори, които не задържат фуражи на склад</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DocumentTypeURI" type="dtu:DocumentTypeURI" minOccurs="0" />
+      <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0" />
+      <xsd:element name="DocumentURI" type="du:DocumentURI" minOccurs="0" />
+      <xsd:element name="DocumentReceiptOrSigningDate" type="drsd:DocumentReceiptOrSigningDate" minOccurs="0" />
+      <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0" />
+      <xsd:element name="ElectronicServiceApplicant" type="esa:ElectronicServiceApplicant" minOccurs="0" />
+      <xsd:element name="BABHRegionalDirectionCode" type="babhrdc:BABHRegionalDirectionCode" minOccurs="1" />
+      <xsd:element name="BABHRegionalDirectionName" type="babhrdn:BABHRegionalDirectionName" minOccurs="1" />
+      <xsd:element name="ForageOperatorActivitiesData" type="foad:ForageOperatorActivitiesData" minOccurs="0" />
+      <xsd:element name="ForageCombinedProducesQTYMonthlyAnimalTypeData" type="fcpqtymatd:ForageCombinedProducesQTYMonthlyAnimalTypeData" minOccurs="0" />
+      <xsd:element name="ForageObjectAddress" type="foa:ForageObjectAddress" minOccurs="0" />
+      <xsd:element name="ForageOperatorObjectRegistrationNumber" type="foorn:ForageOperatorObjectRegistrationNumber" minOccurs="0" />
+      <xsd:element name="Residence" type="r:Residence" minOccurs="0" />
+      <xsd:element name="AISCaseURI" type="acu:AISCaseURI" minOccurs="0"/>
+      <xsd:element name="Official" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="PersonNames" type="pn:PersonNames" />
+            <xsd:element name="ForeignCitizenNames" type="fcn:ForeignCitizenNames" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="XMLDigitalSignature" type="xds:XMLDigitalSignature" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

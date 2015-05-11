@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns="http://esoed.egov.bg/2008/05/Envelope/v1" targetNamespace="http://esoed.egov.bg/2008/05/Envelope/v1" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:enc="http://www.w3.org/2001/04/xmlenc#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+  <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+  <xsd:import namespace="http://www.w3.org/2001/04/xmlenc#" schemaLocation="xenc-schema.xsd"/>
+  <xsd:import namespace="http://esoed.egov.bg/2008/05/Timestamp/v1" schemaLocation="timestamp.xsd"/>
+  <xsd:element name="Esoed">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:choice minOccurs="1" maxOccurs="1">
+          <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="1" name="SenderDetails">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="EnvelopeVersion" type="xsd:string"/>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="xMessageType">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Document"/>
+                        <xsd:enumeration value="DocumentReceipt"/>
+                        <xsd:enumeration value="EsoedResponse"/>
+                        <xsd:enumeration value="EsoedError"/>
+                        <xsd:enumeration value="CCError"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="EsoedSessionId">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="64"/>
+                        <xsd:minLength value="1"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Correlation">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="eServiceURI">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="64"/>
+                              <xsd:minLength value="1"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="EsoedCorrelationId">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:minLength value="0"/>
+                              <xsd:maxLength value="64"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="OriginatorExtraData" type="xsd:string"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="Sender">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="URI">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="64"/>
+                              <xsd:minLength value="1"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="DocumentUri">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:minLength value="1"/>
+                              <xsd:maxLength value="64"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="DocumentTypeUri">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="64"/>
+                              <xsd:minLength value="1"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                        <xsd:element minOccurs="0" maxOccurs="1" name="Authentication">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element ref="dsig:Signature"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="Recipient">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="1" maxOccurs="1" name="URI">
+                          <xsd:simpleType>
+                            <xsd:restriction base="xsd:string">
+                              <xsd:maxLength value="64"/>
+                              <xsd:minLength value="1"/>
+                            </xsd:restriction>
+                          </xsd:simpleType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="0" maxOccurs="1" name="EsoedDetails">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="SessionId">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="64"/>
+                        <xsd:minLength value="1"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="CorrelationId">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:minLength value="0"/>
+                        <xsd:maxLength value="64"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element minOccurs="1" maxOccurs="1" name="ReceiveTime" type="xsd:dateTime"/>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="Errors">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element minOccurs="0" maxOccurs="unbounded" name="Error">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element minOccurs="0" name="Number" type="xsd:integer"/>
+                              <xsd:element minOccurs="0" maxOccurs="unbounded" name="Text" type="xsd:string"/>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" maxOccurs="1" name="Authentication">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element ref="dsig:Signature"/>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element minOccurs="0" name="AdditionalAttributes">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:any minOccurs="0" namespace="##local" processContents="lax"/>
+                      </xsd:sequence>
+                      <xsd:anyAttribute namespace="##local" processContents="lax"/>
+                    </xsd:complexType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+            <xsd:element minOccurs="1" maxOccurs="1" name="Body">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:any minOccurs="0" maxOccurs="unbounded" namespace="##any" processContents="lax"/>
+                </xsd:sequence>
+                <xsd:anyAttribute namespace="##any" processContents="lax"/>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+          <xsd:element minOccurs="1" maxOccurs="1" ref="enc:EncryptedData"/>
+        </xsd:choice>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

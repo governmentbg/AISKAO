@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<Schema Namespace="TechnoLogica.Eservices.Public.DataAccess.Store" Alias="Self" Provider="Oracle.DataAccess.Client" ProviderManifestToken="10.2" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="TechnoLogicaEservicesPublicDataAccessStoreContainer">
+    <EntitySet Name="WEB_ADM_INFORMATIONS" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_ADM_INFORMATIONS" store:Type="Tables" store:Schema="" store:Name="WEB_ADM_INFORMATIONS">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_ADM_INFORMATIONS"."ID" "ID",
+        "WEB_ADM_INFORMATIONS"."CODE" "CODE",
+        "WEB_ADM_INFORMATIONS"."NAME" "NAME",
+        "WEB_ADM_INFORMATIONS"."ADDRESS" "ADDRESS",
+        "WEB_ADM_INFORMATIONS"."EMAIL" "EMAIL",
+        "WEB_ADM_INFORMATIONS"."WEB_SITE" "WEB_SITE",
+        "WEB_ADM_INFORMATIONS"."PHONE" "PHONE",
+        "WEB_ADM_INFORMATIONS"."MOBILE" "MOBILE",
+        "WEB_ADM_INFORMATIONS"."FAX" "FAX",
+        "WEB_ADM_INFORMATIONS"."LOGO_CONTENT_TYPE" "LOGO_CONTENT_TYPE",
+        "WEB_ADM_INFORMATIONS"."LOGO" "LOGO",
+        "WEB_ADM_INFORMATIONS"."BULSTAT" "BULSTAT",
+        "WEB_ADM_INFORMATIONS"."USER_ID" "USER_ID"
+        FROM "WEB_ADM_INFORMATIONS" "WEB_ADM_INFORMATIONS"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_SRVC_INF_BIT_TYPES" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_INF_BIT_TYPES" store:Type="Tables" Schema="" />
+    <EntitySet Name="WEB_SRVC_TYPE_INF_BITS" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_INF_BITS" store:Type="Tables" Schema="" />
+    <EntitySet Name="WEB_SRVC_TYPE_PUBLIC_INFO" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_PUBLIC_INFO" store:Type="Tables" Schema="" />
+    <EntitySet Name="WEB_CASE_OFFICIAL_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_CASE_OFFICIAL_DOCUMENTS_V" store:Type="Views" store:Schema="" store:Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_CASE_OFFICIAL_DOCUMENTS_V"."ID" "ID",
+        "WEB_CASE_OFFICIAL_DOCUMENTS_V"."DOCUMENT_ID" "DOCUMENT_ID",
+        "WEB_CASE_OFFICIAL_DOCUMENTS_V"."INITIAL_DOCUMENT_ID" "INITIAL_DOCUMENT_ID",
+        "WEB_CASE_OFFICIAL_DOCUMENTS_V"."SEQUENCE_NUMBER" "SEQUENCE_NUMBER"
+        FROM "WEB_CASE_OFFICIAL_DOCUMENTS_V" "WEB_CASE_OFFICIAL_DOCUMENTS_V"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_E_SERVICE_STATUS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_E_SERVICE_STATUS_V" store:Type="Views" store:Schema="" store:Name="WEB_E_SERVICE_STATUS_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_E_SERVICE_STATUS_V"."SERVICE_ID" "SERVICE_ID",
+        "WEB_E_SERVICE_STATUS_V"."ACTUAL_START_DATE" "ACTUAL_START_DATE",
+        "WEB_E_SERVICE_STATUS_V"."ACTUAL_COMPLETION_DATE" "ACTUAL_COMPLETION_DATE",
+        "WEB_E_SERVICE_STATUS_V"."STAGE_NAME" "STAGE_NAME",
+        "WEB_E_SERVICE_STATUS_V"."STAGE_STATUS" "STAGE_STATUS",
+        "WEB_E_SERVICE_STATUS_V"."ORDER_SEQ" "ORDER_SEQ"
+        FROM "WEB_E_SERVICE_STATUS_V" "WEB_E_SERVICE_STATUS_V"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_REGISTERED_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_REGISTERED_DOCUMENTS_V" store:Type="Views" store:Schema="" store:Name="WEB_REGISTERED_DOCUMENTS_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_REGISTERED_DOCUMENTS_V"."ID" "ID",
+        "WEB_REGISTERED_DOCUMENTS_V"."NAME" "NAME",
+        "WEB_REGISTERED_DOCUMENTS_V"."DOCUMENT_TYPE_ID" "DOCUMENT_TYPE_ID",
+        "WEB_REGISTERED_DOCUMENTS_V"."DOCUMENT_TYPE" "DOCUMENT_TYPE",
+        "WEB_REGISTERED_DOCUMENTS_V"."CONTENT_ID" "CONTENT_ID",
+        "WEB_REGISTERED_DOCUMENTS_V"."CONTENT_TYPE" "CONTENT_TYPE",
+        "WEB_REGISTERED_DOCUMENTS_V"."CONTENT_MIME_TYPE" "CONTENT_MIME_TYPE",
+        "WEB_REGISTERED_DOCUMENTS_V"."IS_XML_DOC" "IS_XML_DOC",
+        "WEB_REGISTERED_DOCUMENTS_V"."TRANSPORT_TYPE" "TRANSPORT_TYPE",
+        "WEB_REGISTERED_DOCUMENTS_V"."CREATED_ON" "CREATED_ON",
+        "WEB_REGISTERED_DOCUMENTS_V"."CREATED_BY" "CREATED_BY",
+        "WEB_REGISTERED_DOCUMENTS_V"."REGISTERED_ON" "REGISTERED_ON",
+        "WEB_REGISTERED_DOCUMENTS_V"."REGISTERED_BY" "REGISTERED_BY",
+        "WEB_REGISTERED_DOCUMENTS_V"."URI" "URI",
+        "WEB_REGISTERED_DOCUMENTS_V"."ACCESS_IDENTIFIER" "ACCESS_IDENTIFIER",
+        "WEB_REGISTERED_DOCUMENTS_V"."SERVICE_TYPE_ID" "SERVICE_TYPE_ID"
+        FROM "WEB_REGISTERED_DOCUMENTS_V" "WEB_REGISTERED_DOCUMENTS_V"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_SERVICE_STAGES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SERVICE_STAGES_V" store:Type="Views" store:Schema="" store:Name="WEB_SERVICE_STAGES_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_SERVICE_STAGES_V"."SERVICE_ID" "SERVICE_ID",
+        "WEB_SERVICE_STAGES_V"."TASK_NAME" "TASK_NAME",
+        "WEB_SERVICE_STAGES_V"."ACTUAL_START_DATE" "ACTUAL_START_DATE",
+        "WEB_SERVICE_STAGES_V"."ACTUAL_COMPLETION_DATE" "ACTUAL_COMPLETION_DATE",
+        "WEB_SERVICE_STAGES_V"."STAGE_NAME" "STAGE_NAME",
+        "WEB_SERVICE_STAGES_V"."INCLUDED_ON" "INCLUDED_ON",
+        "WEB_SERVICE_STAGES_V"."STAGE_STATUS" "STAGE_STATUS"
+        FROM "WEB_SERVICE_STAGES_V" "WEB_SERVICE_STAGES_V"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_SERVICE_TYPES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SERVICE_TYPES_V" store:Type="Views" store:Schema="" store:Name="WEB_SERVICE_TYPES_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_SERVICE_TYPES_V"."ID" "ID",
+        "WEB_SERVICE_TYPES_V"."URI" "URI",
+        "WEB_SERVICE_TYPES_V"."NAME" "NAME",
+        "WEB_SERVICE_TYPES_V"."TERM" "TERM",
+        "WEB_SERVICE_TYPES_V"."DESCRIPTION" "DESCRIPTION",
+        "WEB_SERVICE_TYPES_V"."RESPONSIBLE" "RESPONSIBLE",
+        "WEB_SERVICE_TYPES_V"."INIT_DOCUMENT_TYPE_URI" "INIT_DOCUMENT_TYPE_URI",
+        "WEB_SERVICE_TYPES_V"."INITIATING_DOC_TYPE" "INITIATING_DOC_TYPE",
+        "WEB_SERVICE_TYPES_V"."ROOT_XSD_ELEMENT_NAME" "ROOT_XSD_ELEMENT_NAME"
+        FROM "WEB_SERVICE_TYPES_V" "WEB_SERVICE_TYPES_V"
+      </DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="WEB_USERS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_USERS_V" store:Type="Views" store:Schema="" store:Name="WEB_USERS_V">
+      <DefiningQuery>
+        SELECT
+
+        "WEB_USERS_V"."ID" "ID",
+        "WEB_USERS_V"."NAME" "NAME"
+        FROM "WEB_USERS_V" "WEB_USERS_V"
+      </DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES" Association="TechnoLogica.Eservices.Public.DataAccess.Store.FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+      <End Role="WEB_SRVC_INF_BIT_TYPES" EntitySet="WEB_SRVC_INF_BIT_TYPES" />
+      <End Role="WEB_SRVC_TYPE_INF_BITS" EntitySet="WEB_SRVC_TYPE_INF_BITS" />
+    </AssociationSet>
+  </EntityContainer>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_ADM_INFORMATIONS' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_ADM_INFORMATIONS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="CODE" Type="nvarchar2" Nullable="false" MaxLength="100" />
+    <Property Name="NAME" Type="nvarchar2" MaxLength="500" />
+    <Property Name="ADDRESS" Type="nvarchar2" MaxLength="250" />
+    <Property Name="EMAIL" Type="nvarchar2" MaxLength="250" />
+    <Property Name="WEB_SITE" Type="nvarchar2" MaxLength="250" />
+    <Property Name="PHONE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="MOBILE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="FAX" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOGO_CONTENT_TYPE" Type="nvarchar2" MaxLength="50" />
+    <Property Name="LOGO" Type="blob" />
+    <Property Name="BULSTAT" Type="nchar" MaxLength="10" />
+    <Property Name="USER_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="WEB_SRVC_INF_BIT_TYPES">
+    <Key>
+      <PropertyRef Name="CODE" />
+    </Key>
+    <Property Name="CODE" Type="nvarchar2" Nullable="false" MaxLength="100" />
+    <Property Name="NAME" Type="nvarchar2" Nullable="false" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="WEB_SRVC_TYPE_INF_BITS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="SERVICE_TYPE_ID" Type="int" Nullable="false" />
+    <Property Name="SERVICE_INF_BIT_TYPE_CODE" Type="nvarchar2" Nullable="false" MaxLength="100" />
+    <Property Name="DESCRIPTION" Type="clob" Nullable="false" />
+    <Property Name="APPEARANCE_ORDER" Type="int" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="int" Nullable="false" />
+    <Property Name="LAST_MODIFIED_ON" Type="date" />
+    <Property Name="LAST_MODIFIED_BY" Type="int" />
+  </EntityType>
+  <EntityType Name="WEB_SRVC_TYPE_PUBLIC_INFO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="clob" />
+    <Property Name="COMPETENT_AUTHORITY" Type="clob" />
+    <Property Name="APPLICANT" Type="clob" />
+    <Property Name="PAYMENT_AND_TERM_DESCRIPTION" Type="clob" />
+    <Property Name="SERVICE_RESPONSIBLE" Type="clob" />
+    <Property Name="REFUSAL_APPEAL_PROCEDURE_DESCR" Type="clob" />
+    <Property Name="RESULT_DESCRIPTION" Type="clob" />
+    <Property Name="IS_PUBLIC" Type="number" Precision="1" Nullable="false" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="int" Nullable="false" />
+    <Property Name="LAST_MODIFIED_ON" Type="date" />
+    <Property Name="LAST_MODIFIED_BY" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_CASE_OFFICIAL_DOCUMENTS_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="DOCUMENT_ID" Type="int" />
+    <Property Name="INITIAL_DOCUMENT_ID" Type="int" Nullable="false" />
+    <Property Name="SEQUENCE_NUMBER" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_E_SERVICE_STATUS_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_E_SERVICE_STATUS_V">
+    <Key>
+      <PropertyRef Name="SERVICE_ID" />
+      <PropertyRef Name="STAGE_NAME" />
+    </Key>
+    <Property Name="SERVICE_ID" Type="int" Nullable="false" />
+    <Property Name="ACTUAL_START_DATE" Type="date" />
+    <Property Name="ACTUAL_COMPLETION_DATE" Type="date" />
+    <Property Name="STAGE_NAME" Type="nvarchar2" MaxLength="500" Nullable="false"/>
+    <Property Name="STAGE_STATUS" Type="int" Nullable="false" />
+    <Property Name="ORDER_SEQ" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_REGISTERED_DOCUMENTS_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_REGISTERED_DOCUMENTS_V">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="clob" Nullable="false" />
+    <Property Name="DOCUMENT_TYPE_ID" Type="int" Nullable="false" />
+    <Property Name="DOCUMENT_TYPE" Type="clob" Nullable="false" />
+    <Property Name="CONTENT_ID" Type="int" Nullable="false" />
+    <Property Name="CONTENT_TYPE" Type="int" Nullable="false" />
+    <Property Name="CONTENT_MIME_TYPE" Type="varchar2" MaxLength="100" />
+    <Property Name="IS_XML_DOC" Type="int" Nullable="false" />
+    <Property Name="TRANSPORT_TYPE" Type="nvarchar2" MaxLength="500" />
+    <Property Name="CREATED_ON" Type="date" Nullable="false" />
+    <Property Name="CREATED_BY" Type="clob" />
+    <Property Name="REGISTERED_ON" Type="date" Nullable="false" />
+    <Property Name="REGISTERED_BY" Type="clob" />
+    <Property Name="URI" Type="varchar2" MaxLength="72" />
+    <Property Name="ACCESS_IDENTIFIER" Type="clob" />
+    <Property Name="SERVICE_TYPE_ID" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_SERVICE_STAGES_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_SERVICE_STAGES_V">
+    <Key>
+      <PropertyRef Name="SERVICE_ID" />
+      <PropertyRef Name="STAGE_NAME" />
+    </Key>
+    <Property Name="SERVICE_ID" Type="int" Nullable="false" />
+    <Property Name="TASK_NAME" Type="nvarchar2" Nullable="false" MaxLength="500" />
+    <Property Name="ACTUAL_START_DATE" Type="date" />
+    <Property Name="ACTUAL_COMPLETION_DATE" Type="date" />
+    <Property Name="STAGE_NAME" Type="nvarchar2" Nullable="false" MaxLength="500" />
+    <Property Name="INCLUDED_ON" Type="date" Nullable="false" />
+    <Property Name="STAGE_STATUS" Type="int" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_SERVICE_TYPES_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_SERVICE_TYPES_V">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="URI" Type="clob" />
+    <Property Name="NAME" Type="clob" Nullable="false" />
+    <Property Name="TERM" Type="int" Nullable="false" />
+    <Property Name="DESCRIPTION" Type="clob" Nullable="false" />
+    <Property Name="RESPONSIBLE" Type="clob" />
+    <Property Name="INIT_DOCUMENT_TYPE_URI" Type="nvarchar2" MaxLength="201" />
+    <Property Name="INITIATING_DOC_TYPE" Type="clob" Nullable="false" />
+    <Property Name="ROOT_XSD_ELEMENT_NAME" Type="clob" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO..WEB_USERS_V' does not have a primary key defined. The key has been inferred and the definition was created a read-only table/view.
+      -->
+  <EntityType Name="WEB_USERS_V">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="NAME" Type="clob" />
+  </EntityType>
+  <Association Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+    <End Role="WEB_SRVC_INF_BIT_TYPES" Type="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_INF_BIT_TYPES" Multiplicity="1" />
+    <End Role="WEB_SRVC_TYPE_INF_BITS" Type="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_INF_BITS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="WEB_SRVC_INF_BIT_TYPES">
+        <PropertyRef Name="CODE" />
+      </Principal>
+      <Dependent Role="WEB_SRVC_TYPE_INF_BITS">
+        <PropertyRef Name="SERVICE_INF_BIT_TYPE_CODE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="WEB_GET_DOC_CONTENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="">
+    <Parameter Name="CONTENT_ID" Type="int" Mode="In" />
+  </Function>
+</Schema>

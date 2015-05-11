@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1016" xmlns="http://ereg.egov.bg/segment/R-1016" xmlns:crozpn="http://ereg.egov.bg/value/R-1004" xmlns:crozpic="http://ereg.egov.bg/value/R-1002" xmlns:crozpad="http://ereg.egov.bg/segment/R-1014" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_CROZParticipantName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_CROZParticipantIdentificationCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1014" schemaLocation="R-1014_CROZParticipantAddressData.xsd" />
+  <xsd:complexType name="CROZBatchIdentifyingData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за идентификация на партида в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZParticipantName" type="crozpn:CROZParticipantName" minOccurs="0" />
+      <xsd:element name="CROZParticipantIdentificationCode" type="crozpic:CROZParticipantIdentificationCode" minOccurs="0" />
+      <xsd:element name="CROZParticipantAddressData" type="crozpad:CROZParticipantAddressData" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

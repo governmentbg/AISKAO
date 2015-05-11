@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/MVR/BDS/PersonalIdentityInfoRequest" targetNamespace="http://egov.bg/RegiX/MVR/BDS/PersonalIdentityInfoRequest" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="PersonalIdentityInfoRequestType">
+		<xs:annotation>
+			<xs:documentation>Входни данни за справка за лице по документ за самоличност</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="IdentityDocumentNumber" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Номер на документ за самоличност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EGN" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>ЕГН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="PersonalIdentityInfoRequest" type="PersonalIdentityInfoRequestType">
+		<xs:annotation>
+			<xs:documentation>Входни данни за справка за лице по документ за самоличност</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

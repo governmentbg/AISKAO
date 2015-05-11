@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000023"
+      xmlns="http://ereg.egov.bg/value/0008-000023"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="SettlementAbroadName">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Наименование на населено място в чужбина</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[А-Яа-я]+([' -][А-Яа-я]+)*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

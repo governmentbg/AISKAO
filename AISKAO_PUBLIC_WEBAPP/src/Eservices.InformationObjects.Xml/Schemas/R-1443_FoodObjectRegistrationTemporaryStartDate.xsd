@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1443" xmlns="http://ereg.egov.bg/value/R-1443" xmlns:prcd="http://ereg.egov.bg/value/0008-000137" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000137" schemaLocation="0008-000137_PopulationRegisterCircumstanceDate.xsd" />
+  <xsd:simpleType name="FoodObjectRegistrationTemporaryStartDate">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Начална дата на временна регистрация</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="prcd:PopulationRegisterCircumstanceDate" />
+  </xsd:simpleType>
+</xsd:schema>

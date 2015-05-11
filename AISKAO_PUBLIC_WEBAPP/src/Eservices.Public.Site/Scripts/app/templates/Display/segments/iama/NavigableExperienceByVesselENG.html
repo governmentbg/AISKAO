@@ -1,0 +1,51 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за плавателен стаж на кораб на английски език</legend>
+    </fieldset>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Име на кораб</th>
+                <th>ИМО № / УЕИН номер</th>
+                <th>Район на плаване</th>
+                <th>Клас на автоматизация</th>
+                <th>GT</th>
+                <th>kW</th>
+                <th>kVa</th>
+                <th>mPa</th>
+                <th>Длъжност</th>
+                <th>Начална дата</th>
+                <th>Крайна дата</th>
+                <th>Брой години</th>
+                <th>Брой месеци</th>
+                <th>Брой дни</th>
+                <th>Процент</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- ko foreach: navigableExperienceByVesselENG -->
+            <tr>
+                <td data-bind="text: 1 + $index()"></td>
+                <td data-bind="text: vesselNameENG"></td>
+                <td data-bind="text: vesselIMONumberENG"></td>
+                <td data-bind="text: navigationAreaENG"></td>
+                <td data-bind="text: automationClass"></td>
+                <td data-bind="text: vesselGT"></td>
+                <td data-bind="text: vesselkW"></td>
+                <td data-bind="text: vesselkVa"></td>
+                <td data-bind="text: vesselmPa"></td>
+                <td data-bind="text: navigableExperienceOccupationENG"></td>
+                <td data-bind="formattedDate: navigableExperienceStartDate"></td>
+                <td data-bind="formattedDate: navigableExperienceEndDate"></td>
+                <td data-bind="text: navigableExperienceYearCount"></td>
+                <td data-bind="text: navigableExperienceMonthCount"></td>
+                <td data-bind="text: navigableExperienceDayCount"></td>
+                <td data-bind="text: navigableExperiencePercentage"></td>
+            </tr>
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

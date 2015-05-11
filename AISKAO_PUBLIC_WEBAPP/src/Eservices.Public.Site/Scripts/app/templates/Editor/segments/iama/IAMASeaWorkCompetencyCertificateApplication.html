@@ -1,0 +1,78 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>                
+                  <span data-bind="attr: { 'class': serviceTermType.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                   <select data-bind="options: serviceTermType.serviceTermTypes,
+                                    optionsText: 'name',
+                                    optionsValue: 'key',
+                                    value: serviceTermType,
+                                    attr: { 'class': serviceTermType.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                                    enable: serviceTermType.serviceTermTypes().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Editor' } -->
+    <!-- /ko-->
+
+     <fieldset>
+        <legend>Указател за издаване или преиздаване на свидетелство за правоспособност</legend>
+        <div class="row">
+            <div class="control-group span12">
+                <label class="radio">
+                    <span>Издаване на свидетелство за правоспособност</span>
+                    <input type="radio" name="options" value="true" data-bind="checked: licenseIssueFlag"/>
+                </label>
+                <label class="radio">
+                    <span>Преиздаване на свидетелство за правоспособност</span>
+                    <input type="radio" name="options" value="false" data-bind="checked: licenseIssueFlag" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Списък на придобитите правоспособности за работа по море</legend>
+        <!--ko compose: { model: seaWorkCompetenciesList, view: 'segments/iama/SeaWorkCompetenciesList', area: 'Editor' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Ограничения за работа на определен тип кораб</legend>
+        <!-- ko with: seaWorkRestrictions -->
+        <div class="row">
+            <div class="controls-row">
+                <div class="span10" data-bind="foreach: seaWorkRestriction.nomSeaWorkRestrictions">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.key, checked: $parent.seaWorkRestriction" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Номер на документ за самоличност</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Номер на документ за самоличност:</span>
+                <input type="text" class="span9" data-bind="value: personalIdentityDocumentNumber, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko-->
+</div>

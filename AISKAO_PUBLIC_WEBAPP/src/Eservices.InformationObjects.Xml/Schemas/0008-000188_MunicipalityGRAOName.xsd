@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000188"
+      xmlns="http://ereg.egov.bg/value/0008-000188"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+  <xsd:simpleType name="MunicipalityGRAOName">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Община (ЕСГРАОН)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+      <xsd:maxLength value="25" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

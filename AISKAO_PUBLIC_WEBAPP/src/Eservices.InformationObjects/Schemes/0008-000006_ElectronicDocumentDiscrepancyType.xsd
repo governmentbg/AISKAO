@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000006"
+      xmlns="http://ereg.egov.bg/value/0008-000006"
+      xmlns:nom="http://ereg.egov.bg/nomenclature/0007-000002"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+  <xsd:import schemaLocation="0007-000002_ElectronicDocumentDiscrepancyTypeNomenclature.xsd" namespace="http://ereg.egov.bg/nomenclature/0007-000002"/>
+
+
+  <xsd:simpleType name="ElectronicDocumentDiscrepancyType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Неуспешна проверка</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="nom:ElectronicDocumentDiscrepancyTypeNomenclature" />
+  </xsd:simpleType>
+
+
+</xsd:schema>

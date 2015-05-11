@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1222" xmlns="http://ereg.egov.bg/nomenclature/R-1222" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="AnimalTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове животни, за които се произвеждат комбинирани фуражи</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове животни, за които се произвеждат комбинирани фуражи - Птици-->
+      <xsd:enumeration value="R-1216" />
+      <!--Видове животни, за които се произвеждат комбинирани фуражи - Свине-->
+      <xsd:enumeration value="R-1217" />
+      <!--Видове животни, за които се произвеждат комбинирани фуражи - Зайци-->
+      <xsd:enumeration value="R-1218" />
+      <!--Видове животни, за които се произвеждат комбинирани фуражи - Преживни-->
+      <xsd:enumeration value="R-1219" />
+      <!--Видове животни, за които се произвеждат комбинирани фуражи - Други-->
+      <xsd:enumeration value="R-1220" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

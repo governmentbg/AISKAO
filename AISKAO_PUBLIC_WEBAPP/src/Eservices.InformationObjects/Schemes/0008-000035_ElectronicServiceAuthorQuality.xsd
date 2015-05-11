@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000035"
+      xmlns="http://ereg.egov.bg/value/0008-000035"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="ElectronicServiceAuthorQuality">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Качество, в което авторът действа от името на титуляра и обем на представителната власт</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

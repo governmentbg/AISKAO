@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1215" xmlns="http://ereg.egov.bg/segment/R-1215" xmlns:ftt="http://ereg.egov.bg/value/R-1213" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1213" schemaLocation="R-1213_ForageTradingType.xsd" />
+  <xsd:complexType name="ForageTradingWarehouseData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Отдаване под наем на складови помещения с цел извършване на търговия</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageTradingTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageTradingType" type="ftt:ForageTradingType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

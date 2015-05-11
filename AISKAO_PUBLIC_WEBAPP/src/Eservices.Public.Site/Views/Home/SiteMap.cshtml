@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = TechnoLogica.Eservices.Public.Site.Resources.ViewTitles.SiteMap;
+    ViewBag.Subtitle = "Информация за подредбата на сайта";
+}
+
+<div id="map">
+<nav>
+    <ul>
+        <li><h3>Обща информация</h3></li>
+        <li><span class="icon-circle-arrow-right"></span><a href="@Url.Action("About", "Home")">Информация за ползване</a></li>
+        <li><i class="icon-circle-arrow-right"></i><a href="@Url.Action("AccessibilityPolicy", "Home")">Политика за достъпност</a></li>
+        <li><i class="icon-circle-arrow-right"></i><a href="@Url.Action("SiteMap", "Home")">Карта на приложението</a></li>
+    </ul>
+    <br />
+
+    <br />
+    <ul class="">
+        <li><h3>Административна информация</h3></li>
+        <li><i class="icon-circle-arrow-right"></i><a href="@Url.Action("GetAdministrationInfo", "Administration")">Доставчик на услуги</a></li>
+    </ul>
+</nav>
+</div>

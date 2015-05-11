@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000019"
+      xmlns="http://ereg.egov.bg/segment/0009-000019"
+      xmlns:espbd="http://ereg.egov.bg/segment/0009-000002"
+      xmlns:dett="http://ereg.egov.bg/value/0008-000005"
+      xmlns:duri="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:aisun="http://ereg.egov.bg/segment/0009-000018"
+      xmlns:ausui="http://ereg.egov.bg/value/0008-000038"
+      xmlns:aisuri="http://ereg.egov.bg/value/0008-000039"
+      xmlns:aiscai="http://ereg.egov.bg/value/0008-000037"
+      xmlns:esa="http://ereg.egov.bg/segment/0009-000016"
+      xmlns:dturi="http://ereg.egov.bg/segment/0009-000003"
+      xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+      xmlns:xdsig="http://ereg.egov.bg/segment/0009-000004"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd" namespace="http://ereg.egov.bg/segment/0009-000002"/>
+    <xsd:import schemaLocation="0008-000005_DocumentElectronicTransportType.xsd" namespace="http://ereg.egov.bg/value/0008-000005"/>
+    <xsd:import schemaLocation="0009-000001_DocumentURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000001"/>
+    <xsd:import schemaLocation="0009-000018_AISUserNames.xsd" namespace="http://ereg.egov.bg/segment/0009-000018"/>
+    <xsd:import schemaLocation="0008-000038_AISUserIdentifier.xsd" namespace="http://ereg.egov.bg/value/0008-000038"/>
+    <xsd:import schemaLocation="0008-000039_AISURI.xsd" namespace="http://ereg.egov.bg/value/0008-000039"/>
+    <xsd:import schemaLocation="0008-000037_AISCaseAccessIdentifier.xsd" namespace="http://ereg.egov.bg/value/0008-000037"/>
+    <xsd:import schemaLocation="0009-000016_ElectronicServiceApplicant.xsd" namespace="http://ereg.egov.bg/segment/0009-000016"/>
+    <xsd:import schemaLocation="0009-000003_DocumentTypeURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000003"/>
+    <xsd:import schemaLocation="0008-000007_DocumentTypeName.xsd" namespace="http://ereg.egov.bg/value/0008-000007"/>
+    <xsd:import schemaLocation="0009-000004_XMLDigitalSignature.xsd" namespace="http://ereg.egov.bg/segment/0009-000004"/>
+
+
+    <xsd:element name="ReceiptAcknowledgedMessage" type="ReceiptAcknowledgedMessage"/>
+
+    <xsd:complexType name="ReceiptAcknowledgedMessage">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Потвърждаване за получаване</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ElectronicServiceProvider" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0"/>
+            <xsd:element name="TransportType" type="dett:DocumentElectronicTransportType" minOccurs="0"/>
+            <xsd:element name="DocumentURI" type="duri:DocumentURI" minOccurs="0"/>
+            <xsd:element name="ReceiptTime" type="xsd:dateTime" minOccurs="0"/>
+            <xsd:element name="RegisteredBy" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:choice>
+                        <xsd:element name="Officer">
+                            <xsd:complexType>
+                                <xsd:sequence>
+                                    <xsd:element name="PersonNames" type="aisun:AISUserNames" minOccurs="0"/>
+                                    <xsd:element name="AISUserIdentifier" type="ausui:AISUserIdentifier" minOccurs="0"/>
+                                </xsd:sequence>
+                            </xsd:complexType>
+                        </xsd:element>
+                        <xsd:element name="AISURI" type="aisuri:AISURI"/>
+                    </xsd:choice>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="CaseAccessIdentifier" type="aiscai:AISCaseAccessIdentifier" minOccurs="0"/>
+            <xsd:element name="Applicant" type="esa:ElectronicServiceApplicant" minOccurs="0"/>
+            <xsd:element name="DocumentTypeURI" type="dturi:DocumentTypeURI" minOccurs="0"/>
+            <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0"/>
+            <xsd:element name="Signature" type="xdsig:XMLDigitalSignature" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema> 

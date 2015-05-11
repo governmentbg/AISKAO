@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/0007-000015"
+      xmlns="http://ereg.egov.bg/nomenclature/0007-000015"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="ApplicationTypeNomenclature">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Номенклатура на видовете заявления според обстоятелството дали заявлението се подава за първи път или е последващ документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0006-000121"/>
+            <xsd:enumeration value="0006-000122"/>
+            <xsd:enumeration value="0006-000123"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,130 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Регистрация на обект</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид регистрация на обект:</span>
+            <select class="span9"
+                data-bind="options: foodObjectRegistrationType.nomFoodObjectRegistrationTypes,
+    optionsText: 'name',
+    optionsValue: 'key',
+    value: foodObjectRegistrationType">
+            </select>
+        </div>
+
+        <!--ko if: foodObjectRegistrationType() === 'R-1066' -->
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Начална дата на временна регистрация:</span>
+                    <span class="input-append" data-bind="datepicker: foodObjectRegistrationTemporaryStartDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+                        <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                        <span class="add-on btn btn-info">
+                            <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="controls-row">
+                <span class="span3 text-left">Крайна дата на временна регистрация:</span>
+                <span class="input-append" data-bind="datepicker: foodObjectRegistrationTemporaryEndDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+                    <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                    <span class="add-on btn btn-info">
+                        <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                    </span>
+                </span>
+            </div>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span data-bind="attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                        <select class="span3"
+                            data-bind="options: regionalDirectionCode.nomDirections(),
+    optionsText: 'name',
+    value: regionalDirectionCode.selectedDirection,
+    attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+    enable: regionalDirectionCode.nomDirections().length != 0">
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристика на обект за производство и търговия с храни</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид обект:</span>
+            <select class="span9"
+                data-bind="options: foodObjectPurpose.nomFoodObjectPurposeTypes,
+    optionsText: 'name',
+    optionsValue: 'key',
+    value: foodObjectPurpose">
+            </select>
+        </div>
+        <div class="row">
+            <span class="span3">Категория обект:</span>
+            <input class="span9" type="text" data-bind="value: foodObjectCategory, valueUpdate: 'afterkeydown'" />
+        </div>
+        <div class="row">
+            <span class="span3">Наименование на обект:</span>
+            <input class="span9" type="text" data-bind="value: foodObjectName, valueUpdate: 'afterkeydown'" />
+        </div>
+        <div class="row">
+            <span class="span3">Изисквания за обект:</span>
+            <input class="span9" type="text" data-bind="value: foodObjectRequirementsMetDescription, valueUpdate: 'afterkeydown'" />
+        </div>
+        <div class="row">
+            <span class="span3">Регистрационен номер на обект:</span>
+            <input class="span9" type="text" data-bind="value: foodObjectRegistrationNumber, valueUpdate: 'afterkeydown'" />
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Адрес на обект за производство и търговия с храни</legend>
+        <!-- ko compose: { model: foodObjectRealAddress, view: 'segments/common/EKATTEAddress', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Списък на групите храни в обекта</legend>
+        <!-- ko compose: { model: foodGroupsList, view: 'segments/babh/FoodGroupsList', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Editor' } -->
+    <!-- /ko -->
+</div>
+

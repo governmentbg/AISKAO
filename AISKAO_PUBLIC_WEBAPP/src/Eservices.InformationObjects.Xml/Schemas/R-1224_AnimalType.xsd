@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1224" xmlns="http://ereg.egov.bg/value/R-1224" xmlns:atn="http://ereg.egov.bg/nomenclature/R-1222" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1222" schemaLocation="R-1222_AnimalTypeNomenclature.xsd" />
+  <xsd:simpleType name="AnimalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид животни, за които се произвеждат комбинирани фуражи</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="atn:AnimalTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

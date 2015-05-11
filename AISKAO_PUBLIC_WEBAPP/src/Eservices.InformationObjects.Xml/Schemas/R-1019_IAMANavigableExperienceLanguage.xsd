@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1019" xmlns="http://ereg.egov.bg/value/R-1019" xmlns:iamaneln="http://ereg.egov.bg/nomenclature/R-1017" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1017" schemaLocation="R-1017_IAMANavigableExperienceLanguageNomenclature.xsd" />
+  <xsd:simpleType name="IAMANavigableExperienceLanguage">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Език на удостоверение за плавателен стаж</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="iamaneln:IAMANavigableExperienceLanguageNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

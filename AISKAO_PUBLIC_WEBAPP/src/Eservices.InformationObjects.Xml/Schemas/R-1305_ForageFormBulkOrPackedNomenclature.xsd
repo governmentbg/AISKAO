@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1305" xmlns="http://ereg.egov.bg/nomenclature/R-1305" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageFormBulkOrPackedNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за форма на фуражи, която може да бъде насипна и/или опакована</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Форма на фуражите - Насипни-->
+      <xsd:enumeration value="R-1295" />
+      <!--Форма на фуражите - Опаковани-->
+      <xsd:enumeration value="R-1297" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

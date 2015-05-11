@@ -1,0 +1,52 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за плавателен стаж на кораб на български език</legend>
+    </fieldset>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th>Име на кораб</th>
+                <th>ИМО № / УЕИН номер</th>
+                <th>Район на плаване</th>
+                <th>Клас на автоматизация</th>
+                <th>GT</th>
+                <th>kW</th>
+                <th>kVa</th>
+                <th>mPa</th>
+                <th>Длъжност</th>
+                <th>Начална дата</th>
+                <th>Крайна дата</th>
+                <th>Брой години</th>
+                <th>Брой месеци</th>
+                <th>Брой дни</th>
+                <th>Процент</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- ko foreach: navigableExperienceByVesselBG -->
+            <tr>
+                <td data-bind="text: 1 + $index()"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselNameBG"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselIMONumberBG"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigationAreaBG"></td>
+                <td contenteditable="true" data-bind="editableHTML: automationClass"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselGT"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselkW"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselkVa"></td>
+                <td contenteditable="true" data-bind="editableHTML: vesselmPa"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceOccupationBG"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceStartDate"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceEndDate"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceYearCount"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceMonthCount"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperienceDayCount"></td>
+                <td contenteditable="true" data-bind="editableHTML: navigableExperiencePercentage"></td>
+            </tr>
+
+            <!-- /ko -->
+        </tbody>
+    </table>
+</div>

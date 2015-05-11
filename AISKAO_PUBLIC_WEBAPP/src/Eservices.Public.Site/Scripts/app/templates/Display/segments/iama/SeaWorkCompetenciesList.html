@@ -1,0 +1,15 @@
+﻿<div>
+    <!-- ko with: seaWorkCompetencyGroups -->
+        <span class="span10">Група правоспособности:</span>
+        <div class="span10" data-bind="foreach: seaWorkCompetencyGroup">
+            <div class="row span12">
+                <span data-bind="text: name"></span>:
+            </div>
+            <span class="span10">Компетенции:</span>
+               <div class="row span10"  data-bind="foreach: competencies().competency">
+                    <span class="span7" data-bind="text: name"></span>
+               </div>
+        </div>
+    <!-- /ko -->
+
+</div>

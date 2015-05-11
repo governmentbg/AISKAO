@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-999065"
+      xmlns="http://ereg.egov.bg/segment/0009-999065"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:stt="http://ereg.egov.bg/value/0008-000143"
+      xmlns:edx="http://ereg.egov.bg/segment/0009-000092"
+      xmlns:ad="http://ereg.egov.bg/segment/0009-000139"
+      xmlns:sard="http://ereg.egov.bg/segment/0009-000141"
+      xmlns:eash="http://ereg.egov.bg/segment/0009-000152"
+      xmlns:easf="http://ereg.egov.bg/segment/0009-000153"
+      xmlns:pid="http://ereg.egov.bg/segment/0009-000202"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000202" schemaLocation="0009-000202_StateAndMunicipalPropertyIdentifyingData.xsd"/>
+  
+  <xsd:element name="DocumentProcessingForSaleOfMunicipalHousing" type="DocumentProcessingForSaleOfMunicipalHousing"/>
+  
+  <xsd:complexType name="DocumentProcessingForSaleOfMunicipalHousing">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за елекронна услуга "Приемане на документи за продажба на общинско жилище"</xsd:documentation>
+    </xsd:annotation>
+      <xsd:sequence>
+          <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" />
+          <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+          <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" />
+          <xsd:element name="StateAndMunicipalPropertyIdentifyingData" type="pid:StateAndMunicipalPropertyIdentifyingData" minOccurs="0" />
+          <xsd:element name="AttachedDocuments" minOccurs="0">
+              <xsd:complexType>
+                  <xsd:choice maxOccurs="unbounded">
+                      <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+                      <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+                  </xsd:choice>
+              </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" />
+      </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,30 @@
+﻿<div>
+    <!--ko compose: { model: animalObjectGeneralData, view: 'segments/babh/BABHAnimalObjectGeneralData', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Данни за отглеждани видове животни
+            <!-- ko with: animalObjectAnimalTypes -->
+            <button type="button" class="btn btn-default" data-bind="click: addBABHAnimalObjectAnimalType">Добави</button>
+            <!-- /ko-->
+        </legend>
+        <div class="row">
+            <div data-bind="with: animalObjectAnimalTypes">
+                <div class="span11" data-bind="foreach: animalObjectAnimalType()">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span8">Данни за вид животни
+                                        <button data-bind="click: $parent.removeBABHAnimalObjectAnimalType.bind($parent), attr: { 'class': $parent.animalObjectAnimalType().length > 1 ? 'btn btn-danger' : 'btn btn-danger disabled' }">Изтрий</button>
+                                </span>
+                            </span>
+                        </legend>
+                        <!--ko compose: { model: $data, view: 'segments/babh/BABHAnimalObjectAnimalType', area: 'Editor' } -->
+                        <!-- /ko-->
+                        <hr />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

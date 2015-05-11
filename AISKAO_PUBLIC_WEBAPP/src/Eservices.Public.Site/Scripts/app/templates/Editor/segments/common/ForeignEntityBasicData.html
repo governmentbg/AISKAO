@@ -1,0 +1,37 @@
+﻿<div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Наименование:</span>
+            <input class="span9" placeholder="Наименование на чуждестранно юридическо лице" type="text" data-bind="value: foreignEntityName, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Държава: </span>
+            <select class="span9"
+                data-bind="options: countryCode.nomCountries(),
+    optionsText: 'name',
+    value: countryCode.selectedCountry">
+            </select>
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Име на регистър: </span>
+            <input class="span9" placeholder="Наименование на регистър" type="text" data-bind="value: foreignEntityRegister, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Номер в регистър: </span>
+            <input class="span9" placeholder="Номер в регистър" type="text" data-bind="value: foreignEntityIdentifier, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Други данни:</span>
+            <input class="span9" placeholder="Други данни" type="text" data-bind="value: foreignEntityOtherData, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+</div>

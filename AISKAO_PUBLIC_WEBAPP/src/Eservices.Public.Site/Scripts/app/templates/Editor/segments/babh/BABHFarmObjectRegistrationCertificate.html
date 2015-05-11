@@ -1,0 +1,83 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Качество на получателя на услугата по отношение на животновъдния обект:</span>
+                <input class="span9" type="text" placeholder="собственик/ упълномощено лице/ползвател и т.н." data-bind="value: farmObjectRecipientActing, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span data-bind="attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                        <select class="span3"
+                            data-bind="options: regionalDirectionCode.nomDirections(),
+    optionsText: 'name',
+    value: regionalDirectionCode.selectedDirection,
+    attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+    enable: regionalDirectionCode.nomDirections().length != 0">
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристика на животновъден обект</legend>
+        <fieldset>
+            <legend>Предназначение на обект</legend>
+            <div class="row">
+                <div class="span12">
+                    <label class="row">
+                        <span class="span3 text-left">Вид животновъден обект:</span>
+                        <input class="span9" type="text" data-bind="value: farmObjectName, valueUpdate: 'afterkeydown'" />
+                    </label>
+                </div>
+            </div>
+            <!-- ko compose: { model: animalObjectData, view: 'segments/babh/BABHAnimalObjectData', area: 'Editor' } -->
+            <!-- /ko -->
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за местонахождение на животновъден обект</legend>
+        <!-- ko compose: { model: animalHoldingAddressData, view: 'segments/babh/AnimalHoldingAddressData', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за полученото одобрение на заявление за регистрация на животновъден обект</legend>
+        <!-- ko compose: { model: farmObjectApprovalData, view: 'segments/babh/BABHFarmObjectApprovalData', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Editor' } -->
+    <!-- /ko -->
+
+</div>

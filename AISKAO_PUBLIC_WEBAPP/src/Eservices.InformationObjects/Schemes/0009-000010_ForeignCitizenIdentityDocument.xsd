@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000010"
+      xmlns="http://ereg.egov.bg/segment/0009-000010"
+      xmlns:fcidn="http://ereg.egov.bg/value/0008-000026"
+      xmlns:fcidt="http://ereg.egov.bg/value/0008-000027"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000026" schemaLocation="0008-000026_ForeignCitizenIdentityDocumentNumber.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000027" schemaLocation="0008-000027_ForeignCitizenIdentityDocumentType.xsd"/>
+
+
+	<xsd:complexType name="ForeignCitizenIdentityDocument">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Данни за документ за самоличност на физическо лице, нерегистрирано по българското законодателство</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+    		<xsd:element name="DocumentNumber" type="fcidn:ForeignCitizenIdentityDocumentNumber" minOccurs="0"/>
+            <xsd:element name="DocumentType" type="fcidt:ForeignCitizenIdentityDocumentType" minOccurs="0"/>
+	    </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

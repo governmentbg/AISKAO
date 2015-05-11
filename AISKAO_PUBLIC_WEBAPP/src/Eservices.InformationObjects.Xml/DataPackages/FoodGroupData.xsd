@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://ereg.egov.bg/segment/R-1053" elementFormDefault="qualified" xmlns="http://ereg.egov.bg/segment/R-1053" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="FoodGroupData">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="FoodGroups" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FoodGroup" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Code" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="ShortName" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="Name" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="Occurrences" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FoodObjectPurpose" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FoodSubGroups" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FoodSubGroup" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Code" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="Name" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="Occurrences" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FoodGroupCode" maxOccurs="unbounded" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="FoodItems" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="FoodItem" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Name" maxOccurs="unbounded" type="xs:string"/>
+										<xs:element name="CanAddFreeText" maxOccurs="unbounded" type="xs:boolean"/>
+										<xs:element name="Occurrences" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="Occurrence" maxOccurs="unbounded">
+														<xs:complexType>
+															<xs:choice>
+																<xs:element name="FoodItemPurpose" maxOccurs="unbounded" type="xs:string"/>
+																<xs:sequence>
+																	<xs:element name="FoodGroupCode" maxOccurs="unbounded" type="xs:string"/>
+																	<xs:element name="FoodSubGroupCode" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+																</xs:sequence>
+															</xs:choice>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="versionDate" use="required" type="xs:date"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

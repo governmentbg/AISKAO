@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000013"
+      xmlns="http://ereg.egov.bg/segment/0009-000013"
+      xmlns:en="http://ereg.egov.bg/value/0008-000029"
+      xmlns:ei="http://ereg.egov.bg/value/0008-000028"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000029" schemaLocation="0008-000029_EntityName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000028" schemaLocation="0008-000028_EntityIdentifier.xsd"/>
+
+
+    <xsd:complexType name="EntityBasicData">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Основни данни за юридическо лице, клон на чуждестранно юридическо лице или едноличен търговец</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Name" type="en:EntityName" minOccurs="0"/>
+            <xsd:element name="Identifier" type="ei:EntityIdentifier" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

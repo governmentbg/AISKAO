@@ -1,0 +1,132 @@
+﻿<div>
+    <!-- ko compose: { model: forageMaterialData, view: 'segments/babh/ForageMaterialData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+    <!-- /ko -->
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageSupplementProductionData.isChecked" />
+        <u>Производство на фуражни добавки, предназначени за пазара</u></label>
+    <div data-bind="if: forageSupplementProductionData.isChecked">
+        <!-- ko compose: { model: forageSupplementProductionData, view: 'segments/babh/ForageSupplementProductionData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: foragePremixProductionData.isChecked" />
+        <u>Производство на премикси, изготвени на основата на фуражни добавки, предназначени за пазара</u></label>
+    <div data-bind="if: foragePremixProductionData.isChecked">
+        <!-- ko compose: { model: foragePremixProductionData, view: 'segments/babh/ForagePremixProductionData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageCombinedMaterialCountData.isChecked" />
+        <u>Производство  на комбинирани фуражи, съдържащи само фуражни суровини, предназначени за пазара</u></label>
+    <div data-bind="if: forageCombinedMaterialCountData.isChecked">
+        <!-- ko compose: { model: forageCombinedMaterialCountData, view: 'segments/babh/ForageCombinedMaterialCountData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageCombinedSupplementPremixData.isChecked" />
+        <u>Производство  на комбинирани фуражи, съдържащи фуражни добавки и/или премикси, изготвени на основата на фуражни добавки</u></label>
+    <div data-bind="if: forageCombinedSupplementPremixData.isChecked">
+        <!-- ko compose: { model: forageCombinedSupplementPremixData, view: 'segments/babh/ForageCombinedSupplementPremixData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: forageCombinedSupplementOtherAnimalProductsData.isChecked" />
+                <u>Производството на комбинирани фуражи, съдържащи странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</u></label>
+            <div data-bind="if: forageCombinedSupplementOtherAnimalProductsData.isChecked">
+                <!-- ko compose: { model: forageCombinedSupplementOtherAnimalProductsData, view: 'segments/babh/ForageCombinedSupplementOtherAnimalProductsData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: forageMaterialByProductionData.isChecked" />
+                <u>Търговия с фуражни суровини съгласно Каталога на фуражните суровини, изготвен в съответствие с чл. 24 на Регламент (ЕО) № 767/2009</u></label>
+            <div data-bind="if: forageMaterialByProductionData.isChecked">
+                <!-- ko compose: { model: forageMaterialByProductionData, view: 'segments/babh/ForageMaterialByProductionData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageOtherAnimalProductsTradingData.isChecked" />
+        <u>Търговия на странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</u></label>
+    <div data-bind="if: forageOtherAnimalProductsTradingData.isChecked">
+        <!-- ko compose: { model: forageOtherAnimalProductsTradingData, view: 'segments/babh/ForageOtherAnimalProductsTradingData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageSupplementTradingData.isChecked" />
+        <u>Търговия с фуражни добавки</u></label>
+    <div data-bind="if: forageSupplementTradingData.isChecked">
+        <!-- ko compose: { model: forageSupplementTradingData, view: 'segments/babh/ForageSupplementTradingData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: foragePremixTradingData.isChecked" />
+        <u>Търговия с премикси, изготвени на основата на фуражни добавки</u></label>
+    <div data-bind="if: foragePremixTradingData.isChecked">
+        <!-- ko compose: { model: foragePremixTradingData, view: 'segments/babh/ForagePremixTradingData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageCombinedTradingData.isChecked" />
+        <u>Търговия с комбинирани фуражи</u></label>
+    <div data-bind="if: forageCombinedTradingData.isChecked">
+        <!-- ko compose: { model: forageCombinedTradingData, view: 'segments/babh/ForageCombinedTradingData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: forageCombinedSupplementOtherAnimalTradingData.isChecked" />
+                <u>Търговия на комбинирани фуражи, съдържащи странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</u></label>
+            <div data-bind="if: forageCombinedSupplementOtherAnimalTradingData.isChecked">
+                <!-- ko compose: { model: forageCombinedSupplementOtherAnimalTradingData, view: 'segments/babh/ForageCombinedSupplementOtherAnimalTradingData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+
+    <label class="checkbox">
+        <input type="checkbox" data-bind="checked: forageTradingWarehouseData.isChecked" />
+        <u>Отдаване под наем на складови помещения с цел извършване на търговия</u></label>
+    <div data-bind="if: forageTradingWarehouseData.isChecked">
+        <!-- ko compose: { model: forageTradingWarehouseData, view: 'segments/babh/ForageTradingWarehouseData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="checkbox">
+                <input type="checkbox" data-bind="checked: animalTypesFedWithRelatedAnimalProductsData.isChecked" />
+                <u>Страничните животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 или фуражите, които ги съдържат, са предназаначени за изхранване на следните видове животни:</u></label>
+            <div data-bind="if: animalTypesFedWithRelatedAnimalProductsData.isChecked">
+                <!-- ko compose: { model: animalTypesFedWithRelatedAnimalProductsData, view: 'segments/babh/AnimalTypesFedWithRelatedAnimalProductsData', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+
+    <div class="span12">
+        <label class="row">
+            <span class="span3 text-left">Брой самостоятелни технологични линии за производство на фуражи:</span>
+            <input class="span8" type="text" data-bind="value: forageProductionLinesCount, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+</div>
+

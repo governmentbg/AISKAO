@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1153" xmlns="http://ereg.egov.bg/segment/R-1153" xmlns:fst="http://ereg.egov.bg/value/R-1151" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1151" schemaLocation="R-1151_ForageSupplementType.xsd" />
+  <xsd:complexType name="ForageSupplementProductionData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Производство на фуражни добавки, предназначени за пазара</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageSupplementTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageSupplementType" type="fst:ForageSupplementType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

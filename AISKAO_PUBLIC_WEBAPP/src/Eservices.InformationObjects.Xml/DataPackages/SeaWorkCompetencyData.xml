@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SeaWorkCompetencyData versionDate="1967-08-13" xmlns="http://ereg.egov.bg/segment/R-1131" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<SeaWorkCompetencyGroups>
+		<SeaWorkCompetencyGroup>
+			<Code>1</Code>
+			<Name>Капитан и палубна команда</Name>
+		</SeaWorkCompetencyGroup>		
+		<SeaWorkCompetencyGroup>
+			<Code>2</Code>
+			<Name>Машинна команда</Name>
+		</SeaWorkCompetencyGroup>		
+		<SeaWorkCompetencyGroup>
+			<Code>3</Code>
+			<Name>Радиовръзки и радиоспециалисти</Name>
+		</SeaWorkCompetencyGroup>
+	</SeaWorkCompetencyGroups>
+	
+	<SeaWorkCompetencies>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан далечно плаване на кораб над 3000 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан далечно плаване на кораб от 500 БТ до 3000 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан на кораб  до 500 БТ в крайбрежно плаване</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан на кораб  до 500 БТ в местно плаване</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Старши помощник-капитан на кораб над 3000 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Старши помощник-капитан на кораб от 500 БТ до 3000 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Вахтен помощник-капитан на кораб над 500 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Вахтен пом. капитан на кораб до 500 БТ в крайбрежно плаване</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Боцман, палубен</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Корабен рулеви</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан на влекач</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Пилот</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Девиатор</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Капитан на риболовен кораб крайбрежно плаване до 200 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Водач на кораб до 40 БТ по море</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>1</GroupCode>
+			<Name>Шкипер на кораб за спорт и развлечение до 300 БТ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Главен механик на кораб с КСУ над 3000 kW</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Главен механик на кораб с КСУ от 750 kW до 3000 kW</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Главен механик на кораб с КСУ от 750 kW до 3000 kW в местно плаване</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Втори механик на кораб с КСУ над 3000 kW</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Втори механик на кораб с КСУ от 750 kW до 3000 kW</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Вахтен механик на кораб с КСУ над 750 kW</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Корабен електромеханик</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Машинен боцман</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Корабен моторист</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>2</GroupCode>
+			<Name>Корабен електротехник</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>3</GroupCode>
+			<Name>Корабен радиоелектроник за СМСББ първи клас</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>3</GroupCode>
+			<Name>Корабен радиоелектроник за СМСББ втори клас</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>3</GroupCode>
+			<Name>Корабен радиооператор обща категория за СМСББ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>3</GroupCode>
+			<Name>Корабен радиооператор ограничена категория за СМСББ</Name>
+		</SeaWorkCompetency>
+		<SeaWorkCompetency>
+			<GroupCode>3</GroupCode>
+			<Name>Корабен радиооператор в местно плаване</Name>
+		</SeaWorkCompetency>
+	</SeaWorkCompetencies>
+</SeaWorkCompetencyData>

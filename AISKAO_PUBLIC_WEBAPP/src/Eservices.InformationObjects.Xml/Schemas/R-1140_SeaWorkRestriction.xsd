@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1140" xmlns="http://ereg.egov.bg/value/R-1140" xmlns:swrn="http://ereg.egov.bg/nomenclature/R-1138" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1138" schemaLocation="R-1138_SeaWorkRestrictionsNomenlcature.xsd" />
+  <xsd:simpleType name="SeaWorkRestriction">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Ограничения за работа на определен тип кораб</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="swrn:SeaWorkRestrictionsNomenlcature" />
+  </xsd:simpleType>
+</xsd:schema>

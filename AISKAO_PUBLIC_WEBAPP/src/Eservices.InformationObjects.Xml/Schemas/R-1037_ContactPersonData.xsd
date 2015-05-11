@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1037" xmlns="http://ereg.egov.bg/segment/R-1037" xmlns:cpfn="http://ereg.egov.bg/value/R-1029" xmlns:cpln="http://ereg.egov.bg/value/R-1031" xmlns:cpj="http://ereg.egov.bg/value/R-1033" xmlns:cpp="http://ereg.egov.bg/value/R-1035" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1029" schemaLocation="R-1029_ContactPersonFirstName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1031" schemaLocation="R-1031_ContactPersonLastName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1033" schemaLocation="R-1033_ContactPersonJob.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1035" schemaLocation="R-1035_ContactPersonPhone.xsd" />
+  <xsd:complexType name="ContactPersonData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за лице за контакт за провеждане на проверка</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ContactPersonFirstName" type="cpfn:ContactPersonFirstName" minOccurs="0" />
+      <xsd:element name="ContactPersonLastName" type="cpln:ContactPersonLastName" minOccurs="0" />
+      <xsd:element name="ContactPersonJob" type="cpj:ContactPersonJob" minOccurs="0" />
+      <xsd:element name="ContactPersonPhone" type="cpp:ContactPersonPhone" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

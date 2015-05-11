@@ -1,0 +1,59 @@
+﻿@model TechnoLogica.Eservices.Public.Site.Models.Service.ListServicesViewModel
+@using TechnoLogica.Eservices.Public.Site.Resources
+
+@{
+    ViewBag.Title = TechnoLogica.Eservices.Public.Site.Resources.Common.Welcome;
+}
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".tooltipBtn").popover();
+        });
+    </script>
+
+}
+
+@section pagedescription {
+    <h3>Това уеб приложение Ви предоставя следните възможности:</h3>
+    <p class="container-paragraph">
+        1. Да заявите административна услуга по електронен път.<br />
+        2. Да направите справка за заявените от Вас услуги и техния статус без значение дали те са заявени по електронен път, с лицензиран пощенски оператор или на гише. 
+        В секцията "Проверка на статус" можете да направите справка за статуса на заявена услуга с информация за услугата, иницииращия документ, статуса на административно изпълнение по етапи,
+        както и списък с достъпни документи от официалния раздел на преписката по изпълнението на Вашата услуга.
+    </p>
+}
+
+<table id="servicesList" class="table table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>@Service.ServiceName</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model.Service)
+    {
+        <tr>
+            <td class="span3">
+                <a href="@Url.Action("ManageInitiatingDocument", "Request", new { DocumentTypeName = @item.XSDName }, null)"
+                   class="btn btn-small btn-inverse tooltipBtn tableBtn" data-placement="top" data-trigger="hover" style="margin-bottom:3px;"
+                   data-content='Натискайки "Заяви", ще се отвори електронен формуляр - заявление, с което можете да заявите избраната услуга. (Задължително е подписването на заявлението с Квалифициран електронен подпис.)'>
+                    <i class="icon-file icon-white"></i>&nbsp;Заяви
+                </a>
+                <a href="@Url.Action("GetServiceDetails", "Service", new { serviceId = @item.ServiceId }, null)"
+                   class="btn btn-small btn-inverse tooltipBtn tableBtn" style="margin-bottom:3px"
+                   data-placement="top" data-trigger="hover"
+                   data-content='Натискайки "Детайли", ще се отвори подробна информация за етапите на обработка на избраната услуга, изискуеми реквизити, такси и други.'>
+                    <i class="icon-list-alt icon-white"></i>&nbsp; Детайли
+                </a>
+            </td>  
+            <td class="span9">
+                <a href="@Url.Action("ManageInitiatingDocument", "Request", new { DocumentTypeName = @item.XSDName }, null)">@item.ServiceName</a>
+            </td>  
+        </tr>
+    }
+   <tbody>
+</table>
+

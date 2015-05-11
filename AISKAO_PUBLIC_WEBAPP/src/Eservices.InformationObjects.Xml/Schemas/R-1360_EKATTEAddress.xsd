@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1360" xmlns="http://ereg.egov.bg/segment/R-1360" xmlns:dc="http://ereg.egov.bg/value/0008-000200" xmlns:dn="http://ereg.egov.bg/value/0008-000201" xmlns:mc="http://ereg.egov.bg/value/0008-000209" xmlns:mn="http://ereg.egov.bg/value/0008-000202" xmlns:sc="http://ereg.egov.bg/value/0008-000205" xmlns:sn="http://ereg.egov.bg/value/0008-000206" xmlns:pc="http://ereg.egov.bg/value/0008-000128" xmlns:ad="http://ereg.egov.bg/value/0008-000194" xmlns:pob="http://ereg.egov.bg/value/0008-000136" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000200" schemaLocation="0008-000200_DistrictCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000201" schemaLocation="0008-000201_DistrictName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000209" schemaLocation="0008-000209_MunicipalityCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000202" schemaLocation="0008-000202_MunicipalityName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000205" schemaLocation="0008-000205_SettlementCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000206" schemaLocation="0008-000206_SettlementName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000128" schemaLocation="0008-000128_PostCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000194" schemaLocation="0008-000194_AddressDescription.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000136" schemaLocation="0008-000136_PostOfficeBox.xsd" />
+  <xsd:complexType name="EKATTEAddress">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">ЕКАТТЕ адрес</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DistrictCode" type="dc:DistrictCode" minOccurs="1" />
+      <xsd:element name="DistrictName" type="dn:DistrictName" minOccurs="1" />
+      <xsd:element name="MunicipalityCode" type="mc:MunicipalityCode" minOccurs="1" />
+      <xsd:element name="MunicipalityName" type="mn:MunicipalityName" minOccurs="1" />
+      <xsd:element name="SettlementCode" type="sc:SettlementCode" minOccurs="0" />
+      <xsd:element name="SettlementName" type="sn:SettlementName" minOccurs="0" />
+      <xsd:element name="PostCode" type="pc:PostCode" minOccurs="0" />
+      <xsd:element name="AddressDescription" type="ad:AddressDescription" minOccurs="0" />
+      <xsd:element name="PostOfficeBox" type="pob:PostOfficeBox" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

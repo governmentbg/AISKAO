@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://esoed.egov.bg/2008/05/ErrorInfo/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="EsoedErrorInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="1" maxOccurs="1" name="DocumentURI">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="64" />
+              <xs:minLength value="1" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="DocumentTypeURI">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="64" />
+              <xs:minLength value="1" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="IssuerURI">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:maxLength value="64" />
+              <xs:minLength value="1" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="CreationDate" type="xs:date" />
+        <xs:element name="TransportType">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Пренос през ЕСОЕД" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element minOccurs="1" maxOccurs="1" name="Errors">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element minOccurs="1" maxOccurs="unbounded" name="Error">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element minOccurs="1" maxOccurs="1" name="Text" type="xs:string" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://egov.bg/RegiX/GRAO/NBD" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://egov.bg/RegiX/GRAO/NBD" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="BirthDate">
+		<xs:annotation>
+			<xs:documentation xml:lang="bg">Дата на раждане</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:date"/>
+	</xs:simpleType>
+	<xs:simpleType name="EGN">
+		<xs:annotation>
+			<xs:documentation xml:lang="bg">ЕГН</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="Gender">
+		<xs:annotation>
+			<xs:documentation xml:lang="bg">Пол</xs:documentation>
+		</xs:annotation>
+    <xs:sequence>
+      <xs:element name="GenderCode" type="xs:int" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Код на пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="GenderName" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+	</xs:complexType>
+  <xs:complexType name="PersonNames">
+    <xs:sequence>
+      <xs:element name="FirstName" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Собствено име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SurName" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Бащино име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FamilyName" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Фамилно име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Nationality">
+    <xs:sequence>
+      <xs:element name="NationalityCode" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Код на гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NationalityName" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NationalityCode2" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Код на второ гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="NationalityName2" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Второ гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="PersonRelationType">
+    <xs:sequence>
+      <xs:element name="RelationCode" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Код на родство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EGN" type="EGN" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>ЕГН на лицето</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="BirthDate" type="BirthDate" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Дата на раждане</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FirstName" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Собствено име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SurName" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Бащино име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="FamilyName" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Фамилно име</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Gender" type="Gender" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Пол</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Nationality" type="Nationality" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Гражданство</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeathDate" type="xs:date" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Дата на смърт</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

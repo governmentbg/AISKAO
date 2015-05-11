@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000139"
+      xmlns="http://ereg.egov.bg/segment/0009-000139"
+      xmlns:adfc="http://ereg.egov.bg/value/0008-000132"
+      xmlns:add="http://ereg.egov.bg/value/0008-000133"
+      xmlns:adui="http://ereg.egov.bg/value/0008-000134"
+      xmlns:ft="http://ereg.egov.bg/value/0008-000041"
+      xmlns:adfn="http://ereg.egov.bg/value/0008-000135"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000132" schemaLocation="0008-000132_AttachedDocumentFileContent.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000133" schemaLocation="0008-000133_AttachedDocumentDescription.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000134" schemaLocation="0008-000134_AttachedDocumentUniqueIdentifier.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000041" schemaLocation="0008-000041_FileType.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000135" schemaLocation="0008-000135_AttachedDocumentFileName.xsd"/>
+
+
+    <xsd:complexType name="AttachedDocument">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Приложен документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="AttachedDocumentFileContent" type="adfc:AttachedDocumentFileContent" minOccurs="0" />
+            <xsd:element name="AttachedDocumentDescription" type="add:AttachedDocumentDescription" minOccurs="0"/>
+            <xsd:element name="AttachedDocumentUniqueIdentifier" type="adui:AttachedDocumentUniqueIdentifier" minOccurs="0"/>
+            <xsd:element name="FileType" type="ft:FileType" minOccurs="0" />
+            <xsd:element name="AttachedDocumentFileName" type="adfn:AttachedDocumentFileName" minOccurs="0" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

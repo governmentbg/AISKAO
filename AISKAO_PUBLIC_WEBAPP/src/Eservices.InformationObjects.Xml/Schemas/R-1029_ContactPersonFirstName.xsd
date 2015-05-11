@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1029" xmlns="http://ereg.egov.bg/value/R-1029" xmlns:pfn="http://ereg.egov.bg/value/0008-000008" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000008" schemaLocation="0008-000008_PersonFirstName.xsd" />
+  <xsd:simpleType name="ContactPersonFirstName">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Собствено име на лице за контакт за провеждане на проверка</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="pfn:PersonFirstName" />
+  </xsd:simpleType>
+</xsd:schema>

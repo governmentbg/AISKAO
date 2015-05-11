@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1139" xmlns="http://ereg.egov.bg/value/R-1139" xmlns:fmpn="http://ereg.egov.bg/nomenclature/R-1137" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1137" schemaLocation="R-1137_ForageMaterialProductNomenclature.xsd" />
+  <xsd:simpleType name="ForageMaterialProduct">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид продукт при прозводство на фуражни суровини</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fmpn:ForageMaterialProductNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

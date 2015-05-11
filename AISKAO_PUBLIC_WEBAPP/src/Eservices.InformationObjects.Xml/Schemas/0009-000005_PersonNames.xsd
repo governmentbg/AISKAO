@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000005"
+      xmlns="http://ereg.egov.bg/segment/0009-000005"
+      xmlns:pfn="http://ereg.egov.bg/value/0008-000008"
+      xmlns:pmn="http://ereg.egov.bg/value/0008-000009"
+      xmlns:pln="http://ereg.egov.bg/value/0008-000010"
+      xmlns:pp="http://ereg.egov.bg/value/0008-000011"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000008" schemaLocation="0008-000008_PersonFirstName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000009" schemaLocation="0008-000009_PersonMiddleName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000010" schemaLocation="0008-000010_PersonLastName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000011" schemaLocation="0008-000011_PersonPseudonim.xsd"/>
+
+
+    <xsd:complexType name="PersonNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Имена на физическо лице</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="First" type="pfn:PersonFirstName" minOccurs="0"/>
+            <xsd:element name="Middle" type="pmn:PersonMiddleName" minOccurs="0"/>
+            <xsd:element name="Last" type="pln:PersonLastName" minOccurs="0"/>
+            <xsd:element name="Pseudonim" type="pp:PersonPseudonim" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

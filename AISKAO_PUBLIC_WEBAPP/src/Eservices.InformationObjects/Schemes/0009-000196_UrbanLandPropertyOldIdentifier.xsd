@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000196"
+      xmlns="http://ereg.egov.bg/segment/0009-000196"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:ulpoicn="http://ereg.egov.bg/value/0008-000275"
+      xmlns:ulpoipn="http://ereg.egov.bg/value/0008-000276"
+      xmlns:ulpoiqn="http://ereg.egov.bg/value/0008-000277"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000275" schemaLocation="0008-000275_UrbanLandPropertyOldIdentifierCadastreNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000276" schemaLocation="0008-000276_UrbanLandPropertyOldIdentifierParcelNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000277" schemaLocation="0008-000277_UrbanLandPropertyOldIdentifierQuarterNumber.xsd"/>
+  
+  <xsd:complexType name="UrbanLandPropertyOldIdentifier">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Стар идентификатор на поземлен имот в урбанизирана територия</xsd:documentation>
+    </xsd:annotation>
+      <xsd:sequence>
+        <xsd:element name="CadastreNumber" type="ulpoicn:UrbanLandPropertyOldIdentifierCadastreNumber" minOccurs="0" />
+        <xsd:element name="Parcel" type="ulpoipn:UrbanLandPropertyOldIdentifierParcelNumber" minOccurs="0" />
+        <xsd:element name="Quarter" type="ulpoiqn:UrbanLandPropertyOldIdentifierQuarterNumber" minOccurs="0" />
+      </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

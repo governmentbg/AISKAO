@@ -1,0 +1,116 @@
+﻿<div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Начин на получаване:</span>
+            <span class="uneditable-input span9"
+                data-bind="text: serviceResultReceiptMethod.displayValue().name"></span>
+        </label>
+    </div>
+
+    <!-- ko if: serviceResultReceiptMethod() === '0006-000078' -->
+    <!-- ko with: municipalityAdministrationAdress -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Област:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: districtCode"></span>
+                    <span data-bind="text: districtName"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Община:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: municipalityCode"></span>
+                    <span data-bind="text: municipalityName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Кметство:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: mayoraltyCode"></span>
+                    <span data-bind="text: mayoralty"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Район:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: areaCode"></span>
+                    <span data-bind="text: areaName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko if: serviceResultReceiptMethod() === '0006-000080' -->
+    <!-- ko with: applicantAdress -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Област:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: districtCode"></span>
+                    <span data-bind="text: districtName"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Община:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: municipalityCode"></span>
+                    <span data-bind="text: municipalityName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Населено място:</span>
+                <span class="uneditable-input span3">
+                    <span data-bind="text: settlementCode"></span>
+                    <span data-bind="text: settlementName"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенски код:</span>
+                <span class="uneditable-input span3" data-bind="text: postCode"></span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Адрес:</span>
+            <span class="uneditable-input span9" data-bind="text: addressDescription"></span>
+        </label>
+    </div>
+    <!-- /ko -->
+    <!-- /ko -->
+
+
+
+    <!-- ko if: serviceResultReceiptMethod() == '0006-000081' -->
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Пощенска кутия:</span>
+            <span class="uneditable-input span9" data-bind="text: postOfficeBox"></span>
+        </label>
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="span10" data-bind="foreach: foodItem.nomFoodItems">
+        <label class="span12 checkbox">
+            <input type="checkbox" data-bind="click: $parent.changeFoodItem.bind($root, $parent), clickBubble: false, checked: $data.selectedFoodItem() !== null && $data.selectedFoodItem() !== undefined" " />
+            <span class="span10" data-bind="text: name"></span>
+        </label> 
+        <!-- ko if: canAddFreeText() === 'true' -->
+            <!-- ko with: $data.selectedFoodItem -->
+               <div class="row">
+                    <div class="span12">
+                        <span class="span3 text-left">Друго описание на хранa:</span>
+                        <input class="span7" type="text" data-bind="value: foodItemDescription" />
+                    </div>
+                </div>
+            <!-- /ko -->
+        <!-- /ko -->
+    </div>
+</div>

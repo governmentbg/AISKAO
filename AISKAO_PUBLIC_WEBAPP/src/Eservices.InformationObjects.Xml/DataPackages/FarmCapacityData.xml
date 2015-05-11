@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FarmCapacityData xmlns="http://ereg.egov.bg/segment/R-1314" versionDate="2013-10-25">
+	<FarmCapacities>
+		<FarmCapacity>
+			<FarmCapacityCode>1</FarmCapacityCode>
+			<FarmCapacityName>До 10</FarmCapacityName>
+		</FarmCapacity>	
+		<FarmCapacity>
+			<FarmCapacityCode>2</FarmCapacityCode>
+			<FarmCapacityName>До 20</FarmCapacityName>
+		</FarmCapacity>	
+		<FarmCapacity>
+			<FarmCapacityCode>3</FarmCapacityCode>
+			<FarmCapacityName>До 30</FarmCapacityName>
+		</FarmCapacity>	
+		<FarmCapacity>
+			<FarmCapacityCode>4</FarmCapacityCode>
+			<FarmCapacityName>До 50</FarmCapacityName>
+		</FarmCapacity>	
+		<FarmCapacity>
+			<FarmCapacityCode>5</FarmCapacityCode>
+			<FarmCapacityName>До 100</FarmCapacityName>
+		</FarmCapacity>	
+		<FarmCapacity>
+			<FarmCapacityCode>6</FarmCapacityCode>
+			<FarmCapacityName>Над 100</FarmCapacityName>
+		</FarmCapacity>		
+	</FarmCapacities>
+</FarmCapacityData>

@@ -1,0 +1,67 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <label class="row">
+            <span class="span3 text-left">Дирекция:</span>
+            <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за дейности на оператор във фуражния сектор</legend>
+        <!-- ko compose: { model: forageOperatorActivitiesData, view: 'segments/babh/ForageOperatorActivitiesData', area: 'Display'} -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: forageCombinedProducesQTYMonthlyAnimalTypeData, view: 'segments/babh/ForageCombinedProducesQTYMonthlyAnimalTypeData', area: 'Display',transition: 'entrance',keepScrollPosition: true } -->
+    <!-- /ko -->
+
+    <fieldset>
+        <legend>Адрес на обект на оператор във фуражния сектор</legend>
+        <!-- ko compose: { model: forageObjectAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Регистрационен номер на обект</legend>
+        <div class="row">
+            <span class="span3 text-left">Регистрационен номер на обект на оператор във фуражния сектор:</span>
+            <span class="span9 uneditable-input" data-bind="text: forageOperatorObjectRegistrationNumber"></span>
+        </div>
+    </fieldset>
+
+
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+</div>
+

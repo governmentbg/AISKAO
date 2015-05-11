@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1307" xmlns="http://ereg.egov.bg/value/R-1307" xmlns:ffbopn="http://ereg.egov.bg/nomenclature/R-1305" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1305" schemaLocation="R-1305_ForageFormBulkOrPackedNomenclature.xsd" />
+  <xsd:simpleType name="ForageFormBulkOrPacked">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Форма на фуражи, която може да бъде насипна и/или опакована</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="ffbopn:ForageFormBulkOrPackedNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

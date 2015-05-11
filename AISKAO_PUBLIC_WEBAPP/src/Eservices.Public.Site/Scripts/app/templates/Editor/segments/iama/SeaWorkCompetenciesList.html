@@ -1,0 +1,14 @@
+﻿<div>
+    <!-- ko with: seaWorkCompetencyGroups -->
+    <span class="span10" data-bind="foreach: seaWorkCompetencyGroup.nomSeaWorkCompetencyGroups">
+        <label class="span12 checkbox">
+            <input type="checkbox" data-bind="click: $parent.changeCompetencyGroup.bind($root, $parent), clickBubble: false, checked: $data.selectedCompetencyGroup() !== null && $data.selectedCompetencyGroup() !== undefined" />
+            <span class="span10" data-bind="text: name"></span>
+        </label>
+        <!-- ko with: $data.selectedCompetencyGroup -->
+        <!-- ko compose: { model: competencies , view: 'segments/iama/Competencies', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </span>
+    <!-- /ko -->
+</div>

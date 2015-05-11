@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1158" xmlns="http://ereg.egov.bg/nomenclature/R-1158" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForagePremixtyTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на видове премикси, изготвени на основата на фуражни добавки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове премикси, изготвени на основата на фуражни добавки - хранителни добавки, с изключение на добавките, които са предмет на точка 3, буква а) от Приложение І на Регламент (ЕО) № 1831/2003: витамини А и Д-->
+      <xsd:enumeration value="R-1154" />
+      <!--Видове премикси, изготвени на основата на фуражни добавки - хранителни добавки, с изключение на добавките, които са предмет на точка 3, буква б) от Приложение І на Регламент (ЕО) № 1831/2003: мед и селен-->
+      <xsd:enumeration value="R-1155" />
+      <!--Видове премикси, изготвени на основата на фуражни добавки - зоотехнически добавки, с изключение на добавките, които са предмет на точка 4, буква г) (“други зоотехнически добавки”) от Приложение І към Регламент (ЕО) № 1831/2003-->
+      <xsd:enumeration value="R-1156" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

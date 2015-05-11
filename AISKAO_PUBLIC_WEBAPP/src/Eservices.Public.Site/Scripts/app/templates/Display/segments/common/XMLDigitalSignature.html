@@ -1,0 +1,50 @@
+﻿<div>
+    <!-- ko if: _settings.isSigned -->
+        <fieldset>
+            <legend>Данни за електронен подпис:</legend>
+            <div class="row">
+                <span class="span3 text-left">Наименование на доставчика:</span>
+                <span class="uneditable-input span9" data-bind="text: issuarName"></span>
+
+                <span class="span3 text-left">Адрес на доставчика:</span>
+                <span class="uneditable-input span9" data-bind="text: issuarAddress"></span>
+
+                <span class="span3 text-left">ЕИК/Булстат на доставчика:</span>
+                <span class="uneditable-input span9" data-bind="text: issuarIdentifier"></span>
+
+                <span class="span3 text-left">Националност на доставчика:</span>
+                <span class="uneditable-input span9" data-bind="text: issuarNationality"></span>
+
+                <span class="span3 text-left">Наименование на тируляр:</span>
+                <span class="uneditable-input span9" data-bind="text: titularName"></span>
+
+                <span class="span3 text-left">Адрес на тируляр:</span>
+                <span class="uneditable-input span9" data-bind="text: titularAddress"></span>
+
+                <span class="span3 text-left">Регистрация на тируляр:</span>
+                <span class="uneditable-input span9" data-bind="text: titularRegistration"></span>
+
+                <span class="span3 text-left">В качеството на:</span>
+                <span class="uneditable-input span9" data-bind="text: authorQuality"></span>
+
+                <span class="span3 text-left">Наименование на автор:</span>
+                <span class="uneditable-input span9" data-bind="text: authorName"></span>
+
+                <span class="span3 text-left">Адрес на автор:</span>
+                <span class="uneditable-input span9" data-bind="text: authorAddress"></span>
+
+                <span class="span3 text-left">Валиден от:</span>
+                <span class="uneditable-input span9" data-bind="text: validFrom"></span>
+
+                <span class="span3 text-left">Валиден до:</span>
+                <span class="uneditable-input span9" data-bind="text: validTo"></span>
+
+                <span class="span3 text-left">Ограничения на действието на подписа:</span>
+                <span class="uneditable-input span9" data-bind="text: restriction"></span>
+
+                <span class="span3 text-left">Уникален идентификационен код на удостоверението:</span>
+                <span class="uneditable-input span9" data-bind="text: serialNumber"></span>
+            </div>
+        </fieldset>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IAMADirectorateData xmlns="http://ereg.egov.bg/segment/R-1008" versionDate="2013-09-25">
+	<IAMADirectorates>
+		<IAMADirectorate>
+			<IAMADirectorateCode>SOFIA</IAMADirectorateCode>
+			<IAMADirectorateNameBG>Изпълнителна агенция "Морска администрация"</IAMADirectorateNameBG>
+			<IAMADirectorateNameENG>Executive Agency "MARITIME ADMINISTRATION"</IAMADirectorateNameENG>
+		</IAMADirectorate>
+		<IAMADirectorate>
+			<IAMADirectorateCode>VARNA</IAMADirectorateCode>
+			<IAMADirectorateNameBG>Дирекция "Морска администрация" - Варна</IAMADirectorateNameBG>
+			<IAMADirectorateNameENG>Directorate "MARITIME ADMINISTRATION" - VARNA</IAMADirectorateNameENG>
+		</IAMADirectorate>
+		<IAMADirectorate>
+			<IAMADirectorateCode>BOURGAS</IAMADirectorateCode>
+			<IAMADirectorateNameBG>Дирекция "Морска администрация" - Бургас</IAMADirectorateNameBG>
+			<IAMADirectorateNameENG>Directorate "MARITIME ADMINISTRATION" - BOURGAS</IAMADirectorateNameENG>
+		</IAMADirectorate>
+		<IAMADirectorate>
+			<IAMADirectorateCode>RUSE</IAMADirectorateCode>
+			<IAMADirectorateNameBG>Дирекция "Морска администрация" - Русе</IAMADirectorateNameBG>
+			<IAMADirectorateNameENG>Directorate "MARITIME ADMINISTRATION" - RUSE</IAMADirectorateNameENG>
+		</IAMADirectorate>
+		<IAMADirectorate>
+			<IAMADirectorateCode>LOM</IAMADirectorateCode>
+			<IAMADirectorateNameBG>Дирекция "Морска администрация" - Лом</IAMADirectorateNameBG>
+			<IAMADirectorateNameENG>Directorate "MARITIME ADMINISTRATION" - LOM</IAMADirectorateNameENG>
+		</IAMADirectorate>
+	</IAMADirectorates>
+</IAMADirectorateData>

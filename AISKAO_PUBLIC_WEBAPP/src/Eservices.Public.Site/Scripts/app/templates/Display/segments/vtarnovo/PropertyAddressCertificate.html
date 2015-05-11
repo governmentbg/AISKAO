@@ -1,0 +1,93 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+<fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ, вписан в РОС:</legend>
+        <div class="row">
+            <div class="span3">
+                <label class="row">
+                    <span class="span3 text-left">УРИ в регистъра на информационните обекти:</span>
+                </label>
+            </div>
+            <!--ko with: documentTypeURI-->
+            <div class="controls-row">
+                <span class="span4 uneditable-input" data-bind="text: registerIndex"></span>
+                <span class="span5 uneditable-input" data-bind="text: batchNumber"></span>
+            </div>
+            <!-- /ko -->
+        </div>
+
+        <div class="row">
+            <span class="span3 text-left">Тип на документ:</span>
+            <div class="row">
+                <span class="span9 uneditable-input" data-bind="text: documentTypeName"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Дата на получаване или подписване на документ:</span>
+                <span class="span9 uneditable-input" data-bind="formattedDate: documentReceiptOrSigningDate"></span>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Детайли за административен адрес:</span>
+            <span class="span9 uneditable-input" data-bind="text: propertyDetailData"></span>
+        </label>
+    </div>
+
+   <fieldset>
+        <legend>Длъжностно лице:</legend>
+        <div class="row">
+            <span class="span3">Тип длъжностно лице:</span>
+            <span class="uneditable-input span9" data-bind="text: official.selectedOfficial().name"></span>
+        </div>
+        <div>
+            <!--ko if: official.selectedOfficial().key === 'PersonNames' -->
+                <!-- ko with: official().personNames -->
+                    <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                    <!-- /ko -->
+                <!--/ko-->
+            <!--/ko-->
+        </div>
+        <div>
+            <!--ko if: official.selectedOfficial().key === 'ForeignCitizenNames' -->
+                <!-- ko with: official().foreignCitizenNames -->
+                    <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenNames', area: 'Display', transition: 'entrance', keepScrollPosition: true} -->
+                    <!-- /ko -->
+                <!-- /ko -->
+            <!--/ko-->
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Електронен подпис</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Електронен подпис:</span>
+                <span class="uneditable-input span9" data-bind="text: xmlDigitalSignature"></span>
+            </label>
+        </div>
+    </fieldset>
+
+</div>

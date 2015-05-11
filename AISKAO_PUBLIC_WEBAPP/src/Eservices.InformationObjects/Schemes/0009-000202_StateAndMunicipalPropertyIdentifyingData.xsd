@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000202"
+      xmlns="http://ereg.egov.bg/segment/0009-000202"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:rebn="http://ereg.egov.bg/value/0008-000288"
+      xmlns:ret="http://ereg.egov.bg/value/0008-000289"
+      xmlns:rq="http://ereg.egov.bg/value/0008-000290"
+      xmlns:atdq="http://ereg.egov.bg/value/0008-000291"
+      xmlns:reai="http://ereg.egov.bg/value/0008-000292"
+      xmlns:spai="http://ereg.egov.bg/segment/0009-000199"
+      xmlns:mpai="http://ereg.egov.bg/segment/0009-000200"
+      xmlns:ulpoi="http://ereg.egov.bg/segment/0009-000196"
+      xmlns:fflpoi="http://ereg.egov.bg/segment/0009-000197"
+      xmlns:reci="http://ereg.egov.bg/segment/0009-000198"
+      xmlns:read="http://ereg.egov.bg/segment/0009-000195"
+      xmlns:ren="http://ereg.egov.bg/segment/0009-000201"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000288" schemaLocation="0008-000288_RealEstateBatchNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000289" schemaLocation="0008-000289_RealEstateType.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000290" schemaLocation="0008-000290_RealQuadrature.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000291" schemaLocation="0008-000291_AccordingToDocumentsQuadrature.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000292" schemaLocation="0008-000292_RealEstateAdditionalInformation.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000199" schemaLocation="0009-000199_StatePropertyActIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000200" schemaLocation="0009-000200_MunicipalPropertyActIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000196" schemaLocation="0009-000196_UrbanLandPropertyOldIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000197" schemaLocation="0009-000197_FarmlandAndForestLandPropertyOldIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000198" schemaLocation="0009-000198_RealEstateCadastreIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000195" schemaLocation="0009-000195_RealEstateAddressData.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000201" schemaLocation="0009-000201_RealEstateNeighboringProperty.xsd"/>
+
+  <xsd:complexType name="StateAndMunicipalPropertyIdentifyingData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни, еднозначно определящи недвижим имот, при заявяване на услуги за държавна и общинска собственост</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="RealEstateType" type="ret:RealEstateType" minOccurs="0" />
+      <xsd:element name="RealEstateAddress" type="read:RealEstateAddressData" minOccurs="0" />
+      <xsd:element name="RealEstateCadastreIdentifier" type="reci:RealEstateCadastreIdentifier" minOccurs="0" />
+      <xsd:element name="LandPropertyOldIdentifier" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="UrbanLandPropertyOldIdentifier" type="ulpoi:UrbanLandPropertyOldIdentifier" />
+            <xsd:element name="FarmlandAndForestLandPropertyOldIdentifier" type="fflpoi:FarmlandAndForestLandPropertyOldIdentifier" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ActIdentifier" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="StatePropertyActIdentifier" type="spai:StatePropertyActIdentifier" />
+            <xsd:element name="MunicipalPropertyActIdentifier" type="mpai:MunicipalPropertyActIdentifier" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RealEstateNeighboringProperties" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RealEstateNeighboringProperty" type="ren:RealEstateNeighboringProperty" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="RealEstateBatchNumber" type="rebn:RealEstateBatchNumber" minOccurs="0" />
+      <xsd:element name="AccordingToDocumentsQuadrature" type="atdq:AccordingToDocumentsQuadrature" minOccurs="0" />
+      <xsd:element name="RealQuadrature" type="rq:RealQuadrature" minOccurs="0" />
+      <xsd:element name="RealEstateAdditionalInformation" type="reai:RealEstateAdditionalInformation" minOccurs="0" />
+    </xsd:sequence> 
+  </xsd:complexType>
+
+</xsd:schema>

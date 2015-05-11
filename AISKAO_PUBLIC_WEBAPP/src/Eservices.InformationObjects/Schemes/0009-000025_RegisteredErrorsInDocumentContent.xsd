@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000025"
+      xmlns="http://ereg.egov.bg/segment/0009-000025"
+      xmlns:dturi="http://ereg.egov.bg/segment/0009-000003"
+      xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+      xmlns:redc="http://ereg.egov.bg/segment/0009-000024"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000024" schemaLocation="0009-000024_RegisteredErrorInDocumentContent.xsd"/>
+
+
+    <xsd:element name="RegisteredErrorsInDocumentContent" type="RegisteredErrorsInDocumentContent"/>
+
+    <xsd:complexType name="RegisteredErrorsInDocumentContent">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Регистрирани грешки в съдържание на документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentTypeURI" type="dturi:DocumentTypeURI" minOccurs="0"/>
+            <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0"/>
+            <xsd:element name="RegisteredErrors" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Error" type="redc:RegisteredErrorInDocumentContent" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

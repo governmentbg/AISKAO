@@ -1,0 +1,21 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Данни за резултат</legend>
+        <!-- ko compose: { model: returnInformation, view: 'segments/regix/ReturnInformation', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за МПС-та</legend>
+        <div class="row">
+            <!-- ko with: vehicles -->
+            <div class="span12" data-bind="foreach: vehicle">
+                <!-- ko compose: { model: $data, view: 'segments/regix/Vehicle', area: 'Display' } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko -->
+        </div>
+    </fieldset>
+</div>

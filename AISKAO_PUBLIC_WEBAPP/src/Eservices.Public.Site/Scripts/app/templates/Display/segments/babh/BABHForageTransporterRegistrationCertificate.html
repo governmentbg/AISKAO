@@ -1,0 +1,61 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: forageForTransportationData, view: 'segments/babh/ForageForTransportationData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <div class="row">
+        <!-- ko with: forageTransportActivityDatas -->
+        <div class="span12" data-bind="foreach: forageTransportActivityData">
+            <!-- ko compose: { model: $data, view: 'segments/babh/ForageTransportActivityData', area: 'Display' } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+
+    <fieldset>
+        <legend>Регистрационен номер</legend>
+        <div class="row">
+            <span class="span3">Регистрационен номер на превозвач на фуражи:</span>
+            <span class="span9 uneditable-input" data-bind="text: forageTransporterRegistrationNumber" />
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+</div>
+

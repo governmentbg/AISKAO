@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/0007-000014"
+      xmlns="http://ereg.egov.bg/nomenclature/0007-000014"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="ServiceTermTypeNomenclature">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Номенклатура на видовете услуги, спрямо срока за предоствянето им</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0006-000083"/><!-- Обикновена -->
+            <xsd:enumeration value="0006-000084"/><!-- Бърза -->
+            <xsd:enumeration value="0006-000085"/><!-- Експресна -->
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

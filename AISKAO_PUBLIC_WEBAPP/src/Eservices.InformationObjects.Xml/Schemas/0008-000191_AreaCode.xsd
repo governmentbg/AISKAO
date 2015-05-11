@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000191"
+      xmlns="http://ereg.egov.bg/value/0008-000191"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="AreaCode">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Код на район в градовете с районно деление</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+          <xsd:pattern value="[0-9]{5}-[0-9]{2}" />  
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

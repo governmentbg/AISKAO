@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1131" xmlns="http://ereg.egov.bg/segment/R-1131" xmlns:swcgn="http://ereg.egov.bg/value/R-1125" xmlns:swcgc="http://ereg.egov.bg/value/R-1127" xmlns:swcn="http://ereg.egov.bg/value/R-1129" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1125" schemaLocation="R-1125_SeaWorkCompetencyGroupName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1127" schemaLocation="R-1127_SeaWorkCompetencyGroupCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1129" schemaLocation="R-1129_SeaWorkCompetencyName.xsd" />
+  <xsd:element name="SeaWorkCompetencyData" type="SeaWorkCompetencyData" />
+  <xsd:complexType name="SeaWorkCompetencyData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Видове правоспособности за работа по море</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+		<xsd:element name="SeaWorkCompetencyGroups">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="SeaWorkCompetencyGroup" maxOccurs="unbounded">
+				  <xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="Code" type="swcgc:SeaWorkCompetencyGroupCode" />
+						<xsd:element name="Name" type="swcgn:SeaWorkCompetencyGroupName" />					  
+					</xsd:sequence>
+				  </xsd:complexType>
+				</xsd:element>
+			  </xsd:sequence>
+			</xsd:complexType>
+		  </xsd:element>	
+		  <xsd:element name="SeaWorkCompetencies">
+			<xsd:complexType>
+			  <xsd:sequence>
+				<xsd:element name="SeaWorkCompetency" maxOccurs="unbounded">
+				  <xsd:complexType>
+					<xsd:sequence>
+					  <xsd:element name="GroupCode" type="swcgc:SeaWorkCompetencyGroupCode" />
+					  <xsd:element name="Name" type="swcn:SeaWorkCompetencyName" />
+					</xsd:sequence>
+				  </xsd:complexType>
+				</xsd:element>
+			  </xsd:sequence>
+			</xsd:complexType>
+		  </xsd:element>	  
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

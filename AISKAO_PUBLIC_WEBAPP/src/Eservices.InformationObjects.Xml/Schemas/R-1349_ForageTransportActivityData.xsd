@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1349" xmlns="http://ereg.egov.bg/segment/R-1349" xmlns:ftvt="http://ereg.egov.bg/value/R-1345" xmlns:ftvrn="http://ereg.egov.bg/value/R-1347" xmlns:fft="http://ereg.egov.bg/value/R-1301" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1345" schemaLocation="R-1345_ForageTransportVechicleType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1347" schemaLocation="R-1347_ForageTransportVechicleRegistrationNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1301" schemaLocation="R-1301_ForageFormType.xsd" />
+  <xsd:complexType name="ForageTransportActivityData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за транспортна дейност</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageTransportVechicleType" type="ftvt:ForageTransportVechicleType" minOccurs="0" />
+      <xsd:element name="ForageTransportVechicleRegistrationNumbers" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageTransportVechicleRegistrationNumber" type="ftvrn:ForageTransportVechicleRegistrationNumber" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ForageFormTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageFormType" type="fft:ForageFormType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

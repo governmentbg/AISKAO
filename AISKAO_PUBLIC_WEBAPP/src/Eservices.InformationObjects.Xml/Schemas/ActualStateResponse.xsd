@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://egov.bg/RegiX/AV/TR" xmlns="http://egov.bg/RegiX/AV/TR/ActualStateResponse" targetNamespace="http://egov.bg/RegiX/AV/TR/ActualStateResponse" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://egov.bg/RegiX/AV/TR" schemaLocation="TRCommon.xsd"/>
+	<xs:complexType name="ActualStateResponseType">
+		<xs:sequence>
+			<xs:element name="Status" type="common:StatusType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус на партида</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="UIC" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00010 - ЕИК</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Company" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00020 - Фирма</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LegalForm" type="common:LegalFormType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00030 - Правна форма</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Transliteration" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00040 - Изписване на чужд език</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Seat" type="common:SeatType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00050 - Седалище и адрес на управление</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SeatForCorrespondence" type="common:AddressType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00051 - Адрес за кореспонденция с НАП на територията на страната</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubjectOfActivity" type="common:SubjectOfActivityType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00060 - Предмет на дейност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SubjectOfActivityNKID" type="common:NKIDType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00061 - Основна  дейност по НКИД</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WayOfManagement" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00080 - Начин на управление</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="WayOfRepresentation" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00110 - Начин на представляване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TermsOfPartnership" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00160 - Срок на дружеството</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TermOfExisting" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00161 - Срок на съществуване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SpecialConditions" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00170 - Специални условия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="HiddenNonMonetaryDeposit" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00241 - Скрита непарична вноска</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SharePaymentResponsibility" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00250 - Отговорност над дялови вноски</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ConcededEstateValue" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00251 - Стойност на имуществото, предоставено от държавата или общината</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CessationOfTrade" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00260 - Прекратяване на търговската дейност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AddemptionOfTrader" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00270 - Заличаване на търговеца</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AddemptionOfTraderSeatChange" type="common:AddemptionOfTraderType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00271 - Заличаване поради преместване на седалището в друга дъжвава-членка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Funds" type="common:CapitalAmountType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00310 - Капитал Размер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Shares" type="common:SharesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00311 - Акции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MinimumAmount" type="common:CapitalAmountType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00312 - Минимален размер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DepositedFunds" type="common:CapitalAmountType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00320 - Внесен капитал</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NonMonetaryDeposits" type="common:NonMonetaryDepositsType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00330 - Непарична вноска</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BuyBackDecision" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00340 - Решение за обратно изкупуване на акции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BoardOfDirectorsMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00120 - Съвет на директорите</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="AdministrativeBoardMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00122 - Административен орган</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BoardOfManagersMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00130 - Управителен съвет</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BoardOfManagers2Mandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00132 - Управителен съвет</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LeadingBoardMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00133 - Ръководен орган</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SupervisingBoardMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00140 - Надзорен съвет</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SupervisingBoard2Mandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00142 - Надзорен орган</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ControllingBoardMandate" type="common:MandateType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на поле:00150 - Контролен съвет</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Details" type="common:DetailsType" minOccurs="0"/>
+      <xs:element name="DataValidForDate" type="xs:dateTime" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Дата на валидност на данните</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActualStateResponse" type="ActualStateResponseType">
+		<xs:annotation>
+			<xs:documentation>Справка за актуално състояние</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

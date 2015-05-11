@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000141"
+            xmlns="http://ereg.egov.bg/segment/0009-000141"
+            xmlns:srrm="http://ereg.egov.bg/value/0008-000197"
+            xmlns:pob="http://ereg.egov.bg/value/0008-000136"
+            xmlns:sc="http://ereg.egov.bg/value/0008-000205"
+            xmlns:sn="http://ereg.egov.bg/value/0008-000206"
+            xmlns:pc="http://ereg.egov.bg/value/0008-000128"
+            xmlns:ad="http://ereg.egov.bg/value/0008-000194"
+            xmlns:ac="http://ereg.egov.bg/value/0008-000191"
+            xmlns:an="http://ereg.egov.bg/value/0008-000192"
+			xmlns:mta="http://ereg.egov.bg/segment/0008-000198"
+            xmlns:dc="http://ereg.egov.bg/value/0008-000200"
+            xmlns:dis="http://ereg.egov.bg/value/0008-000201"
+            xmlns:mc="http://ereg.egov.bg/value/0008-000209"
+            xmlns:mun="http://ereg.egov.bg/value/0008-000202"
+            xmlns:mac="http://ereg.egov.bg/value/0008-000203"
+            xmlns:may="http://ereg.egov.bg/value/0008-000204"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000197" schemaLocation="0008-000197_ServiceResultReceiptMethod.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000136" schemaLocation="0008-000136_PostOfficeBox.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000128" schemaLocation="0008-000128_PostCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000194" schemaLocation="0008-000194_AddressDescription.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000191" schemaLocation="0008-000191_AreaCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000192" schemaLocation="0008-000192_AreaName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000200" schemaLocation="0008-000200_DistrictCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000201" schemaLocation="0008-000201_DistrictName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000209" schemaLocation="0008-000209_MunicipalityCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000202" schemaLocation="0008-000202_MunicipalityName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000203" schemaLocation="0008-000203_MayoraltyCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000204" schemaLocation="0008-000204_MayoraltyName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000205" schemaLocation="0008-000205_SettlementCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000206" schemaLocation="0008-000206_SettlementName.xsd"/>
+
+
+    <xsd:complexType name="ServiceApplicantReceiptData">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Данни за получаване на резултат от услуга от заявителя</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ServiceResultReceiptMethod" type="srrm:ServiceResultReceiptMethod" minOccurs="0"/>
+            <xsd:choice minOccurs="0" >
+                <xsd:element name="ApplicantAdress">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="DistrictCode" type="dc:DistrictCode" minOccurs="0"/>
+                            <xsd:element name="DistrictName" type="dis:DistrictName" minOccurs="0"/>
+                            <xsd:element name="MunicipalityCode" type="mc:MunicipalityCode" minOccurs="0"/>
+                            <xsd:element name="MunicipalityName" type="mun:MunicipalityName" minOccurs="0"/>
+                            <xsd:element name="SettlementCode" type="sc:SettlementCode" minOccurs="0"/>
+                            <xsd:element name="SettlementName" type="sn:SettlementName" minOccurs="0"/>
+                            <xsd:element name="PostCode" type="pc:PostCode" minOccurs="0"/>
+                            <xsd:element name="AddressDescription" type="ad:AddressDescription" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="MunicipalityAdministrationAdress" >
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="DistrictCode" type="dc:DistrictCode" minOccurs="0"/>
+                            <xsd:element name="DistrictName" type="dis:DistrictName" minOccurs="0"/>
+                            <xsd:element name="MunicipalityCode" type="mc:MunicipalityCode" minOccurs="0"/>
+                            <xsd:element name="MunicipalityName" type="mun:MunicipalityName" minOccurs="0"/>
+                            <xsd:element name="MayoraltyCode" type="mac:MayoraltyCode" minOccurs="0"/>
+                            <xsd:element name="Mayoralty" type="may:MayoraltyName" minOccurs="0"/>
+                            <xsd:element name="AreaCode" type="ac:AreaCode" minOccurs="0"/>
+                            <xsd:element name="AreaName" type="an:AreaName" minOccurs="0"/>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="PostOfficeBox" type="pob:PostOfficeBox"/>
+            </xsd:choice>   
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

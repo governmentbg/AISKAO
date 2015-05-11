@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1404" xmlns="http://ereg.egov.bg/segment/R-1404" xmlns:artc="http://ereg.egov.bg/value/R-1398" xmlns:artn="http://ereg.egov.bg/value/R-1400" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1398" schemaLocation="R-1398_AnimalRisingTechnologyCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1400" schemaLocation="R-1400_AnimalRisingTechnologyName.xsd" />
+  <xsd:element name="AnimalRisingTechnologyData" type="AnimalRisingTechnologyData" />
+  <xsd:complexType name="AnimalRisingTechnologyData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Технология на отглеждане на животни в характеристика на обект с епизоотично значение</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalRisingTechnologys">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="AnimalRisingTechnology" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="AnimalRisingTechnologyCode" type="artc:AnimalRisingTechnologyCode" />
+                  <xsd:element name="AnimalRisingTechnologyName" type="artn:AnimalRisingTechnologyName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

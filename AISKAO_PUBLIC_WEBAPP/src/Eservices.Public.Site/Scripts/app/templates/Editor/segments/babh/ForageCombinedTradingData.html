@@ -1,0 +1,21 @@
+﻿<div>
+    <div class="row">
+        <!-- ko with: forageCombinedTradingTypes -->
+        <div class="controls-row">
+            <div class="span10" data-bind="foreach: forageCombinedTradingType.nomForageCombinedTradingType">
+                <label class="span12 checkbox">
+                    <input type="checkbox" data-bind="value: $data.key, checked: $parent.forageCombinedTradingType" />
+                    <span class="span10" data-bind="text: name"></span>
+                </label>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+</div>
+
+
+
+
+
+
+

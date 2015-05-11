@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000036"
+      xmlns="http://ereg.egov.bg/value/0008-000036"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="EmailAddress">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Адрес на електронна поща за получаване на електронни изявления</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <!--<xsd:pattern value="[\w\-!#$%&amp;&#39;*+/=?^`0{|}~.&quot;]+@([\w]+[.-]?)+[\w]\.[\w]+"/>-->
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

@@ -1,0 +1,53 @@
+﻿<div>
+    <!-- ko compose: { model: EKATTEAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">GPS координати по X:</span>
+                <span class="span3 uneditable-input" data-bind="text: animalHoldingAddressGPSCoordinateX"></span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">GPS координати по Y:</span>
+                <span class="span3 uneditable-input" data-bind="text: animalHoldingAddressGPSCoordinateY"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <!-- ko with: animalHoldingPhones-->
+        <div class="span6">
+            <!-- ko if: animalHoldingPhone().length > 0 -->
+            Списък с добавени телефонни номера:
+        <!-- /ko -->
+            <div class="span6" data-bind="foreach: animalHoldingPhone">
+                <div class="row">
+                    <span class="span3 text-left">Телефонен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span3 uneditable-input" data-bind="text: $data"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Номер на факс:</span>
+                <span class="span9 uneditable-input" data-bind="text: animalHoldingFax"></span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Адрес на електронна поща:</span>
+                <span class="span9 uneditable-input" data-bind="text: animalHoldingEMail"></span>
+            </label>
+        </div>
+    </div>
+</div>

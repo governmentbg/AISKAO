@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/0007-000003"
+      xmlns="http://ereg.egov.bg/nomenclature/0007-000003"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+	<xsd:simpleType name="ElectronicServiceProviderTypeNomenclature">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Номенклатура на видовете доставчици на електронни административни услуги</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0006-000031"/>
+            <xsd:enumeration value="0006-000032"/>
+            <xsd:enumeration value="0006-000033"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

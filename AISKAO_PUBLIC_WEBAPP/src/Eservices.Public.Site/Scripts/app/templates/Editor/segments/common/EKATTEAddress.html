@@ -1,0 +1,67 @@
+﻿<div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Област:</span>
+                <span data-bind="attr: { 'class': districtCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select class="span3"
+                        data-bind="options: districtCode.nomDistricts,
+                        optionsText: 'name',
+                        optionsValue: 'code',
+                        optionsCaption: '--Изберете Област--',
+                        value: districtCode,
+                        css: { 'span3 bar fullwidth': districtCode.isLoading() === true, 'span3': districtCode.isLoading() === false },
+                        enable: districtCode.isLoaded()">
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Община:</span>
+                <span data-bind="attr: { 'class':  municipalityCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select data-bind="options: municipalityCode.nomMunicipalities,
+                                optionsText: 'name',
+                                optionsValue: 'code',
+                                optionsCaption: '--Изберете Община--',
+                                value: municipalityCode,
+                                css: { 'span3 bar fullwidth': municipalityCode.isLoading() === true, 'span3': municipalityCode.isLoading() === false },
+                                enable: municipalityCode.nomMunicipalities().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Населено място:</span>
+                <span data-bind="attr: { 'class': settlementCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select data-bind="options: settlementCode.nomSettlements,
+                                optionsText: 'name',
+                                optionsValue: 'code',
+                                optionsCaption: '--Изберете Населено място--',
+                                value: settlementCode,
+                                css: { 'span3 bar fullwidth': settlementCode.isLoading() === true, 'span3': settlementCode.isLoading() === false },
+                                enable: settlementCode.nomSettlements().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенски код:</span>
+                <input class="span3" type="text" data-bind="value: postCode, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Описание на адрес в рамките на населено място:</span>
+                <input class="span9" type="text" data-bind="value: addressDescription" />
+            </label>
+        </div>
+    </div>
+</div>

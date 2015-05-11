@@ -1,0 +1,82 @@
+﻿<div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Област:</span>
+                <span class="span3 uneditable-input">
+                <span data-bind="text: districtName"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Община:</span>
+                <span class="span3 uneditable-input">
+                <span data-bind="text: municipalityName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Населено място:</span>
+                <span class="span3 uneditable-input">
+                 <span data-bind="text: settlementName"></span>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенски код:</span>
+                <span class="span3 uneditable-input" data-bind="text: postCode"></span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Адрес:</span>
+                <span class="span3 uneditable-input" data-bind="text: addressDescription"></span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенска кутия:</span>
+                <span class="span3 uneditable-input" data-bind="text: postOfficeBox"></span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <!-- ko with: phoneNumbers -->
+        <div class="span6">
+            <!-- ko if: phoneNumber().length > 0 -->
+            Списък с добавени телефонни номера:
+        <!-- /ko -->
+            <span class="span6" data-bind="foreach: phoneNumber">
+                <span class="row">
+                    <span class="span3 text-left">Телефонен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                    </span>
+                </span>
+            </span>
+        </div>
+        <!-- /ko -->
+        <!-- ko with: faxNumbers -->
+        <div class="span6">
+            <!-- ko if: faxNumber().length > 0 -->
+            Списък с добавени факс номера:
+        <!-- /ko -->
+            <span class="span6" data-bind="foreach: faxNumber">
+                <span class="row">
+                    <span class="span3 text-left">Факс номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                    </span>
+                </span>
+            </span>
+        </div>
+    <!-- /ko -->
+    </div>
+</div>

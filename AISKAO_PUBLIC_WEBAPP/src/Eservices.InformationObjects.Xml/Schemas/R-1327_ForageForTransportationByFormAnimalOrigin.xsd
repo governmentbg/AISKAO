@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1327" xmlns="http://ereg.egov.bg/segment/R-1327" xmlns:fmaomp="http://ereg.egov.bg/segment/R-1309" xmlns:fmaoep="http://ereg.egov.bg/segment/R-1311" xmlns:fmaoff="http://ereg.egov.bg/segment/R-1313" xmlns:fmaobp="http://ereg.egov.bg/segment/R-1315" xmlns:fmaobf="http://ereg.egov.bg/segment/R-1317" xmlns:fmaocp="http://ereg.egov.bg/segment/R-1319" xmlns:fmaolfo="http://ereg.egov.bg/value/R-1321" xmlns:fmaolmf="http://ereg.egov.bg/value/R-1323" xmlns:fmaoo="http://ereg.egov.bg/segment/R-1325" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1309" schemaLocation="R-1309_ForageMaterialAnimalOriginMilkProduct.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1311" schemaLocation="R-1311_ForageMaterialAnimalOriginEggProduct.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1313" schemaLocation="R-1313_ForageMaterialAnimalOriginFishFlour.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1315" schemaLocation="R-1315_ForageMaterialAnimalOriginBloodProduct.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1317" schemaLocation="R-1317_ForageMaterialAnimalOriginBloodFlour.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1319" schemaLocation="R-1319_ForageMaterialAnimalOriginCalciumPhosphate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1321" schemaLocation="R-1321_ForageMaterialAnimalOriginLiquidFishOil.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1323" schemaLocation="R-1323_ForageMaterialAnimalOriginLiquidMeltedFat.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1325" schemaLocation="R-1325_ForageMaterialAnimalOriginOther.xsd" />
+  <xsd:complexType name="ForageForTransportationByFormAnimalOrigin">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за фуражи за транспортиране по форма - фуражни суровини от животински произход (категория 3 от Регламент (ЕО) № 1069/2009)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageMaterialAnimalOriginMilkProduct" type="fmaomp:ForageMaterialAnimalOriginMilkProduct" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginEggProduct" type="fmaoep:ForageMaterialAnimalOriginEggProduct" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginFishFlour" type="fmaoff:ForageMaterialAnimalOriginFishFlour" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginBloodProduct" type="fmaobp:ForageMaterialAnimalOriginBloodProduct" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginBloodFlour" type="fmaobf:ForageMaterialAnimalOriginBloodFlour" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginCalciumPhosphate" type="fmaocp:ForageMaterialAnimalOriginCalciumPhosphate" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginLiquidFishOil" type="fmaolfo:ForageMaterialAnimalOriginLiquidFishOil" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginLiquidMeltedFat" type="fmaolmf:ForageMaterialAnimalOriginLiquidMeltedFat" minOccurs="0" />
+      <xsd:element name="ForageMaterialAnimalOriginOther" type="fmaoo:ForageMaterialAnimalOriginOther" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1372" xmlns="http://ereg.egov.bg/segment/R-1372" xmlns:ekattea="http://ereg.egov.bg/segment/R-1360" xmlns:ahagpscx="http://ereg.egov.bg/value/R-1368" xmlns:ahagpscy="http://ereg.egov.bg/value/R-1370" xmlns:ahp="http://ereg.egov.bg/value/R-1362" xmlns:ahf="http://ereg.egov.bg/value/R-1364" xmlns:ahem="http://ereg.egov.bg/value/R-1366" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1360" schemaLocation="R-1360_EKATTEAddress.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1368" schemaLocation="R-1368_AnimalHoldingAddressGPSCoordinateX.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1370" schemaLocation="R-1370_AnimalHoldingAddressGPSCoordinateY.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1362" schemaLocation="R-1362_AnimalHoldingPhone.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1364" schemaLocation="R-1364_AnimalHoldingFax.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1366" schemaLocation="R-1366_AnimalHoldingEMail.xsd" />
+  <xsd:complexType name="AnimalHoldingAddressData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за местонахождение на животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="EKATTEAddress" type="ekattea:EKATTEAddress" minOccurs="0" />
+      <xsd:element name="AnimalHoldingAddressGPSCoordinateX" type="ahagpscx:AnimalHoldingAddressGPSCoordinateX" minOccurs="0" />
+      <xsd:element name="AnimalHoldingAddressGPSCoordinateY" type="ahagpscy:AnimalHoldingAddressGPSCoordinateY" minOccurs="0" />
+      <xsd:element name="AnimalHoldingPhones" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="AnimalHoldingPhone" type="ahp:AnimalHoldingPhone" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="AnimalHoldingFax" type="ahf:AnimalHoldingFax" minOccurs="0" />
+      <xsd:element name="AnimalHoldingEMail" type="ahem:AnimalHoldingEMail" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

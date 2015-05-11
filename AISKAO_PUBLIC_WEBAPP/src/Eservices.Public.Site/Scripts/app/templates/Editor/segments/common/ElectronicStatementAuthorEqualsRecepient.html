@@ -1,0 +1,11 @@
+﻿<div>
+    <!-- ko if: person -->
+        <!-- ko compose: { model: person, view: 'segments/common/PersonBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko if: foreignCitizen -->
+        <!-- ko compose: { model: foreignCitizen, view: 'segments/common/ForeignCitizenBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    <!-- /ko -->
+</div>

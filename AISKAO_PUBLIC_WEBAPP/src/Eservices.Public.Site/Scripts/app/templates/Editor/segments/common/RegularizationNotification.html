@@ -1,0 +1,54 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+    <fieldset>
+        <legend>Данни за преписка</legend>
+        <!-- ko with: aisCaseURI -->
+        <!-- ko with: documentInInternalRegisterURI()-->
+        <div class="row">
+            <span class="span3">УРИ на регистриран документ във вътрешен документен регистър</span>
+            <span class="span9 uneditable-input" data-bind="text: $data"></span>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko with: documentURI()-->
+        <!-- ko compose: { view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </fieldset>
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+    <fieldset>
+        <legend>Нормативни изисквания</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Правно основание:</span>
+                <input class="span9" type="text" data-bind="value: regularizationNotificationLegalGround" />
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Фактически основания:</span>
+                <input class="span9" type="text" data-bind="value: regularizationNotificationFactualGround" />
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Срок за отстраняване на нередовност (брой дни):</span>
+                <input class="span9" type="text" data-bind="value: regularizationNotificationTerm" />
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Editor' } -->
+    <!-- /ko -->
+</div>

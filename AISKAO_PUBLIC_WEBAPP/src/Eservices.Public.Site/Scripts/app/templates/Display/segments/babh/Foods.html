@@ -1,0 +1,24 @@
+﻿<div>
+    <!-- ko foreach: food -->
+        <div class="span12" data-bind="foreach: foodSubGroup">
+                <span class="span3 text-left" data-bind="if: foodSubGroupName">Наименование на подгрупа:</span>
+                <span class="span7" data-bind="text: foodSubGroupName"></span>
+            <!-- ko with: foodSubItem -->
+                <div class="span10" data-bind="with: foodItems">
+                    <div class="span10" data-bind="foreach: foodItem">
+                       <!-- ko compose: { model: $data , view: 'segments/babh/FoodItem', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                        <!-- /ko -->
+                    </div>
+                </div>
+             <!-- /ko -->
+            
+        </div>
+    
+
+        <div class="span10" data-bind="foreach: foodItem">
+                <!-- ko compose: { model: $data , view: 'segments/babh/FoodItem', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</div>
+

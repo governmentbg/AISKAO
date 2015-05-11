@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/0007-000002"
+      xmlns="http://ereg.egov.bg/nomenclature/0007-000002"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+  <xsd:simpleType name="ElectronicDocumentDiscrepancyTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на видовете неуспешни проверки при заявление, подадено по електронен път</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration value="0006-000005"/>
+      <xsd:enumeration value="0006-000006"/>
+      <xsd:enumeration value="0006-000007"/>
+      <xsd:enumeration value="0006-000008"/>
+      <xsd:enumeration value="0006-000009"/>
+      <xsd:enumeration value="0006-000010"/>
+      <xsd:enumeration value="0006-000011"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+
+
+</xsd:schema>

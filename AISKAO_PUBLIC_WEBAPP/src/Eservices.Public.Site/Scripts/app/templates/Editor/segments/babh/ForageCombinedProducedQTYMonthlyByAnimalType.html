@@ -1,0 +1,18 @@
+﻿<div>
+    <div class="row">
+        <span class="span12">
+            <span class="span3 text-left">Вид животни, за които се произвеждат комбинирани фуражи:</span>
+            <select class="span8"
+                data-bind="options: animalType.nomAnimalTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: animalType">
+            </select>
+        </span>
+        <div class="span12">
+            <span class="span3 text-left">Количество в тонове на месец:</span>
+            <input class="span8" type="text" data-bind="value: forageCombinedProducedQTYMonthly, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>
+</div>
+

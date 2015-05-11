@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<IAMACertificateIssuingCityData versionDate="1967-08-13" xsi:schemaLocation="http://ereg.egov.bg/segment/R-1152 R-1152_IAMACertificateIssuingCityData.xsd" xmlns="http://ereg.egov.bg/segment/R-1152" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<IAMACertificateIssuingCitys>
+		<IAMACertificateIssuingCity>
+			<IAMACertificateIssuingCityCode>1</IAMACertificateIssuingCityCode>
+			<IAMACertificateIssuingCityName>София</IAMACertificateIssuingCityName>
+		</IAMACertificateIssuingCity>
+		<IAMACertificateIssuingCity>
+			<IAMACertificateIssuingCityCode>2</IAMACertificateIssuingCityCode>
+			<IAMACertificateIssuingCityName>Варна</IAMACertificateIssuingCityName>
+		</IAMACertificateIssuingCity>
+		<IAMACertificateIssuingCity>
+			<IAMACertificateIssuingCityCode>3</IAMACertificateIssuingCityCode>
+			<IAMACertificateIssuingCityName>Бургас</IAMACertificateIssuingCityName>
+		</IAMACertificateIssuingCity>
+		<IAMACertificateIssuingCity>
+			<IAMACertificateIssuingCityCode>4</IAMACertificateIssuingCityCode>
+			<IAMACertificateIssuingCityName>Русе</IAMACertificateIssuingCityName>
+		</IAMACertificateIssuingCity>
+		<IAMACertificateIssuingCity>
+			<IAMACertificateIssuingCityCode>5</IAMACertificateIssuingCityCode>
+			<IAMACertificateIssuingCityName>Лом</IAMACertificateIssuingCityName>
+		</IAMACertificateIssuingCity>
+	</IAMACertificateIssuingCitys>
+</IAMACertificateIssuingCityData>

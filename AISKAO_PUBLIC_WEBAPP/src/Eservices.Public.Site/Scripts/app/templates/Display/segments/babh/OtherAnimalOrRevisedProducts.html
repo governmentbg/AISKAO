@@ -1,0 +1,31 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: otherProductTypes -->
+            <div class="span10" data-bind="foreach: otherProductType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getOtherProductTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <!-- ko with: otherOtherProductTypes -->
+    <!-- ko if: otherOtherProductType().length > 0 -->
+    Списък с други видове странични животински продукти:
+                <!-- /ko -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span6" data-bind="foreach: otherOtherProductType">
+                    <span class="span3 text-left">Друг вид друг страничен животински продукт #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span3 uneditable-input" data-bind="text: $data"></span>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

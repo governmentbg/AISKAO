@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1049" xmlns="http://ereg.egov.bg/segment/R-1049" xmlns:crozretc="http://ereg.egov.bg/value/R-1045" xmlns:crozretn="http://ereg.egov.bg/value/R-1047" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1045" schemaLocation="R-1045_CROZRegistrationEntryTypeCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1047" schemaLocation="R-1047_CROZRegistrationEntryTypeName.xsd" />
+  <xsd:element name="CROZRegistrationEntryTypeData" type="CROZRegistrationEntryTypeData" />
+  <xsd:complexType name="CROZRegistrationEntryTypeData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Видове вписвания в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZRegistrationEntryTypes">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CROZRegistrationEntryType" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="CROZRegistrationEntryTypeCode" type="crozretc:CROZRegistrationEntryTypeCode" />
+                  <xsd:element name="CROZRegistrationEntryTypeName" type="crozretn:CROZRegistrationEntryTypeName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

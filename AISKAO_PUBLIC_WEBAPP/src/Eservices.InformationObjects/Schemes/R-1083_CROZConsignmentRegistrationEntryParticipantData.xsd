@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1083" xmlns="http://ereg.egov.bg/segment/R-1083" xmlns:crozrepbd="http://ereg.egov.bg/segment/R-1081" xmlns:crozredfeed="http://ereg.egov.bg/segment/R-1063" xmlns:crozredfloeed="http://ereg.egov.bg/segment/R-1065" xmlns:crozredfeaed="http://ereg.egov.bg/segment/R-1067" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1081" schemaLocation="R-1081_CROZRegistrationEntryParticipantBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1063" schemaLocation="R-1063_CROZRegistrationEntryDatesForExecutionEntriesData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1065" schemaLocation="R-1065_CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1067" schemaLocation="R-1067_CROZRegistrationEntryDatesForErasureAgreeementEntriesData.xsd" />
+  <xsd:complexType name="CROZConsignmentRegistrationEntryParticipantData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за участник по първоначално вписване или допълнителните вписвания към него по партида на определено лице в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crozrepbd:CROZRegistrationEntryParticipantBasicData">
+        <xsd:sequence>
+          <xsd:element name="CROZRegistrationEntryDatesForExecutionEntriesData" type="crozredfeed:CROZRegistrationEntryDatesForExecutionEntriesData" minOccurs="0" />
+          <xsd:element name="CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData" type="crozredfloeed:CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData" minOccurs="0" />
+          <xsd:element name="CROZRegistrationEntryDatesForErasureAgreeementEntriesData" type="crozredfeaed:CROZRegistrationEntryDatesForErasureAgreeementEntriesData" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

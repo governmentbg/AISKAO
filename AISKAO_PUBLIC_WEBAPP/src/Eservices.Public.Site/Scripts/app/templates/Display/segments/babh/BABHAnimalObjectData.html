@@ -1,0 +1,22 @@
+﻿<div>
+    <!--ko compose: { model: animalObjectGeneralData, view: 'segments/babh/BABHAnimalObjectGeneralData', area: 'Display' } -->
+    <!-- /ko-->
+
+    <!-- ko with: animalObjectAnimalTypes -->
+    <div class="span12" data-bind="foreach: animalObjectAnimalType">
+        <fieldset>
+            <legend>
+                <span class="controls-row">
+                    <span class="span5">Данни за вид животни
+                    </span>
+                </span>
+            </legend>
+            <!-- ko compose: { model: $data, view: 'segments/babh/BABHAnimalObjectAnimalType', area: 'Display' } -->
+            <!-- /ko-->
+            <hr />
+        </fieldset>
+    </div>
+    <!-- /ko -->
+</div>
+
+

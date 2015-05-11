@@ -1,0 +1,22 @@
+﻿<div>
+    <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Editor', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span data-bind="attr: { 'class': regionalDirectionName.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'fullheight progressPadding' }">
+                        <span data-bind="attr: { 'class': regionalDirectionName.isLoading() === true ? 'uneditable-input bar fullwidth progressPadding' : 'uneditable-input span9 progressPadding' }, text: regionalDirectionName() !== undefined ? regionalDirectionName() : ' - '"></span>
+                    </span>
+                    
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>

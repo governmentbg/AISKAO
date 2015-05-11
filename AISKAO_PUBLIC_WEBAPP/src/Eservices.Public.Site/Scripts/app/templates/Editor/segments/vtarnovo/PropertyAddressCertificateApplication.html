@@ -1,0 +1,37 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>
+                <select class="span9"
+                    data-bind="options: serviceTermType.nomServiceTermTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: serviceTermType">
+                </select>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Editor', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Описание на поземлен имот:</span>
+            <textarea name="textarea" class="span9" data-bind="value: propertyDescription" />
+        </label>
+    </div>
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko-->
+</div>

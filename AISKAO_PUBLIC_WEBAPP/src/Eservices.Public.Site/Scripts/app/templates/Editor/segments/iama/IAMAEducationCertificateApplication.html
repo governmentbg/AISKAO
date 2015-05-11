@@ -1,0 +1,83 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>
+                <span data-bind="attr: { 'class': serviceTermType.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                    <select data-bind="options: serviceTermType.serviceTermTypes,
+                                    optionsText: 'name',
+                                    optionsValue: 'key',
+                                    value: serviceTermType,
+                                    attr: { 'class': serviceTermType.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                                    enable: serviceTermType.serviceTermTypes().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Указател за издаване или преиздаване на свидетелство за правоспособност</legend>
+        <div class="row">
+            <div class="control-group span12">
+                <label class="radio">
+                    <span>Издаване на свидетелство за правоспособност</span>
+                    <input type="radio" name="options" value="true" data-bind="checked: licenseIssueFlag"/>
+                </label>
+                <label class="radio">
+                    <span>Преиздаване на свидетелство за правоспособност</span>
+                    <input type="radio" name="options" value="false" data-bind="checked: licenseIssueFlag" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Информация за преминати курсове за специална и допълнителна подготовка на морски лица
+            <!-- ko with: takenNavalCourses -->
+            <button type="button" class="btn btn-default" data-bind="click: addTakenNavalCourse">Добави</button>
+            <!-- /ko-->
+        </legend>
+        <div class="row">
+            <div data-bind="with: takenNavalCourses">
+                <div class="span11" data-bind="foreach: takenNavalCourse()">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span8">Преминат курс
+                                        <button data-bind="click: $parent.removeTakenNavalCourse.bind($parent), attr: { 'class': $parent.takenNavalCourse().length > 1 ? 'btn btn-danger' : 'btn btn-danger disabled' }">Изтрий</button>
+                                </span>
+                            </span>
+                        </legend>
+                        <!--ko compose: { model: $data, view: 'segments/iama/TakenNavalCourse', area: 'Editor' } -->
+                        <!-- /ko-->
+                        <hr />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Номер на документ за самоличност</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Номер на документ за самоличност:</span>
+                <input type="text" class="span9" data-bind="value: personalIdentityDocumentNumber, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko-->
+</div>
+

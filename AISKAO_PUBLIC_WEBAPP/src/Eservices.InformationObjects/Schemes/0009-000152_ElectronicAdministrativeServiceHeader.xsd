@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000152"
+            xmlns="http://ereg.egov.bg/segment/0009-000152"
+            xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+            xmlns:dtu="http://ereg.egov.bg/segment/0009-000003"
+            xmlns:esa="http://ereg.egov.bg/segment/0009-000016"
+            xmlns:ssu="http://ereg.egov.bg/value/0008-000077"
+            xmlns:espbd="http://ereg.egov.bg/segment/0009-000002"
+            xmlns:esacd="http://ereg.egov.bg/segment/0009-000137"
+            xmlns:ssn="http://ereg.egov.bg/value/0008-000131"
+            xmlns:at="http://ereg.egov.bg/value/0008-000144"
+            xmlns:du="http://ereg.egov.bg/segment/0009-000001"
+            xmlns:aate="http://ereg.egov.bg/value/0008-000198"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000016" schemaLocation="0009-000016_ElectronicServiceApplicant.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000077" schemaLocation="0008-000077_SUNAUServiceURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000137" schemaLocation="0009-000137_ElectronicServiceApplicantContactData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000131" schemaLocation="0008-000131_SUNAUServiceName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000144" schemaLocation="0008-000144_ApplicationType.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000198" schemaLocation="0008-000198_SendApplicationWithReceiptAcknowledgedMessage.xsd"/>
+
+
+    <xsd:complexType name="ElectronicAdministrativeServiceHeader">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Водеща част на заявление за предоставяне на електронна административна услуга, когато се изисква идентификация на заявителя.</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="SUNAUServiceURI" type="ssu:SUNAUServiceURI" minOccurs="0"/>
+            <xsd:element name="DocumentTypeURI" type="dtu:DocumentTypeURI" minOccurs="0"/>
+            <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0"/>
+            <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0"/>
+            <xsd:element name="ElectronicServiceApplicant" type="esa:ElectronicServiceApplicant" minOccurs="0"/>
+            <xsd:element name="ElectronicServiceApplicantContactData" type="esacd:ElectronicServiceApplicantContactData" minOccurs="0"/>
+            <xsd:element name="ApplicationType" type="at:ApplicationType" minOccurs="0"/>
+            <xsd:element name="SUNAUServiceName" type="ssn:SUNAUServiceName" minOccurs="0"/>
+            <xsd:element name="DocumentURI" type="du:DocumentURI" minOccurs="0"/>
+            <xsd:element name="SendApplicationWithReceiptAcknowledgedMessage" type="aate:SendApplicationWithReceiptAcknowledgedMessage" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

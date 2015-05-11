@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000280"
+      xmlns="http://ereg.egov.bg/value/0008-000280"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+  <xsd:simpleType name="CadastralAreaNumber">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номер на кадастрален район</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="\d{0,4}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

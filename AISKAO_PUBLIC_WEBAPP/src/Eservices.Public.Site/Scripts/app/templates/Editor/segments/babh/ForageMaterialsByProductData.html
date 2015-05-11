@@ -1,0 +1,41 @@
+﻿<div>
+    <div class="row">
+        <span class="span12">
+            <span class="span3 text-left">Вид продукт при производство на фуражни суровини:</span>
+            <select class="span8"
+                data-bind="options: forageMaterialProduct.nomForageMaterialProducts,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: forageMaterialProduct">
+            </select>
+        </span>
+        <div class="span12" data-bind="with: forageMaterialNames">
+            <span class="span3 text-left">Наименование на фуражна суровина:</span>
+            <span class="input-append">
+                <input class="span2" type="text" data-bind="value: forageMaterialName.itemToAdd, valueUpdate: 'afterkeydown'" />
+                <button data-bind="click: addForageMaterialName, attr: { 'class': (forageMaterialName.itemToAdd() && ko.utils.arrayIndexOf(forageMaterialName(), forageMaterialName.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }" class="btn btn-success disabled">Добави</button>
+            </span>
+        </div>
+    </div>
+    <!-- ko with: forageMaterialNames -->
+    <!-- ko if: forageMaterialName().length > 0 -->
+    Списък с добавени фуражни суровини:
+        <!-- /ko -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span6" data-bind="foreach: forageMaterialName">
+                    <span class="span3 text-left">Наименование на фуражна суровина #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                        <button class="btn btn-danger" data-bind="click: $parent.removeForageMaterialName.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>
+
+
+

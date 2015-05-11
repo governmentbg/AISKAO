@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1063" xmlns="http://ereg.egov.bg/segment/R-1063" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stt="http://ereg.egov.bg/value/0008-000143" xmlns:edx="http://ereg.egov.bg/segment/0009-000092" xmlns:ad="http://ereg.egov.bg/segment/0009-000139" xmlns:sard="http://ereg.egov.bg/segment/0009-000141" xmlns:eash="http://ereg.egov.bg/segment/0009-000152" xmlns:easf="http://ereg.egov.bg/segment/0009-000153" xmlns:babhrdc="http://ereg.egov.bg/value/R-1002" xmlns:babhrdn="http://ereg.egov.bg/value/R-1004" xmlns:fop="http://ereg.egov.bg/value/R-1019" xmlns:foc="http://ereg.egov.bg/value/R-1021" xmlns:fora="http://ereg.egov.bg/segment/R-1023" xmlns:form="http://ereg.egov.bg/value/R-1025" xmlns:fodbp="http://ereg.egov.bg/value/R-1027" xmlns:cpd="http://ereg.egov.bg/segment/R-1037" xmlns:fgl="http://ereg.egov.bg/segment/R-1057" xmlns:fodgmo="http://ereg.egov.bg/value/R-1059" xmlns:fon="http://ereg.egov.bg/value/R-1061" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_BABHRegionalDirectionCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_BABHRegionalDirectionName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1019" schemaLocation="R-1019_FoodObjectPurpose.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1021" schemaLocation="R-1021_FoodObjectCategory.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1023" schemaLocation="R-1023_FoodObjectRealAddress.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1025" schemaLocation="R-1025_FoodObjectRequirementsMet.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1027" schemaLocation="R-1027_FoodObjectDeclarationBestPractices.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1037" schemaLocation="R-1037_ContactPersonData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1057" schemaLocation="R-1057_FoodGroupsList.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1059" schemaLocation="R-1059_FoodObjectDeclarationGMO.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1061" schemaLocation="R-1061_FoodObjectName.xsd" />
+  <xsd:element name="BABHFoodObjectRegistrationApplication" type="BABHFoodObjectRegistrationApplication" />
+  <xsd:complexType name="BABHFoodObjectRegistrationApplication">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за регистрация на обект за производство и търговия с храни</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" />
+      <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+      <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" />
+      <xsd:element name="BABHRegionalDirectionCode" type="babhrdc:BABHRegionalDirectionCode" minOccurs="1" />
+      <xsd:element name="BABHRegionalDirectionName" type="babhrdn:BABHRegionalDirectionName" minOccurs="1" />
+      <xsd:element name="FoodObjectPurpose" type="fop:FoodObjectPurpose" minOccurs="0" />
+      <xsd:element name="FoodObjectCategory" type="foc:FoodObjectCategory" minOccurs="0" />
+      <xsd:element name="FoodObjectRealAddress" type="fora:FoodObjectRealAddress" minOccurs="1" />
+      <xsd:element name="FoodObjectRequirementsMet" type="form:FoodObjectRequirementsMet" minOccurs="0" />
+      <xsd:element name="FoodObjectDeclarationBestPractices" type="fodbp:FoodObjectDeclarationBestPractices" minOccurs="0" />
+      <xsd:element name="ContactPersonData" type="cpd:ContactPersonData" minOccurs="0" />
+      <xsd:element name="FoodGroupsList" type="fgl:FoodGroupsList" minOccurs="0" />
+      <xsd:element name="FoodObjectDeclarationGMO" type="fodgmo:FoodObjectDeclarationGMO" minOccurs="0" />
+      <xsd:element name="FoodObjectName" type="fon:FoodObjectName" minOccurs="0" />
+      <xsd:element name="AttachedDocuments" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

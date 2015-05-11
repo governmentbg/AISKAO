@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimalPurposeData xmlns="http://ereg.egov.bg/segment/R-1298" versionDate="2013-10-25">
+	<AnimalPurposes>
+		<AnimalPurpose>
+			<AnimalPurposeCode>1</AnimalPurposeCode>
+			<AnimalPurposeName>За репродукция</AnimalPurposeName>
+		</AnimalPurpose>
+		<AnimalPurpose>
+			<AnimalPurposeCode>2</AnimalPurposeCode>
+			<AnimalPurposeName>За продукция</AnimalPurposeName>
+		</AnimalPurpose>
+		<AnimalPurpose>
+			<AnimalPurposeCode>3</AnimalPurposeCode>
+			<AnimalPurposeName>За спорт</AnimalPurposeName>
+		</AnimalPurpose>
+		<AnimalPurpose>
+			<AnimalPurposeCode>4</AnimalPurposeCode>
+			<AnimalPurposeName>За компаньон</AnimalPurposeName>
+		</AnimalPurpose>
+		<AnimalPurpose>
+			<AnimalPurposeCode>5</AnimalPurposeCode>
+			<AnimalPurposeName>За работа</AnimalPurposeName>
+		</AnimalPurpose>	
+	</AnimalPurposes>
+</AnimalPurposeData>

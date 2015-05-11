@@ -1,0 +1,98 @@
+﻿<div>
+    <!-- ko if: _settings.needsToInstallFlash -->
+        <span>Необходимо е да инсталирате Flash Player.</span>
+        <p>
+            <a href="http://www.adobe.com/go/getflashplayer">
+                <img alt="Get Adobe Flash player" src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif"></a>
+        </p>
+    <!-- /ko -->
+
+    <!-- ko ifnot: _settings.needsToInstallFlash -->    
+        <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span>Добави приложен документ</span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" data-bind="foreach: _settings.attachedDocumentTypes">
+            <li>
+                <a href="#" data-bind="click: $parent.addAttachedDocument.bind($parent), text: name"></a>
+            </li>
+        </ul>
+    </div>
+    
+        <!-- ko foreach:  attachedDocument -->     
+            <fieldset>
+                <legend>Неструктуриран документ</legend> 
+                    <div class="row">
+                        <div class="span10 files">
+                            <!-- ko if: attachedDocumentFileContent -->
+                            <span data-bind="downloadFile: attachedDocumentFileContent, downloadFileName: attachedDocumentFileName"></span>
+<!--                            <a class="btn btn-info" data-bind="attr: { href: attachedDocumentFileContent.downloadLink, download: attachedDocumentFileName }" title="Запази"><i class="icon-download-alt icon-white"></i></a>-->
+                            <!-- /ko -->
+                            <button class="btn btn-danger span1" data-bind="click: $parent.removeAttachedDocument.bind($parent)" title="Изтрий"><i class="icon-remove icon-white"></i></button>
+                            <input type="file" title="Избери" data-bind="file: attachedDocumentFileContent.file, fileBinaryData: attachedDocumentFileContent, fileName: attachedDocumentFileName, fileType: fileType" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <span class="span3 text-left">Име на избрания файл:</span>
+                            <input type="text" class="span8" data-bind="value: attachedDocumentFileName, valueUpdate: 'afterkeydown'" />
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <span class="span3 text-left">Тип на избрания файл:</span>
+                            <input type="text" class="span8" data-bind="value: fileType, valueUpdate: 'afterkeydown'" />
+                        </label>
+                    </div>
+                    <div class="row">
+                        <label>
+                            <span class="span3 text-left">Описание:</span>
+                            <textarea rows="3" class="span8" data-bind="value: attachedDocumentDescription"></textarea>
+                        </label>
+                    </div>
+                </fieldset>
+        <!-- /ko -->
+
+        <!-- ko foreach:  attachedXmlDocument -->
+            <fieldset>
+                <legend>Структуриран документ</legend>
+                   <div class="row">
+                        <div class="span10 files">
+                            <!-- ko if: electronicDocumentXmlContent -->
+                                <span data-bind="downloadFile: electronicDocumentXmlContent.fileBinaryData, downloadFileName: electronicDocumentXmlContent.fileName"></span>
+<!--                                <a class="btn btn-info" data-bind="attr: { href: electronicDocumentXmlContent.downloadLink, download: electronicDocumentXmlContent.fileName }" title="Запази"><i class="icon-download-alt icon-white"></i></a>-->
+                            <!-- /ko -->
+                            <button class="btn btn-danger span1" data-bind="click: $parent.removeAttachedXmlDocument.bind($parent)" title="Изтрий"><i class="icon-remove icon-white"></i></button>
+                            <input type="file" title="Избери" 
+                                data-bind="file: electronicDocumentXmlContent.file,
+                                        fileBinaryData: electronicDocumentXmlContent.fileBinaryData,
+                                        fileName: electronicDocumentXmlContent.fileName,
+                                        fileType: electronicDocumentXmlContent.fileType,
+                                        documentTypeName: documentTypeName,
+                                        documentTypeURIRegisterIndex: documentTypeURI().registerIndex,
+                                        documentTypeURIBatchNumber: documentTypeURI().batchNumber,
+                                        isXML: true,
+                                        xml: electronicDocumentXmlContent" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="span3 text-left">Ури на тип документ:</span>
+                        <!--ko with: documentTypeURI-->
+                            <div class="row">
+                                <input type="text" class="span3" data-bind="value: registerIndex" />
+                                <input type="text" class="span3" data-bind="value: batchNumber" />
+                            </div>
+                        <!-- /ko -->
+                    </div>
+                    <div class="row">
+                        <label>
+                            <span class="span3 text-left">Тип на документа:</span>
+                            <textarea class="span8" data-bind="value: documentTypeName, valueUpdate: 'afterkeydown'" ></textarea>
+                        </label>
+                    </div>
+
+                </fieldset>
+        <!-- /ko -->
+    <!-- /ko -->
+</div>

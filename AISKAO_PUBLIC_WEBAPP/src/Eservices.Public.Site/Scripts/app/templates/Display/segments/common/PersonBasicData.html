@@ -1,0 +1,19 @@
+﻿<div>
+    <!--ko compose: { model: names, view: 'segments/common/PersonNames', area: 'Display' }-->
+    <!--/ko-->
+
+    <div class="row">
+        <div class="span5">
+            <label class="row">
+                <span class="span3 text-left">Идентификатор:</span>
+                <span class="uneditable-input span2" data-bind="text: identifier.selectedIdentifierType().name"></span>
+            </label>
+        </div>
+        <!-- ko if: identifier.selectedIdentifierType().key === 'egn' -->
+        <span class="uneditable-input span7" title="Единен граждански номер" data-bind="text: identifier().egn"></span>
+        <!-- /ko -->
+        <!-- ko if: identifier.selectedIdentifierType().key === 'lnch' -->
+        <span class="uneditable-input span7" title="Личен номер на чужденец" data-bind="text: identifier().lnch"></span>
+        <!-- /ko -->
+    </div>
+</div>

@@ -1,0 +1,100 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Имена на лице, извършващо дейността в обект
+        </legend>
+        <div class="row">
+            <!-- ko with: plantObjectExecutingNamess -->
+            <div class="span12" data-bind="foreach: plantObjectExecutingNames">
+                <fieldset>
+                    <legend>
+                        <span class="controls-row">
+                            <span class="span5">Имена на лице
+                            </span>
+                        </span>
+                    </legend>
+                    <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Display' } -->
+                    <!-- /ko -->
+                    <hr />
+                </fieldset>
+            </div>
+            <!-- /ko -->
+        </div>
+    </fieldset>
+
+    <div class="row">
+        <span class="span3">ЕГН/ЛНЧ на представител на фирма:</span>
+        <span class="span9 uneditable-input" data-bind="text: entityRepresentativeID"></span>
+    </div>
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристики на обект за растителна защита</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид обект:</span>
+                <span class="span9 uneditable-input" data-bind="text: plantObjectType.displayValue().name"></span>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид дейност на обект:</span>
+                <span class="span9 uneditable-input" data-bind="text: plantObjectActivityNomenlatyre.displayValue().name"></span>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Адрес на обект за растителна защита</legend>
+        <!-- ko compose: { model: plantObjectRealAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <span class="span3">Срок на валидност на разрешение (години):</span>
+        <span class="span9 uneditable-input" data-bind="text: plantObjectRegistrationValidity"></span>
+    </div>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+</div>
+

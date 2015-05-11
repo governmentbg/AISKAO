@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1184" xmlns="http://ereg.egov.bg/nomenclature/R-1184" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageMaterialByProductionTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове фуражни суровини съгласно Каталога на фуражните суровини, изготвен в съответствие с чл. 24 на Регламент (ЕО) № 767/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове фуражни суровини съгласно Каталога на фуражните суровини, изготвен в съответствие с чл. 24 на Регламент (ЕО) № 767/2009 - Фуражни суровини от местно производство-->
+      <xsd:enumeration value="R-1181" />
+      <!--Видове фуражни суровини съгласно Каталога на фуражните суровини, изготвен в съответствие с чл. 24 на Регламент (ЕО) № 767/2009 - Фуражни суровини от внос-->
+      <xsd:enumeration value="R-1182" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

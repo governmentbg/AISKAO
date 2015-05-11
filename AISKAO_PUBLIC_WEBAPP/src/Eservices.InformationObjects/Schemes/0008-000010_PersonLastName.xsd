@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000010"
+      xmlns="http://ereg.egov.bg/value/0008-000010"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="PersonLastName">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Фамилно име</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+            <xsd:pattern value="[А-Яа-я]+([' -][А-Яа-я]+)*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

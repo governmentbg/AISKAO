@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1329" xmlns="http://ereg.egov.bg/segment/R-1329" xmlns:fft="http://ereg.egov.bg/value/R-1301" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1301" schemaLocation="R-1301_ForageFormType.xsd" />
+  <xsd:complexType name="ForageForTransportationByFormSupplement">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за фуражи за транспортиране по форма - фуражни добавки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageFormTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageFormType" type="fft:ForageFormType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

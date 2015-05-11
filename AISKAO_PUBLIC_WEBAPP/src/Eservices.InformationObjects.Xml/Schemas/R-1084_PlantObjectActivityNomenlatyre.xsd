@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1084" xmlns="http://ereg.egov.bg/nomenclature/R-1084" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="PlantObjectActivityNomenlatyre">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за вид на дейност на обект за растителна защита</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Вид на дейност на обект за растителна защита - търговия с продукти за растителна защита-->
+      <xsd:enumeration value="R-1080" />
+      <!--Вид на дейност на обект за растителна защита - преопаковане на продукти за растителна защита-->
+      <xsd:enumeration value="R-1081" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

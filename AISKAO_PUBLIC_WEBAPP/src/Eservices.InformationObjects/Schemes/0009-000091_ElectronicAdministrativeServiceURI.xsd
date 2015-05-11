@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000091"
+      xmlns="http://ereg.egov.bg/segment/0009-000091"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:rou="http://ereg.egov.bg/segment/0009-000022"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000022"  schemaLocation="0009-000022_RegisterObjectURI.xsd"/>
+
+    <xsd:complexType name="ElectronicAdministrativeServiceURI">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">УРИ на електронна административна услуга в Регистъра на електронните услуги</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexContent>
+            <xsd:extension base="rou:RegisterObjectURI" />
+        </xsd:complexContent>
+    </xsd:complexType>
+</xsd:schema>

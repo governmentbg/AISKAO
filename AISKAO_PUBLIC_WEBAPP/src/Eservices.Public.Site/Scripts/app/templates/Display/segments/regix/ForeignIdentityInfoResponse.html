@@ -1,0 +1,50 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Информация на резултат</legend>
+        <!--ko compose: { model: returnInformations, view: 'segments/regix/ReturnInformation', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend></legend>
+        <div class="row">
+            <span class="span3">ЕГН:</span>
+            <span class="span9 uneditable-input" data-bind="text: egn"></span>
+        </div>
+        <div class="row">
+            <span class="span3">ЛНЧ:</span>
+            <span class="span9 uneditable-input" data-bind="text: lnch"></span>
+        </div>
+        <!--ko compose: { model: personNames, view: 'segments/regix/PersonNamesMVR', area: 'Display' } -->
+        <!-- /ko-->
+        <div class="row">
+            <span class="span3">Дата на раждане:</span>
+            <span class="span9 uneditable-input" data-bind="formattedDate: birthDate"></span>
+        </div>
+    </fieldset>
+
+    <div class="row">
+        <!-- ko with: nationalityList -->
+        <div class="span12" data-bind="foreach: nationality">
+            <!-- ko compose: { model: $data, view: 'segments/regix/Nationality', area: 'Display' } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+
+    <div class="row">
+        <!-- ko with: statuses -->
+        <div class="span12" data-bind="foreach: status">
+            <!-- ko compose: { model: $data, view: 'segments/regix/Status', area: 'Display' } -->
+            <!-- /ko -->
+        </div>
+        <!-- /ko -->
+    </div>
+    <!--ko compose: { model: picture, view: 'segments/regix/Picture', area: 'Display' } -->
+    <!-- /ko-->
+
+    <!--ko compose: { model: identitySignature, view: 'segments/regix/IdentitySignature', area: 'Display' } -->
+    <!-- /ko-->
+</div>

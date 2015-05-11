@@ -1,0 +1,63 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko with: serviceTermType.displayValue -->
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>
+                <span class="span9 uneditable-input" data-bind="text: name"></span>
+            </label>
+        </div>
+    </fieldset>
+    <!-- /ko -->
+
+    <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Display', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Качество на получател</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Качество на получателя на услугата по отношение на животновъдния обект:</span>
+                    <span class="span9 uneditable-input" data-bind="text: farmObjectRecipientActing"></span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристика на обект с епизоотично значение</legend>
+        <!-- ko compose: { model: animalObjectData, view: 'segments/babh/BABHAnimalObjectData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за местонахождение на животновъден обект</legend>
+        <!-- ko compose: { model: animalHoldingAddressData, view: 'segments/babh/AnimalHoldingAddressData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <label class="row">
+            <span class="span3 text-left">Дирекция:</span>
+            <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+        </label>
+    </fieldset>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceFooter, view: 'segments/common/ElectronicAdministrativeServiceFooter', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Display' } -->
+    <!-- /ko -->
+</div>
+

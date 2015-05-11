@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg) -->
+<xsd:schema xmlns="http://ereg.egov.bg/segment/R-1057" xmlns:fgc="http://ereg.egov.bg/value/R-1039" xmlns:fgn="http://ereg.egov.bg/value/R-1041" xmlns:fgsn="http://ereg.egov.bg/value/R-1043" xmlns:fsgc="http://ereg.egov.bg/value/R-1045" xmlns:fsgn="http://ereg.egov.bg/value/R-1047" xmlns:fin="http://ereg.egov.bg/value/R-1049" xmlns:fid="http://ereg.egov.bg/value/R-1051" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ereg.egov.bg/segment/R-1057" elementFormDefault="qualified">
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1039" schemaLocation="R-1039_FoodGroupCode.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1041" schemaLocation="R-1041_FoodGroupName.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1043" schemaLocation="R-1043_FoodGroupShortName.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1045" schemaLocation="R-1045_FoodSubGroupCode.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1047" schemaLocation="R-1047_FoodSubGroupName.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1049" schemaLocation="R-1049_FoodItemName.xsd"/>
+	<xsd:import namespace="http://ereg.egov.bg/value/R-1051" schemaLocation="R-1051_FoodItemDescription.xsd"/>
+	<xsd:element name="FoodGroupsList" type="FoodGroupsList"/>
+	<xsd:complexType name="FoodGroupsList">
+		<xsd:annotation>
+			<xsd:documentation xml:lang="bg">Списък на групите храни в обекта</xsd:documentation>
+		</xsd:annotation>
+		<xsd:sequence>
+			<xsd:element name="FoodGroups" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="FoodGroup" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="Code" type="fgc:FoodGroupCode"/>
+									<xsd:element name="ShortName" type="fgsn:FoodGroupShortName"/>
+									<xsd:element name="Name" type="fgn:FoodGroupName"/>
+									<xsd:element name="FoodSubGroups" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="FoodSubGroup" minOccurs="0" maxOccurs="unbounded">
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element name="FoodSubGroupCode" type="fsgc:FoodSubGroupCode" minOccurs="0"/>
+															<xsd:element name="FoodSubGroupName" type="fsgn:FoodSubGroupName" minOccurs="0"/>
+															<xsd:element name="FoodItems" minOccurs="0">
+																<xsd:complexType>
+																	<xsd:sequence>
+																		<xsd:element name="FoodItem" minOccurs="0" maxOccurs="unbounded">
+																			<xsd:complexType>
+																				<xsd:sequence>
+																					<xsd:element name="FoodItemName" type="fin:FoodItemName"/>
+																					<xsd:element name="FoodItemDescription" type="fid:FoodItemDescription" minOccurs="0"/>
+																				</xsd:sequence>
+																			</xsd:complexType>
+																		</xsd:element>
+																	</xsd:sequence>
+																</xsd:complexType>
+															</xsd:element>
+														</xsd:sequence>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+									<xsd:element name="FoodItems" minOccurs="0">
+										<xsd:complexType>
+											<xsd:sequence>
+												<xsd:element name="FoodItem" maxOccurs="unbounded">
+													<xsd:complexType>
+														<xsd:sequence>
+															<xsd:element name="FoodItemName" type="fin:FoodItemName"/>
+															<xsd:element name="FoodItemDescription" type="fid:FoodItemDescription" minOccurs="0"/>
+														</xsd:sequence>
+													</xsd:complexType>
+												</xsd:element>
+											</xsd:sequence>
+										</xsd:complexType>
+									</xsd:element>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="FoodItems" minOccurs="0">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="FoodItem" maxOccurs="unbounded">
+							<xsd:complexType>
+								<xsd:sequence>
+									<xsd:element name="FoodItemName" type="fin:FoodItemName"/>
+									<xsd:element name="FoodItemDescription" type="fid:FoodItemDescription" minOccurs="0"/>
+								</xsd:sequence>
+							</xsd:complexType>
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

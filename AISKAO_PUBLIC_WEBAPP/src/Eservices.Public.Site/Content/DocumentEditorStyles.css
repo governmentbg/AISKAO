@@ -1,0 +1,302 @@
+﻿/*#region bootstrap*/
+.uneditable-input {
+    height: 100% !important;
+    min-height: 20px !important;
+    white-space: normal !important;
+    cursor: text !important;
+    /*border-color: #C4C4C4 !important;
+    color: #C4C4C4  !important;*/
+}
+/*#endregion*/
+
+/*#region koErrors*/
+.control-label.koError,
+.help-block.koError,
+.help-inline.kokoError {
+    color: #b94a48 !important;
+}
+
+.uneditable-input.koError,
+.checkbox.koError,
+.radio .koError,
+input[type="text"].koError,
+select.koError,
+textarea.koError {
+    color: #b94a48 !important;
+}
+
+    select.koError option {
+        color: rgb(85, 85, 85) !important;
+    }
+select.koError:focus,
+input[type="file"].koError:focus,
+input[type="radio"].koError:focus,
+input[type="checkbox"].koError:focus {
+    outline: none !important;
+}
+
+.uneditable-input.koError,
+input[type="text"].koError,
+select.koError,
+textarea.koError {
+    border-color: #b94a48 !important;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075) !important;
+}
+
+    input[type="text"].koError:focus,
+    select.koError:focus,
+    textarea.koError:focus {
+        border-color: #953b39 !important;
+        -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important;
+        -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #d59392 !important;
+    }
+
+.input-prepend.koError .add-on,
+.input-append.koError .add-on {
+    color: #b94a48 !important;
+    background-color: #f2dede !important;
+    border-color: #b94a48 !important;
+}
+/*#endregion*/
+
+/*#region customClasses*/
+.files {
+    position: relative;
+}
+
+.fullwidth {
+    width: 100% !important;
+}
+
+.fullheight {
+    margin: 0px !important;
+    height: 100% !important;
+}
+
+.progressPadding {
+    margin: 0px !important;
+    text-align: left !important;
+}
+
+    .progressPadding select {
+        margin-bottom: 0px !important;
+        padding-bottom: 10px !important;
+    }
+
+.applicantChoise {
+    border-bottom: dotted 1px gray;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+/*#endregion*/
+
+/*#region forLoading*/
+#circularG {
+    position: relative;
+    width: 30px;
+    height: 30px;
+}
+
+.circularG {
+    position: absolute;
+    background-color: #0480be;
+    width: 7px;
+    height: 7px;
+    -moz-border-radius: 5px;
+    -moz-animation-name: bounce_circularG;
+    -moz-animation-duration: 1.04s;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: linear;
+    -webkit-border-radius: 5px;
+    -webkit-animation-name: bounce_circularG;
+    -webkit-animation-duration: 1.04s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: linear;
+    -o-border-radius: 5px;
+    -o-animation-name: bounce_circularG;
+    -o-animation-duration: 1.04s;
+    -o-animation-iteration-count: infinite;
+    -o-animation-direction: linear;
+    -ms-border-radius: 5px;
+    -ms-animation-name: bounce_circularG;
+    -ms-animation-duration: 1.04s;
+    -ms-animation-iteration-count: infinite;
+    -ms-animation-direction: linear;
+    border-radius: 5px;
+    animation-name: bounce_circularG;
+    animation-duration: 1.04s;
+    animation-iteration-count: infinite;
+    animation-direction: linear;
+}
+
+#circularG_1 {
+    left: 0;
+    top: 12px;
+    -moz-animation-delay: 0.39s;
+    -webkit-animation-delay: 0.39s;
+    -o-animation-delay: 0.39s;
+    -ms-animation-delay: 0.39s;
+    animation-delay: 0.39s;
+}
+
+#circularG_2 {
+    left: 3px;
+    top: 3px;
+    -moz-animation-delay: 0.52s;
+    -webkit-animation-delay: 0.52s;
+    -o-animation-delay: 0.52s;
+    -ms-animation-delay: 0.52s;
+    animation-delay: 0.52s;
+}
+
+#circularG_3 {
+    top: 0;
+    left: 12px;
+    -moz-animation-delay: 0.65s;
+    -webkit-animation-delay: 0.65s;
+    -o-animation-delay: 0.65s;
+    -ms-animation-delay: 0.65s;
+    animation-delay: 0.65s;
+}
+
+#circularG_4 {
+    right: 3px;
+    top: 3px;
+    -moz-animation-delay: 0.78s;
+    -webkit-animation-delay: 0.78s;
+    -o-animation-delay: 0.78s;
+    -ms-animation-delay: 0.78s;
+    animation-delay: 0.78s;
+}
+
+#circularG_5 {
+    right: 0;
+    top: 12px;
+    -moz-animation-delay: 0.91s;
+    -webkit-animation-delay: 0.91s;
+    -o-animation-delay: 0.91s;
+    -ms-animation-delay: 0.91s;
+    animation-delay: 0.91s;
+}
+
+#circularG_6 {
+    right: 3px;
+    bottom: 3px;
+    -moz-animation-delay: 1.04s;
+    -webkit-animation-delay: 1.04s;
+    -o-animation-delay: 1.04s;
+    -ms-animation-delay: 1.04s;
+    animation-delay: 1.04s;
+}
+
+#circularG_7 {
+    left: 12px;
+    bottom: 0;
+    -moz-animation-delay: 1.17s;
+    -webkit-animation-delay: 1.17s;
+    -o-animation-delay: 1.17s;
+    -ms-animation-delay: 1.17s;
+    animation-delay: 1.17s;
+}
+
+#circularG_8 {
+    left: 3px;
+    bottom: 3px;
+    -moz-animation-delay: 1.3s;
+    -webkit-animation-delay: 1.3s;
+    -o-animation-delay: 1.3s;
+    -ms-animation-delay: 1.3s;
+    animation-delay: 1.3s;
+}
+
+@-moz-keyframes bounce_circularG {
+    0% {
+        -moz-transform: scale(1);
+    }
+
+    100% {
+        -moz-transform: scale(.3);
+    }
+}
+
+@-webkit-keyframes bounce_circularG {
+    0% {
+        -webkit-transform: scale(1);
+    }
+
+    100% {
+        -webkit-transform: scale(.3);
+    }
+}
+
+@-o-keyframes bounce_circularG {
+    0% {
+        -o-transform: scale(1);
+    }
+
+    100% {
+        -o-transform: scale(.3);
+    }
+}
+
+@-ms-keyframes bounce_circularG {
+    0% {
+        -ms-transform: scale(1);
+    }
+
+    100% {
+        -ms-transform: scale(.3);
+    }
+}
+
+@keyframes bounce_circularG {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(.3);
+    }
+}
+/*#endregion*/
+
+/*#region print*/
+
+@media print {
+    .loginInfoRow,
+    .headerContent,
+    .footerContent,
+    .nav,
+    #breadcrumbs-two,
+    .btn,
+    .btn-small {
+        display: none !important;
+    }
+
+    #printPageTitle {
+        display: none !important;
+    }
+
+    .applicationHost {
+        display: block !important;
+        margin-bottom: 20px !important;
+    }
+}
+/*#endregion*/
+
+
+/*#region test*/
+/*.groups{
+    background-color: lightblue;
+}
+.subgroups{
+    background-color: lightcoral;
+}
+.items{
+    background-color:green;
+}*/
+
+/*#endregion*/

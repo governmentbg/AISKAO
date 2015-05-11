@@ -1,0 +1,68 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Наименование на административен орган:</span>
+            <input class="span9" type="text" data-bind="value: administrativeBodyName" />
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Заглавна част на отказ за издаване на индивидуален административен акт:</span>
+            <input class="span9" type="text" data-bind="value: individualAdministrativeActRefusalHeader" />
+        </label>
+    </div>
+    <fieldset>
+        <legend>Данни за преписка</legend>
+        <!-- ko with: aisCaseURI -->
+        <!-- ko with: documentInInternalRegisterURI()-->
+        <div class="row">
+            <span class="span3">УРИ на регистриран документ във вътрешен документен регистър</span>
+            <span class="span9 uneditable-input" data-bind="text: $data"></span>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko with: documentURI()-->
+        <!-- ko compose: { view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </fieldset>
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+    <fieldset>
+        <legend>Нормативни изисквания</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Правно основание:</span>
+                <input class="span9" type="text" data-bind="value: individualAdministrativeActRefusalLegalGround" />
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Мотиви:</span>
+                <input class="span9" type="text" data-bind="value: individualAdministrativeActRefusalFactualGround" />
+            </label>
+        </div>
+        <div class="row">
+            <span class="span3 text-left">Срок за обжалване (брой дни):</span>
+            <div class="controls-row">
+                <input class="span3" type="text" data-bind="value: individualAdministrativeActRefusalAppealTerm" />
+                <span class="span1 text-right">пред</span>
+                <input class="span5" type="text" data-bind="value: individualAdministrativeActRefusalAppealAuthority" />
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Editor' } -->
+    <!-- /ko -->
+</div>

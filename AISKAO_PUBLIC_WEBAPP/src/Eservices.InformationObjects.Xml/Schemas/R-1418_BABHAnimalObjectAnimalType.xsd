@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1418" xmlns="http://ereg.egov.bg/segment/R-1418" xmlns:atc="http://ereg.egov.bg/value/R-1376" xmlns:atn="http://ereg.egov.bg/value/R-1378" xmlns:oatn="http://ereg.egov.bg/value/R-1439" xmlns:atai="http://ereg.egov.bg/value/R-1380" xmlns:aoap="http://ereg.egov.bg/segment/R-1390" xmlns:oap="http://ereg.egov.bg/value/R-1392" xmlns:artc="http://ereg.egov.bg/value/R-1398" xmlns:artn="http://ereg.egov.bg/value/R-1400" xmlns:oart="http://ereg.egov.bg/value/R-1402" xmlns:fcbat="http://ereg.egov.bg/value/R-1408" xmlns:fac="http://ereg.egov.bg/value/R-1410" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1376" schemaLocation="R-1376_AnimalTypeCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1378" schemaLocation="R-1378_AnimalTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1439" schemaLocation="R-1439_OtherAnimalTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1380" schemaLocation="R-1380_AnimalTypeAdditionalInfo.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1390" schemaLocation="R-1390_AnimalObjectAnimalPurpose.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1392" schemaLocation="R-1392_OtherAnimalPurpose.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1398" schemaLocation="R-1398_AnimalRisingTechnologyCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1400" schemaLocation="R-1400_AnimalRisingTechnologyName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1402" schemaLocation="R-1402_OtherAnimalRisingTechnology.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1408" schemaLocation="R-1408_FarmCapacityByAnimalType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1410" schemaLocation="R-1410_FarmAnimalsCount.xsd" />
+  <xsd:complexType name="BABHAnimalObjectAnimalType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за животни в животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalTypeCode" type="atc:AnimalTypeCode" minOccurs="0" />
+      <xsd:element name="AnimalTypeName" type="atn:AnimalTypeName" minOccurs="0" />
+      <xsd:element name="OtherAnimalTypeName" type="oatn:OtherAnimalTypeName" minOccurs="0" />
+      <xsd:element name="AnimalTypeAdditionalInfo" type="atai:AnimalTypeAdditionalInfo" minOccurs="0" />
+      <xsd:element name="AnimalObjectAnimalPurposes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="AnimalObjectAnimalPurpose" type="aoap:AnimalObjectAnimalPurpose" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="OtherAnimalPurpose" type="oap:OtherAnimalPurpose" minOccurs="0" />
+      <xsd:element name="AnimalRisingTechnologyCode" type="artc:AnimalRisingTechnologyCode" minOccurs="0" />
+      <xsd:element name="AnimalRisingTechnologyName" type="artn:AnimalRisingTechnologyName" minOccurs="0" />
+      <xsd:element name="OtherAnimalRisingTechnology" type="oart:OtherAnimalRisingTechnology" minOccurs="0" />
+      <xsd:element name="FarmCapacityByAnimalType" type="fcbat:FarmCapacityByAnimalType" minOccurs="0" />
+      <xsd:element name="FarmAnimalsCount" type="fac:FarmAnimalsCount" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

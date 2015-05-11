@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1257" xmlns="http://ereg.egov.bg/nomenclature/R-1257" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="OtherProductTypesNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за други продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Други продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - рибно масло-->
+      <xsd:enumeration value="R-1253" />
+      <!--Други продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - мляко и/или млечни продукти и производни продукти (суроватка, цвик)-->
+      <xsd:enumeration value="R-1254" />
+      <!--Други продукти като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - топени мазнини-->
+      <xsd:enumeration value="R-1255" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

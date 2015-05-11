@@ -1,0 +1,136 @@
+﻿<div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Област:</span>
+                <span data-bind="attr: { 'class': districtCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <!-- <select class="span3"
+                        data-bind="options: districtCode.nomDistricts,
+                        optionsText: 'name',
+                        value: districtCode.selectedDistrict,
+                        attr: { 'class':  districtCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                        enable: districtCode.isLoaded()">
+                    </select>-->
+                    <select class="span3"
+                        data-bind="options: districtCode.nomDistricts,
+                        optionsText: 'name',
+                        optionsValue: 'code',
+                        optionsCaption: '--Изберете Област--',
+                        value: districtCode,
+                        css: { 'span3 bar fullwidth': districtCode.isLoading() === true, 'span3': districtCode.isLoading() === false },
+                        enable: districtCode.isLoaded()">
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Община:</span>
+                <span data-bind="attr: { 'class':  municipalityCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select data-bind="options: municipalityCode.nomMunicipalities,
+                                optionsText: 'name',
+                                optionsValue: 'code',
+                                optionsCaption: '--Изберете Община--',
+                                value: municipalityCode,
+                                css: { 'span3 bar fullwidth': municipalityCode.isLoading() === true, 'span3': municipalityCode.isLoading() === false },
+                                enable: municipalityCode.nomMunicipalities().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Населено място:</span>
+                <span data-bind="attr: { 'class': settlementCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select data-bind="options: settlementCode.nomSettlements,
+                                optionsText: 'name',
+                                optionsValue: 'code',
+                                optionsCaption: '--Изберете Населено място--',
+                                value: settlementCode,
+                                css: { 'span3 bar fullwidth': settlementCode.isLoading() === true, 'span3': settlementCode.isLoading() === false },
+                                enable: settlementCode.nomSettlements().length != 0 ">
+                    </select>
+                </span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенски код:</span>
+                <input class="span3" type="text" data-bind="value: postCode, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Адрес:</span>
+                <input class="span3" type="text" data-bind="value: addressDescription" />
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Пощенска кутия:</span>
+                <input class="span3" type="text" data-bind="value: postOfficeBox" />
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="span6" data-bind="with: phoneNumbers">
+            <label class="row">
+                <span class="span3 text-left">Нов телефонен номер:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: phoneNumber.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addPhoneNumber, attr: { 'class': (phoneNumber.itemToAdd() && ko.utils.arrayIndexOf(phoneNumber(), phoneNumber.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }">Добави</button>
+                </span>
+            </label>
+        </div>
+        <div class="span6" data-bind="with: faxNumbers">
+            <label class="row">
+                <span class="span3 text-left">Нов факс номер:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: faxNumber.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addFaxNumber, attr: { 'class': (faxNumber.itemToAdd() && ko.utils.arrayIndexOf(faxNumber(), faxNumber.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }">Добави</button>
+                </span>
+            </label>
+        </div>
+    </div>
+    <div class="row">
+        <!-- ko with: phoneNumbers -->
+        <div class="span6">
+            <!-- ko if: phoneNumber().length > 0  -->
+            Списък с добавени телефонни номера:
+        <!-- /ko -->
+            <div class="span6" data-bind="foreach: phoneNumber">
+                <div class="row">
+                    <span class="span3 text-left">Tелефонен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                        <button class="btn btn-danger" data-bind="click: $parent.removePhoneNumber.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- /ko -->
+        <!-- ko with: faxNumbers -->
+        <div class="span6">
+            <!-- ko if: faxNumber().length > 0  -->
+            Списък с добавени факс номера:
+        <!-- /ko -->
+            <div class="span6" data-bind="foreach: faxNumber">
+                <div class="row">
+                    <span class="span3 text-left">Факс номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                        <button class="btn btn-danger" data-bind="click: $parent.removeFaxNumber.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- /ko -->
+    </div>
+</div>

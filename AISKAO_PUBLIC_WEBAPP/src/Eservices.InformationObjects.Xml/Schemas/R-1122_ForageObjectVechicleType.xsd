@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1122" xmlns="http://ereg.egov.bg/value/R-1122" xmlns:fovtn="http://ereg.egov.bg/nomenclature/R-1120" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1120" schemaLocation="R-1120_ForageObjectVehicleTypeNomenclature.xsd" />
+  <xsd:simpleType name="ForageObjectVechicleType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид транспортни средства за осъществяване на дейност</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fovtn:ForageObjectVehicleTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

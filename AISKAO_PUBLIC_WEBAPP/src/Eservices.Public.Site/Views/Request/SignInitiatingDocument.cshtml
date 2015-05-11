@@ -1,0 +1,172 @@
+﻿@using (Html.BeginForm("ManageInitiatingDocument", "Request", FormMethod.Post))
+{
+    @Html.AntiForgeryToken();
+    @Html.Hidden("DocumentTypeName")
+    
+    <div class="btn-toolbar">
+        <div class="btn-group">
+            @*<button id="back" name="back" type="submit" class="btn">
+                <i class="icon-arrow-left" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Обратно към документ"></i>
+            </button>*@
+            @*  <a  href='@Url.Action("ShowDocumentContent", "Request")' class = "btn" >
+                <i class="icon-arrow-left" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Обратно към документ"></i>
+            </a>*@
+            <a href="#showUnsignedContent" role="button" id="previewUnsignedContent" class="btn openModal" data-toggle="modal">
+                <i class="icon-info-sign" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Преглед на XML съдържание"></i>
+                Преглед на XML съдържание
+            </a>
+            <a href="#showSignedContent" role="button" id="previewSignedContent" class="btn" style="display: none" data-toggle="modal">
+                <i class="icon-edit" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Преглед на подписно XML съдържание"></i>
+                Преглед на подписно XML съдържание
+            </a>
+            <a href="#" id="validateSignature" class="btn" style="display: none">
+                <i class="icon-check" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Валидиране на подписа"></i>
+                Валидиране на подписа
+            </a>
+        </div>
+
+    </div>
+    
+    <div class="container offset3">
+        <input id="READ_ID" type="hidden" name="xmlContent" value="@TempData["XmlDocumentContent"]" />
+        <input id="content" type="hidden" name="content" />
+
+        <div id="app" class="controls-row">
+            <applet code="main.GoApplet.class" codebase="."
+                    archive="@Url.Content("~/scripts/libs/XMLSigning/xml.singer.v2.jar"), @Url.Content("~/scripts/libs/XMLSigning/lib/xmlsec-2.0.jar")"
+                    width="400" height="200">
+                <param name="htmlElementTextToReadId" value="READ_ID">
+                <param name="htmlElementTextToWriteId" value="content">
+                <param name="jsFunctionSuccessFail" value="finishMe">
+                <param name="jsFunctionLockUnlockPage" value="blockMe">
+                <param name="moveXpath" value="@TempData["MoveXpath"]">
+                @*<PARAM name="moveXpath" value =".">*@
+                <param name="moveNS" value="@TempData["MoveNS"]">
+                <param name="timestampURL" value="http://tsa.swisssign.net">
+                <param name="signatureType" value="hades">
+                [applet tag]No java, no applets, no xml signing!
+            </applet>
+        </div>
+
+        @* ModalContent *@
+
+        <div id="showUnsignedContent" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <h3>Неподписано съдържание</h3>
+            </div>
+            <div class="modal-body">
+                <textarea disabled id="initialContent" name="initialContent" style="width:700px;">@TempData["XmlDocumentContent"]</textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn closeModal" data-dismiss="modal" aria-hidden="true">Затвори</button>
+            </div>
+        </div>
+
+        <div id="showSignedContent" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-header">
+                <h3>Подписано съдържание</h3>
+            </div>
+            <div class="modal-body">
+                <textarea disabled id="signedContent"></textarea>
+            </div>
+            <div class="modal-footer">
+                <button class="btn closeModal" data-dismiss="modal" aria-hidden="true">Затвори</button>
+            </div>
+        </div>
+
+
+        <div id="waitingModal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-body">
+                Моля изчакайте, докато подписът се валидира...
+                <div class="progress progress-striped active 
+                page-progress-bar">
+                    <div class="bar" style="width: 100%;"></div>
+                </div>
+            </div>
+        </div>
+        <p>
+            <div class="row start" style="display: none">
+                <button id="sendNewDocument" name="sendNewDocument" type="submit" class="btn btn-inverse span4">
+                    <i class="icon-ok icon-white" data-toggle="tooltip" data-placement="top" rel="tooltip" title="Подаване на заявлението"></i>
+                    Преглед
+                </button>
+            </div>
+        </p>
+    </div>   
+
+}
+
+@section scripts{
+    <script type="text/javascript">
+        function blockMe(s) {
+        }
+        function finishMe(s) {
+            if (s) {
+                $(".modal").attr('style', 'width: 900px;');
+                $("#signedContent").attr('style', 'width: 800px; height: 380px');
+                $("#app").attr('style', 'display: none;');
+
+                $("#previewSignedContent").attr('style', 'display: inline-block;');
+                //$("#sendNewDocument").attr('style', 'display: inline-block; width: 318px;');
+
+                $(".start").attr('style', 'display: inline-block; width: 318px;');
+
+                @*if ('@TempData["Caller"].ToString()' == "Start") {
+                    $(".start").attr('style', 'display: inline-block; width: 318px;');
+                }
+                if ('@TempData["Caller"].ToString()' == "Add"){  
+                    $(".add").attr('style', 'display: inline-block; width: 318px;');  
+                }*@
+
+                $("#validateSignature").attr('style', 'display: inline-block;');
+                $("#captcha").attr('style', 'display: block;');
+
+                $("#signedContent").text($("#content").val());
+            }
+        }
+
+        $(document).ready(function () {
+
+            $('a, button').tooltip({
+                selector: "i[data-toggle=tooltip]"
+            });
+
+            $('.openModal').click(function () {
+                $(".modal").attr('style', 'width: 900px;');
+                $("#initialContent").attr('style', 'width: 800px; height: 380px;');
+                $("#app").attr('style', 'display: none;');
+            })
+            $('.closeModal').click(function () {
+                if ($("#content").val() == null || $("#content").val().length == 0) {
+                    $("#app").attr('style', 'display: block;');
+                }
+            })
+
+            $('#validateSignature').click(function () {
+                var xmlValue = $("#content").val();
+                var base64Content = window.btoa(unescape(encodeURIComponent(xmlValue)));
+                $('#waitingModal').modal();
+                $("#waitingModal").modal('show');
+
+                $.ajax({
+                    type: 'POST',
+                    dataType: 'text',
+                    process: false,
+                    //contentType: 'text/xml',
+                    url: '@Url.Action("ValidateSignature", "Request")',
+                    data: { content: xmlValue },
+                    success: function (data) {
+
+                        $("#waitingModal").modal('hide');
+
+                        var res = JSON.parse(data);
+                        alert(res.message);
+                    },
+                    error: function () {
+
+                    }
+                })
+            })
+        })
+    </script>
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000199"
+      xmlns="http://ereg.egov.bg/segment/0009-000199"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:span="http://ereg.egov.bg/value/0008-000284"
+      xmlns:spaid="http://ereg.egov.bg/value/0008-000285"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000284" schemaLocation="0008-000284_StatePropertyActNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000285" schemaLocation="0008-000285_StatePropertyActIssueDate.xsd"/>
+
+  <xsd:complexType name="StatePropertyActIdentifier">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни, еднозначно определящи акт за държавна собственост</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="Number" type="span:StatePropertyActNumber" minOccurs="0" />
+      <xsd:element name="IssueDate" type="spaid:StatePropertyActIssueDate" minOccurs="0" />
+    </xsd:sequence> 
+  </xsd:complexType>
+
+</xsd:schema>

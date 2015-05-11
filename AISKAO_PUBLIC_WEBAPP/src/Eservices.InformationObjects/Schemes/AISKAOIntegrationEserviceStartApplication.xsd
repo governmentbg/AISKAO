@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema id="AISKAOIntegrationEserviceStartApplication"
+    targetNamespace="http://ereg.egov.bg/segment/R-0009-000001"
+      xmlns="http://ereg.egov.bg/segment/R-0009-000001"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:stt="http://ereg.egov.bg/value/0008-000143"
+      xmlns:edx="http://ereg.egov.bg/segment/0009-000092"
+      xmlns:ad="http://ereg.egov.bg/segment/0009-000139"
+      xmlns:sard="http://ereg.egov.bg/segment/0009-000141"
+      xmlns:eash="http://ereg.egov.bg/segment/0009-000152"
+      xmlns:easf="http://ereg.egov.bg/segment/0009-000153"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd"/>
+
+  <xsd:element name="AISKAOIntegrationEserviceStartApplication" type="AISKAOIntegrationEserviceStartApplication" />
+  <xsd:complexType name="AISKAOIntegrationEserviceStartApplication">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за стартиране на електронна услуга в АИСКАО, използва се в интеграционни сценарии</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" >
+        <xsd:annotation>
+          <xsd:documentation xml:lang="bg">Данни за заявителя и за получателя (титуляра ) на заявяваната електронна услуга</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+      <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" >
+        <xsd:annotation>
+          <xsd:documentation xml:lang="bg">Начин на получаване и пощенски адрес или друга администрация, където да бъде получен резултата</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name ="AdditionalInformation" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="bg">Допълнителна информация</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="ResultDocumentTypeURI" type="xsd:string" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation>УРИ на тип на документ на резултата в АИСКАО</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+      <xsd:element name="AttachedDocuments" minOccurs="0">
+        <xsd:annotation>
+          <xsd:documentation xml:lang="bg">Прикачени документи, XML или бинарни файлове</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" >
+        <xsd:annotation>
+          <xsd:documentation xml:lang="bg">Електронен подпис и време на подписване</xsd:documentation>
+        </xsd:annotation>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  
+</xsd:schema>

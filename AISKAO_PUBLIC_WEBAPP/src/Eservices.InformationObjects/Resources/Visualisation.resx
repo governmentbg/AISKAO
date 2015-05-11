@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0009-000002_ElectronicServiceProviderType" xml:space="preserve">
+    <value>Вид на доставчик</value>
+  </data>
+  <data name="0009-000013_Identifier" xml:space="preserve">
+    <value>ЕИК/БУЛСТАТ</value>
+  </data>
+  <data name="0009-000013_Name" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="0009-000014_CountryNameCyrillic" xml:space="preserve">
+    <value>Държава</value>
+  </data>
+  <data name="0009-000014_ForeignEntityName" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="0009-000014_Identifier" xml:space="preserve">
+    <value>Номер в регистър</value>
+  </data>
+  <data name="0009-000014_OtherData" xml:space="preserve">
+    <value>Други данни</value>
+  </data>
+  <data name="0009-000014_Register" xml:space="preserve">
+    <value>Име на регистър</value>
+  </data>
+  <data name="0009-000016_EmailAddress" xml:space="preserve">
+    <value>Електронна поща</value>
+  </data>
+  <data name="0009-000024_ErrorDescription" xml:space="preserve">
+    <value>Текст на грешката</value>
+  </data>
+  <data name="0009-000024_TermURI" xml:space="preserve">
+    <value>УРИ на термин, с който се представя грешката</value>
+  </data>
+  <data name="0009-000025_DocumentTypeName" xml:space="preserve">
+    <value>Наименование на проверяван документ</value>
+  </data>
+  <data name="0009-000025_DocumentTypeURI" xml:space="preserve">
+    <value>УРИ на проверяван документ</value>
+  </data>
+  <data name="0009-000092_DocumentTypeName" xml:space="preserve">
+    <value>Име на тип документ</value>
+  </data>
+  <data name="0009-000092_DocumentTypeURI" xml:space="preserve">
+    <value>УРИ на тип документ</value>
+  </data>
+  <data name="0009-000137_AddressDescription" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="0009-000137_DistrictCode" xml:space="preserve">
+    <value>Код на област</value>
+  </data>
+  <data name="0009-000137_DistrictName" xml:space="preserve">
+    <value>Област</value>
+  </data>
+  <data name="0009-000137_MunicipalityCode" xml:space="preserve">
+    <value>Код на община</value>
+  </data>
+  <data name="0009-000137_MunicipalityName" xml:space="preserve">
+    <value>Община</value>
+  </data>
+  <data name="0009-000137_PostCode" xml:space="preserve">
+    <value>Пощенски код</value>
+  </data>
+  <data name="0009-000137_PostOfficeBox" xml:space="preserve">
+    <value>Пощенска кутия</value>
+  </data>
+  <data name="0009-000137_SettlementCode" xml:space="preserve">
+    <value>Код на населено място</value>
+  </data>
+  <data name="0009-000137_SettlementName" xml:space="preserve">
+    <value>Населено място</value>
+  </data>
+  <data name="0009-000139_AttachedDocumentDescription" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="0009-000139_AttachedDocumentFileName" xml:space="preserve">
+    <value>Име</value>
+  </data>
+  <data name="0009-000139_AttachedDocumentUniqueIdentifier" xml:space="preserve">
+    <value>Уникален идентификатор</value>
+  </data>
+  <data name="0009-000139_FileType" xml:space="preserve">
+    <value>Формат</value>
+  </data>
+  <data name="0009-000141_AddressDescription" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="0009-000141_PostCode" xml:space="preserve">
+    <value>Пощенски код</value>
+  </data>
+  <data name="0009-000141_PostOfficeBox" xml:space="preserve">
+    <value>Пощенска кутия</value>
+  </data>
+  <data name="0009-000141_ServiceResultReceiptMethod" xml:space="preserve">
+    <value>Начин на получаване на резултат от услуга</value>
+  </data>
+  <data name="0009-000152_ApplicationType" xml:space="preserve">
+    <value>Вид заявление</value>
+  </data>
+  <data name="0009-000152_DocumentTypeName" xml:space="preserve">
+    <value>Тип документ</value>
+  </data>
+  <data name="0009-000152_SendApplicationWithReceiptAcknowledgedMessage" xml:space="preserve">
+    <value>Желая да получа документа "Потвърждение за получаване"</value>
+  </data>
+  <data name="0009-000152_SUNAUServiceName" xml:space="preserve">
+    <value>Административна услуга</value>
+  </data>
+  <data name="0009-000153_ApplicationSigningTime" xml:space="preserve">
+    <value>Време на подписване на заявлението</value>
+  </data>
+  <data name="0009-000199_IssueDate" xml:space="preserve">
+    <value>Дата на издаване</value>
+  </data>
+  <data name="0009-000199_Number" xml:space="preserve">
+    <value>Номер на акт</value>
+  </data>
+  <data name="0009-000200_IssueDate" xml:space="preserve">
+    <value>Дата на издаване</value>
+  </data>
+  <data name="0009-000200_Number" xml:space="preserve">
+    <value>Номер на акт</value>
+  </data>
+  <data name="0009-000201_NeighboringPropertyDescription" xml:space="preserve">
+    <value>Описание</value>
+  </data>
+  <data name="0009-000201_NeighboringPropertyDirection" xml:space="preserve">
+    <value>Посока</value>
+  </data>
+  <data name="0009-000202_AccordingToDocumentsQuadrature" xml:space="preserve">
+    <value>Площ на недвижим имот по документи в кв. м.</value>
+  </data>
+  <data name="0009-000202_RealEstateAdditionalInformation" xml:space="preserve">
+    <value>Допълнителна информация</value>
+  </data>
+  <data name="0009-000202_RealEstateAddress" xml:space="preserve">
+    <value>Адрес на имот</value>
+  </data>
+  <data name="0009-000202_RealEstateBatchNumber" xml:space="preserve">
+    <value>Номер на партида</value>
+  </data>
+  <data name="0009-000202_RealEstateType" xml:space="preserve">
+    <value>Вид имот</value>
+  </data>
+  <data name="0009-000202_RealQuadrature" xml:space="preserve">
+    <value>Реална площ на недвижим имот в кв. м.</value>
+  </data>
+  <data name="0009-000204_ServiceTermType" xml:space="preserve">
+    <value>Вид на услугата</value>
+  </data>
+  <data name="ElectronicServiceApplicantDifferentAuthorAndRecipient" xml:space="preserve">
+    <value>Автор/и на електронното изявление:
+:Author:
+Получател/и на електронната административна услуга:
+:Recipient:
+Качество, в което авторът действа от името на титуляра и обем на представителната власт:
+:AuthorQuality:
+Адрес на електронна поща за получаване на електронни изявления:
+:EmailAddress:</value>
+  </data>
+  <data name="ElectronicServiceApplicantSamAuthorAndRecipient" xml:space="preserve">
+    <value>Получател/и на електронната административна услуга:
+:Recipient:
+Адрес на електронна поща за получаване на електронни изявления:
+:EmailAddress:</value>
+  </data>
+  <data name="EmptyAuthorQuality" xml:space="preserve">
+    <value>не е посочено</value>
+  </data>
+  <data name="HtmlAuthorQuality" xml:space="preserve">
+    <value>&amp;nbsp &amp;nbsp Основание на овластяването: :AuthorQuality:&lt;br/&gt;</value>
+  </data>
+  <data name="HtmlElectronicServiceApplicantDifferentAuthorAndRecipient" xml:space="preserve">
+    <value>&lt;p&gt;Автор/и на електронното изявление:&lt;br/&gt;
+:Author:
+&lt;/p&gt;
+&lt;p&gt;Получател/и на електронната административна услуга:&lt;br/&gt;
+:Recipient:
+&lt;/p&gt;
+&lt;p&gt;Качество, в което авторът действа от името на титуляра и обем на представителната власт:&lt;br/&gt;
+:AuthorQuality:
+&lt;/p&gt;
+&lt;p&gt;Адрес на електронна поща за получаване на електронни изявления:&lt;br/&gt;
+:EmailAddress:
+&lt;/p&gt;</value>
+  </data>
+  <data name="HtmlElectronicServiceApplicantSamAuthorAndRecipient" xml:space="preserve">
+    <value>&lt;p&gt;Получател/и на електронната административна услуга:&lt;br/&gt;
+:Recipient:
+&lt;/p&gt;
+&lt;p&gt;Адрес на електронна поща за получаване на електронни изявления:&lt;br/&gt;
+:EmailAddress:
+&lt;/p&gt;</value>
+  </data>
+  <data name="HtmlIssuerBulstat" xml:space="preserve">
+    <value>&amp;nbsp &amp;nbsp ЕГН или ЕИК на доставчика на удостоверителни услуги: :IssuerBulstat: &lt;br/&gt;</value>
+  </data>
+  <data name="HtmlReceiptAcknowledgedMessage" xml:space="preserve">
+    <value>&lt;p&gt;&lt;b&gt;Доставчик на електронни административни услуги:&lt;/b&gt;&lt;br/&gt;
+:ElectronicServiceProvider:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Уникален регистров идентификатор на получения документ:&lt;/b&gt;&lt;br/&gt;
+:DocumentURI:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Вид на пренос:&lt;/b&gt;&lt;br/&gt;
+:TransportType:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Заявител на електронната административна услуга:&lt;/b&gt;&lt;br/&gt;
+:Applicant:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Подаден документ:&lt;/b&gt;&lt;br/&gt;
+УРИ в регистъра на информационните обекти :DocumentTypeURI:, :DocumentTypeName:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Извършил регистрацията:&lt;/b&gt;&lt;br/&gt;
+:RegisteredBy:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Информация за достъп до получения документ:&lt;/b&gt;&lt;br/&gt;
+:CaseAccessIdentifier:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Време на създаване на съобщението:&lt;/b&gt;&lt;br/&gt;
+:ReceiptTime:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Електронен подпис:&lt;/b&gt;&lt;br/&gt;
+:Signature:
+&lt;/p&gt;</value>
+  </data>
+  <data name="HtmlReceiptNotAcknowledgedMessage" xml:space="preserve">
+    <value>&lt;p&gt;&lt;b&gt;Доставчик на електронни административни услуги:&lt;/b&gt;&lt;br/&gt;
+:ElectronicServiceProvider:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Уникален регистров идентификатор на регистриран документ:&lt;/b&gt;&lt;br/&gt;
+:DocumentURI:::ElectronicServiceProvider: 
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Вид на пренос:&lt;/b&gt;&lt;br/&gt;
+:TransportType:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Получаването не се потвърждава:&lt;/b&gt;&lt;br/&gt;
+:Discrepancies:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Заявител на електронната административна услуга:&lt;/b&gt;&lt;br/&gt;
+:Applicant:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Подаден документ:&lt;/b&gt;&lt;br/&gt;
+УРИ в регистъра на информационните обекти :DocumentTypeURI:, :DocumentTypeName:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Време на създаване на съобщението:&lt;/b&gt;&lt;br/&gt;
+:ReceiptTime:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Електронен подпис:&lt;/b&gt;&lt;br/&gt;
+:Signature:
+&lt;/p&gt;
+&lt;br/&gt;</value>
+  </data>
+  <data name="HtmlSignature" xml:space="preserve">
+    <value>&lt;p&gt;Данни за доставчика на удостоверителни услуги: &lt;br/&gt;
+&amp;nbsp &amp;nbsp Наименование: :IssuerNameCommonName: ,&lt;br/&gt;
+&amp;nbsp &amp;nbsp Адрес: :IssuerAddress: ,&lt;br/&gt;
+:IssuerBulstat:
+&amp;nbsp &amp;nbsp Националност: :IssuerCountry: 
+&lt;/p&gt;
+&lt;p&gt;Данни за титуляра на усъвършенствания електронен подпис: &lt;br/&gt;
+&amp;nbsp &amp;nbsp Име или наименование: :TitularName: ; &lt;br/&gt;
+&amp;nbsp &amp;nbsp Адрес: :TitularAddress: ; &lt;br/&gt;
+&amp;nbsp &amp;nbsp Данни за регистрацията на титуляра на усъвършенствания електронен подпис: :TitularOrgCourtRegistration: ; &lt;br/&gt;
+:AuthorQuality:
+&lt;/p&gt;	
+&lt;p&gt;Дата и час на издаването: :SigningTime: 
+&lt;/p&gt;
+&lt;p&gt;Удостоверение за време: :TimeStampTime:
+&lt;/p&gt;
+&lt;p&gt;Срок на действие: &lt;br/&gt;
+&amp;nbsp &amp;nbsp Валиден от: :NotBefore: &lt;br/&gt;
+&amp;nbsp &amp;nbsp Валиден до: :NotAfter:
+&lt;/p&gt;
+&lt;p&gt;Ограничения на действието на подписа: :CretificateUsageRestrictions:
+&lt;/p&gt;
+&lt;p&gt;Уникален идентификационен код на удостоверението: :SerialNumber:
+&lt;/p&gt;
+&lt;br/&gt;</value>
+  </data>
+  <data name="HtmlTaskInfo" xml:space="preserve">
+    <value>&lt;p&gt;&lt;b&gt;Наименование:&lt;/b&gt;&lt;br/&gt;
+:TaskName:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Описание:&lt;/b&gt;&lt;br/&gt;
+:TaskDescription:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Планиран от:&lt;/b&gt;&lt;br/&gt;
+:TaskFrom:
+&lt;/p&gt;
+&lt;br/&gt;
+&lt;p&gt;&lt;b&gt;Планиран за:&lt;/b&gt;&lt;br/&gt;
+:TaskTo:
+&lt;/p&gt;</value>
+  </data>
+  <data name="NoData" xml:space="preserve">
+    <value>Няма данни</value>
+  </data>
+  <data name="ReceiptAcknowledgedMessage" xml:space="preserve">
+    <value>Доставчик на електронни административни услуги: 
+:ElectronicServiceProvider:
+
+Уникален регистров идентификатор на получения документ: 
+:DocumentURI:
+
+Вид на пренос: 
+:TransportType:
+
+Заявител на електронната административна услуга:
+:Applicant:
+
+Подаден документ: 
+УРИ в регистъра на информационните обекти :DocumentTypeURI:, :DocumentTypeName:
+
+Извършил регистрацията: 
+:RegisteredBy:
+
+Информация за достъп до получения документ: 
+:CaseAccessIdentifier:
+
+Време на създаване на съобщението: 
+:ReceiptTime:
+
+Електронен подпис: 
+:Signature:</value>
+  </data>
+  <data name="ReceiptAcknowledgedMessageRegisteredByAISURI" xml:space="preserve">
+    <value>Сертифицирана система: :AISURI:</value>
+  </data>
+  <data name="ReceiptAcknowledgedMessageRegisteredByOfficer" xml:space="preserve">
+    <value>:PersonNames:, :AISUserIdentifier:</value>
+  </data>
+  <data name="ReceiptNotAcknowledgedMessage" xml:space="preserve">
+    <value>Доставчик на електронни административни услуги: 
+:ElectronicServiceProvider:
+
+Уникален регистров идентификатор на регистриран документ:
+:DocumentURI:::ElectronicServiceProvider: 
+
+Вид на пренос:
+:TransportType:
+
+Получаването не се потвърждава:
+:Discrepancies:
+
+Заявител на електронната административна услуга: 
+:Applicant:
+
+Подаден документ: 
+УРИ в регистъра на информационните обекти :DocumentTypeURI:, :DocumentTypeName:
+
+Време на създаване на съобщението: 
+:ReceiptTime:
+
+Електронен подпис: 
+:Signature:</value>
+  </data>
+</root>

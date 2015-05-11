@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1202" xmlns="http://ereg.egov.bg/nomenclature/R-1202" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageCombinedTradingTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове комбинирани фуражи за търговия</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове комбинирани фуражи за търговия - Пълноценни фуражи-->
+      <xsd:enumeration value="R-1193" />
+      <!--Видове комбинирани фуражи за търговия - Млекозаместители-->
+      <xsd:enumeration value="R-1194" />
+      <!--Видове комбинирани фуражи за търговия - Допълващи фуражи, съдържащи фуражни добавки и премикси, изготвени на основата на фуражни добавки-->
+      <xsd:enumeration value="R-1195" />
+      <!--Видове комбинирани фуражи за търговия - Комбинирани фуражи, съдържащи само фуражни суровини-->
+      <xsd:enumeration value="R-1196" />
+      <!--Видове комбинирани фуражи за търговия - Минерални фуражи-->
+      <xsd:enumeration value="R-1197" />
+      <!--Видове комбинирани фуражи за търговия - Допълващи фуражи, изготвени на основата на меласа-->
+      <xsd:enumeration value="R-1198" />
+      <!--Видове комбинирани фуражи за търговия - Храни за домашни любимци, предназначени за търговия на едро-->
+      <xsd:enumeration value="R-1199" />
+      <!--Видове комбинирани фуражи за търговия - Фуражи със специално предназначение-->
+      <xsd:enumeration value="R-1200" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

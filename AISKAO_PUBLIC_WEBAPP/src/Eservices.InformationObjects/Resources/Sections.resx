@@ -1,0 +1,585 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0009-000001" xml:space="preserve">
+    <value>УРИ на регистриран документ в официален документен регистър</value>
+  </data>
+  <data name="0009-000005" xml:space="preserve">
+    <value>Имена на физическо лице</value>
+  </data>
+  <data name="0009-000009" xml:space="preserve">
+    <value>Място на раждане на физическо лице, нерегистрирано по българското законодателство</value>
+  </data>
+  <data name="0009-000092" xml:space="preserve">
+    <value>Приложен електронен документ в XML формат</value>
+  </data>
+  <data name="0009-000139" xml:space="preserve">
+    <value>Приложен документ</value>
+  </data>
+  <data name="0009-000141" xml:space="preserve">
+    <value>Данни за получаване на резултат от услуга от заявителя</value>
+  </data>
+  <data name="0009-000152" xml:space="preserve">
+    <value>Водеща част на заявление за предоставяне на електронна административна услуга, когато се изисква идентификация на заявителя</value>
+  </data>
+  <data name="0009-000153" xml:space="preserve">
+    <value>Данни за подписване на заявление за предоставяне на електронна административна услуга, подадено по електронен път</value>
+  </data>
+  <data name="0009-000195" xml:space="preserve">
+    <value>Данни за адрес на недвижим имот</value>
+  </data>
+  <data name="0009-000196" xml:space="preserve">
+    <value>Стар идентификатор на поземлен имот в урбанизирана територия</value>
+  </data>
+  <data name="0009-000197" xml:space="preserve">
+    <value>Стар идентификатор на поземлен имот в земеделска или горска територия</value>
+  </data>
+  <data name="0009-000198" xml:space="preserve">
+    <value>Кадастрален идентификатор на недвижим имот</value>
+  </data>
+  <data name="0009-000199" xml:space="preserve">
+    <value>Данни, еднозначно определящи акт за държавна собственост</value>
+  </data>
+  <data name="0009-000200" xml:space="preserve">
+    <value>Данни, еднозначно определящи акт за общинска собственост</value>
+  </data>
+  <data name="0009-000201" xml:space="preserve">
+    <value>Данни за съседен недвижим имот</value>
+  </data>
+  <data name="0009-000202" xml:space="preserve">
+    <value>Данни, еднозначно определящи недвижим имот, при заявяване на услуги за държавна и общинска собственост</value>
+  </data>
+  <data name="0009-000203" xml:space="preserve">
+    <value>Заявление за извършване на справка за наличието на жилищно-спестовен влог</value>
+  </data>
+  <data name="999033" xml:space="preserve">
+    <value>Издаване на удостоверение за наличие на жилищно-спестовен влог</value>
+  </data>
+  <data name="999037" xml:space="preserve">
+    <value>Приемане и обработка на документи за изплащане левова компенсация на титулярите на жилищно-спестовни влогове</value>
+  </data>
+  <data name="999041" xml:space="preserve">
+    <value>Издаване на удостоверение за установени жилищни нужди</value>
+  </data>
+  <data name="999045" xml:space="preserve">
+    <value>Установяване на жилищни нужди</value>
+  </data>
+  <data name="999049" xml:space="preserve">
+    <value>Включване в списъци за парично обезщетение на лица, имащи дългогодишни жилищно-спестовни влогове</value>
+  </data>
+  <data name="999053" xml:space="preserve">
+    <value>Настаняване в общинско жилище</value>
+  </data>
+  <data name="999057" xml:space="preserve">
+    <value>Промяна на данъчната оценка на недвижим имот</value>
+  </data>
+  <data name="999061" xml:space="preserve">
+    <value>Връщане на конфискувани имоти или обезщетяване с равностоен имот или пари</value>
+  </data>
+  <data name="999065" xml:space="preserve">
+    <value>Приемане на документи за продажба на общинско жилище</value>
+  </data>
+  <data name="999069" xml:space="preserve">
+    <value>Издаване на удостоверение относно собствеността на недвижими имоти</value>
+  </data>
+  <data name="999073" xml:space="preserve">
+    <value>Издаване на удостоверение за наличие на реституционни претенции за недвижими имоти - общинска собственост</value>
+  </data>
+  <data name="999077" xml:space="preserve">
+    <value>Издаване на удостоверение относно отчуждаване на имот</value>
+  </data>
+  <data name="999081" xml:space="preserve">
+    <value>Издаване на удостоверение за отписан (деактуван) или за възстановен общински имот</value>
+  </data>
+  <data name="999085" xml:space="preserve">
+    <value>Приемане на документи и прекратяване на съсобственост върху недвижим имот</value>
+  </data>
+  <data name="999089" xml:space="preserve">
+    <value>Отписване на имот от актовите книги за общинска собственост</value>
+  </data>
+  <data name="999093" xml:space="preserve">
+    <value>Издаване на заверени копия от документи относно общинска собственост</value>
+  </data>
+  <data name="999097" xml:space="preserve">
+    <value>Обстоятелствена проверка за признаване правото на собственост</value>
+  </data>
+  <data name="999101" xml:space="preserve">
+    <value>Справка по актовите книги</value>
+  </data>
+  <data name="999105" xml:space="preserve">
+    <value>Справка относно разпределение на идеални части от общите части на сгради с етажна собственост</value>
+  </data>
+  <data name="999109" xml:space="preserve">
+    <value>Справка за извършени сделки с имоти общинска собственост</value>
+  </data>
+  <data name="999113" xml:space="preserve">
+    <value>Учредяване право на надстрояване и пристрояване</value>
+  </data>
+  <data name="999117" xml:space="preserve">
+    <value>Приемане на документи за изкупуване право на собственост от физически и юридически лица на земя с учредено право на строеж</value>
+  </data>
+  <data name="999121" xml:space="preserve">
+    <value>Отразяване на промени в обстоятелствата върху издадени Актове за държавна собственост</value>
+  </data>
+  <data name="999125" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти, придобити чрез правна сделка</value>
+  </data>
+  <data name="999129" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти, правото на собственост върху които се възстановява по силата на реституционни закони</value>
+  </data>
+  <data name="999133" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти, неправилно актувани като държавна собственост</value>
+  </data>
+  <data name="999137" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти в полза на търговски дружества</value>
+  </data>
+  <data name="999141" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти частна държавна собственост преминали в собственост на общините</value>
+  </data>
+  <data name="999145" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти възстановени с решение на поземлена комисия</value>
+  </data>
+  <data name="999149" xml:space="preserve">
+    <value>Отписване от актовите книги на парцели по парцеларен план</value>
+  </data>
+  <data name="999153" xml:space="preserve">
+    <value>Отписване от актовите книги на реституирани имоти със съдебно решение</value>
+  </data>
+  <data name="999157" xml:space="preserve">
+    <value>Отписване от актовите книги на реституирани имоти със заповед на кмета на община</value>
+  </data>
+  <data name="999161" xml:space="preserve">
+    <value>Отписване от актовите книги на имоти закупени с договор от Областен управител</value>
+  </data>
+  <data name="999165" xml:space="preserve">
+    <value>Издаване на удостоверение по обстоятелствена проверка</value>
+  </data>
+  <data name="999169" xml:space="preserve">
+    <value>Издаване на удостоверения при продажба на съсобствен имот</value>
+  </data>
+  <data name="999173" xml:space="preserve">
+    <value>Издаване на удостоверения за реституционни претенции</value>
+  </data>
+  <data name="999177" xml:space="preserve">
+    <value>Издаване на удостоверения за собственост</value>
+  </data>
+  <data name="999181" xml:space="preserve">
+    <value>Справки по регистри и книги за имоти – частна и публична държавна собственост</value>
+  </data>
+  <data name="999185" xml:space="preserve">
+    <value>Издаване на заверени копия от договори, заповеди и други документи от интерес на физическите и юридическите лица, от архив “Държавна собственост”</value>
+  </data>
+  <data name="999189" xml:space="preserve">
+    <value>Издаване на решения за обезщетяване по реда на Закона за обезщетяване на собственици на одържавени имоти</value>
+  </data>
+  <data name="999193" xml:space="preserve">
+    <value>Изготвяне на експертизи за оценка на дължимото обезщетение по реда на Закона за обезщетяване на собственици на одържавени имоти</value>
+  </data>
+  <data name="999197" xml:space="preserve">
+    <value>Издаване на Актове за публична държавна собственост на ведомства, министерства и други</value>
+  </data>
+  <data name="999201" xml:space="preserve">
+    <value>Издаване на Актове за частна държавна собственост на ведомства, министерства и др. за недвижими имоти в / извън регулационните планове на населените места</value>
+  </data>
+  <data name="999205" xml:space="preserve">
+    <value>Издаване на Актове за държавна собственост на парцели, включени в парцеларните планове на стопанските дворове</value>
+  </data>
+  <data name="999209" xml:space="preserve">
+    <value>Издаване на Заповед за изземване на държавен имот, който се владее или държи без основание, който се ползва не по предназначение или нуждата от който е отпаднала</value>
+  </data>
+  <data name="R0019" xml:space="preserve">
+    <value>УРИ на регистриран документ</value>
+  </data>
+  <data name="R0021" xml:space="preserve">
+    <value>Доставчик на електронни административни услуги</value>
+  </data>
+  <data name="R0033" xml:space="preserve">
+    <value>УРИ на документ, вписан в регистъра на информационните обекти</value>
+  </data>
+  <data name="R0035" xml:space="preserve">
+    <value>Данни за електронен подпис на XML документ по XADES стандарта</value>
+  </data>
+  <data name="R0051" xml:space="preserve">
+    <value>Идентификатор на физическо лице</value>
+  </data>
+  <data name="R0069" xml:space="preserve">
+    <value>Имена на физическо лице, нерегистрирано по българското законодателство</value>
+  </data>
+  <data name="R0071" xml:space="preserve">
+    <value>Основни данни за физическо лице</value>
+  </data>
+  <data name="R0073" xml:space="preserve">
+    <value>Автор на електронно изявление</value>
+  </data>
+  <data name="R0079" xml:space="preserve">
+    <value>Основни данни за юридическо лице</value>
+  </data>
+  <data name="R0081" xml:space="preserve">
+    <value>Получател на електронна административна услуга</value>
+  </data>
+  <data name="R0087" xml:space="preserve">
+    <value>Заявител на електронна административна услуга</value>
+  </data>
+  <data name="R0089" xml:space="preserve">
+    <value>Съобщение, че получаването не се потвърждава</value>
+  </data>
+  <data name="R0094" xml:space="preserve">
+    <value>Имена на потребител на АИС</value>
+  </data>
+  <data name="R0100" xml:space="preserve">
+    <value>Потвърждаване за получаване</value>
+  </data>
+  <data name="R0111" xml:space="preserve">
+    <value>Пренасян документ</value>
+  </data>
+  <data name="R0113" xml:space="preserve">
+    <value>Контейнер за пренос</value>
+  </data>
+  <data name="R0120" xml:space="preserve">
+    <value>Грешка в съдържание на документ</value>
+  </data>
+  <data name="R0122" xml:space="preserve">
+    <value>Регистрирани грешки в съдържание на документ</value>
+  </data>
+  <data name="R0162" xml:space="preserve">
+    <value>Основни данни за чуждестранно юридическо лице</value>
+  </data>
+  <data name="R0206" xml:space="preserve">
+    <value>Резултат от етап</value>
+  </data>
+  <data name="R0210" xml:space="preserve">
+    <value>Ведомствена номенклатура на резултати от етап</value>
+  </data>
+  <data name="R0212" xml:space="preserve">
+    <value>УРИ на унифициран етап</value>
+  </data>
+  <data name="R0218" xml:space="preserve">
+    <value>Изпълнител на етап</value>
+  </data>
+  <data name="R0224" xml:space="preserve">
+    <value>Данни за елементите от ведомствената номенклатура на етапи от услуги или процедури</value>
+  </data>
+  <data name="R0226" xml:space="preserve">
+    <value>Ведомствена номенклатура на етапи от услуги или процедури</value>
+  </data>
+  <data name="R0228" xml:space="preserve">
+    <value>УРИ на вид документ от ведомствената номенклатура на видовете документи</value>
+  </data>
+  <data name="R0243" xml:space="preserve">
+    <value>Овластено лице да подписва документ</value>
+  </data>
+  <data name="R0252" xml:space="preserve">
+    <value>УРИ на приложение за визуализация и/или за редактиране</value>
+  </data>
+  <data name="R0256" xml:space="preserve">
+    <value>Данни за елемент на ведомствената номенклатура на видовете документи</value>
+  </data>
+  <data name="R0258" xml:space="preserve">
+    <value>Ведомствена номенклатура на видовете документи</value>
+  </data>
+  <data name="R0262" xml:space="preserve">
+    <value>УРИ на административна услуга или процедура</value>
+  </data>
+  <data name="R0268" xml:space="preserve">
+    <value>Отговорен за услуга или процедура</value>
+  </data>
+  <data name="R0274" xml:space="preserve">
+    <value>Данни за елемент от ведомствената номенклатура на услугите и процедурите</value>
+  </data>
+  <data name="R0276" xml:space="preserve">
+    <value>Ведомствена номенклатура на услугите и процедурите</value>
+  </data>
+  <data name="R0290" xml:space="preserve">
+    <value>Раздел от класификационна схема в АИС</value>
+  </data>
+  <data name="R0296" xml:space="preserve">
+    <value>Класификационна схема в АИС</value>
+  </data>
+  <data name="R0300" xml:space="preserve">
+    <value>Данни за класифициране на обект в раздел от класификационна схема</value>
+  </data>
+  <data name="R0306" xml:space="preserve">
+    <value>Класификация на обекти в АИС</value>
+  </data>
+  <data name="R0314" xml:space="preserve">
+    <value>Позиция на потребител на АИС в административната структура</value>
+  </data>
+  <data name="R0318" xml:space="preserve">
+    <value>Позиция в административната структура</value>
+  </data>
+  <data name="R0328" xml:space="preserve">
+    <value>Потребител на АИС</value>
+  </data>
+  <data name="R0330" xml:space="preserve">
+    <value>Данни за създаден достъп за изпращане на информационни обекти в АИС</value>
+  </data>
+  <data name="R0332" xml:space="preserve">
+    <value>Данни за създаден достъп на потребители до информационни обекти в АИС</value>
+  </data>
+  <data name="R0342" xml:space="preserve">
+    <value>Данни за документ за самоличност на физическо лице, нерегистрирано по българското законодателство</value>
+  </data>
+  <data name="R0344" xml:space="preserve">
+    <value>Данни за кореспондент в АИС</value>
+  </data>
+  <data name="R0352" xml:space="preserve">
+    <value>Изпълнител на задача</value>
+  </data>
+  <data name="R0354" xml:space="preserve">
+    <value>Член на екипа по изпълнение на задача</value>
+  </data>
+  <data name="R0364" xml:space="preserve">
+    <value>Изходен документ на задача</value>
+  </data>
+  <data name="R0366" xml:space="preserve">
+    <value>Създаден документ от задача</value>
+  </data>
+  <data name="R0370" xml:space="preserve">
+    <value>Данни за създаване на обект в АИС</value>
+  </data>
+  <data name="R0372" xml:space="preserve">
+    <value>Задача</value>
+  </data>
+  <data name="R0383" xml:space="preserve">
+    <value>Данни за статус на задача</value>
+  </data>
+  <data name="R0387" xml:space="preserve">
+    <value>Данни за включване на задача в списък на задачи в статус на услуга или процедура</value>
+  </data>
+  <data name="R0389" xml:space="preserve">
+    <value>Статус на услуга или процедура</value>
+  </data>
+  <data name="R0395" xml:space="preserve">
+    <value>Документен регистър</value>
+  </data>
+  <data name="R0399" xml:space="preserve">
+    <value>Извършил вписването на документ в документен регистър</value>
+  </data>
+  <data name="R0405" xml:space="preserve">
+    <value>Данни за документ в документен регистър</value>
+  </data>
+  <data name="R0411" xml:space="preserve">
+    <value>УРИ на преписка</value>
+  </data>
+  <data name="R0417" xml:space="preserve">
+    <value>Данни за включване в раздел на преписка</value>
+  </data>
+  <data name="R0421" xml:space="preserve">
+    <value>Официален раздел на преписка</value>
+  </data>
+  <data name="R0423" xml:space="preserve">
+    <value>Вътрешен раздел на преписка</value>
+  </data>
+  <data name="R0425" xml:space="preserve">
+    <value>Контролен раздел на преписка</value>
+  </data>
+  <data name="R0427" xml:space="preserve">
+    <value>Преписка</value>
+  </data>
+  <data name="R0444" xml:space="preserve">
+    <value>Данни за документ в АИС</value>
+  </data>
+  <data name="R0456" xml:space="preserve">
+    <value>Данни за създаване на становище по документ</value>
+  </data>
+  <data name="R0460" xml:space="preserve">
+    <value>Становище по документ в АИС</value>
+  </data>
+  <data name="R0475" xml:space="preserve">
+    <value>Протокол от оценяване на изпълнението на задача</value>
+  </data>
+  <data name="R0483" xml:space="preserve">
+    <value>Служител, приемащ или предаващ документ</value>
+  </data>
+  <data name="R0485" xml:space="preserve">
+    <value>Данни за завеждане на документ в хранилище</value>
+  </data>
+  <data name="R0487" xml:space="preserve">
+    <value>Данни за приемане на документ в хранилище</value>
+  </data>
+  <data name="R0489" xml:space="preserve">
+    <value>Данни за предаване на документи в хранилище</value>
+  </data>
+  <data name="R0491" xml:space="preserve">
+    <value>Данни за пренос между информационни системи</value>
+  </data>
+  <data name="R0701" xml:space="preserve">
+    <value>Основни данни за потребител на АИС</value>
+  </data>
+  <data name="R0703" xml:space="preserve">
+    <value>Позиция в администрацията или потребител на АИС</value>
+  </data>
+  <data name="R0705" xml:space="preserve">
+    <value>Потребител на АИС или АИС</value>
+  </data>
+  <data name="R0709" xml:space="preserve">
+    <value>УРИ на партида</value>
+  </data>
+  <data name="R0713" xml:space="preserve">
+    <value>УРИ на унифицирани данни</value>
+  </data>
+  <data name="R0717" xml:space="preserve">
+    <value>Основни данни за физическо лице, нерегистрирано по българското законодателство</value>
+  </data>
+  <data name="R0719" xml:space="preserve">
+    <value>УРИ на регистриран документ</value>
+  </data>
+  <data name="R0721" xml:space="preserve">
+    <value>Основни данни за вид документ от ведомствената номенклатура на видовете документи</value>
+  </data>
+  <data name="R0723" xml:space="preserve">
+    <value>Регистриран документ или вид документ</value>
+  </data>
+  <data name="R0725" xml:space="preserve">
+    <value>Създаван документ от етап</value>
+  </data>
+  <data name="R0727" xml:space="preserve">
+    <value>УРИ на иницииращ документ</value>
+  </data>
+  <data name="R0729" xml:space="preserve">
+    <value>Раздел на преписка</value>
+  </data>
+  <data name="R0731" xml:space="preserve">
+    <value>Оценка на изпълнението на задача</value>
+  </data>
+  <data name="R0735" xml:space="preserve">
+    <value>Достъп до преписка през интернет</value>
+  </data>
+  <data name="R1164" xml:space="preserve">
+    <value>Данни за контакт със заявителя на електронната административна услуга</value>
+  </data>
+  <data name="R1234" xml:space="preserve">
+    <value>Водеща част на заявление за предоставяне на електронна административна услуга, когато се изисква идентификация на заявителя</value>
+  </data>
+  <data name="R1260" xml:space="preserve">
+    <value>Данни за районите в градовете с районно делене от Единния класификатор на административно-териториалните и териториални единици (ЕКАТТЕ)</value>
+  </data>
+  <data name="R1286" xml:space="preserve">
+    <value>Данни за области, общини, кметства и населени места от Единния класификатор на административно-териториалните и териториални единици (ЕКАТТЕ)</value>
+  </data>
+  <data name="R9020" xml:space="preserve">
+    <value>Данни за селищни образувания</value>
+  </data>
+  <data name="R9097" xml:space="preserve">
+    <value>Заявление за извършване на справка за наличието на жилищно-спестовен влог</value>
+  </data>
+  <data name="R9101" xml:space="preserve">
+    <value>Заявление за оценка на общински имот или вещно право върху общински имот</value>
+  </data>
+</root>

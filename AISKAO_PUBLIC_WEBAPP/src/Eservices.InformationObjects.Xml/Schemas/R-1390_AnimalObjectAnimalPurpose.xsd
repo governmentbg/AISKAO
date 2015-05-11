@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1390" xmlns="http://ereg.egov.bg/segment/R-1390" xmlns:apc="http://ereg.egov.bg/value/R-1386" xmlns:apn="http://ereg.egov.bg/value/R-1388" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1386" schemaLocation="R-1386_AnimalPurposeCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1388" schemaLocation="R-1388_AnimalPurposeName.xsd" />
+  <xsd:complexType name="AnimalObjectAnimalPurpose">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за предназначение на животни в животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalPurposeCode" type="apc:AnimalPurposeCode" minOccurs="0" />
+      <xsd:element name="AnimalPurposeName" type="apn:AnimalPurposeName" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,34 @@
+﻿<div>
+    <!-- ko foreach: food -->
+        <div class="span10 subgroups" data-bind="foreach: foodSubGroup.nomFoodSubGroups">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="click: $parent.changeFoodSubGroup.bind($root, $parent), clickBubble: false, checked: $data.selectedFoodSubGroup() !== null && $data.selectedFoodSubGroup() !== undefined" />
+                <span class="span10" data-bind="text: name"></span>
+            </label>
+            <!-- ko with: $data.selectedFoodSubGroup -->
+                <!-- ko compose: { model: $data , view: 'segments/babh/FoodSubGroup', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko -->
+            <!-- /ko -->
+        </div>
+        <div class="span10 items" data-bind="foreach: foodItem.nomfoodItems">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="click: $parent.changeFoodItem.bind($root, $parent), checked: $data.selectedFoodItem() !== null && $data.selectedFoodItem() !== undefined" />
+                 <span class="span10" data-bind="text: name"></span>
+
+            </label>
+
+                <!-- ko if: canAddFreeText()==='true' -->
+                    <!-- ko with: $data.selectedFoodItem -->
+                        <div>
+                            <div class="row">
+                                <div class="span12">
+                                    <span class="span3 text-left">Друго описание на хранa:</span>
+                                    <input class="span7" type="text" data-bind="value: foodItemDescription" />
+                                </div>
+                            </div>
+                        </div>
+                    <!-- /ko -->
+                <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</div>

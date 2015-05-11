@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1166" xmlns="http://ereg.egov.bg/nomenclature/R-1166" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageCombinedMaterialCountTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове комбинирани фуражи, съдържащи само фуражни суровини</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове комбинирани фуражи, съдържащи само фуражни суровини - комбинирани фуражи, включващи до три фуражни суровини-->
+      <xsd:enumeration value="R-1163" />
+      <!--Видове комбинирани фуражи, съдържащи само фуражни суровини - комбинирани фуражи, включващи над три фуражни суровини-->
+      <xsd:enumeration value="R-1164" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1170" xmlns="http://ereg.egov.bg/segment/R-1170" xmlns:fcmct="http://ereg.egov.bg/value/R-1168" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1168" schemaLocation="R-1168_ForageCombinedMaterialCountType.xsd" />
+  <xsd:complexType name="ForageCombinedMaterialCountData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Производство  на комбинирани фуражи, съдържащи само фуражни суровини, предназначени за пазара</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageCombinedMaterialCountTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageCombinedMaterialCountType" type="fcmct:ForageCombinedMaterialCountType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

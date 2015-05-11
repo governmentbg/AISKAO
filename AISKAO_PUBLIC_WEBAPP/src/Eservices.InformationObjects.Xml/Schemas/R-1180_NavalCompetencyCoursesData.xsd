@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1180" xmlns="http://ereg.egov.bg/segment/R-1180" xmlns:nccc="http://ereg.egov.bg/value/R-1176" xmlns:nccn="http://ereg.egov.bg/value/R-1178" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1176" schemaLocation="R-1176_NavalCompetencyCourseCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1178" schemaLocation="R-1178_NavalCompetencyCourseName.xsd" />
+  <xsd:element name="NavalCompetencyCoursesData" type="NavalCompetencyCoursesData" />
+  <xsd:complexType name="NavalCompetencyCoursesData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Курсове за специална и допълнителна подготовка на морски лица</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="NavalCompetencyCourses">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="NavalCompetencyCourse" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Code" type="nccc:NavalCompetencyCourseCode" />
+                  <xsd:element name="Name" type="nccn:NavalCompetencyCourseName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

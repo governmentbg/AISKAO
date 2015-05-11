@@ -1,0 +1,31 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <!-- ko with: revisedAnimalProteinTypes -->
+            <div class="span12" data-bind="foreach: revisedAnimalProteinType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getRevisedAnimalProteinTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+
+            <!-- ko with: otherRevisedAnimalProteins -->
+            <!-- ko if: otherRevisedAnimalProtein().length > 0 -->
+            Списък с преработени животински протеини:
+                <!-- /ko -->
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span6" data-bind="foreach: otherRevisedAnimalProtein">
+                            <span class="span3 text-left">Преработен животински протеин #<span data-bind="text: 1 + $index()"></span>:</span>
+                            <span class="input-append">
+                                <span class="span3 uneditable-input" data-bind="text: $data"></span>
+                            </span>
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

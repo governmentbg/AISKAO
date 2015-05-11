@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1240" xmlns="http://ereg.egov.bg/value/R-1240" xmlns:raptn="http://ereg.egov.bg/nomenclature/R-1236" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1236" schemaLocation="R-1236_RevisedAnimalProteinTypesNomenclature.xsd" />
+  <xsd:simpleType name="RevisedAnimalProteinType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид преработени животински протеини</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="raptn:RevisedAnimalProteinTypesNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

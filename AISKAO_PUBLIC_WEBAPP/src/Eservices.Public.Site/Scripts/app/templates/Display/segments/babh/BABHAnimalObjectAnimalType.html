@@ -1,0 +1,97 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Вид животни:</span>
+                <span class="span9 uneditable-input">
+                    <span data-bind="text: animalTypeName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+     <!-- ko if: animalTypeCode() === '32'-->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друг вид животно:</span>
+                <span class="span9 uneditable-input" data-bind="text: otherAnimalTypeName"></span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Допълнителна информация за вид животни:</span>
+                <span class="span9 uneditable-input" data-bind="text: animalTypeAdditionalInfo"></span>
+            </label>
+        </div>
+    </div>
+
+    <!-- ko with: animalObjectAnimalPurposes -->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Предназначение на животните:</span>
+                <span data-bind="foreach: animalObjectAnimalPurpose">
+                    <span class="span3"></span>
+                    <span class="span9 uneditable-input">
+                        <span data-bind="text: animalPurposeName"></span>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друго предназначение:</span>
+                <span class="span9 uneditable-input" data-bind="text: otherAnimalPurpose"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Технология на отглеждане:</span>
+                <span class="span9 uneditable-input">
+                    <span data-bind="text: animalRisingTechnologyName"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- ko if: animalRisingTechnologyCode() === '3'-->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друга технология:</span>
+                <span class="span9 uneditable-input" data-bind="text: otherAnimalRisingTechnology"></span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Капацитет за отглеждане на вида животни:</span>
+                <span class="span9 uneditable-input" data-bind="text: farmCapacityByAnimalType"></span>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Брой отглеждани животни:</span>
+                <span class="span9 uneditable-input" data-bind="text: farmAnimalsCount"></span>
+            </label>
+        </div>
+    </div>
+</div>

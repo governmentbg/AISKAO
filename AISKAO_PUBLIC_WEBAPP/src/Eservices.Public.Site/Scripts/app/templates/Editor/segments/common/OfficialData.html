@@ -1,0 +1,58 @@
+﻿<div>
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">Служебна информация за документ
+                </a>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse">
+                <div class="accordion-inner">
+                </div>
+                <div class="row">
+                    <span class="span3 text-left">Уникален регистров идентификатор на документ, вписан в регистъра на информационните обекти:</span>
+                    <!--ko with: documentTypeURI-->
+                    <div class="controls-row">
+                        <input class="span4" type="text" data-bind="value: registerIndex" />
+                        <input class="span5" type="text" data-bind="value: batchNumber" />
+                    </div>
+                    <!-- /ko -->
+                </div>
+
+                <div class="row">
+                    <span class="span3 text-left">Тип на документ:</span>
+                    <div class="row">
+                        <input class="span9" type="text" data-bind="value: documentTypeName,  valueUpdate: 'afterkeydown'" />
+                    </div>
+                </div>
+
+                <fieldset>
+                    <legend>Длъжностно лице</legend>
+                    <div class="row">
+                        <span class="span3">Тип длъжностно лице:</span>
+                        <select class="span9" data-bind="options: official.nomOfficial,
+                                             optionsText: 'name',
+                                             value: official.selectedOfficial">
+                        </select>
+                    </div>
+                    <div>
+                        <!--ko if: official.selectedOfficial().key === "PersonNames" -->
+                        <!-- ko with: official().personNames -->
+                        <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                        <!-- /ko -->
+                        <!--/ko-->
+                        <!--/ko-->
+                    </div>
+
+                    <div>
+                        <!--ko if: official.selectedOfficial().key === "ForeignCitizenNames" -->
+                        <!-- ko with: official().foreignCitizenNames -->
+                        <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true} -->
+                        <!-- /ko -->
+                        <!-- /ko -->
+                        <!--/ko-->
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>

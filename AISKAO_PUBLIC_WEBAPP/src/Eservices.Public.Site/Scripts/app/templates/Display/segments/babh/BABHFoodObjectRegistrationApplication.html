@@ -1,0 +1,118 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Display' } -->
+    <!-- /ko-->
+
+    <!--ko  with: serviceTermType.displayValue -->
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>
+                <span class="span9 uneditable-input" data-bind="text: name"></span>
+            </label>
+        </div>
+    </fieldset>
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Display', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристики на обект за производство и търговия с храни</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectPurpose.displayValue().name"></span>
+        </div>
+        <div class="row">
+            <span class="span3 text-left">Категория обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectCategory"></span>
+        </div>
+        <div class="row">
+            <span class="span3 text-left">Наименование на обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectName"></span>
+        </div>
+
+        <div class="row">
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Декларирам, че:</span>
+                    <input type="checkbox" disabled data-bind="checked: foodObjectRequirementsMet" />
+                </label>
+                <span class="uneditable-input span11">Обектът отговаря на приложимата нормативна уредба 
+                спрямо дейностите и храните, които са заявени.</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Декларирам, че:</span>
+                    <input type="checkbox" disabled data-bind="checked: foodObjectDeclarationBestPractices" />
+                </label>
+                <span class="uneditable-input span11">1.Запознат\а съм с действащото законодателство в областта
+                    на храните, свързано със заявените от мен дейности.
+                    2.Обектът отговаря на хигиенните изисквания, отнасящи се към заявените дейности.
+                    3.Има разработени добри практики за производство и търговия с храни и система за анализ на
+                    опасностите и критични контролни точки или процедури в съотвествие с нейните принципи, когато
+                    цялостното внедряване на системата е неприложимо.
+                    4.Има разработена технологична документация за групите храни, които ще се произвеждат в обекта.
+                </span>
+            </div>
+        </div>
+
+        <!-- ko if: foodObjectPurpose() === 'R-1009' -->
+        <fieldset>
+            <legend>Декларация за ГМО</legend>
+            <div class="row">
+                <div class="control-group span12">
+                    <label class="checkbox">
+                        <span>Декларирам, че:</span>
+                        <input type="checkbox" disabled data-bind="checked: foodObjectDeclarationGMO" />
+                    </label>
+                    <span class="uneditable-input span11">Влагат се съставки и добавки, както и компоненти на дадена 
+                        съставка и вещества, които присъстват в крайния продукт, макар и в променена форма
+                        произведени от ГМО.</span>
+                </div>
+            </div>
+        </fieldset>
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Адрес на обект за производство и търговия с храни</legend>
+        <!-- ko compose: { model: foodObjectRealAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <label class="row">
+            <span class="span3 text-left">Дирекция:</span>
+            <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Списък на групите храни в обекта</legend>
+        <!-- ko compose: { model: foodGroupsList, view: 'segments/babh/FoodGroupsList', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за лице за контакт за провеждане на проверка</legend>
+        <!-- ko compose: { model: contactPersonData, view: 'segments/babh/ContactPersonData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceFooter, view: 'segments/common/ElectronicAdministrativeServiceFooter', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Display' } -->
+    <!-- /ko-->
+</div>
+

@@ -1,0 +1,30 @@
+﻿<div>
+    <div class="row">
+        <label>
+            <span class="span3">Електронна поща:</span>
+            <span class="uneditable-input span9" data-bind="text: emailAddress"></span>
+        </label>
+    </div>
+    
+    <!-- ko if: recipientGroups.isAuthorEqualsRecipient -->
+        <!-- ko foreach: recipientGroups -->
+            <div class="row">
+                <label>
+                    <span class="span3">Тип на автор:</span>
+                    <span class="uneditable-input span9" data-bind="text: authors.selectedAuthorType"></span>
+                </label>
+            </div>
+            <!-- ko foreach: authors -->
+                <!-- ko compose: { view: 'segments/common/ElectronicStatementAuthorEqualsRecepient', area: 'Display' } -->
+                <!-- /ko -->
+            <!-- /ko -->
+        <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko ifnot: recipientGroups.isAuthorEqualsRecipient -->
+        <div data-bind="with: recipientGroups()[0]">
+            <!-- ko compose: { view: 'segments/common/RecipientGroup', area: 'Display'} -->
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</div>

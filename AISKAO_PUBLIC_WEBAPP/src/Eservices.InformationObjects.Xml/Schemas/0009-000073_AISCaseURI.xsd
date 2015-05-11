@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000073"
+      xmlns="http://ereg.egov.bg/segment/0009-000073"
+      xmlns:rdu="http://ereg.egov.bg/segment/0009-000044"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000044" schemaLocation="0009-000044_RegisteredDocumentURI.xsd"/>
+
+
+  <xsd:complexType name="AISCaseURI">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">УРИ на преписка</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="rdu:RegisteredDocumentURI" />
+    </xsd:complexContent>
+  </xsd:complexType>
+
+
+</xsd:schema>

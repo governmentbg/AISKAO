@@ -1,0 +1,62 @@
+﻿<fieldset>
+    <legend>Редактиране</legend>
+
+    <div class="row">
+        <span class="span3">Вид на пренос:</span>
+        <span class="span6" data-bind="text: transportType.displayValue().name"></span>
+    </div>
+
+    <!-- ko with: discrepancies -->
+    <div class="row">
+        <span class="span3 strong">Добави Причина за отказ:</span>
+        <span>
+            <select class="span6" data-bind="options: discrepancy.nomDiscrepancies,
+                                            optionsText: 'name',
+                                            value: discrepancy.selectedDiscrepancy">
+            </select>
+            <button data-bind="click: addDiscrepancy"><i class="icon-ok icon-white"></i></button>
+        </span>
+    </div>
+    <!--/ko-->
+
+    <!-- ko with: discrepancies -->
+        <!-- ko foreach: discrepancy-->
+            <div class="row">
+                <span class="span3 text-left">Причина #<span data-bind="text: 1 + $index()"></span>:</span>
+                <span class="input-append">
+                    <span class="uneditable-input span6" data-bind="text: $parent.getDiscrepancyName($data)"></span>
+                    <button class="btn btn-danger" data-bind="click: $parent.removeDiscrepancy.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                </span>
+            </div>
+        <!-- /ko -->
+    <!-- /ko -->
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+    </fieldset>
+    <!-- ko compose: { model: applicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor'} -->
+    <!-- /ko -->
+
+    <div class="row">
+        <span class="span3 text-left">Подаден документ:</span>
+        <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+    </div>
+
+    <div class="row">
+        <span class="span3 text-left">УРИ в регистъра на информационните обекти:</span>
+
+        <!--ko with: documentTypeURI-->
+        <div class="row">
+            <span class="span4 uneditable-input" data-bind="text: registerIndex"></span>
+            <span class="span5 uneditable-input" data-bind="text: batchNumber"></span>
+        </div>
+        <!-- /ko -->
+    </div>
+    <div class="row">
+        <span class="span3 text-left">Време на създаване на съобщението:</span>
+        <span class="uneditable-input span9" data-bind="formattedDateTime: messageCreationTime"></span>
+    </div>
+
+    <!-- ko compose: { model: electronicServiceProvider, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+    <!-- /ko -->
+</fieldset>

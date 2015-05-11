@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000031"
+      xmlns="http://ereg.egov.bg/value/0008-000031"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+	<xsd:simpleType name="ForeignEntityRegister">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Наименование на регистър в друга държава</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+        	<xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

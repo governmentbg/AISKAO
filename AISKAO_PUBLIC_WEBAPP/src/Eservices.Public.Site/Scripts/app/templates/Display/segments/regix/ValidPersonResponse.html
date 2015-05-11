@@ -1,0 +1,31 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend></legend>
+        <div class="row">
+            <span class="span3">Собствено име:</span>
+            <span class="span9 uneditable-input" data-bind="text: firstName"></span>
+        </div>
+
+        <div class="row">
+            <span class="span3">Бащино име:</span>
+            <span class="span9 uneditable-input" data-bind="text: surName"></span>
+        </div>
+
+        <div class="row">
+            <span class="span3">Фамилно име:</span>
+            <span class="span9 uneditable-input" data-bind="text: familyName"></span>
+        </div>
+
+        <div class="row">
+            <span class="span3">Дата на раждане:</span>
+            <span class="span9 uneditable-input" data-bind="formattedDate: birthDate"></span>
+        </div>
+
+        <div class="row">
+            <span class="span3">Дата на смърт:</span>
+            <span class="span9 uneditable-input" data-bind="formattedDate: deathDate"></span>
+        </div>
+    </fieldset>
+</div>

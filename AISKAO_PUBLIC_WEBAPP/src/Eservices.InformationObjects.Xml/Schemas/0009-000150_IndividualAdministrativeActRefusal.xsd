@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000150"
+            xmlns="http://ereg.egov.bg/segment/0009-000150"
+            xmlns:drsd="http://ereg.egov.bg/value/0008-000004"
+            xmlns:du="http://ereg.egov.bg/segment/0009-000001"
+            xmlns:pn="http://ereg.egov.bg/segment/0009-000005"
+            xmlns:fcn="http://ereg.egov.bg/segment/0009-000007"
+            xmlns:espbd="http://ereg.egov.bg/segment/0009-000002"
+            xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+            xmlns:dtu="http://ereg.egov.bg/segment/0009-000003"
+            xmlns:xds="http://ereg.egov.bg/segment/0009-000004"
+            xmlns:esa="http://ereg.egov.bg/segment/0009-000016"
+            xmlns:acu="http://ereg.egov.bg/segment/0009-000073"
+            xmlns:iaarh="http://ereg.egov.bg/value/0008-000138"
+            xmlns:iaarlg="http://ereg.egov.bg/value/0008-000139"
+            xmlns:iaarfg="http://ereg.egov.bg/value/0008-000140"
+            xmlns:iaarat="http://ereg.egov.bg/value/0008-000141"
+            xmlns:iaaraa="http://ereg.egov.bg/value/0008-000142"
+            xmlns:abn="http://ereg.egov.bg/value/0008-000047"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000004" schemaLocation="0008-000004_DocumentReceiptOrSigningDate.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000005" schemaLocation="0009-000005_PersonNames.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000007" schemaLocation="0009-000007_ForeignCitizenNames.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000016" schemaLocation="0009-000016_ElectronicServiceApplicant.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000073" schemaLocation="0009-000073_AISCaseURI.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000138" schemaLocation="0008-000138_IndividualAdministrativeActRefusalHeader.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000139" schemaLocation="0008-000139_IndividualAdministrativeActRefusalLegalGround.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000140" schemaLocation="0008-000140_IndividualAdministrativeActRefusalFactualGround.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000141" schemaLocation="0008-000141_IndividualAdministrativeActRefusalAppealTerm.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000142" schemaLocation="0008-000142_IndividualAdministrativeActRefusalAppealAuthority.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000047" schemaLocation="0008-000047_AdministrativeBodyName.xsd"/>
+
+  <xsd:element name="IndividualAdministrativeActRefusal" type="IndividualAdministrativeActRefusal"/>
+  <xsd:complexType name="IndividualAdministrativeActRefusal">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Отказ за издаване на индивидуален административен акт</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DocumentTypeURI" type="dtu:DocumentTypeURI" minOccurs="0"/>
+      <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0"/>
+      <xsd:element name="DocumentURI" type="du:DocumentURI" minOccurs="0"/>
+      <xsd:element name="DocumentReceiptOrSigningDate" type="drsd:DocumentReceiptOrSigningDate" minOccurs="0"/>
+      <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0"/>
+      <xsd:element name="ElectronicServiceApplicant" type="esa:ElectronicServiceApplicant" minOccurs="0"/>
+      <xsd:element name="IndividualAdministrativeActRefusalHeader" type="iaarh:IndividualAdministrativeActRefusalHeader" minOccurs="0"/>
+      <xsd:element name="AISCaseURI" type="acu:AISCaseURI" minOccurs="0"/>
+      <xsd:element name="IndividualAdministrativeActRefusalLegalGround" type="iaarlg:IndividualAdministrativeActRefusalLegalGround" minOccurs="0"/>
+      <xsd:element name="IndividualAdministrativeActRefusalFactualGround" type="iaarfg:IndividualAdministrativeActRefusalFactualGround" minOccurs="0"/>
+      <xsd:element name="IndividualAdministrativeActRefusalAppealTerm" type="iaarat:IndividualAdministrativeActRefusalAppealTerm" minOccurs="0"/>
+      <xsd:element name="IndividualAdministrativeActRefusalAppealAuthority" type="iaaraa:IndividualAdministrativeActRefusalAppealAuthority" minOccurs="0"/>
+      <xsd:element name="AdministrativeBodyName" type="abn:AdministrativeBodyName" minOccurs="0"/>
+      <xsd:element name="Official" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="PersonNames" type="pn:PersonNames"/>
+            <xsd:element name="ForeignCitizenNames" type="fcn:ForeignCitizenNames"/>
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="XMLDigitalSignature" type="xds:XMLDigitalSignature" minOccurs="0"/>
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

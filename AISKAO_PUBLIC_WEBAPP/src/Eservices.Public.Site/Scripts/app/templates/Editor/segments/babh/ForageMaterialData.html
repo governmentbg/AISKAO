@@ -1,0 +1,26 @@
+﻿<div>
+    <fieldset>
+        <legend>Производство на фуражни суровини, предназначени за пазара
+            <!-- ko  with: forageMaterialsByProductDatas -->
+            <button type="button" class="btn btn-default" data-bind="click: addForageMaterialsByProductData">Добави</button>
+            <!-- /ko -->
+        </legend>
+        <div class="row">
+            <div class="span6" data-bind="with: forageMaterialsByProductDatas">
+                <div class="span6" data-bind="foreach: forageMaterialsByProductData()">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span7">Данни за фуражни суровини по вид продукт
+                                  <button class="btn btn-danger" type="button" data-bind="click: $parent.removeForageMaterialsByProductData.bind($parent)">Изтрий</button>
+                                </span>
+                            </span>
+                        </legend>
+                        <!-- ko compose: { model: $data, view: 'segments/babh/ForageMaterialsByProductData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                        <!-- /ko -->
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+</div>

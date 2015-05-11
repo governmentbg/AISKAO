@@ -1,0 +1,155 @@
+﻿<div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Начин на получаване:</span>
+             <span data-bind="attr: { 'class': serviceResultReceiptMethod.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                   <select data-bind="options: serviceResultReceiptMethod.serviceResultReceiptMethods,
+                                    optionsText: 'name',
+                                    optionsValue: 'key',
+                                    value: serviceResultReceiptMethod,
+                                    attr: { 'class': serviceResultReceiptMethod.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                                    enable: serviceResultReceiptMethod.serviceResultReceiptMethods().length != 0 ">
+                    </select>
+                </span>
+        </label>
+    </div>
+
+        <!-- ko if: serviceResultReceiptMethod() == '0006-000078' -->
+            <!-- ko with: municipalityAdministrationAdress -->
+                <div class="row">
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Област:</span>
+                            <span data-bind="attr: { 'class': districtCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: districtCode.nomDistricts(),
+                                            optionsText: 'name',
+                                            value: districtCode.selectedDistrict,
+                                            attr: { 'class': districtCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: districtCode.isLoaded()">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Община:</span>
+                            <span data-bind="attr: { 'class': municipalityCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: municipalityCode.nomMunicipalities(),
+                                            optionsText: 'name',
+                                            value: municipalityCode.selectedMunicipality,
+                                            attr: { 'class': municipalityCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: municipalityCode.nomMunicipalities() != 0">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Кметство:</span>
+                            <span data-bind="attr: { 'class': mayoraltyCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: mayoraltyCode.nomMayoralties(),
+                                            optionsText: 'name',
+                                            value: mayoraltyCode.selectedMayoralty,
+                                            attr: { 'class': mayoraltyCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: mayoraltyCode.nomMayoralties() != 0">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Район:</span>
+                            <span data-bind="attr: { 'class': areaCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: areaCode.nomAreas(),
+                                            optionsText: 'name',
+                                            value: areaCode.selectedArea,
+                                            attr: { 'class': areaCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: areaCode.nomAreas() != 0">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            <!-- /ko -->
+        <!-- /ko -->
+
+        <!-- ko if: serviceResultReceiptMethod() == '0006-000080' -->
+            <!-- ko with: applicantAdress -->
+                <div class="row">
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Област:</span>
+                            <span data-bind="attr: { 'class': districtCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: districtCode.nomDistricts(),
+                                            optionsText: 'name',
+                                            value: districtCode.selectedDistrict,
+                                            attr: { 'class': districtCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: districtCode.isLoaded()">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Община:</span>
+                            <span data-bind="attr: { 'class': municipalityCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: municipalityCode.nomMunicipalities(),
+                                            optionsText: 'name',
+                                            value: municipalityCode.selectedMunicipality,
+                                            attr: { 'class': municipalityCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: municipalityCode.nomMunicipalities() != 0">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Населено място:</span>
+                            <span data-bind="attr: { 'class': settlementCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                                <select class="span3"
+                                    data-bind="options: settlementCode.nomSettlements(),
+                                            optionsText: 'displayName',
+                                            value: settlementCode.selectedSettlement,
+                                            attr: { 'class': settlementCode.isLoading() === true ? 'span3 bar fullwidth' : 'span3' },
+                                            enable: settlementCode.nomSettlements() != 0">
+                                </select>
+                            </span>
+                        </label>
+                    </div>
+                    <div class="span6">
+                        <label class="row">
+                            <span class="span3 text-left">Пощенски код:</span>
+                            <input class="span3" type="text" data-bind="value: postCode" />
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <span class="span3 text-left">Адрес:</span>
+                        <input class="span9" type="text" data-bind="value: addressDescription" />
+                    </label>
+                </div>
+            <!-- /ko -->
+        <!-- /ko -->
+
+    <div>
+        <!-- ko if: serviceResultReceiptMethod() == '0006-000081' -->
+            <div class="row">
+                <label>
+                    <span class="span3 text-left">Пощенска кутия:</span>
+                    <input class="span9" type="text" data-bind="value: postOfficeBox" />
+                </label>
+            </div>
+        <!-- /ko -->
+    </div>
+</div>

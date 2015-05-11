@@ -1,0 +1,128 @@
+﻿<div>
+    <fieldset>
+        <legend>
+            <span class="controls-row">
+                <span class="span12">Данни за МПС</span>
+            </span></legend>
+        <!--ko compose: { model: ownerPersonData, view: 'segments/regix/PersonData', area: 'Display' } -->
+        <!-- /ko-->
+
+        <!--ko compose: { model: ownerEntityData, view: 'segments/regix/EntityData', area: 'Display' } -->
+        <!-- /ko-->
+
+        <!--ko compose: { model: ownerForeignerPersonData, view: 'segments/regix/ForeignerPersonData', area: 'Display' } -->
+        <!-- /ko-->
+
+        <fieldset>
+            <legend>Данни за МПС</legend>
+            <div class="row">
+                <span class="span3">Регистрационен номер на МПС:</span>
+                <span class="span9 uneditable-input" data-bind="text: vehicleRegistrationNumber"></span>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                    <label class="row">
+                        <span class="span3 text-left">Дата нa първа регистрация:</span>
+                        <span class="span9 uneditable-input" data-bind="formattedDate: firstRegistrationDate"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="span3">Номер на документа:</span>
+                <span class="span9 uneditable-input" data-bind="text: motorVehicleRegistrationCertificateNumber"></span>
+            </div>
+
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span3 text-left">Вид МПС на кирилица:</span>
+                        <span class="span3 uneditable-input" data-bind="text: motorVehicleType"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <span class="span3 text-left">Вид МПС на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: motorVehicleTypeLatin"></span>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span3">Марка (модел) на кирилица:</span>
+                        <span class="span3 uneditable-input" data-bind="text: motorVehicleModel"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <span class="span3">Марка (модел) на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: motorVehicleModelLatin"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span3">Търговско описание на кирилица:</span>
+                        <span class="span3 uneditable-input" data-bind="text: tradeDescription"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <span class="span3">Търговско описание на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: tradeDescriptionLatin"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="span3">Идентификационен номер на МПС:</span>
+                <span class="span9 uneditable-input" data-bind="text: vinNumber"></span>
+            </div>
+
+            <div class="row">
+                <div class="span12">
+                    <label class="row">
+                        <span class="span3 text-left">Дата на издаване на свидетелството:</span>
+                        <span class="span9 uneditable-input" data-bind="formattedDate: issueDate"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="span3">Категория на превозното средство:</span>
+                <span class="span9 uneditable-input" data-bind="text: category"></span>
+            </div>
+
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span3">Цвят на МПС на кирилица:</span>
+                        <span class="span3 uneditable-input" data-bind="text: color"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <span class="span3">Цвят на МПС на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: colorLatin"></span>
+                </div>
+            </div>
+
+            <div class="row">
+                <span class="span3">Номер на двигател:</span>
+                <span class="span9 uneditable-input" data-bind="text: engineNumber"></span>
+            </div>
+
+            <div class="row">
+                <div class="span6">
+                    <label class="row">
+                        <span class="span3">Допълнителен цвят на МПС:</span>
+                        <span class="span3 uneditable-input" data-bind="text: colorSecondary"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <span class="span3">Допълнителен цвят на МПС на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: colorSecondaryLatin"></span>
+                </div>
+            </div>
+        </fieldset>
+    </fieldset>
+</div>

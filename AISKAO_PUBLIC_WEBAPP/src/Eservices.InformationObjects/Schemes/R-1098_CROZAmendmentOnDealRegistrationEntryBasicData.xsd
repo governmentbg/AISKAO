@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1098" xmlns="http://ereg.egov.bg/segment/R-1098" xmlns:crozdred="http://ereg.egov.bg/segment/R-1096" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1096" schemaLocation="R-1096_CROZDealRegistrationEntryData.xsd" />
+  <xsd:complexType name="CROZAmendmentOnDealRegistrationEntryBasicData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за допълнително вписване по сделка, запор на имущество или решение на съда по несъстоятелността в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crozdred:CROZDealRegistrationEntryData" />
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

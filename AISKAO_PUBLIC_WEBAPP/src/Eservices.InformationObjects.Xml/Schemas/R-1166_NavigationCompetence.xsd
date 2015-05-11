@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1166" xmlns="http://ereg.egov.bg/value/R-1166" xmlns:ncn="http://ereg.egov.bg/nomenclature/R-1164" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1164" schemaLocation="R-1164_NavigationCompetenciesNomeclature.xsd" />
+  <xsd:simpleType name="NavigationCompetence">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Правоспособност за плаване по ВВПЕ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="ncn:NavigationCompetenciesNomeclature" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,1437 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E210F09A-61ED-47BF-A365-E670B148CDC8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoLogica.Eservices.InformationObjects</RootNamespace>
+    <AssemblyName>Eservices.InformationObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\Eservices.AIS.Solution\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Validation">
+      <HintPath>..\Eservices.AIS.Solution\Libraries\Microsoft.Practices.EnterpriseLibrary.Validation.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAnnotation\BulstatUICAttribute.cs" />
+    <Compile Include="DataAnnotation\CharsAllowedAttribute.cs" />
+    <Compile Include="DataAnnotation\Common.cs" />
+    <Compile Include="DataAnnotation\CountryAttribute.cs" />
+    <Compile Include="DataAnnotation\DateFormatAttribute.cs" />
+    <Compile Include="DataAnnotation\DAValidationMessagesOverride.Designer.cs" />
+    <Compile Include="DataAnnotation\EGNAttributeAttribute.cs" />
+    <Compile Include="DataAnnotation\EKATTEAreasAttribute.cs" />
+    <Compile Include="DataAnnotation\EKATTELocationsAttribute.cs" />
+    <Compile Include="DataAnnotation\EKATTELocationsOrSettlements.cs" />
+    <Compile Include="DataAnnotation\EmailAttribute.cs" />
+    <Compile Include="DataAnnotation\ExactStringLengthAttribute.cs" />
+    <Compile Include="DataAnnotation\IntegerAttribute.cs" />
+    <Compile Include="DataAnnotation\LocalizedDisplayNameAttribute.cs" />
+    <Compile Include="DataAnnotation\MaxStringLengthAttribute.cs" />
+    <Compile Include="DataAnnotation\MinBoundaryNumberAttribute.cs" />
+    <Compile Include="DataAnnotation\NomenclatureDataTypeAttribute.cs" />
+    <Compile Include="DataAnnotation\NomenclatureRestrictedAttribute.cs" />
+    <Compile Include="DataAnnotation\PNFAttribute.cs" />
+    <Compile Include="DataAnnotation\RequiredInSectionAttribute.cs" />
+    <Compile Include="DataAnnotation\RequiredOneOfGroupInSectionAttribute.cs" />
+    <Compile Include="DataAnnotation\RequiredSectionAttribute.cs" />
+    <Compile Include="DataAnnotation\ValidateDateTimeModelFieldsAttribute .cs" />
+    <Compile Include="Documents\HousingSavingsAccountAvailabilityReportApplication.cs" />
+    <Compile Include="Documents\IElectronicApplicationDocument.cs" />
+    <Compile Include="Documents\IPropertyElectronicApplicationDocument.cs" />
+    <Compile Include="Documents\ReceiptAcknowledgedMessage.cs" />
+    <Compile Include="Documents\ReceiptNotAcknowledgedMessage.cs" />
+    <Compile Include="Documents\RegisteredErrorsInDocumentContent.cs" />
+    <Compile Include="Documents\TerritorialDataDistrictSegment.cs" />
+    <Compile Include="Documents\TerritorialDataMunicipalitySegment.cs" />
+    <Compile Include="Documents\TerritorialUnitEKATTESegment.cs" />
+    <Compile Include="Documents\TransferContainer.cs" />
+    <Compile Include="EnumHelper.cs" />
+    <Compile Include="ESOED\EsoedDocument.cs" />
+    <Compile Include="ExtensionsHelper.cs" />
+    <Compile Include="IInformationObject.cs" />
+    <Compile Include="InformationObject.cs" />
+    <Compile Include="InformationObjectCustom.cs" />
+    <Compile Include="Nomenclatures\AdministrativeNomenclatureDocumentTypeArchivalType.cs" />
+    <Compile Include="Nomenclatures\AdministrativeNomenclatureDocumentTypeProcessingType.cs" />
+    <Compile Include="Nomenclatures\AISAccessManagementType.cs" />
+    <Compile Include="Nomenclatures\AISCertificationCheckResultType.cs" />
+    <Compile Include="Nomenclatures\AISTaskExecutionAssessmentType.cs" />
+    <Compile Include="Nomenclatures\AISTaskStatus.cs" />
+    <Compile Include="Nomenclatures\ApplicationType.cs" />
+    <Compile Include="Nomenclatures\ClassificationSchemeSectionType.cs" />
+    <Compile Include="Nomenclatures\DocumentElectronicTransportType.cs" />
+    <Compile Include="Nomenclatures\DocumentOpinionType.cs" />
+    <Compile Include="Nomenclatures\DocumentProcessType.cs" />
+    <Compile Include="Nomenclatures\DocumentTransformationTypes.cs" />
+    <Compile Include="Nomenclatures\ElectronicDocumentDiscrepancyType.cs" />
+    <Compile Include="Nomenclatures\ElectronicServiceProviderType.cs" />
+    <Compile Include="Nomenclatures\ESOEDMessageType.cs" />
+    <Compile Include="Nomenclatures\IndividualAdministrativeActRefusalType.cs" />
+    <Compile Include="Nomenclatures\ObjectLockType.cs" />
+    <Compile Include="Nomenclatures\RealEstateType.cs" />
+    <Compile Include="Nomenclatures\ServiceInformationBitType.cs" />
+    <Compile Include="Nomenclatures\ServiceResultReceiptMethod.cs" />
+    <Compile Include="Nomenclatures\ServiceStageExternalServiceTypes.cs" />
+    <Compile Include="Nomenclatures\ServiceTermType.cs" />
+    <Compile Include="Nomenclatures\SpeedOfServiceProcessingNomenclature.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReceiptAcknowledgedMessageRegisteredBy.cs" />
+    <Compile Include="ReceiptAcknowledgedMessageRegisteredByOfficer.cs" />
+    <Compile Include="Resources\Documents.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Documents.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Fields.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fields.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Labels.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Labels.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Nomenclatures.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Nomenclatures.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Sections.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sections.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Terms.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Terms.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Visualisation.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Visualisation.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Schemes\0007-000003_ElectronicServiceProviderTypeNomenclature.designer.cs" />
+    <Compile Include="Schemes\0007-000013_ServiceResultReceiptMethodNomenclature.designer.cs" />
+    <Compile Include="Schemes\0007-000014_ServiceTermTypeNomenclature.designer.cs" />
+    <Compile Include="Schemes\0007-000015_ApplicationTypeNomenclature.designer.cs" />
+    <Compile Include="Schemes\0007-000022_RealEstateTypeNomenclature.designer.cs" />
+    <Compile Include="Schemes\0008-000001_BatchNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000002_RegisterIndex.designer.cs" />
+    <Compile Include="Schemes\0008-000003_DocumentSequenceNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000004_DocumentReceiptOrSigningDate.designer.cs" />
+    <Compile Include="Schemes\0008-000007_DocumentTypeName.designer.cs" />
+    <Compile Include="Schemes\0008-000008_PersonFirstName.designer.cs" />
+    <Compile Include="Schemes\0008-000009_PersonMiddleName.designer.cs" />
+    <Compile Include="Schemes\0008-000010_PersonLastName.designer.cs" />
+    <Compile Include="Schemes\0008-000011_PersonPseudonim.designer.cs" />
+    <Compile Include="Schemes\0008-000012_EGN.designer.cs" />
+    <Compile Include="Schemes\0008-000013_LNCh.designer.cs" />
+    <Compile Include="Schemes\0008-000014_ForeignCitizenFirstNameCyrillic.designer.cs" />
+    <Compile Include="Schemes\0008-000015_ForeignCitizenLastNameCyrillic.designer.cs" />
+    <Compile Include="Schemes\0008-000016_ForeignCitizenOtherNameCyrillic.designer.cs" />
+    <Compile Include="Schemes\0008-000017_ForeignCitizenPseudonimCyrillic.designer.cs" />
+    <Compile Include="Schemes\0008-000018_ForeignCitizenFirstNameLatin.designer.cs" />
+    <Compile Include="Schemes\0008-000019_ForeignCitizenLastNameLatin.designer.cs" />
+    <Compile Include="Schemes\0008-000020_ForeignCitizenOtherNameLatin.designer.cs" />
+    <Compile Include="Schemes\0008-000021_ForeignCitizenPseudonimLatin.designer.cs" />
+    <Compile Include="Schemes\0008-000022_BirthDate.designer.cs" />
+    <Compile Include="Schemes\0008-000023_SettlementAbroadName.designer.cs" />
+    <Compile Include="Schemes\0008-000024_CountryISO3166TwoLetterCode.designer.cs" />
+    <Compile Include="Schemes\0008-000025_CountryNameCyrillic.designer.cs" />
+    <Compile Include="Schemes\0008-000026_ForeignCitizenIdentityDocumentNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000027_ForeignCitizenIdentityDocumentType.designer.cs" />
+    <Compile Include="Schemes\0008-000028_EntityIdentifier.designer.cs" />
+    <Compile Include="Schemes\0008-000029_EntityName.designer.cs" />
+    <Compile Include="Schemes\0008-000030_ForeignEntityName.designer.cs" />
+    <Compile Include="Schemes\0008-000031_ForeignEntityRegister.designer.cs" />
+    <Compile Include="Schemes\0008-000032_ForeignEntityIdentifier.designer.cs" />
+    <Compile Include="Schemes\0008-000033_ForeignEntityOtherData.designer.cs" />
+    <Compile Include="Schemes\0008-000034_ElectronicServiceProviderType.designer.cs" />
+    <Compile Include="Schemes\0008-000035_ElectronicServiceAuthorQuality.designer.cs" />
+    <Compile Include="Schemes\0008-000036_EmailAddress.designer.cs" />
+    <Compile Include="Schemes\0008-000037_AISCaseAccessIdentifier.designer.cs" />
+    <Compile Include="Schemes\0008-000041_FileType.designer.cs" />
+    <Compile Include="Schemes\0008-000077_SUNAUServiceURI.designer.cs" />
+    <Compile Include="Schemes\0008-000120_ElectronicDocumentXmlContent.designer.cs" />
+    <Compile Include="Schemes\0008-000121_AISCorrespondenceAccessIdentifier.designer.cs" />
+    <Compile Include="Schemes\0008-000125_BuildingNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000126_Entrance.designer.cs" />
+    <Compile Include="Schemes\0008-000127_Floor.designer.cs" />
+    <Compile Include="Schemes\0008-000128_PostCode.designer.cs" />
+    <Compile Include="Schemes\0008-000129_ElectronicServiceApplicantPhoneNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000130_ElectronicServiceApplicantFaxNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000131_SUNAUServiceName.designer.cs" />
+    <Compile Include="Schemes\0008-000132_AttachedDocumentFileContent.designer.cs" />
+    <Compile Include="Schemes\0008-000133_AttachedDocumentDescription.designer.cs" />
+    <Compile Include="Schemes\0008-000134_AttachedDocumentUniqueIdentifier.designer.cs" />
+    <Compile Include="Schemes\0008-000135_AttachedDocumentFileName.designer.cs" />
+    <Compile Include="Schemes\0008-000136_PostOfficeBox.designer.cs" />
+    <Compile Include="Schemes\0008-000143_ServiceTermType.designer.cs" />
+    <Compile Include="Schemes\0008-000144_ApplicationType.designer.cs" />
+    <Compile Include="Schemes\0008-000191_AreaCode.designer.cs" />
+    <Compile Include="Schemes\0008-000192_AreaName.designer.cs" />
+    <Compile Include="Schemes\0008-000194_AddressDescription.designer.cs" />
+    <Compile Include="Schemes\0008-000197_ServiceResultReceiptMethod.designer.cs" />
+    <Compile Include="Schemes\0008-000198_SendApplicationWithReceiptAcknowledgedMessage.designer.cs" />
+    <Compile Include="Schemes\0008-000199_ApplicationSigningTime.designer.cs" />
+    <Compile Include="Schemes\0008-000200_DistrictCode.designer.cs" />
+    <Compile Include="Schemes\0008-000201_DistrictName.designer.cs" />
+    <Compile Include="Schemes\0008-000202_MunicipalityName.designer.cs" />
+    <Compile Include="Schemes\0008-000203_MayoraltyCode.designer.cs" />
+    <Compile Include="Schemes\0008-000204_MayoraltyName.designer.cs" />
+    <Compile Include="Schemes\0008-000205_SettlementCode.designer.cs" />
+    <Compile Include="Schemes\0008-000206_SettlementName.designer.cs" />
+    <Compile Include="Schemes\0008-000209_MunicipalityCode.designer.cs" />
+    <Compile Include="Schemes\0008-000226_ResidentialComplex.designer.cs" />
+    <Compile Include="Schemes\0008-000227_StreetBoulevardSquare.designer.cs" />
+    <Compile Include="Schemes\0008-000228_StreetBoulevardSquareNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000269_ArealName.designer.cs" />
+    <Compile Include="Schemes\0008-000270_TerritorialUnitEKATTECode.designer.cs" />
+    <Compile Include="Schemes\0008-000271_TerritorialUnitEKATTEName.designer.cs" />
+    <Compile Include="Schemes\0008-000272_SeparateBuildingUnitFunctionalDesignationCode.designer.cs" />
+    <Compile Include="Schemes\0008-000273_SeparateBuildingUnitFunctionalDesignationName.designer.cs" />
+    <Compile Include="Schemes\0008-000274_SeparateBuildingUnitNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000275_UrbanLandPropertyOldIdentifierCadastreNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000276_UrbanLandPropertyOldIdentifierParcelNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000277_UrbanLandPropertyOldIdentifierQuarterNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000278_FarmlandAndForestLandPropertyOldIdentifierParcelNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000279_FarmlandAndForestLandPropertyOldIdentifierArrayNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000280_CadastralAreaNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000281_LandPropertyCadastralNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000282_LandPropertyBuildingCadastralNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000283_SeparateBuildingUnitCadastralNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000284_StatePropertyActNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000285_StatePropertyActIssueDate.designer.cs" />
+    <Compile Include="Schemes\0008-000286_MunicipalPropertyActNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000287_MunicipalPropertyActIssueDate.designer.cs" />
+    <Compile Include="Schemes\0008-000288_RealEstateBatchNumber.designer.cs" />
+    <Compile Include="Schemes\0008-000289_RealEstateType.designer.cs" />
+    <Compile Include="Schemes\0008-000290_RealQuadrature.designer.cs" />
+    <Compile Include="Schemes\0008-000291_AccordingToDocumentsQuadrature.designer.cs" />
+    <Compile Include="Schemes\0008-000292_RealEstateAdditionalInformation.designer.cs" />
+    <Compile Include="Schemes\0008-000293_NeighboringPropertyDirection.designer.cs" />
+    <Compile Include="Schemes\0008-000294_NeighboringPropertyDescription.designer.cs" />
+    <Compile Include="Schemes\0009-000001_DocumentURI.designer.cs" />
+    <Compile Include="Schemes\0009-000002_ElectronicServiceProviderBasicData.designer.cs" />
+    <Compile Include="Schemes\0009-000003_DocumentTypeURI.designer.cs" />
+    <Compile Include="Schemes\0009-000004_XMLDigitalSignature.designer.cs" />
+    <Compile Include="Schemes\0009-000005_PersonNames.designer.cs" />
+    <Compile Include="Schemes\0009-000006_PersonIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000007_ForeignCitizenNames.designer.cs" />
+    <Compile Include="Schemes\0009-000008_PersonBasicData.designer.cs" />
+    <Compile Include="Schemes\0009-000009_ForeignCitizenPlaceOfBirth.designer.cs" />
+    <Compile Include="Schemes\0009-000010_ForeignCitizenIdentityDocument.designer.cs" />
+    <Compile Include="Schemes\0009-000011_ForeignCitizenBasicData.designer.cs" />
+    <Compile Include="Schemes\0009-000012_ElectronicStatementAuthor.designer.cs" />
+    <Compile Include="Schemes\0009-000013_EntityBasicData.designer.cs" />
+    <Compile Include="Schemes\0009-000014_ForeignEntityBasicData.designer.cs" />
+    <Compile Include="Schemes\0009-000015_ElectronicServiceRecipient.designer.cs" />
+    <Compile Include="Schemes\0009-000016_ElectronicServiceApplicant.designer.cs" />
+    <Compile Include="Schemes\0009-000017_ReceiptNotAcknowledgedMessage.designer.cs" />
+    <Compile Include="Schemes\0009-000018_AISUserNames.designer.cs" />
+    <Compile Include="Schemes\0009-000019_ReceiptAcknowledgedMessage.designer.cs" />
+    <Compile Include="Schemes\0009-000020_TransferredDocument.designer.cs" />
+    <Compile Include="Schemes\0009-000021_TransferContainer.designer.cs" />
+    <Compile Include="Schemes\0009-000022_RegisterObjectURI.designer.cs" />
+    <Compile Include="Schemes\0009-000023_TermURI.designer.cs" />
+    <Compile Include="Schemes\0009-000024_RegisteredErrorInDocumentContent.designer.cs" />
+    <Compile Include="Schemes\0009-000025_RegisteredErrorsInDocumentContent.designer.cs" />
+    <Compile Include="Schemes\0009-000044_RegisteredDocumentURI.designer.cs" />
+    <Compile Include="Schemes\0009-000091_ElectronicAdministrativeServiceURI.designer.cs" />
+    <Compile Include="Schemes\0009-000092_ElectronicDocumentXml.designer.cs" />
+    <Compile Include="Schemes\0009-000093_AdministrativeServiceDeliveryLetter.designer.cs" />
+    <Compile Include="Schemes\0009-000137_ElectronicServiceApplicantContactData.designer.cs" />
+    <Compile Include="Schemes\0009-000139_AttachedDocument.designer.cs" />
+    <Compile Include="Schemes\0009-000141_ServiceApplicantReceiptData.designer.cs" />
+    <Compile Include="Schemes\0009-000152_ElectronicAdministrativeServiceHeader.designer.cs" />
+    <Compile Include="Schemes\0009-000153_ElectronicAdministrativeServiceFooter.designer.cs" />
+    <Compile Include="Schemes\0009-000195_RealEstateAddressData.designer.cs" />
+    <Compile Include="Schemes\0009-000196_UrbanLandPropertyOldIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000197_FarmlandAndForestLandPropertyOldIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000198_RealEstateCadastreIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000199_StatePropertyActIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000200_MunicipalPropertyActIdentifier.designer.cs" />
+    <Compile Include="Schemes\0009-000201_RealEstateNeighboringProperty.designer.cs" />
+    <Compile Include="Schemes\0009-000202_StateAndMunicipalPropertyIdentifyingData.designer.cs" />
+    <Compile Include="Schemes\0009-000203_HousingSavingsAccountAvailabilityReportApplication.designer.cs" />
+    <Compile Include="Schemes\0009-000204_MunicipalPropertyEvaluationApplication.designer.cs" />
+    <Compile Include="Schemes\0009-999033.designer.cs" />
+    <Compile Include="Schemes\0009-999037.designer.cs" />
+    <Compile Include="Schemes\0009-999041.designer.cs" />
+    <Compile Include="Schemes\0009-999045.designer.cs" />
+    <Compile Include="Schemes\0009-999049.designer.cs" />
+    <Compile Include="Schemes\0009-999053.designer.cs" />
+    <Compile Include="Schemes\0009-999057.designer.cs" />
+    <Compile Include="Schemes\0009-999061.designer.cs" />
+    <Compile Include="Schemes\0009-999065.designer.cs" />
+    <Compile Include="Schemes\0009-999069.designer.cs" />
+    <Compile Include="Schemes\0009-999073.designer.cs" />
+    <Compile Include="Schemes\0009-999077.designer.cs" />
+    <Compile Include="Schemes\0009-999081.designer.cs" />
+    <Compile Include="Schemes\0009-999085.designer.cs" />
+    <Compile Include="Schemes\0009-999089.designer.cs" />
+    <Compile Include="Schemes\0009-999093.designer.cs" />
+    <Compile Include="Schemes\0009-999097.designer.cs" />
+    <Compile Include="Schemes\0009-999101.designer.cs" />
+    <Compile Include="Schemes\0009-999105.designer.cs" />
+    <Compile Include="Schemes\0009-999109.designer.cs" />
+    <Compile Include="Schemes\0009-999113.designer.cs" />
+    <Compile Include="Schemes\0009-999117.designer.cs" />
+    <Compile Include="Schemes\0009-999121.designer.cs" />
+    <Compile Include="Schemes\0009-999125.designer.cs" />
+    <Compile Include="Schemes\0009-999129.designer.cs" />
+    <Compile Include="Schemes\0009-999133.designer.cs" />
+    <Compile Include="Schemes\0009-999137.designer.cs" />
+    <Compile Include="Schemes\0009-999141.designer.cs" />
+    <Compile Include="Schemes\0009-999145.designer.cs" />
+    <Compile Include="Schemes\0009-999149.designer.cs" />
+    <Compile Include="Schemes\0009-999153.designer.cs" />
+    <Compile Include="Schemes\0009-999157.designer.cs" />
+    <Compile Include="Schemes\0009-999161.designer.cs" />
+    <Compile Include="Schemes\0009-999165.designer.cs" />
+    <Compile Include="Schemes\0009-999169.designer.cs" />
+    <Compile Include="Schemes\0009-999173.designer.cs" />
+    <Compile Include="Schemes\0009-999177.designer.cs" />
+    <Compile Include="Schemes\0009-999181.designer.cs" />
+    <Compile Include="Schemes\0009-999185.designer.cs" />
+    <Compile Include="Schemes\0009-999189.designer.cs" />
+    <Compile Include="Schemes\0009-999193.designer.cs" />
+    <Compile Include="Schemes\0009-999197.designer.cs" />
+    <Compile Include="Schemes\0009-999201.designer.cs" />
+    <Compile Include="Schemes\0009-999205.designer.cs" />
+    <Compile Include="Schemes\0009-999209.designer.cs" />
+    <Compile Include="Schemes\AISKAOIntegrationEserviceStartApplication.designer.cs" />
+    <Compile Include="Schemes\EsoedDocument.cs">
+      <DependentUpon>EsoedDocument.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Schemes\EsoedDocument.designer.cs">
+      <DependentUpon>EsoedDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schemes\EsoedErrorInfo.designer.cs" />
+    <Compile Include="Schemes\R-1002_CROZParticipantIdentificationCode.designer.cs" />
+    <Compile Include="Schemes\R-1004_CROZParticipantName.designer.cs" />
+    <Compile Include="Schemes\R-1006_CROZRegistrationNumber.designer.cs" />
+    <Compile Include="Schemes\R-1008_PeriodStartDate.designer.cs" />
+    <Compile Include="Schemes\R-1010_PeriodEndDate.designer.cs" />
+    <Compile Include="Schemes\R-1012_CROZResultInformationPeriodData.designer.cs" />
+    <Compile Include="Schemes\R-1014_CROZParticipantAddressData.designer.cs" />
+    <Compile Include="Schemes\R-1016_CROZBatchIdentifyingData.designer.cs" />
+    <Compile Include="Schemes\R-1018_CROZBatchRegistrationCertificateApplication.designer.cs" />
+    <Compile Include="Schemes\R-1022_CROZRegistrationCertificateApplication.designer.cs" />
+    <Compile Include="Schemes\R-1026_CROZParticipantsApplication.designer.cs" />
+    <Compile Include="Schemes\R-1030_CROZParticipantServiceIdentificationCode.designer.cs" />
+    <Compile Include="Schemes\R-1032_CROZParticipantsResponse.designer.cs" />
+    <Compile Include="Schemes\R-1035_CROZCityName.designer.cs" />
+    <Compile Include="Schemes\R-1037_CROZConsignmentRegistrationDateTime.designer.cs" />
+    <Compile Include="Schemes\R-1039_CROZRegisterEntryIsInConditionalStatus.designer.cs" />
+    <Compile Include="Schemes\R-1041_CROZRegisterEntryProcedureIsCompleted.designer.cs" />
+    <Compile Include="Schemes\R-1043_CROZRegisterEntryIsArchived.designer.cs" />
+    <Compile Include="Schemes\R-1045_CROZRegistrationEntryTypeCode.designer.cs" />
+    <Compile Include="Schemes\R-1047_CROZRegistrationEntryTypeName.designer.cs" />
+    <Compile Include="Schemes\R-1049_CROZRegistrationEntryType.designer.cs" />
+    <Compile Include="Schemes\R-1053_CROZRegistrationEntryTerminationDate.designer.cs" />
+    <Compile Include="Schemes\R-1055_CROZRegistrationEntryOpticleArchivePagesCount.designer.cs" />
+    <Compile Include="Schemes\R-1057_CROZConsignmentEntryAmendmentsCount.designer.cs" />
+    <Compile Include="Schemes\R-1059_CROZRegistrationEntryOpticleArchivePagesCount.designer.cs" />
+    <Compile Include="Schemes\R-1061_CROZRegistrationEntryCreationDate.designer.cs" />
+    <Compile Include="Schemes\R-1063_CROZRegistrationEntryDatesForExecutionEntriesData.designer.cs" />
+    <Compile Include="Schemes\R-1065_CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData.designer.cs" />
+    <Compile Include="Schemes\R-1067_CROZRegistrationEntryDatesForErasureAgreeementEntriesData.designer.cs" />
+    <Compile Include="Schemes\R-1069_CROZRegistrationEntryDateForNewManagerInvitationsData.designer.cs" />
+    <Compile Include="Schemes\R-1071_CROZPledgeOnClaimsRegistrationEntryNumber.designer.cs" />
+    <Compile Include="Schemes\R-1073_CROZDistrainSecuredClaimsRegistrationEntryNumbersData.designer.cs" />
+    <Compile Include="Schemes\R-1075_CROZInformationActualityDescription.designer.cs" />
+    <Compile Include="Schemes\R-1077_CROZOpticalArchiveFieldSeventeenImageContent.designer.cs" />
+    <Compile Include="Schemes\R-1079_CROZOpticalArchiveFieldSeventeenImageData.designer.cs" />
+    <Compile Include="Schemes\R-1081_CROZRegistrationEntryParticipantBasicData.designer.cs" />
+    <Compile Include="Schemes\R-1083_CROZConsignmentRegistrationEntryParticipantData.designer.cs" />
+    <Compile Include="Schemes\R-1085_CROZRegistrationEntryBasicData.designer.cs" />
+    <Compile Include="Schemes\R-1087_CROZConsignmentRegistrationEntryData.designer.cs" />
+    <Compile Include="Schemes\R-1089_CROZConsignmentEntryEntityCertificate.designer.cs" />
+    <Compile Include="Schemes\R-1092_CROZRegistrationEntryCreditorsData.designer.cs" />
+    <Compile Include="Schemes\R-1094_CROZRegistrationEntryDebtorsData.designer.cs" />
+    <Compile Include="Schemes\R-1096_CROZDealRegistrationEntryData.designer.cs" />
+    <Compile Include="Schemes\R-1098_CROZAmendmentOnDealRegistrationEntryBasicData.designer.cs" />
+    <Compile Include="Schemes\R-1100_CROZDealInfoCertificate.designer.cs" />
+    <Compile Include="Schemes\R-2072_InsuredPersonNNSICode.designer.cs" />
+    <Compile Include="Schemes\R-2074_InsurerNSSICode.designer.cs" />
+    <Compile Include="Schemes\R-2076_InsuredPersonNSSICodeRequestApplication.designer.cs" />
+    <Compile Include="Schemes\R-2080_InsurerNSSICodeRequestApplication.designer.cs" />
+    <Compile Include="Schemes\R-2084_InsuredPersonNSSICodeResponse.designer.cs" />
+    <Compile Include="Schemes\R-2087_InsurerNSSICodeResponse.designer.cs" />
+    <Compile Include="Schemes\R-3002_NSIIKOCodeApplication.designer.cs" />
+    <Compile Include="Schemes\xmldsig-core-schema.designer.cs" />
+    <Compile Include="Segments\AccomodationInMunicipalHousing.cs" />
+    <Compile Include="Segments\AccomodationInMunicipalHousingMD.cs" />
+    <Compile Include="Segments\AISUserNames.cs" />
+    <Compile Include="Segments\AmendmentOfRealEstateTaxAssesment.cs" />
+    <Compile Include="Segments\AmendmentOfRealEstateTaxAssesmentMD.cs" />
+    <Compile Include="Segments\AttachedDocument.cs" />
+    <Compile Include="Segments\AttachedDocumentMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceForRealEstateOwnership.cs" />
+    <Compile Include="Segments\CertificateIssuanceForRealEstateOwnershipMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceForTheSaleOfCoownedProperty.cs" />
+    <Compile Include="Segments\CertificateIssuanceForTheSaleOfCoownedPropertyMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfAvailabilityOfRestitutionClaimsForMunicipalProperty.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfAvailabilityOfRestitutionClaimsForMunicipalPropertyMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfFoundHousingNeeds.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfFoundHousingNeedsMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfOwnership.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfOwnershipMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfRestitutionClaims.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfRestitutionClaimsMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfWithdrawnOrRetrievedMunicipalProperty.cs" />
+    <Compile Include="Segments\CertificateIssuanceOfWithdrawnOrRetrievedMunicipalPropertyMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOnAlienationOfProperty.cs" />
+    <Compile Include="Segments\CertificateIssuanceOnAlienationOfPropertyMD.cs" />
+    <Compile Include="Segments\CertificateIssuanceOnCircumstantialVerification.cs" />
+    <Compile Include="Segments\CertificateIssuanceOnCircumstantialVerificationMD.cs" />
+    <Compile Include="Segments\CircumstantialVerificationForRecognizingTheRightOfOwnership.cs" />
+    <Compile Include="Segments\CircumstantialVerificationForRecognizingTheRightOfOwnershipMD.cs" />
+    <Compile Include="Segments\CROZBatchRegistrationCertificateApplication.cs" />
+    <Compile Include="Segments\CROZConsignmentEntryEntityCertificate.cs" />
+    <Compile Include="Segments\CROZConsignmentRegistrationEntryData.cs" />
+    <Compile Include="Segments\CROZDealInfoCertificate.cs" />
+    <Compile Include="Segments\CROZDistrainSecuredClaimsRegistrationEntryNumbersData.cs" />
+    <Compile Include="Segments\CROZRegistrationCertificateApplication.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryBasicData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryCreditorsData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryDateForNewManagerInvitationsData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryDatesForErasureAgreeementEntriesData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryDatesForExecutionEntriesData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData.cs" />
+    <Compile Include="Segments\CROZRegistrationEntryDebtorsData.cs" />
+    <Compile Include="Segments\DocumentProcessingAndTerminationOfJointOwnershipOfProperty.cs" />
+    <Compile Include="Segments\DocumentProcessingAndTerminationOfJointOwnershipOfPropertyMD.cs" />
+    <Compile Include="Segments\DocumentProcessingForCompensationOfHousingSavingAccount.cs" />
+    <Compile Include="Segments\DocumentProcessingForCompensationOfHousingSavingAccountMD.cs" />
+    <Compile Include="Segments\DocumentProcessingForSaleOfMunicipalHousing.cs" />
+    <Compile Include="Segments\DocumentProcessingForSaleOfMunicipalHousingMD.cs" />
+    <Compile Include="Segments\DocumentProcessingForThePurchaseOwnershipOfNaturalAndLegalPersonsOfLandWithEstablishedConstructionRight.cs" />
+    <Compile Include="Segments\DocumentProcessingForThePurchaseOwnershipOfNaturalAndLegalPersonsOfLandWithEstablishedConstructionRightMD.cs" />
+    <Compile Include="Segments\DocumentTypeURI.cs" />
+    <Compile Include="Segments\DocumentURI.cs" />
+    <Compile Include="Segments\DocumentURIMD.cs" />
+    <Compile Include="Segments\ElectronicAdministrativeServiceFooter.cs" />
+    <Compile Include="Segments\ElectronicAdministrativeServiceFooterMD.cs" />
+    <Compile Include="Segments\ElectronicAdministrativeServiceHeader.cs" />
+    <Compile Include="Segments\ElectronicAdministrativeServiceHeaderMD.cs" />
+    <Compile Include="Segments\ElectronicAdministrativeServiceURI.cs" />
+    <Compile Include="Segments\ElectronicDocumentXml.cs" />
+    <Compile Include="Segments\ElectronicDocumentXmlMD.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicant.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicantContactData.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicantContactDataMD.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicantMD.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicantRecipientGroup.cs" />
+    <Compile Include="Segments\ElectronicServiceApplicantRecipientGroupMD.cs" />
+    <Compile Include="Segments\ElectronicServiceProviderBasicData.cs" />
+    <Compile Include="Segments\ElectronicServiceProviderBasicDataMD.cs" />
+    <Compile Include="Segments\ElectronicServiceRecipient.cs" />
+    <Compile Include="Segments\ElectronicStatementAuthor.cs" />
+    <Compile Include="Segments\EntityBasicData.cs" />
+    <Compile Include="Segments\EntityBasicDataMD.cs" />
+    <Compile Include="Segments\EstablishingTheRightToUpgradeAndAddition.cs" />
+    <Compile Include="Segments\EstablishingTheRightToUpgradeAndAdditionMD.cs" />
+    <Compile Include="Segments\ExpertReportsToAssessTheCompensationDueUnderTheActToCompensateOwnersOfNationalizedProperties.cs" />
+    <Compile Include="Segments\ExpertReportsToAssessTheCompensationDueUnderTheActToCompensateOwnersOfNationalizedPropertiesMD.cs" />
+    <Compile Include="Segments\FarmlandAndForestLandPropertyOldIdentifier.cs" />
+    <Compile Include="Segments\FarmlandAndForestLandPropertyOldIdentifierMD.cs" />
+    <Compile Include="Segments\FindingOfHousingNeeds.cs" />
+    <Compile Include="Segments\FindingOfHousingNeedsMD.cs" />
+    <Compile Include="Segments\ForeignCitizenBasicData.cs" />
+    <Compile Include="Segments\ForeignCitizenBasicDataMD.cs" />
+    <Compile Include="Segments\ForeignCitizenIdentityDocument.cs" />
+    <Compile Include="Segments\ForeignCitizenIdentityDocumentMD.cs" />
+    <Compile Include="Segments\ForeignCitizenNames.cs" />
+    <Compile Include="Segments\ForeignCitizenNamesMD.cs" />
+    <Compile Include="Segments\ForeignCitizenPlaceOfBirth.cs" />
+    <Compile Include="Segments\ForeignCitizenPlaceOfBirthMD.cs" />
+    <Compile Include="Segments\ForeignEntityBasicData.cs" />
+    <Compile Include="Segments\ForeignEntityBasicDataMD.cs" />
+    <Compile Include="Segments\HousingSavingAccountCertificate.cs" />
+    <Compile Include="Segments\HousingSavingAccountCertificateMD.cs" />
+    <Compile Include="Segments\HousingSavingsAccountAvailabilityReportApplication.cs" />
+    <Compile Include="Segments\HousingSavingsAccountAvailabilityReportApplicationMD.cs" />
+    <Compile Include="Segments\IncludingInListForCompensationOfHousingSavingAccount.cs" />
+    <Compile Include="Segments\IncludingInListForCompensationOfHousingSavingAccountMD.cs" />
+    <Compile Include="Segments\InqueryInRegistryAndBooksAboutRealEstatePublicAndPrivateStateProperty.cs" />
+    <Compile Include="Segments\InqueryInRegistryAndBooksAboutRealEstatePublicAndPrivateStatePropertyMD.cs" />
+    <Compile Include="Segments\InquiryInTheActsBook.cs" />
+    <Compile Include="Segments\InquiryInTheActsBookMD.cs" />
+    <Compile Include="Segments\InquiryOnTheDistributionOfSharesOfTheCommonPartsOfBuildings.cs" />
+    <Compile Include="Segments\InquiryOnTheDistributionOfSharesOfTheCommonPartsOfBuildingsMD.cs" />
+    <Compile Include="Segments\InquiryOnTransactionsWithMunicipalProperties.cs" />
+    <Compile Include="Segments\InquiryOnTransactionsWithMunicipalPropertiesMD.cs" />
+    <Compile Include="Segments\IssuanceOfCertifiedCopiesOfContractsOrdersAndOtherDocumentsOfInterestToNaturalAndLegalPersonsFromStatePropertyArchive.cs" />
+    <Compile Include="Segments\IssuanceOfCertifiedCopiesOfContractsOrdersAndOtherDocumentsOfInterestToNaturalAndLegalPersonsFromStatePropertyArchiveMD.cs" />
+    <Compile Include="Segments\IssuanceOfDecisionsOnCompensationUnderTheActToCompensateOwnersOfNationalizedProperties.cs" />
+    <Compile Include="Segments\IssuanceOfDecisionsOnCompensationUnderTheActToCompensateOwnersOfNationalizedPropertiesMD.cs" />
+    <Compile Include="Segments\IssueOfActsOfStateOwnedParcelsIncludedInTheParcelPlansOfFarmyards.cs" />
+    <Compile Include="Segments\IssueOfActsOfStateOwnedParcelsIncludedInTheParcelPlansOfFarmyardsMD.cs" />
+    <Compile Include="Segments\IssueOfActsOnPrivateStatePropertyOfAgenciesMinistriesAndOthersInOrOutsideTheRegulationPlans.cs" />
+    <Compile Include="Segments\IssueOfActsOnPrivateStatePropertyOfAgenciesMinistriesAndOthersInOrOutsideTheRegulationPlansMD.cs" />
+    <Compile Include="Segments\IssueOfActsOnPublicStatePropertyToAgenciesMinistries.cs" />
+    <Compile Include="Segments\IssueOfActsOnPublicStatePropertyToAgenciesMinistriesMD.cs" />
+    <Compile Include="Segments\IssueOfCertifiedCopiesOfDocumentsOnMunicipalProperty.cs" />
+    <Compile Include="Segments\IssueOfCertifiedCopiesOfDocumentsOnMunicipalPropertyMD.cs" />
+    <Compile Include="Segments\MunicipalPropertyActIdentifier.cs" />
+    <Compile Include="Segments\MunicipalPropertyActIdentifierMD.cs" />
+    <Compile Include="Segments\MunicipalPropertyEvaluationApplication.cs" />
+    <Compile Include="Segments\MunicipalPropertyEvaluationApplicationMD.cs" />
+    <Compile Include="Segments\OrderingTheConfiscationOfStatePropertyWhichIsPossessedOrHoldWithoutJustification.cs" />
+    <Compile Include="Segments\OrderingTheConfiscationOfStatePropertyWhichIsPossessedOrHoldWithoutJustificationMD.cs" />
+    <Compile Include="Segments\PersonBasicData.cs" />
+    <Compile Include="Segments\PersonBasicDataMD.cs" />
+    <Compile Include="Segments\PersonIdentifier.cs" />
+    <Compile Include="Segments\PersonIdentifierMD.cs" />
+    <Compile Include="Segments\PersonNames.cs" />
+    <Compile Include="Segments\PersonNamesMD.cs" />
+    <Compile Include="Segments\RealEstateAddressData.cs" />
+    <Compile Include="Segments\RealEstateAddressDataLandOrUrbanPropertyAddress.cs" />
+    <Compile Include="Segments\RealEstateAddressDataLandOrUrbanPropertyAddressMD.cs" />
+    <Compile Include="Segments\RealEstateAddressDataMD.cs" />
+    <Compile Include="Segments\RealEstateCadastreIdentifier.cs" />
+    <Compile Include="Segments\RealEstateCadastreIdentifierMD.cs" />
+    <Compile Include="Segments\RealEstateNeighboringProperty.cs" />
+    <Compile Include="Segments\RealEstateNeighboringPropertyMD.cs" />
+    <Compile Include="Segments\ReflectingTheChangedCircumstancesOfTheIssuedActsForStateProperty.cs" />
+    <Compile Include="Segments\ReflectingTheChangedCircumstancesOfTheIssuedActsForStatePropertyMD.cs" />
+    <Compile Include="Segments\RegisteredErrorInDocumentContent.cs" />
+    <Compile Include="Segments\RegisteredErrorInDocumentContentMD.cs" />
+    <Compile Include="Segments\RegisteredErrorsInDocumentContentMD.cs" />
+    <Compile Include="Segments\RegisteredObjectURI.cs" />
+    <Compile Include="Segments\RegisterObjectURIMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfParcelsOnParcelPlan.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfParcelsOnParcelPlanMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPrivatelyStateOwnedPropertyTransferredToTheMunicipalities.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPrivatelyStateOwnedPropertyTransferredToTheMunicipalitiesMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertiesRestoredByDecisionOfTheLandCommission.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertiesRestoredByDecisionOfTheLandCommissionMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyAcquiredThroughALegalTransaction.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyAcquiredThroughALegalTransactionMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyForTheBenefitOfCompanies.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyForTheBenefitOfCompaniesMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyImproperlyRegisteredAsStateProperty.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyImproperlyRegisteredAsStatePropertyMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyOwnershipOfWhichIsRefundableUnderTheRestitutionLaws.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyOwnershipOfWhichIsRefundableUnderTheRestitutionLawsMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyPurchasedUnderContractByTheGovernor.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfPropertyPurchasedUnderContractByTheGovernorMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfRestitutedPropertyByACourtDecision.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfRestitutedPropertyByACourtDecisionMD.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfRestitutedPropertyByOrderOfTheMayor.cs" />
+    <Compile Include="Segments\RemovalFromTheActBookOfRestitutedPropertyByOrderOfTheMayorMD.cs" />
+    <Compile Include="Segments\ReturnOfConfiscatedPropertyOrCompensation.cs" />
+    <Compile Include="Segments\ReturnOfConfiscatedPropertyOrCompensationMD.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptData.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptDataApplicantAdress.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptDataApplicantAdressMD.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptDataMD.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptDataMunicipalityAdministrationAdress.cs" />
+    <Compile Include="Segments\ServiceApplicantReceiptDataMunicipalityAdministrationAdressMD.cs" />
+    <Compile Include="Segments\StateAndMunicipalPropertyIdentifyingData.cs" />
+    <Compile Include="Segments\StateAndMunicipalPropertyIdentifyingDataActIdentifier.cs" />
+    <Compile Include="Segments\StateAndMunicipalPropertyIdentifyingDataLandPropertyOldIdentifier.cs" />
+    <Compile Include="Segments\StateAndMunicipalPropertyIdentifyingDataMD.cs" />
+    <Compile Include="Segments\StatePropertyActIdentifier.cs" />
+    <Compile Include="Segments\StatePropertyActIdentifierMD.cs" />
+    <Compile Include="Segments\TransferredDocument.cs" />
+    <Compile Include="Segments\TransferredDocumentMD.cs" />
+    <Compile Include="Segments\UrbanLandPropertyOldIdentifier.cs" />
+    <Compile Include="Segments\UrbanLandPropertyOldIdentifierMD.cs" />
+    <Compile Include="Segments\WriteoffOfPropertyFromTheActsBookOnMunicipalProperty.cs" />
+    <Compile Include="Segments\WriteoffOfPropertyFromTheActsBookOnMunicipalPropertyMD.cs" />
+    <Compile Include="Segments\XMLDigitalSignature.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataAnnotation\DAValidationMessagesOverride.resx" />
+    <EmbeddedResource Include="Resources\Documents.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Documents.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Fields.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Labels.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Labels.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Nomenclatures.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Nomenclatures.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Sections.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Sections.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Terms.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Terms.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Visualisation.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Visualisation.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documents\AdministrativeTerritorialUnitData.xml" />
+    <Content Include="Documents\AreaData.xml" />
+    <Content Include="Documents\BuildingAndSeparateBuildingUnitFunctionalDesignationData.xml" />
+    <Content Include="Documents\CountriesData.xml" />
+    <Content Include="Documents\SettlementFormationData.xml" />
+    <Content Include="Schemes\XSD2CodeGenerationGuide.txt" />
+    <Content Include="Schemes\XSD2CodeVersion.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schemes\0007-000001_DocumentElectronicTransportTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000002_ElectronicDocumentDiscrepancyTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000003_ElectronicServiceProviderTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000013_ServiceResultReceiptMethodNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000014_ServiceTermTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000015_ApplicationTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0007-000022_RealEstateTypeNomenclature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000001_BatchNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000002_RegisterIndex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000003_DocumentSequenceNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000004_DocumentReceiptOrSigningDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000005_DocumentElectronicTransportType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000006_ElectronicDocumentDiscrepancyType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000007_DocumentTypeName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000008_PersonFirstName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000009_PersonMiddleName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000010_PersonLastName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000011_PersonPseudonim.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000012_EGN.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000013_LNCh.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000014_ForeignCitizenFirstNameCyrillic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000015_ForeignCitizenLastNameCyrillic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000016_ForeignCitizenOtherNameCyrillic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000017_ForeignCitizenPseudonimCyrillic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000018_ForeignCitizenFirstNameLatin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000019_ForeignCitizenLastNameLatin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000020_ForeignCitizenOtherNameLatin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000021_ForeignCitizenPseudonimLatin.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000022_BirthDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000023_SettlementAbroadName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000024_CountryISO3166TwoLetterCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000025_CountryNameCyrillic.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000026_ForeignCitizenIdentityDocumentNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000027_ForeignCitizenIdentityDocumentType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000028_EntityIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000029_EntityName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000030_ForeignEntityName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000031_ForeignEntityRegister.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000032_ForeignEntityIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000033_ForeignEntityOtherData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000034_ElectronicServiceProviderType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000035_ElectronicServiceAuthorQuality.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000036_EmailAddress.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000037_AISCaseAccessIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000038_AISUserIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000039_AISURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000040_FileContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000041_FileType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000042_ShortTransferDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000043_ExpandedTransferDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000070_DocumentInInternalDocumentRegisterURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000077_SUNAUServiceURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000120_ElectronicDocumentXmlContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000121_AISCorrespondenceAccessIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000125_BuildingNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000126_Entrance.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000127_Floor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000128_PostCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000129_ElectronicServiceApplicantPhoneNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000130_ElectronicServiceApplicantFaxNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000131_SUNAUServiceName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000132_AttachedDocumentFileContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000133_AttachedDocumentDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000134_AttachedDocumentUniqueIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000135_AttachedDocumentFileName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000136_PostOfficeBox.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000143_ServiceTermType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000144_ApplicationType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000191_AreaCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000192_AreaName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000194_AddressDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000197_ServiceResultReceiptMethod.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000198_SendApplicationWithReceiptAcknowledgedMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000199_ApplicationSigningTime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000200_DistrictCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000201_DistrictName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000202_MunicipalityName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000203_MayoraltyCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000204_MayoraltyName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000205_SettlementCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000206_SettlementName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000209_MunicipalityCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000226_ResidentialComplex.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000227_StreetBoulevardSquare.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000228_StreetBoulevardSquareNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000269_ArealName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000270_TerritorialUnitEKATTECode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000271_TerritorialUnitEKATTEName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000272_SeparateBuildingUnitFunctionalDesignationCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000273_SeparateBuildingUnitFunctionalDesignationName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000274_SeparateBuildingUnitNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000275_UrbanLandPropertyOldIdentifierCadastreNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000276_UrbanLandPropertyOldIdentifierParcelNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000277_UrbanLandPropertyOldIdentifierQuarterNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000278_FarmlandAndForestLandPropertyOldIdentifierParcelNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000279_FarmlandAndForestLandPropertyOldIdentifierArrayNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000280_CadastralAreaNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000281_LandPropertyCadastralNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000282_LandPropertyBuildingCadastralNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000283_SeparateBuildingUnitCadastralNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000284_StatePropertyActNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000285_StatePropertyActIssueDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000286_MunicipalPropertyActNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000287_MunicipalPropertyActIssueDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000288_RealEstateBatchNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000289_RealEstateType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000290_RealQuadrature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000291_AccordingToDocumentsQuadrature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000292_RealEstateAdditionalInformation.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000293_NeighboringPropertyDirection.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0008-000294_NeighboringPropertyDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000001_DocumentURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000002_ElectronicServiceProviderBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000002_ElectronicServiceProviderBasicData.xsd.xsd2code" />
+    <None Include="Schemes\0009-000003_DocumentTypeURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000003_DocumentTypeURI.xsd.xsd2code" />
+    <None Include="Schemes\0009-000004_XMLDigitalSignature.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000005_PersonNames.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000006_PersonIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000007_ForeignCitizenNames.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000008_PersonBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000009_ForeignCitizenPlaceOfBirth.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000010_ForeignCitizenIdentityDocument.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000011_ForeignCitizenBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000012_ElectronicStatementAuthor.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000013_EntityBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000014_ForeignEntityBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000014_ForeignEntityBasicData.xsd.xsd2code" />
+    <None Include="Schemes\0009-000015_ElectronicServiceRecipient.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000016_ElectronicServiceApplicant.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000017_ReceiptNotAcknowledgedMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000017_ReceiptNotAcknowledgedMessage.xsd.xsd2code" />
+    <None Include="Schemes\0009-000018_AISUserNames.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000019_ReceiptAcknowledgedMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000019_ReceiptAcknowledgedMessage.xsd.xsd2code" />
+    <None Include="Schemes\0009-000020_TransferredDocument.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000020_TransferredDocument.xsd.xsd2code" />
+    <None Include="Schemes\0009-000021_TransferContainer.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000022_RegisterObjectURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000023_TermURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000024_RegisteredErrorInDocumentContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000025_RegisteredErrorsInDocumentContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000044_RegisteredDocumentURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000091_ElectronicAdministrativeServiceURI.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000092_ElectronicDocumentXml.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000093_AdministrativeServiceDeliveryLetter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000137_ElectronicServiceApplicantContactData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000139_AttachedDocument.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000139_AttachedDocument.xsd.xsd2code" />
+    <None Include="Schemes\0009-000141_ServiceApplicantReceiptData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000141_ServiceApplicantReceiptData.xsd.xsd2code" />
+    <None Include="Schemes\0009-000152_ElectronicAdministrativeServiceHeader.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000152_ElectronicAdministrativeServiceHeader.xsd.xsd2code" />
+    <None Include="Schemes\0009-000153_ElectronicAdministrativeServiceFooter.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000195_RealEstateAddressData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000195_RealEstateAddressData.xsd.xsd2code" />
+    <None Include="Schemes\0009-000196_UrbanLandPropertyOldIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000197_FarmlandAndForestLandPropertyOldIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000198_RealEstateCadastreIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000199_StatePropertyActIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000200_MunicipalPropertyActIdentifier.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000201_RealEstateNeighboringProperty.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000202_StateAndMunicipalPropertyIdentifyingData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000202_StateAndMunicipalPropertyIdentifyingData.xsd.xsd2code" />
+    <None Include="Schemes\0009-000203_HousingSavingsAccountAvailabilityReportApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000203_HousingSavingsAccountAvailabilityReportApplication.xsd.xsd2code" />
+    <None Include="Schemes\0009-000204_MunicipalPropertyEvaluationApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-000204_MunicipalPropertyEvaluationApplication.xsd.xsd2code" />
+    <None Include="Schemes\0009-999033.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999037.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999041.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999045.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999049.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999053.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999057.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999061.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999065.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999069.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999073.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999077.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999081.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999085.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999089.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999093.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999097.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999101.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999105.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999109.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999113.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999117.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999121.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999125.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999129.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999133.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999137.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999141.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999145.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999149.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999153.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999157.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999161.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999165.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999169.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999173.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999177.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999181.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999185.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999189.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999193.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999197.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999201.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999205.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\0009-999209.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\AISKAOIntegrationEserviceStartApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\defaults.xsd2code" />
+    <None Include="Schemes\EsoedDocument.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\EsoedErrorInfo.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\GenerateClasses.ps1" />
+    <None Include="Schemes\R-1002_CROZParticipantIdentificationCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1004_CROZParticipantName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1006_CROZRegistrationNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1008_PeriodStartDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1010_PeriodEndDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1012_CROZResultInformationPeriodData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1014_CROZParticipantAddressData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1016_CROZBatchIdentifyingData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1018_CROZBatchRegistrationCertificateApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1018_CROZBatchRegistrationCertificateApplication.xsd.xsd2code" />
+    <None Include="Schemes\R-1022_CROZRegistrationCertificateApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1022_CROZRegistrationCertificateApplication.xsd.xsd2code" />
+    <None Include="Schemes\R-1026_CROZParticipantsApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1026_CROZParticipantsApplication.xsd.xsd2code" />
+    <None Include="Schemes\R-1030_CROZParticipantServiceIdentificationCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1032_CROZParticipantsResponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1035_CROZCityName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1037_CROZConsignmentRegistrationDateTime.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1039_CROZRegisterEntryIsInConditionalStatus.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1041_CROZRegisterEntryProcedureIsCompleted.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1043_CROZRegisterEntryIsArchived.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1045_CROZRegistrationEntryTypeCode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1047_CROZRegistrationEntryTypeName.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1049_CROZRegistrationEntryType.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1053_CROZRegistrationEntryTerminationDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1055_CROZRegistrationEntryOpticleArchivePagesCount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1057_CROZConsignmentEntryAmendmentsCount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1059_CROZRegistrationEntryOpticleArchivePagesCount.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1061_CROZRegistrationEntryCreationDate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1063_CROZRegistrationEntryDatesForExecutionEntriesData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1065_CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1067_CROZRegistrationEntryDatesForErasureAgreeementEntriesData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1069_CROZRegistrationEntryDateForNewManagerInvitationsData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1071_CROZPledgeOnClaimsRegistrationEntryNumber.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1073_CROZDistrainSecuredClaimsRegistrationEntryNumbersData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1075_CROZInformationActualityDescription.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1077_CROZOpticalArchiveFieldSeventeenImageContent.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1079_CROZOpticalArchiveFieldSeventeenImageData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1081_CROZRegistrationEntryParticipantBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1083_CROZConsignmentRegistrationEntryParticipantData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1085_CROZRegistrationEntryBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1087_CROZConsignmentRegistrationEntryData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1089_CROZConsignmentEntryEntityCertificate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1092_CROZRegistrationEntryCreditorsData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1094_CROZRegistrationEntryDebtorsData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1096_CROZDealRegistrationEntryData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1098_CROZAmendmentOnDealRegistrationEntryBasicData.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-1100_CROZDealInfoCertificate.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2072_InsuredPersonNNSICode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2074_InsurerNSSICode.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2076_InsuredPersonNSSICodeRequestApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2076_InsuredPersonNSSICodeRequestApplication.xsd.xsd2code" />
+    <None Include="Schemes\R-2080_InsurerNSSICodeRequestApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2080_InsurerNSSICodeRequestApplication.xsd.xsd2code" />
+    <None Include="Schemes\R-2084_InsuredPersonNSSICodeResponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-2087_InsurerNSSICodeResponse.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-3002_NSIIKOCodeApplication.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\R-3002_NSIIKOCodeApplication.xsd.xsd2code" />
+    <None Include="Schemes\timestamp.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\xenc-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\xmldsig-core-schema.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Schemes\xmldsig-core-schema.xsd.xsd2code" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

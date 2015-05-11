@@ -1,0 +1,47 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за транспортна дейност</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3">Вид на транспортно средство:</span>
+                    <span class="span9 uneditable-input" data-bind="text: forageTransportVechicleType"></span>
+                </label>
+            </div>
+        </div>
+
+        <!-- ko with: forageTransportVechicleRegistrationNumbers -->
+        <!-- ko if: forageTransportVechicleRegistrationNumber().length > 0 -->
+        Списък с регистрационни номера:
+                        <!-- /ko -->
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="row" data-bind="foreach: forageTransportVechicleRegistrationNumber">
+                        <span class="span3 text-left">Регистрационен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                        <span class="input-append">
+                            <span class="span9 uneditable-input" data-bind="text: $data"></span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko with: forageFormTypes -->
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Форма на фуражи:</span>
+                    <span data-bind="foreach: forageFormType">
+                        <span class="span3"></span>
+                        <span class="span9 uneditable-input">
+                            <span data-bind="text: $parent.getForageFormTypeName($data)"></span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+</div>

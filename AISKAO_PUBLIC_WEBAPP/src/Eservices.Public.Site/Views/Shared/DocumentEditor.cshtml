@@ -1,0 +1,33 @@
+﻿<link href="~/Content/bootstrap/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+   
+<div class="container">
+    <input type="hidden" name="documentTypeName" value="@ViewBag.DocumentTypeName" data-bind="hiddenInputValue: _settings.documentType" />
+    <input type="hidden" name="xmlContent" value="@TempData["XmlDocumentContent"]" data-bind="hiddenInputValue: _settings.xmlContent, applyValue: _settings.xmlContent.applyValue" />
+    <input type="hidden" name="applicationRootURL" value="@Url.Content("~/")" data-bind="hiddenInputValue: _settings.applicationRootURL" />
+    <input type="hidden" name="moveXpath" data-bind="value: _settings.moveXpath" />
+    <input type="hidden" name="moveNS" data-bind="value: _settings.moveNS" />
+
+    <div id="applicationHost">
+        @RenderPage("_splash.cshtml")
+    </div>
+
+@*        <input type="submit" id="generateXML" value="Подписване" data-bind="click: generateXML" class="btn" />
+    <input type="hidden" id="content" name="content" data-bind="value: _settings.resultXML" />
+    <input type="button" class="btn" name="Edit" value="Редактиране" data-bind="visible: _settings.isEditable, click: editDocument" />*@
+
+</div>
+
+@Scripts.Render("~/bundles/libs")
+<script src="~/scripts/libs/require.js" data-main="@Url.Content("~/scripts/app/app.js")"></script>
+<script>
+    //A fix for windows.location.origin not supported by IE browsers
+    if (!window.location.origin) {
+        window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port : '');
+    }
+
+    PublicDataURL = window.location.origin + "/api/";
+</script>
+
+<script type="text/javascript">
+    GetSignatureInfoUrl = 'Request/GetSignatureInfo';
+</script>

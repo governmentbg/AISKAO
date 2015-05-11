@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1339" xmlns="http://ereg.egov.bg/segment/R-1339" xmlns:fftbfpo="http://ereg.egov.bg/segment/R-1303" xmlns:fftbfao="http://ereg.egov.bg/segment/R-1327" xmlns:fftbfs="http://ereg.egov.bg/segment/R-1329" xmlns:fftbfp="http://ereg.egov.bg/segment/R-1331" xmlns:fftbfc="http://ereg.egov.bg/segment/R-1333" xmlns:fftbfsu="http://ereg.egov.bg/segment/R-1335" xmlns:fftbfm="http://ereg.egov.bg/segment/R-1337" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1303" schemaLocation="R-1303_ForageForTransportationByFormPlantOrigin.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1327" schemaLocation="R-1327_ForageForTransportationByFormAnimalOrigin.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1329" schemaLocation="R-1329_ForageForTransportationByFormSupplement.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1331" schemaLocation="R-1331_ForageForTransportationByFormPremix.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1333" schemaLocation="R-1333_ForageForTransportationByFormCombined.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1335" schemaLocation="R-1335_ForageForTransportationByFormSpecialUse.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1337" schemaLocation="R-1337_ForageForTransportationByFormMedical.xsd" />
+  <xsd:complexType name="ForageForTransportationByFormData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за фуражи за транспортиране по форма</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageForTransportationByFormPlantOrigin" type="fftbfpo:ForageForTransportationByFormPlantOrigin" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormAnimalOrigin" type="fftbfao:ForageForTransportationByFormAnimalOrigin" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormSupplement" type="fftbfs:ForageForTransportationByFormSupplement" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormPremix" type="fftbfp:ForageForTransportationByFormPremix" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormCombined" type="fftbfc:ForageForTransportationByFormCombined" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormSpecialUse" type="fftbfsu:ForageForTransportationByFormSpecialUse" minOccurs="0" />
+      <xsd:element name="ForageForTransportationByFormMedical" type="fftbfm:ForageForTransportationByFormMedical" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

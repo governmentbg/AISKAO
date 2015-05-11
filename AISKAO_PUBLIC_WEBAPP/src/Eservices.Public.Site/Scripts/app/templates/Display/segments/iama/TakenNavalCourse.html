@@ -1,0 +1,44 @@
+﻿<div>
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Учебно заведение или център:</span>
+            <span class="span8 uneditable-input">
+                <span data-bind="text: navalEducationalOrganizationName"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ko if: navalEducationalOrganizationCode()=='13'-->
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Друго учебно заведение или център:</span>
+            <span class="span8 uneditable-input" data-bind="text: otherNavalEducationalOrganization"></span>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Наименование на курс:</span>
+            <span class="span8 uneditable-input">
+                <span data-bind="text: navalCompetencyCourseName"></span>
+            </span>
+        </div>
+    </div>
+
+    <!-- ko if: navalCompetencyCourseCode()=='60'-->
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Друг курс:</span>
+            <span class="span8 uneditable-input" data-bind="text: otherNavalCompetencyCourse"></span>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Дата на завършване на курс:</span>
+            <span class="span8 uneditable-input" data-bind="formattedDate: navalCompetencyCourseDateTaken"></span>
+        </div>
+    </div>
+</div>

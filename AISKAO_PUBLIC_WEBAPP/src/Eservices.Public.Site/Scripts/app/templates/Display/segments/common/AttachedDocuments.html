@@ -1,0 +1,68 @@
+﻿<div data-bind="ifnot: attachedDocument().lenght == 0 && attachedXmlDocument().lenght == 0">
+    <fieldset>
+        <legend>Приложени документи</legend>
+        <!-- ko foreach:  attachedDocument() -->
+            <fieldset>
+                <legend>Неструктуриран документ</legend>
+                <div class="row">
+                    <div class="span10 files">
+                        <!-- ko if: attachedDocumentFileContent -->
+                        <span data-bind="downloadFile: attachedDocumentFileContent, downloadFileName: attachedDocumentFileName"></span>
+                        <a class="btn btn-info" data-bind="attr: { href: attachedDocumentFileContent.downloadLink, download: attachedDocumentFileName }" title="Запази"><i class="icon-download-alt icon-white"></i></a>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <div class="row">
+                    <label>
+                        <span class="span3 text-left">Име на избрания файл:</span>
+                        <span class="uneditable-input span9" data-bind="text: attachedDocumentFileName"></span>
+                    </label>
+                </div>
+
+                <div class="row">
+                    <label>
+                        <span class="span3 text-left">Тип на избрания файл:</span>
+                        <span class="uneditable-input span9" data-bind="text: fileType"></span>
+                    </label>
+                </div>
+                <div class="row">
+                    <label>
+                        <span class="span3 text-left">Описание:</span>
+                        <span class="uneditable-input span9" data-bind="text: attachedDocumentDescription"></span>
+                    </label>
+                </div>
+            </fieldset>
+        <!-- /ko -->
+
+        <!-- ko foreach:  attachedXmlDocument() -->
+            <fieldset>
+                <legend>Структуриран документ</legend>
+                <div class="row">
+                    <div class="span10 files">
+                        <!-- ko if: electronicDocumentXmlContent -->
+                        <span data-bind="downloadFile: electronicDocumentXmlContent.fileBinaryData, downloadFileName: electronicDocumentXmlContent.fileName"></span>
+                        <a class="btn btn-info" data-bind="attr: { href: electronicDocumentXmlContent.downloadLink, download: electronicDocumentXmlContent.fileName }" title="Запази"><i class="icon-download-alt icon-white"></i></a>
+                        <!-- /ko -->
+                    </div>
+                </div>
+                <div class="row">
+                    <span class="span3 text-left">Ури на тип документ:</span>
+                    <!--ko with: documentTypeURI()-->
+                    <div class="row">
+                        <span class="uneditable-input span3" data-bind="text: registerIndex"></span>
+                        <span class="uneditable-input span3" data-bind="text: batchNumber"></span>
+                    </div>
+                    <!-- /ko -->
+                </div>
+                <div class="row">
+                    <label>
+                        <span class="span3 text-left">Тип на документа:</span>
+                        <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+                    </label>
+                </div>
+
+            </fieldset>
+        <!-- /ko -->
+
+    </fieldset>
+</div>

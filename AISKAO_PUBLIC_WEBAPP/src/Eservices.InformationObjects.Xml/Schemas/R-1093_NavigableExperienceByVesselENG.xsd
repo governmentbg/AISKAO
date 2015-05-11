@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1093" xmlns="http://ereg.egov.bg/segment/R-1093" xmlns:vneng="http://ereg.egov.bg/value/R-1055" xmlns:vimoneng="http://ereg.egov.bg/value/R-1059" xmlns:naeng="http://ereg.egov.bg/value/R-1063" xmlns:ac="http://ereg.egov.bg/value/R-1065" xmlns:vgt="http://ereg.egov.bg/value/R-1067" xmlns:vw="http://ereg.egov.bg/value/R-1071" xmlns:vv="http://ereg.egov.bg/value/R-1069" xmlns:vp="http://ereg.egov.bg/value/R-1073" xmlns:neoeng="http://ereg.egov.bg/value/R-1077" xmlns:nesd="http://ereg.egov.bg/value/R-1079" xmlns:need="http://ereg.egov.bg/value/R-1081" xmlns:neyc="http://ereg.egov.bg/value/R-1083" xmlns:nemc="http://ereg.egov.bg/value/R-1085" xmlns:nedc="http://ereg.egov.bg/value/R-1087" xmlns:nep="http://ereg.egov.bg/value/R-1089" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1055" schemaLocation="R-1055_VesselNameENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1059" schemaLocation="R-1059_VesselIMONumberENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1063" schemaLocation="R-1063_NavigationAreaENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1065" schemaLocation="R-1065_AutomationClass.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1067" schemaLocation="R-1067_VesselGT.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1071" schemaLocation="R-1071_VesselkW.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1069" schemaLocation="R-1069_VesselkVa.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1073" schemaLocation="R-1073_VesselmPa.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1077" schemaLocation="R-1077_NavigableExperienceOccupationENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1079" schemaLocation="R-1079_NavigableExperienceStartDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1081" schemaLocation="R-1081_NavigableExperienceEndDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1083" schemaLocation="R-1083_NavigableExperienceYearCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1085" schemaLocation="R-1085_NavigableExperienceMonthCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1087" schemaLocation="R-1087_NavigableExperienceDayCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1089" schemaLocation="R-1089_NavigableExperiencePercentage.xsd" />
+  <xsd:complexType name="NavigableExperienceByVesselENG">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за плавателен стаж на кораб на английски език</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="VesselNameENG" type="vneng:VesselNameENG" minOccurs="0" />
+      <xsd:element name="VesselIMONumberENG" type="vimoneng:VesselIMONumberENG" minOccurs="0" />
+      <xsd:element name="NavigationAreaENG" type="naeng:NavigationAreaENG" minOccurs="0" />
+      <xsd:element name="AutomationClass" type="ac:AutomationClass" minOccurs="0" />
+      <xsd:element name="VesselGT" type="vgt:VesselGT" minOccurs="0" />
+      <xsd:element name="VesselkW" type="vw:VesselkW" minOccurs="0" />
+      <xsd:element name="VesselkVa" type="vv:VesselkVa" minOccurs="0" />
+      <xsd:element name="VesselmPa" type="vp:VesselmPa" minOccurs="0" />
+      <xsd:element name="NavigableExperienceOccupationENG" type="neoeng:NavigableExperienceOccupationENG" minOccurs="0" />
+      <xsd:element name="NavigableExperienceStartDate" type="nesd:NavigableExperienceStartDate" minOccurs="0" />
+      <xsd:element name="NavigableExperienceEndDate" type="need:NavigableExperienceEndDate" minOccurs="0" />
+      <xsd:element name="NavigableExperienceYearCount" type="neyc:NavigableExperienceYearCount" minOccurs="0" />
+      <xsd:element name="NavigableExperienceMonthCount" type="nemc:NavigableExperienceMonthCount" minOccurs="0" />
+      <xsd:element name="NavigableExperienceDayCount" type="nedc:NavigableExperienceDayCount" minOccurs="0" />
+      <xsd:element name="NavigableExperiencePercentage" type="nep:NavigableExperiencePercentage" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

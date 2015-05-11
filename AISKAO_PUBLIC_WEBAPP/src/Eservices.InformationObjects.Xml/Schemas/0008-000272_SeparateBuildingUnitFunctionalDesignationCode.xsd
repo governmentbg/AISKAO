@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000272"
+      xmlns="http://ereg.egov.bg/value/0008-000272"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+  <xsd:simpleType name="SeparateBuildingUnitFunctionalDesignationCode">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Код на предназначение на самостоятелен обект в сграда</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:pattern value="[1-9]\d{2}" />
+    </xsd:restriction>
+  </xsd:simpleType>
+
+</xsd:schema>

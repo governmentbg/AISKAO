@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimalRisingTechnologyData xmlns="http://ereg.egov.bg/segment/R-1306" versionDate="2013-10-25">
+  <AnimalRisingTechnologies>
+    <AnimalRisingTechnology>
+      <AnimalRisingTechnologyCode>1</AnimalRisingTechnologyCode>
+      <AnimalRisingTechnologyName>Интензивно</AnimalRisingTechnologyName>
+    </AnimalRisingTechnology>
+    <AnimalRisingTechnology>
+      <AnimalRisingTechnologyCode>2</AnimalRisingTechnologyCode>
+      <AnimalRisingTechnologyName>Екстензивно</AnimalRisingTechnologyName>
+    </AnimalRisingTechnology>
+    <AnimalRisingTechnology>
+      <AnimalRisingTechnologyCode>3</AnimalRisingTechnologyCode>
+      <AnimalRisingTechnologyName>Друга технология</AnimalRisingTechnologyName>
+    </AnimalRisingTechnology>
+  </AnimalRisingTechnologies>
+</AnimalRisingTechnologyData>

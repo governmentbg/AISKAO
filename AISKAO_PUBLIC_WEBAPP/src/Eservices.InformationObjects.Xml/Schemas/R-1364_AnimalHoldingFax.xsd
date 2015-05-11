@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1364" xmlns="http://ereg.egov.bg/value/R-1364" xmlns:esafn="http://ereg.egov.bg/value/0008-000130" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000130" schemaLocation="0008-000130_ElectronicServiceApplicantFaxNumber.xsd" />
+  <xsd:simpleType name="AnimalHoldingFax">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номер на факс за контакт в животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="esafn:ElectronicServiceApplicantFaxNumber" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,36 @@
+﻿<div>
+    <!-- ko with: names -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Трите имена:</span>
+                <input class="span3" type="text" placeholder="Собствено име" data-bind="value: first, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+        <div class="controls-row">
+            <input class="span3" type="text" placeholder="Бащино име" data-bind="value: middle, valueUpdate: 'afterkeydown'" />
+            <input class="span3" type="text" placeholder="Фамилно име" data-bind="value: last, valueUpdate: 'afterkeydown'" />
+        </div>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Псевдоним:</span>
+            <input class="span9" placeholder="Псевдоним" type="text" data-bind="value: pseudonim, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+    <!-- /ko -->
+    <div class="row">
+        <div class="span5">
+            <label class="row">
+                <span class="span3 text-left">Идентификатор:</span>
+                <select class="span2" data-bind="options: identifier.identifierTypes, optionsText: 'name', value: identifier.selectedIdentifierType"></select>
+            </label>
+        </div>
+        <!-- ko if: identifier.selectedIdentifierType().key === 'egn' -->
+            <input class="span7" type="text" placeholder="Единен граждански номер" data-bind="value: identifier().egn, valueUpdate: 'afterkeydown'" />
+                <!-- /ko -->
+                <!-- ko if: identifier.selectedIdentifierType().key === 'lnch' -->
+            <input class="span7" type="text" placeholder="Личен номер на чужденец" data-bind="value: identifier().lnch, valueUpdate: 'afterkeydown'" />
+        <!-- /ko -->
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1149" xmlns="http://ereg.egov.bg/nomenclature/R-1149" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageSupplementTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове фуражни добавки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове фуражни добавки - технологични фуражни добавки, с изключение на: Добавките, които са предмет на точка 1, буква б) („антиоксиданти”) от Приложение І на Регламент (ЕО) № 1831/2003: само добавките с фиксирано максимално съдържание-->
+      <xsd:enumeration value="R-1146" />
+      <!--Видове фуражни добавки - сензорни добавки, с изключение на: Добавките, които са предмет на точка 2, буква а) („оцветители”) от Приложение І на Регламент (ЕО) № 1831/2003: каротеноиди и ксантофили-->
+      <xsd:enumeration value="R-1147" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

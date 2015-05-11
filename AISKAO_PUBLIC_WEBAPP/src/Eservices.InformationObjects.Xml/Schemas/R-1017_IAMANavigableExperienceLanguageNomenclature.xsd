@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1017" xmlns="http://ereg.egov.bg/nomenclature/R-1017" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="IAMANavigableExperienceLanguageNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на език на удостоверение за плавателен стаж</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Български език-->
+      <xsd:enumeration value="R-1013" />
+      <!--Английски език-->
+      <xsd:enumeration value="R-1014" />
+      <!--Български и английски език-->
+      <xsd:enumeration value="R-1015" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

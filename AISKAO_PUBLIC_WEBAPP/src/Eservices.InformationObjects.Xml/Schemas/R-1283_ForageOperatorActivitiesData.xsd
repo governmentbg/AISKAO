@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1283" xmlns="http://ereg.egov.bg/segment/R-1283" xmlns:fmd="http://ereg.egov.bg/segment/R-1145" xmlns:fspd="http://ereg.egov.bg/segment/R-1153" xmlns:fppd="http://ereg.egov.bg/segment/R-1162" xmlns:fcmcd="http://ereg.egov.bg/segment/R-1170" xmlns:fcspd="http://ereg.egov.bg/segment/R-1180" xmlns:fcsoapd="http://ereg.egov.bg/segment/R-1265" xmlns:fmbpd="http://ereg.egov.bg/segment/R-1188" xmlns:foaptd="http://ereg.egov.bg/segment/R-1267" xmlns:fstd="http://ereg.egov.bg/segment/R-1190" xmlns:fptd="http://ereg.egov.bg/segment/R-1192" xmlns:fctd="http://ereg.egov.bg/segment/R-1206" xmlns:fcsoatd="http://ereg.egov.bg/segment/R-1269" xmlns:ftwd="http://ereg.egov.bg/segment/R-1215" xmlns:fplc="http://ereg.egov.bg/value/R-1232" xmlns:atfwrapd="http://ereg.egov.bg/segment/R-1281" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1145" schemaLocation="R-1145_ForageMaterialData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1153" schemaLocation="R-1153_ForageSupplementProductionData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1162" schemaLocation="R-1162_ForagePremixProductionData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1170" schemaLocation="R-1170_ForageCombinedMaterialCountData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1180" schemaLocation="R-1180_ForageCombinedSupplementPremixData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1265" schemaLocation="R-1265_ForageCombinedSupplementOtherAnimalProductsData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1188" schemaLocation="R-1188_ForageMaterialByProductionData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1267" schemaLocation="R-1267_ForageOtherAnimalProductsTradingData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1190" schemaLocation="R-1190_ForageSupplementTradingData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1192" schemaLocation="R-1192_ForagePremixTradingData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1206" schemaLocation="R-1206_ForageCombinedTradingData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1269" schemaLocation="R-1269_ForageCombinedSupplementOtherAnimalTradingData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1215" schemaLocation="R-1215_ForageTradingWarehouseData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1232" schemaLocation="R-1232_ForageProductionLinesCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1281" schemaLocation="R-1281_AnimalTypesFedWithRelatedAnimalProductsData.xsd" />
+  <xsd:complexType name="ForageOperatorActivitiesData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за дейности на оператор във фуражния сектор</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageMaterialData" type="fmd:ForageMaterialData" minOccurs="0" />
+      <xsd:element name="ForageSupplementProductionData" type="fspd:ForageSupplementProductionData" minOccurs="0" />
+      <xsd:element name="ForagePremixProductionData" type="fppd:ForagePremixProductionData" minOccurs="0" />
+      <xsd:element name="ForageCombinedMaterialCountData" type="fcmcd:ForageCombinedMaterialCountData" minOccurs="0" />
+      <xsd:element name="ForageCombinedSupplementPremixData" type="fcspd:ForageCombinedSupplementPremixData" minOccurs="0" />
+      <xsd:element name="ForageCombinedSupplementOtherAnimalProductsData" type="fcsoapd:ForageCombinedSupplementOtherAnimalProductsData" minOccurs="0" />
+      <xsd:element name="ForageMaterialByProductionData" type="fmbpd:ForageMaterialByProductionData" minOccurs="0" />
+      <xsd:element name="ForageOtherAnimalProductsTradingData" type="foaptd:ForageOtherAnimalProductsTradingData" minOccurs="0" />
+      <xsd:element name="ForageSupplementTradingData" type="fstd:ForageSupplementTradingData" minOccurs="0" />
+      <xsd:element name="ForagePremixTradingData" type="fptd:ForagePremixTradingData" minOccurs="0" />
+      <xsd:element name="ForageCombinedTradingData" type="fctd:ForageCombinedTradingData" minOccurs="0" />
+      <xsd:element name="ForageCombinedSupplementOtherAnimalTradingData" type="fcsoatd:ForageCombinedSupplementOtherAnimalTradingData" minOccurs="0" />
+      <xsd:element name="ForageTradingWarehouseData" type="ftwd:ForageTradingWarehouseData" minOccurs="0" />
+      <xsd:element name="ForageProductionLinesCount" type="fplc:ForageProductionLinesCount" minOccurs="0" />
+      <xsd:element name="AnimalTypesFedWithRelatedAnimalProductsData" type="atfwrapd:AnimalTypesFedWithRelatedAnimalProductsData" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

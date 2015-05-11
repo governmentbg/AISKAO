@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:common="http://egov.bg/RegiX/AV/TR" xmlns="http://egov.bg/RegiX/AV/TR/ActualStateRequest" targetNamespace="http://egov.bg/RegiX/AV/TR/ActualStateRequest" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://egov.bg/RegiX/AV/TR" schemaLocation="TRCommon.xsd"/>
+	<xs:complexType name="ActualStateRequestType">
+		<xs:sequence>
+			<xs:element name="UIC" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕИК</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ActualStateRequest" type="ActualStateRequestType">
+		<xs:annotation>
+			<xs:documentation>Справка за актуално състояние</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

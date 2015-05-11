@@ -1,0 +1,112 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko-->
+    </fieldset>
+
+     <fieldset>
+        <legend>УРИ на документ</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Код и наименование:</span>
+                    <span data-bind="attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                        <select class="span3"
+                            data-bind="options: regionalDirectionCode.nomDirections(),
+                        optionsText: 'name',
+                        value: regionalDirectionCode.selectedDirection,
+                        attr: { 'class':  regionalDirectionCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                        enable: regionalDirectionCode.nomDirections().length != 0">
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Имена на лице, извършващо дейността в обект
+            <!-- ko with: plantObjectExecutingNamess -->
+            <button type="button" class="btn" data-bind="click: addPlantObjectExecutingNames">Добави</button>
+            <!-- /ko-->
+        </legend>
+        <div class="row">
+            <div data-bind="with: plantObjectExecutingNamess">
+                <div class="span12" data-bind="foreach: plantObjectExecutingNames">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span5">Имена на лице
+                              <button class="btn btn-danger" data-bind="click: $parent.removePlantObjectExecutingNames.bind($parent), attr: { 'class': $parent.plantObjectExecutingNames().length > 1 ? 'btn btn-danger' : 'btn btn-danger disabled' }">Изтрий</button>
+                                </span>
+                            </span>
+                        </legend>
+                        <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Editor' } -->
+                        <!-- /ko -->
+                        <hr />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="row">
+        <span class="span3">ЕГН/ЛНЧ на представител на фирма:</span>
+        <input class="span9" type="text" placeholder="ЕГН/ЛНЧ на представител на фирма" data-bind="value: entityRepresentativeID" />
+    </div>
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристики на обект за растителна защита</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид обект:</span>
+            <select class="span9"
+                data-bind="options: plantObjectType.nomPlantObjectTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: plantObjectType">
+            </select>
+        </div>
+        <div class="row">
+            <span class="span3 text-left">Вид дейност на обект:</span>
+            <select class="span9"
+                data-bind="options: plantObjectActivityNomenlatyre.nomPlantObjectActivityTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: plantObjectActivityNomenlatyre">
+            </select>
+        </div>
+        <div class="row">
+            <span class="span3">Срок на валидност на разрешение (години):</span>
+            <input class="span9" type="text" data-bind="value: plantObjectRegistrationValidity, valueUpdate: 'afterkeydown'" />
+        </div>
+        <fieldset>
+            <legend>Адрес на обект за растителна защита</legend>
+            <!-- ko compose: { model: plantObjectRealAddress, view: 'segments/common/EKATTEAddress', area: 'Editor' } -->
+            <!-- /ko -->
+        </fieldset>
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Editor' } -->
+    <!-- /ko -->
+</div>

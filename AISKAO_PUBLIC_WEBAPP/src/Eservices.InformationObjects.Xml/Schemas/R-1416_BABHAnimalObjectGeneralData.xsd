@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1416" xmlns="http://ereg.egov.bg/segment/R-1416" xmlns:aoat="http://ereg.egov.bg/value/R-1414" xmlns:aoc="http://ereg.egov.bg/value/R-1412" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1414" schemaLocation="R-1414_AnimalObjectAnimalTypes.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1412" schemaLocation="R-1412_AnimalObjectCapacity.xsd" />
+  <xsd:complexType name="BABHAnimalObjectGeneralData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за предназначение на животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalObjectAnimalTypes" type="aoat:AnimalObjectAnimalTypes" minOccurs="0" />
+      <xsd:element name="AnimalObjectCapacity" type="aoc:AnimalObjectCapacity" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

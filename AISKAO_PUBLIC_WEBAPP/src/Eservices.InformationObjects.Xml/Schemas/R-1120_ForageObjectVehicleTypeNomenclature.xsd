@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1120" xmlns="http://ereg.egov.bg/nomenclature/R-1120" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageObjectVehicleTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за вид транспортни средства, използвани за осъществяване на дейност</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Вид транспортни средства, използвани за осъществяване на дейност - собствени транспортни средства-->
+      <xsd:enumeration value="R-1117" />
+      <!--Вид транспортни средства, използвани за осъществяване на дейност - наемни транспортни средства-->
+      <xsd:enumeration value="R-1118" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

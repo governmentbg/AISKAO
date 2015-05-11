@@ -1,0 +1,17 @@
+﻿<div>
+    <div data-bind="with: authors()[0]">
+        <!-- ko compose: { model: $data, view: 'segments/common/ElectronicStatementAuthor', area: 'Display'} -->
+        <!-- /ko -->
+    </div>
+
+    <div data-bind="with: recipients()[0]">
+        <!-- ko compose: { model: $data, view: 'segments/common/ElectronicServiceRecipient', area: 'Display'} -->
+        <!-- /ko -->
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">В качеството на (на заявител спрямо получател):</span>
+            <span class="span9 uneditable-input" data-bind="text: authorQuality"></span>
+        </label>
+    </div>
+</div>

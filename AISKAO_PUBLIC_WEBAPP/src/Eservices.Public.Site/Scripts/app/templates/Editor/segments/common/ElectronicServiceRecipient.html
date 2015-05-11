@@ -1,0 +1,41 @@
+﻿<div>
+    <!-- ko if: person -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Физическо лице</span>
+        </legend>
+        <!-- ko compose: { model: person, view: 'segments/common/PersonBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true  } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+
+    <!-- ko if: foreignPerson -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Физическо лице, нерегистрирано по българското законодателство</span>
+        </legend>
+        <!-- ko compose: { model: foreignPerson, view: 'segments/common/ForeignCitizenBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true  } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+
+    <!-- ko if: entity -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Юридическо лице</span>
+        </legend>
+        <!-- ko compose: { model: entity, view: 'segments/common/EntityBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true  } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+
+    <!-- ko if: foreignEntity -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Чуждестранно юридическо лице</span>
+        </legend>
+        <!-- ko compose: { model: foreignEntity, view: 'segments/common/ForeignEntityBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true  } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+</div>

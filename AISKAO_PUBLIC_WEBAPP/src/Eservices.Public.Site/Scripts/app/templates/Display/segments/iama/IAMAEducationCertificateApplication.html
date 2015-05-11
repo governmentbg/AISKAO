@@ -1,0 +1,75 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Display' } -->
+    <!-- /ko-->
+    
+     <!--ko  with: serviceTermType.displayValue -->
+        <fieldset>
+            <legend>Вид на услугата</legend>
+            <div class="row">
+                <label>
+                    <span class="span3 text-left">Вид на услугата:</span>
+                    <span class="span9 uneditable-input" data-bind="text: name"></span>
+                </label>
+            </div>
+        </fieldset>    
+    <!-- /ko-->
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Display' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Указател за издаване или преиздаване на свидетелство за правоспособност</legend>
+        <div class="row">
+            <div class="control-group span12">
+                <label class="radio">
+                    <span>Издаване на свидетелство за правоспособност</span>
+                    <input type="radio" value="true" data-bind="checked: licenseIssueFlag().toString()" disabled />
+                </label>
+                <label class="radio">
+                    <span>Преиздаване на свидетелство за правоспособност</span>
+                    <input type="radio" value="false" data-bind="checked: licenseIssueFlag().toString()" disabled />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Информация за преминати курсове за специална и допълнителна подготовка на морски лица
+        </legend>
+        <div class="row">
+            <div data-bind="with: takenNavalCourses">
+                <div class="span11" data-bind="foreach: takenNavalCourse()">
+                    <fieldset>
+                        <legend>
+                            <span class="controls-row">
+                                <span class="span8">Преминат курс</span>
+                            </span>
+                        </legend>
+                        <!--ko compose: { model: $data, view: 'segments/iama/TakenNavalCourse', area: 'Display' } -->
+                        <!-- /ko-->
+                        <hr />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Номер на документ за самоличност</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Номер на документ за самоличност:</span>
+                <span class="span9 uneditable-input" data-bind="text: personalIdentityDocumentNumber, valueUpdate: 'afterkeydown'"></span>
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceFooter, view: 'segments/common/ElectronicAdministrativeServiceFooter', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Display' } -->
+    <!-- /ko-->
+</div>
+

@@ -1,0 +1,169 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ, вписан в РОС:</legend>
+        <div class="row">
+            <div class="span3">
+                <label class="row">
+                    <span class="span3 text-left">УРИ в регистъра на информационните обекти:</span>
+                </label>
+            </div>
+            <!--ko with: documentTypeURI-->
+            <div class="controls-row">
+                <input class="span4" type="text" data-bind="value: registerIndex" />
+                <input class="span5" type="text" data-bind="value: batchNumber" />
+            </div>
+            <!-- /ko -->
+        </div>
+
+        <div class="row">
+            <span class="span3 text-left">Тип на документ:</span>
+            <div class="row">
+                <input class="span9" type="text" data-bind="value: documentTypeName" />
+            </div>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Дата на получаване или подписване на документ:</span>
+                <span class="input-append" data-bind="datepicker: documentReceiptOrSigningDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+                    <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                    <span class="add-on btn btn-info">
+                        <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+
+
+    <div class="row">
+        <div class="span11" data-bind="with: navigableExperienceByVesselBGs">
+            <!-- ko compose: { model: $data, view: 'segments/iama/NavigableExperienceByVesselBG', area: 'Editor' } -->
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Брой години обща продължителност на плавателния стаж:</span>
+                <input class="span3" type="text" data-bind="value: navigableExperienceTotalYearCount" />
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Брой месеци обща продължителност на плавателния стаж:</span>
+                <input class="span3" type="text" data-bind="value: navigableExperienceTotalMonthCount" />
+            </label>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Брой дни обща продължителност на плавателния стаж:</span>
+                <input class="span3" type="text" data-bind="value: navigableExperienceTotalDayCount" />
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Общ плавателен стаж:</span>
+                <input class="span3" type="text" data-bind="value: navigableExperienceTotal" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Номер на моряшки паспорт:</span>
+                <input class="span9" type="text" data-bind="value: seafarerPassportNumber" />
+            </label>
+        </div>
+    </div>
+
+    <div>
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Дата на издаване на моряшки паспорт:</span>
+                    <span class="input-append" data-bind="datepicker: seafarerPassportIssueDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, saveTime: true, dateIsRequired: false">
+                        <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                        <span class="add-on btn btn-info">
+                            <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Дата на валидност на моряшки паспорт:</span>
+                    <span class="input-append" data-bind="datepicker: seafarerPassportExpireDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, saveTime: true, dateIsRequired: false ">
+                        <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                        <span class="add-on btn btn-info">
+                            <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>Данни за дирекция на български език</legend>
+        <div class="row">
+            <span class="span3 text-left">Трите имена на капитан на пристанището:</span>
+            <input class="span9" type="text" data-bind="value: harbourMasterBG" />
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3">Наименование на дирекция на Морска администрация:</span>
+                <input class="span9" type="text" data-bind="value: directorateNameBG" />
+            </label>
+        </div>
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Длъжностно лице</legend>
+        <div class="row">
+            <span class="span3">Тип длъжностно лице:</span>
+            <select class="span9" data-bind="options: official.nomOfficial,
+                                             optionsText: 'name',
+                                             value: official.selectedOfficial">
+            </select>
+        </div>
+        <div>
+            <!--ko if: official.selectedOfficial().key === "PersonNames" -->
+            <!-- ko with: official().personNames -->
+            <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+            <!-- /ko -->
+            <!--/ko-->
+            <!--/ko-->
+        </div>
+        <div>
+            <!--ko if: official.selectedOfficial().key === "ForeignCitizenNames" -->
+            <!-- ko with: official().foreignCitizenNames -->
+            <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true} -->
+            <!-- /ko -->
+            <!-- /ko -->
+            <!--/ko-->
+        </div>
+    </fieldset>
+</div>

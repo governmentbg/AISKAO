@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1037" xmlns="http://ereg.egov.bg/segment/R-1037" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stt="http://ereg.egov.bg/value/0008-000143" xmlns:edx="http://ereg.egov.bg/segment/0009-000092" xmlns:ad="http://ereg.egov.bg/segment/0009-000139" xmlns:sard="http://ereg.egov.bg/segment/0009-000141" xmlns:eash="http://ereg.egov.bg/segment/0009-000152" xmlns:easf="http://ereg.egov.bg/segment/0009-000153" xmlns:iamadc="http://ereg.egov.bg/value/R-1002" xmlns:iamadnbg="http://ereg.egov.bg/value/R-1004" xmlns:pidn="http://ereg.egov.bg/value/R-1027" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_IAMADirectorateCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_IAMADirectorateNameBG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1027" schemaLocation="R-1027_PersonalIdentityDocumentNumber.xsd" />
+  <xsd:element name="IAMAWorkCompetencyCertificateProlongationApplication" type="IAMAWorkCompetencyCertificateProlongationApplication" />
+  <xsd:complexType name="IAMAWorkCompetencyCertificateProlongationApplication">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за удължaване на срока на валидност на свидетелство за правоспособност за работа по море</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" />
+      <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+      <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" />
+      <xsd:element name="IAMADirectorateCode" type="iamadc:IAMADirectorateCode" minOccurs="0" />
+      <xsd:element name="IAMADirectorateNameBG" type="iamadnbg:IAMADirectorateNameBG" minOccurs="0" />
+      <xsd:element name="PersonalIdentityDocumentNumber" type="pidn:PersonalIdentityDocumentNumber" minOccurs="0" />
+      <xsd:element name="AttachedDocuments" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

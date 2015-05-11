@@ -1,0 +1,38 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Вид на услугата</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на услугата:</span>
+                    <select data-bind="options: serviceTermType.serviceTermTypes,
+                                    optionsText: 'name',
+                                    optionsValue: 'key',
+                                    value: serviceTermType,
+                                    attr: { 'class': serviceTermType.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                                    enable: serviceTermType.serviceTermTypes().length != 0 ">
+                    </select>
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Editor' } -->
+    <!-- /ko-->
+
+      <!--<fieldset>
+        <legend>Номер на документ за самоличност</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Номер на документ за самоличност:</span>
+                <input type="text" class="span9" data-bind="value: personalIdentityDocumentNumber, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </fieldset>-->
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko-->
+</div>

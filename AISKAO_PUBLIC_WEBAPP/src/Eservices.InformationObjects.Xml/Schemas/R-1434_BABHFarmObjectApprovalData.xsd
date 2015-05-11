@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1434" xmlns="http://ereg.egov.bg/segment/R-1434" xmlns:babhfoap="http://ereg.egov.bg/value/R-1430" xmlns:babhfoac="http://ereg.egov.bg/value/R-1432" xmlns:vrn="http://ereg.egov.bg/value/R-1428" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1430" schemaLocation="R-1430_BABHFarmObjectApprovingProtocol.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1432" schemaLocation="R-1432_BABHFarmObjectApprovingComission.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1428" schemaLocation="R-1428_VetRegistrationNumber.xsd" />
+  <xsd:complexType name="BABHFarmObjectApprovalData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за полученото одобрение на заявление за регистрация на животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="BABHFarmObjectApprovingProtocol" type="babhfoap:BABHFarmObjectApprovingProtocol" minOccurs="0" />
+      <xsd:element name="BABHFarmObjectApprovingComission" type="babhfoac:BABHFarmObjectApprovingComission" minOccurs="0" />
+      <xsd:element name="VetRegistrationNumber" type="vrn:VetRegistrationNumber" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1087" xmlns="http://ereg.egov.bg/segment/R-1087" xmlns:crozrebd="http://ereg.egov.bg/segment/R-1085" xmlns:crozredfnmid="http://ereg.egov.bg/segment/R-1069" xmlns:crozceac="http://ereg.egov.bg/value/R-1057" xmlns:crozcrepd="http://ereg.egov.bg/segment/R-1083" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1085" schemaLocation="R-1085_CROZRegistrationEntryBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1069" schemaLocation="R-1069_CROZRegistrationEntryDateForNewManagerInvitationsData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1057" schemaLocation="R-1057_CROZConsignmentEntryAmendmentsCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1083" schemaLocation="R-1083_CROZConsignmentRegistrationEntryParticipantData.xsd" />
+  <xsd:complexType name="CROZConsignmentRegistrationEntryData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за вписване по партида на определено лице в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crozrebd:CROZRegistrationEntryBasicData">
+        <xsd:sequence>
+          <xsd:element name="CROZRegistrationEntryDateForNewManagerInvitationsData" type="crozredfnmid:CROZRegistrationEntryDateForNewManagerInvitationsData" minOccurs="0" />
+          <xsd:element name="CROZConsignmentEntryAmendmentsCount" type="crozceac:CROZConsignmentEntryAmendmentsCount" minOccurs="0" />
+          <xsd:element name="CROZConsignmentRegistrationEntryParticipantDatas" minOccurs="0">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="CROZConsignmentRegistrationEntryParticipantData" type="crozcrepd:CROZConsignmentRegistrationEntryParticipantData" maxOccurs="unbounded" />
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

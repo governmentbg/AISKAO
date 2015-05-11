@@ -1,0 +1,38 @@
+﻿<div>
+    <!-- ko with: person -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Физическо лице</span>
+        </legend>
+        <!-- ko compose: { model: $data, view: 'segments/common/PersonBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+    <!-- ko with: foreignPerson -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Физическо лице, нерегистрирано по българското законодателство</span>
+        </legend>
+        <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+    <!-- ko with: entity -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Юридическо лице</span>
+        </legend>
+        <!-- ko compose: { model: $data, view: 'segments/common/EntityBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+    <!-- ko with: foreignEntity -->
+    <fieldset>
+        <legend>
+            <span>Данни за получател - Чуждестранно юридическо лице</span>
+        </legend>
+        <!-- ko compose: { model: $data, view: 'segments/common/ForeignEntityBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+</div>

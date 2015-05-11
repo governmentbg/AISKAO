@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000143"
+      xmlns="http://ereg.egov.bg/value/0008-000143"
+      xmlns:stbtn="http://ereg.egov.bg/nomenclature/0007-000014"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/nomenclature/0007-000014" schemaLocation="0007-000014_ServiceTermTypeNomenclature.xsd"/>
+
+    <xsd:simpleType name="ServiceTermType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Вид на услугата, спрямо срока за предоставянето й</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="stbtn:ServiceTermTypeNomenclature"/>
+    </xsd:simpleType>
+
+</xsd:schema>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000014"
+      xmlns="http://ereg.egov.bg/segment/0009-000014"
+      xmlns:fen="http://ereg.egov.bg/value/0008-000030"
+      xmlns:clc="http://ereg.egov.bg/value/0008-000024"
+      xmlns:cnc="http://ereg.egov.bg/value/0008-000025"
+      xmlns:fer="http://ereg.egov.bg/value/0008-000031"
+      xmlns:fei="http://ereg.egov.bg/value/0008-000032"
+      xmlns:feod="http://ereg.egov.bg/value/0008-000033"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000030" schemaLocation="0008-000030_ForeignEntityName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000024" schemaLocation="0008-000024_CountryISO3166TwoLetterCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000025" schemaLocation="0008-000025_CountryNameCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000031" schemaLocation="0008-000031_ForeignEntityRegister.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000032" schemaLocation="0008-000032_ForeignEntityIdentifier.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000033" schemaLocation="0008-000033_ForeignEntityOtherData.xsd"/>
+
+
+	<xsd:complexType name="ForeignEntityBasicData">
+		<xsd:annotation>
+		    <xsd:documentation xml:lang="bg">Основни данни за чуждестранно юридическо лице</xsd:documentation>
+		</xsd:annotation>  
+  		<xsd:sequence>
+			<xsd:element name="ForeignEntityName" type="fen:ForeignEntityName" minOccurs="0"/>
+			<xsd:element name="CountryISO3166TwoLetterCode" type="clc:CountryISO3166TwoLetterCode" minOccurs="0"/>
+			<xsd:element name="CountryNameCyrillic" type="cnc:CountryNameCyrillic" minOccurs="0"/>
+			<xsd:choice>
+				<xsd:sequence>
+					<xsd:element name="ForeignEntityRegister" type="fer:ForeignEntityRegister" minOccurs="0"/>
+					<xsd:element name="ForeignEntityIdentifier" type="fei:ForeignEntityIdentifier" minOccurs="0"/>
+				</xsd:sequence>
+				<xsd:element name="ForeignEntityOtherData" type="feod:ForeignEntityOtherData" minOccurs="0"/>
+			</xsd:choice>
+		</xsd:sequence>
+	</xsd:complexType>
+
+
+</xsd:schema>

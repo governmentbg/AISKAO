@@ -1,0 +1,55 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3">Вид на транспортно средство:</span>
+                <input class="span9" type="text" data-bind="value: forageTransportVechicleType" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <label class="row">
+            <span class="span10" data-bind="with: forageTransportVechicleRegistrationNumbers">
+                <span class="span3 text-left">Регистрационен номер на транспортно средство:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: forageTransportVechicleRegistrationNumber.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addForageTransportVechicleRegistrationNumber, attr: { 'class': (forageTransportVechicleRegistrationNumber.itemToAdd() && ko.utils.arrayIndexOf(forageTransportVechicleRegistrationNumber(), forageTransportVechicleRegistrationNumber.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }" class="btn btn-success disabled">Добави</button>
+                </span>
+            </span>
+        </label>
+    </div>
+
+    <!-- ko with: forageTransportVechicleRegistrationNumbers -->
+    <div class="span6">
+        <!-- ko if: forageTransportVechicleRegistrationNumber().length > 0 -->
+        Списък с регистрационни номера:
+                <!-- /ko -->
+        <div class="span6" data-bind="foreach: forageTransportVechicleRegistrationNumber">
+            <div class="row">
+                <span class="span3 text-left">Регистрационен номер #<span data-bind="text: 1 + $index()"></span>:</span>
+                <span class="input-append">
+                    <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                    <button class="btn btn-danger" data-bind="click: $parent.removeForageTransportVechicleRegistrationNumber.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko with: forageFormTypes -->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Форма на фуражи:</span>
+                <span class="span5" data-bind="foreach: forageFormType.nomForageFormTypes">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.key, checked: $parent.forageFormType" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

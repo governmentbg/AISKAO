@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1079" xmlns="http://ereg.egov.bg/segment/R-1079" xmlns:ft="http://ereg.egov.bg/value/0008-000041" xmlns:crozrn="http://ereg.egov.bg/value/R-1006" xmlns:crozoafsic="http://ereg.egov.bg/value/R-1077" xmlns:crozreoapc="http://ereg.egov.bg/value/R-1059" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000041" schemaLocation="0008-000041_FileType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1006" schemaLocation="R-1006_CROZRegistrationNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1077" schemaLocation="R-1077_CROZOpticalArchiveFieldSeventeenImageContent.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1059" schemaLocation="R-1059_CROZRegistrationEntryOpticleArchivePagesCount.xsd" />
+  <xsd:complexType name="CROZOpticalArchiveFieldSeventeenImageData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за изображение от оптичния архив на ЦРОЗ с тип "Поле 17"</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="FileType" type="ft:FileType" minOccurs="0" />
+      <xsd:element name="CROZRegistrationNumber" type="crozrn:CROZRegistrationNumber" minOccurs="0" />
+      <xsd:element name="CROZOpticalArchiveFieldSeventeenImageContent" type="crozoafsic:CROZOpticalArchiveFieldSeventeenImageContent" minOccurs="0" />
+      <xsd:element name="CROZRegistrationEntryOpticleArchivePagesCount" type="crozreoapc:CROZRegistrationEntryOpticleArchivePagesCount" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

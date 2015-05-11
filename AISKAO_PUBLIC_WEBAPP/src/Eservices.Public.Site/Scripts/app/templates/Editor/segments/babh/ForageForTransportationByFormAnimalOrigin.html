@@ -1,0 +1,69 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginMilkProduct.isChecked" />
+                <u>мляко и млечни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginMilkProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginMilkProduct, view: 'segments/babh/ForageMaterialAnimalOriginMilkProduct', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginEggProduct.isChecked" />
+                <u>яйчни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginEggProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginEggProduct, view: 'segments/babh/ForageMaterialAnimalOriginEggProduct', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginFishFlour.isChecked" />
+                <u>рибно брашно</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginFishFlour.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginFishFlour, view: 'segments/babh/ForageMaterialAnimalOriginFishFlour', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginBloodProduct.isChecked" />
+                <u>кръвни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginBloodProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginBloodProduct, view: 'segments/babh/ForageMaterialAnimalOriginBloodProduct', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginBloodFlour.isChecked" />
+                <u>кръвно брашно</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginBloodFlour.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginBloodFlour, view: 'segments/babh/ForageMaterialAnimalOriginBloodFlour', area: 'Editor',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginCalciumPhosphate.isChecked" />
+                <u>дикалциев/трикалциев фосфат от животински произход</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginCalciumPhosphate.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginCalciumPhosphate, view: 'segments/babh/ForageMaterialAnimalOriginCalciumPhosphate', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginLiquidFishOil" />
+                рибно масло (течно)</label>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginLiquidMeltedFat" />
+                топени мазнини (течни)</label>
+
+            <label class="checkbox span12">
+                <input type="checkbox" data-bind="checked: forageMaterialAnimalOriginOther.isChecked" />
+                <u>други</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginOther.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginOther, view: 'segments/babh/ForageMaterialAnimalOriginOther', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+</div>

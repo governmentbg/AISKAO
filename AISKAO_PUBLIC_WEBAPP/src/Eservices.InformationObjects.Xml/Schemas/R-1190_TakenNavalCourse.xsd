@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1190" xmlns="http://ereg.egov.bg/segment/R-1190" xmlns:neoc="http://ereg.egov.bg/value/R-1168" xmlns:neon="http://ereg.egov.bg/value/R-1170" xmlns:oneo="http://ereg.egov.bg/value/R-1184" xmlns:nccc="http://ereg.egov.bg/value/R-1176" xmlns:nccn="http://ereg.egov.bg/value/R-1178" xmlns:oncc="http://ereg.egov.bg/value/R-1186" xmlns:nccdt="http://ereg.egov.bg/value/R-1188" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1168" schemaLocation="R-1168_NavalEducationalOrganizationCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1170" schemaLocation="R-1170_NavalEducationalOrganizationName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1184" schemaLocation="R-1184_OtherNavalEducationalOrganization.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1176" schemaLocation="R-1176_NavalCompetencyCourseCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1178" schemaLocation="R-1178_NavalCompetencyCourseName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1186" schemaLocation="R-1186_OtherNavalCompetencyCourse.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1188" schemaLocation="R-1188_NavalCompetencyCourseDateTaken.xsd" />
+  <xsd:complexType name="TakenNavalCourse">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Информация за преминат курс за специална и допълнителна подготовка на морски лица</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="NavalEducationalOrganizationCode" type="neoc:NavalEducationalOrganizationCode" minOccurs="0" />
+      <xsd:element name="NavalEducationalOrganizationName" type="neon:NavalEducationalOrganizationName" minOccurs="0" />
+      <xsd:element name="OtherNavalEducationalOrganization" type="oneo:OtherNavalEducationalOrganization" minOccurs="0" />
+      <xsd:element name="NavalCompetencyCourseCode" type="nccc:NavalCompetencyCourseCode" minOccurs="0" />
+      <xsd:element name="NavalCompetencyCourseName" type="nccn:NavalCompetencyCourseName" minOccurs="0" />
+      <xsd:element name="OtherNavalCompetencyCourse" type="oncc:OtherNavalCompetencyCourse" minOccurs="0" />
+      <xsd:element name="NavalCompetencyCourseDateTaken" type="nccdt:NavalCompetencyCourseDateTaken" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

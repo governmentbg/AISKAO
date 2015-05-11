@@ -1,0 +1,40 @@
+﻿@using (Html.BeginForm("SignAdditionalDocument", "Request", FormMethod.Post, new { id = "submitForm" }))
+{
+    @Html.AntiForgeryToken();
+    @Html.Partial("DocumentEditor")
+    @Html.Hidden("serviceId")
+
+    <!-- ko if: _settings.viewDocument() == true && _settings.isSigned() == false  -->
+    <input type="button" class="btn" name="Edit" value="Редактиране" data-bind="click: editDocument" />
+    <input type="submit" id="generateXML" value="Подписване" data-bind="click: generateXmlForSigning" class="btn" />
+    <!-- /ko -->
+    <input type="button" class="btn" name="viewDocument" value="Преглед" data-bind="visible: _settings.viewDocument() == false, click: viewDocument" />
+
+    <!-- ko if: _settings.showErrors() == false  -->
+    <input type="button" class="btn" id="submitValidDocument" value="Подай заявлението" 
+           data-bind="visible: _settings.viewDocument() == true && _settings.isSigned() == true" />
+    <!-- /ko -->
+    
+    <!-- ko if: _settings.showErrors() == true  -->
+    <input type="button" class="btn" value="Подай заявлението" data-toggle="modal" data-target="#confirmationMessage" data-bind="visible: _settings.viewDocument() == true && _settings.isSigned() == true" />
+    <!-- /ko -->
+
+    <input type="hidden" id="content" name="content" data-bind="value: _settings.resultXML" />
+
+    @Html.Partial("SubmitInvalidDocumentConfirmation")
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            SubmitFormUrl = '@Url.Action("SubmitAdditionalDocument", "Request")';
+        });
+    </script>
+
+    <script type="text/javascript" src="~/Scripts/Request/SubmitDocument.js"></script>
+
+}
+
+
+
+

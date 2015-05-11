@@ -1,0 +1,1924 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{12AD5745-C0B2-4138-8268-5013B08BBD4C}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TechnoLogica.Eservices.Public.Site</RootNamespace>
+    <AssemblyName>Eservices.Public.Site</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\Eservices.Public.Solution\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PublishDatabaseSettings>
+      <Objects>
+        <ObjectGroup Name="DefaultConnection-Deployment" Order="1" Enabled="True">
+          <Destination Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=DefaultConnectionDeploy%3bIntegrated Security=True" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=MVC_Demo%3bIntegrated Security=True%3bPersist Security Info=True%3bMultipleActiveResultSets=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\DefaultConnection-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="AISWebEntities-Deployment" Order="2" Enabled="True">
+          <Destination Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=AISWebEntitiesDeploy%3bIntegrated Security=True" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=MVC_Demo%3bIntegrated Security=True%3bPersist Security Info=True%3bMultipleActiveResultSets=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\AISWebEntities-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+        <ObjectGroup Name="AISKAOEntities-Deployment" Order="3" Enabled="True">
+          <Destination Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=AISKAOEntitiesDeploy%3bIntegrated Security=True%3bPooling=True" />
+          <Object Type="DbFullSql">
+            <PreSource Path="Data Source=%28localdb%29\v11.0%3bInitial Catalog=MVC_Demo%3bIntegrated Security=True%3bPersist Security Info=True%3bMultipleActiveResultSets=True" ScriptSchema="True" ScriptData="True" CopyAllFullTextCatalogs="False" DriDefaults="True" />
+            <Source Path="obj\Debug\AutoScripts\AISKAOEntities-Deployment_SchemaAndData.sql" Transacted="True" />
+          </Object>
+        </ObjectGroup>
+      </Objects>
+    </PublishDatabaseSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=3.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Eservices.Public.Solution\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="AutoMapper.Net4, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Eservices.Public.Solution\packages\AutoMapper.3.0.0\lib\net40\AutoMapper.Net4.dll</HintPath>
+    </Reference>
+    <Reference Include="Bootstrapper">
+      <HintPath>..\Eservices.Public.Solution\packages\Bootstrapper.2.0.3.9\lib\Net40\Bootstrapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Eservices.AIS.DataAccess">
+      <HintPath>..\libs\Eservices.AIS.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Eservices.AIS.Models">
+      <HintPath>..\libs\Eservices.AIS.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="Eservices.AIS.RegiXClient">
+      <HintPath>..\libs\Eservices.AIS.RegiXClient.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Eservices.AIS.Solution\Libraries\Recaptcha.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Eservices.AIS.Core" />
+    <Reference Include="Eservices.AIS.Infrastructure" />
+    <Reference Include="SecureBlackbox, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.HTTP, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.HTTP.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.HTTPCommon, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.HTTPCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.PGP, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.PGP.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SSLClient, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.SSLClient.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.SSLCommon, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.SSLCommon.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.XML, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.XML.dll</HintPath>
+    </Reference>
+    <Reference Include="SecureBlackbox.XMLSecurity, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\libs\SecureBlackbox.XMLSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.0\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.40804.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\Eservices.Public.Solution\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Eservices.Public.Solution\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebApi.Client.4.0.20710.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebApi.Core.4.0.20710.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebApi.WebHost.4.0.20710.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers">
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.Providers.Core.1.1\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\Eservices.Public.Solution\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\DocumentEditorConfig.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AminalCategoriesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AnimalProductionTypesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AnimalPurposesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AnimalRisingTechnologiesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AnimalTypesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\AreasController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\CertificateIssuingCitiesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\CountriesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\DirectionsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\DistrictsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\DocumentsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\FarmCapacitiesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\FoodGroupsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\FoodItemController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\FoodItemsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\FoodSubGroupsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\IAMADirectoratesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\MayoraltiesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\MunicipalitiesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\NavalCompetencyCoursesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\NavalEducationalOrganizationsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\SeaWorkCompetenciesController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\SeaWorkCompetencyGroupsController.cs">
+    </Compile>
+    <Compile Include="Controllers\odata\SettlementsController.cs">
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Controllers\AdministrationController.cs" />
+    <Compile Include="Controllers\ElectronicServiceController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RequestController.cs" />
+    <Compile Include="Controllers\ServiceController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ExtenstionMethods.cs" />
+    <Compile Include="Models\Administration\GetAdministrationInfoViewModel.cs" />
+    <Compile Include="Models\ElectronicService\ElectronicServiceStageViewModel.cs" />
+    <Compile Include="Models\ElectronicService\GetEServiceAccessViewModel.cs" />
+    <Compile Include="Models\ElectronicService\GetEServiceDetailsViewModel.cs" />
+    <Compile Include="Models\ElectronicService\OfficialDocumentViewModel.cs" />
+    <Compile Include="Models\Service\GetServiceDetailsViewModel.cs" />
+    <Compile Include="Models\Service\ListServicesViewModel.cs" />
+    <Compile Include="Models\Service\SearchResultServicesViewModel.cs" />
+    <Compile Include="Models\Service\ServiceTypeInfoBitsViewModel.cs" />
+    <Compile Include="Models\Service\ServiceViewModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\Administration.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Administration.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\AlternativeDescriptions.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AlternativeDescriptions.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Buttons.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Buttons.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ElectronicService.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicService.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ErrorMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\Service.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Service.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ViewTitles.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ViewTitles.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap-datetimepicker.min.css">
+    </Content>
+    <Content Include="Content\bootstrap\img\downloadFileFlash.png">
+    </Content>
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.bg.js">
+    </Content>
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.js">
+    </Content>
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.min.js">
+    </Content>
+    <Content Include="Content\DocumentEditorStyles.css">
+    </Content>
+    <Content Include="Content\downloadify.swf">
+    </Content>
+    <Content Include="Content\expressInstall.swf">
+    </Content>
+    <Content Include="Content\filereader.swf">
+    </Content>
+    <Content Include="Scripts\app\app.js">
+    </Content>
+    <Content Include="Scripts\app\dataPackages\datacontext.js">
+    </Content>
+    <Content Include="Scripts\app\Enums.js">
+    </Content>
+    <Content Include="Scripts\app\GlobalParameters.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ActualStateRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ActualStateResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\AnimalHoldingAddressData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHAnimalObjectData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHFarmObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHFarmObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHFoodObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHFoodObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHForageOperatorObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHForageOperatorObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHForageTransporterRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHForageTransporterRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHPlantObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\BABHPlantObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ForeignIdentityInfoRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ForeignIdentityInfoResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMAEducationCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMALeaderShipCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMANavigableExperienceCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMANavigableExperienceCertificateBG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMANavigableExperienceCertificateENG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMANavigationCompetencyCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMASeaWorkCompetencyCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IAMAWorkCompetencyCertificateProlongationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\IndividualAdministrativeActRefusal.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\MotorVehicleRegistrationRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\MotorVehicleRegistrationResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\NavigableExperienceByVesselBG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PermanentAddressCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PersonalIdentityInfoRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PersonalIdentityInfoResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PersonCyrrilicFullName.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PropertyAddressCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\PropertyAddressCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ReceiptAcknowledgedMessage.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ReceiptNotAcknowledgedMessage.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\RegisteredErrorsInDocumentContentDocument.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\RegularizationNotification.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidBulstatRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidBulstatResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidPersonRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidPersonResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidUICRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\documents\ValidUICResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalHoldingAddressData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalHoldingPhones.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalObjectAnimalPurpose.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalObjectAnimalPurposes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalTypeFedWithRelatedAnimalProducts.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\AnimalTypesFedWithRelatedAnimalProductsData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHAnimalObjectAnimalType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHAnimalObjectAnimalTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHAnimalObjectData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHAnimalObjectDatas.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHAnimalObjectGeneralData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHFarmObjectApprovalData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHFarmObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHFarmObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHFoodObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHFoodObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHForageOperatorObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHForageOperatorObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHForageTransporterRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHForageTransporterRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHPlantObjectRegistrationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BABHPlantObjectRegistrationCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BloodProductsTypeData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\BloodProductsTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ContactPersonData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FarmObjectRealAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\Food.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodGroup.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodGroupNames.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodGroups.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodGroupsList.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodItem.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodItems.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodObjectRealAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\Foods.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodSubGroup.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodSubGroups.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\FoodSubItem.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedMaterialCountData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedMaterialCountTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedProducedQTYMonthlyByAnimalType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedProducedQTYMonthlyByAnimalTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedProducesQTYMonthlyAnimalTypeData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedSupplementOtherAnimalProductsData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedSupplementOtherAnimalTradingData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedSupplementPremixData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedSupplementPremixTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedTradingData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageCombinedTradingTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageFormBulkOrPackeds.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageFormTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormAnimalOrigin.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormCombined.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormDatas.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormMedical.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormPlantOrigin.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormPremix.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormSpecialUse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationByFormSupplement.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageForTransportationData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginBloodFlour.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginBloodProduct.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginCalciumPhosphate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginEggProduct.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginFishFlour.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginMilkProduct.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialAnimalOriginOther.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialByProductionData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialByProductionTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialNames.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialsByProductData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageMaterialsByProductDatas.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageObjectAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageObjectVechicleTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageOperatorActivitiesData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageOtherAnimalProductsTradingData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForagePremixProductionData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForagePremixTradingData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForagePremixTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageSupplementProductionData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageSupplementTradingData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageSupplementTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageTradingTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageTradingWarehouseData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageTransportActivityData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageTransportActivityDatas.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\ForageTransportVechicleRegistrationNumbers.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherAnimalOrRevisedProducts.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherAnimalTypeFedWithRelatedAnimalProducts.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherBloodProducts.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherOtherProductTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherProductTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\OtherRevisedAnimalProteins.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\PlantObjectExecutingNamess.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\PlantObjectRealAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\RevisedAnimalProteinTypeData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\babh\RevisedAnimalProteinTypes.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ApplicantAdress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\AttachedDocument.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\AttachedDocuments.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\Discrepancies.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\DocumentURI.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\EKATTEAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicAdministrativeServiceFooter.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicAdministrativeServiceHeader.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicDocumentXml.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicServiceApplicant.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicServiceApplicantContactData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicServiceProviderBasicData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicServiceRecipient.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ElectronicStatementAuthor.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\EntityBasicData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\FaxNumbers.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ForeignCitizenBasicData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ForeignCitizenIdentityDocument.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ForeignCitizenNames.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ForeignCitizenPlaceOfBirth.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ForeignEntityBasicData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\IndividualAdministrativeActRefusal.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\MunicipalityAdministrationAdress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\Officials.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\PersonAddress.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\PersonBasicData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\PersonIdentifier.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\PersonNames.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\PhoneNumbers.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ReceiptAcknowledgedMessage.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ReceiptNotAcknowledgedMessage.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RecipientGroup.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisteredBy.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisteredDocumentURI.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisteredErrorInDocumentContent.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisteredErrors.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisteredErrorsInDocumentContent.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegisterObjectURI.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\RegularizationNotification.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\Residence.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\ServiceApplicantReceiptData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\common\XMLDigitalSignature.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\Competencies.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\Competency.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\CompetencyName.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMACertificateInformation.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMAEducationCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMALeaderShipCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMANavigableExperienceCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMANavigableExperienceCertificateBG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMANavigableExperienceCertificateENG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMANavigationCompetencyCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMASeaWorkCompetencyCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\IAMAWorkCompetencyCertificateProlongationApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\NavigableExperienceByVesselBG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\NavigableExperienceByVesselBGs.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\NavigableExperienceByVesselENG.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\NavigableExperienceByVesselENGs.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\NavigationCompetences.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\PersonCyrrilicFullName.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\SeaWorkCompetenciesList.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\SeaWorkCompetencyGroup.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\SeaWorkCompetencyGroups.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\SeaWorkRestrictions.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\TakenNavalCourse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\iama\TakenNavalCourses.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\PermanentAddressCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ActualStateRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ActualStateResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\AddressesType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\AddressTypeBL.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\AddressTypeTR.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\BulstatStatusType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ContactsType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\EntityData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ForeignerPersonData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ForeignIdentityInfoRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ForeignIdentityInfoResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\IdentitySignature.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\LegalFormType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ManagersType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ManagerType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\MotorVehicleRegistrationRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\MotorVehicleRegistrationResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Nationality.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\NationalityList.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonalIdentityInfoRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonalIdentityInfoResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonData.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonNamesGRAO.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonNamesMVR.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\PersonType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Picture.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ReturnInformation.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\SeatType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Status.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Statuses.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\StatusType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidBulstatInfoType.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidBulstatRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidBulstatResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidPersonRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidPersonResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidUICRequest.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\ValidUICResponse.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Vehicle.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\regix\Vehicles.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\vtarnovo\PropertyAddressCertificate.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\segments\vtarnovo\PropertyAddressCertificateApplication.js">
+    </Content>
+    <Content Include="Scripts\app\informationObjects\ViewModel.js">
+    </Content>
+    <Content Include="Scripts\app\ko.bindingHandlers.js">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ActualStateRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ActualStateResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHFarmObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHFarmObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHFoodObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHFoodObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHForageOperatorObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHForageOperatorObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHForageTransporterRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHForageTransporterRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHPlantObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\BABHPlantObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ForeignIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ForeignIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMAApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMAEducationCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMALeaderShipCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMANavigableExperienceCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMANavigableExperienceCertificateBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMANavigableExperienceCertificateENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMANavigationCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMASeaWorkCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IAMAWorkCompetencyCertificateProlongationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\IndividualAdministrativeActRefusal.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\MotorVehicleRegistrationRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\MotorVehicleRegistrationResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\NavigableExperienceByVesselBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\NavigableExperienceByVesselENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PermanentAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PersonalIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PersonalIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PersonCyrrilicFullName.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PropertyAddressCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\PropertyAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ReceiptAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ReceiptNotAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\RegularizationNotification.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidBulstatRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidBulstatResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidPersonRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidPersonResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidUICRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\documents\ValidUICResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\AnimalHoldingAddressData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\AnimalObjectAnimalPurpose.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\AnimalTypesFedWithRelatedAnimalProductsData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHAnimalObjectAnimalType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHAnimalObjectData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHAnimalObjectGeneralData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHFarmObjectApprovalData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHFarmObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHFarmObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHFoodObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHFoodObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHForageOperatorObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHForageOperatorObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHForageTransporterRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHForageTransporterRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHPlantObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BABHPlantObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\BloodProductsTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ContactPersonData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\FoodGroups.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\FoodGroupsList.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\FoodItems.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\Foods.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\FoodSubGroups.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\FoodSubItem.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedMaterialCountData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedProducedQTYMonthlyByAnimalType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedProducesQTYMonthlyAnimalTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedSupplementOtherAnimalProductsData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedSupplementOtherAnimalTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedSupplementPremixData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageCombinedTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormAnimalOrigin.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormCombined.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormMedical.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormPlantOrigin.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormPremix.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormSpecialUse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationByFormSupplement.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageForTransportationData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginBloodFlour.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginBloodProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginCalciumPhosphate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginEggProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginFishFlour.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginMilkProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialAnimalOriginOther.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialByProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageMaterialsByProductData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageOperatorActivitiesData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageOtherAnimalProductsTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForagePremixProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForagePremixTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageSupplementProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageSupplementTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageTradingWarehouseData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\ForageTransportActivityData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\OtherAnimalOrRevisedProducts.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\PlantObjectExecutingNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\PlantObjectRealAddress.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\babh\RevisedAnimalProteinTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\AttachedDocuments.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\DocumentURI.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\EKATTEAddress.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicAdministrativeServiceFooter.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicAdministrativeServiceHeader.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicServiceApplicant.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicServiceApplicantContactData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicServiceProviderBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicServiceRecipient.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicStatementAuthor.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ElectronicStatementAuthorEqualsRecepient.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\EntityBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ForeignCitizenBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ForeignCitizenNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ForeignEntityBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\IndividualAdministrativeActRefusal.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\OfficialData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\PersonBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\PersonNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ReceiptAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ReceiptNotAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\RecipientGroup.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\RegularizationNotification.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\Residence.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\ServiceApplicantReceiptData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\common\XMLDigitalSignature.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\Competencies.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\CompetencyName.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMAApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMACertificateInformation.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMAEducationCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMALeaderShipCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMANavigableExperienceCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMANavigableExperienceCertificateBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMANavigableExperienceCertificateENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMANavigationCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMASeaWorkCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\IAMAWorkCompetencyCertificateProlongationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\NavigableExperienceByVesselBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\NavigableExperienceByVesselENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\PersonCyrrilicFullName.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\SeaWorkCompetenciesList.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\iama\TakenNavalCourse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\PermanentAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ActualStateRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ActualStateResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\AddressesType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\AddressTypeBL.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\AddressTypeTR.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\BulstatStatusType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ContactsType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\EntityData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ForeignerPersonData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ForeignIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ForeignIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\IdentitySignature.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\LegalFormType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ManagersType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ManagerType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\MotorVehicleRegistrationRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\MotorVehicleRegistrationResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\Nationality.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonalIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonalIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonNamesMVR.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\PersonType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\Picture.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ReturnInformation.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\SeatType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\Status.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\StatusType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidBulstatInfoType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidBulstatRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidBulstatResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidPersonRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidPersonResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidUICRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\ValidUICResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\regix\Vehicle.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\vtarnovo\PropertyAddressCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Display\segments\vtarnovo\PropertyAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ActualStateRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ActualStateResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHFarmObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHFarmObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHFoodObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHFoodObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHForageOperatorObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHForageOperatorObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHForageTransporterRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHForageTransporterRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHPlantObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\BABHPlantObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ForeignIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ForeignIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMAApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMAEducationCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMALeaderShipCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMANavigableExperienceCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMANavigableExperienceCertificateBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMANavigableExperienceCertificateENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMANavigationCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMASeaWorkCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IAMAWorkCompetencyCertificateProlongationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\IndividualAdministrativeActRefusal.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\MotorVehicleRegistrationRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\MotorVehicleRegistrationResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\NavigableExperienceByVesselBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\NavigableExperienceByVesselENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PermanentAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PersonalIdentityInfoRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PersonalIdentityInfoResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PersonCyrrilicFullName.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PropertyAddressCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\PropertyAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ReceiptAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ReceiptNotAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\RegularizationNotification.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidBulstatRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidBulstatResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidPersonRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidPersonResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidUICRequest.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\documents\ValidUICResponse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\AnimalHoldingAddressData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\AnimalObjectAnimalPurpose.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\AnimalTypesFedWithRelatedAnimalProductsData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHAnimalObjectAnimalType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHAnimalObjectData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHAnimalObjectGeneralData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHFarmObjectApprovalData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHFarmObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHFarmObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHFoodObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHFoodObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHForageOperatorObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHForageOperatorObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHForageTransporterRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHForageTransporterRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHPlantObjectRegistrationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BABHPlantObjectRegistrationCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\BloodProductsTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ContactPersonData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\Food.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodGroups.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodGroupsList.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodItem.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodItems.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodObjectRealAddress.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\Foods.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodSubGroups.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\FoodSubItem.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedMaterialCountData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedProducedQTYMonthlyByAnimalType.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedProducesQTYMonthlyAnimalTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedSupplementOtherAnimalProductsData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedSupplementOtherAnimalTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedSupplementPremixData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageCombinedTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormAnimalOrigin.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormCombined.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormMedical.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormPlantOrigin.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormPremix.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormSpecialUse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationByFormSupplement.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageForTransportationData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginBloodFlour.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginBloodProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginCalciumPhosphate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginEggProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginFishFlour.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginMilkProduct.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialAnimalOriginOther.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialByProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageMaterialsByProductData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageOperatorActivitiesData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageOtherAnimalProductsTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForagePremixProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForagePremixTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageSupplementProductionData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageSupplementTradingData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageTradingWarehouseData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\ForageTransportActivityData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\OtherAnimalOrRevisedProducts.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\PlantObjectExecutingNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\PlantObjectRealAddress.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\babh\RevisedAnimalProteinTypeData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\AttachedDocuments.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\DocumentURI.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\EKATTEAddress.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicAdministrativeServiceFooter.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicAdministrativeServiceHeader.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicServiceApplicant.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicServiceApplicantContactData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicServiceProviderBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicServiceRecipient.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicStatementAuthor.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ElectronicStatementAuthorEqualsRecepient.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\EntityBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ForeignCitizenBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ForeignCitizenNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ForeignEntityBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\IndividualAdministrativeActRefusal.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\OfficialData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\PersonBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\PersonNames.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ReceiptNotAcknowledgedMessage.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\RecipientGroup.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\RegularizationNotification.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\Residence.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\common\ServiceApplicantReceiptData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\Competencies.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMAApplicationBasicData.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMACertificateInformation.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMAEducationCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMALeaderShipCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMANavigableExperienceCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMANavigableExperienceCertificateBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMANavigableExperienceCertificateENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMANavigationCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMASeaWorkCompetencyCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\IAMAWorkCompetencyCertificateProlongationApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\NavigableExperienceByVesselBG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\NavigableExperienceByVesselENG.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\PersonCyrrilicFullName.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\SeaWorkCompetenciesList.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\iama\TakenNavalCourse.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\PermanentAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\vtarnovo\PropertyAddressCertificate.html">
+    </Content>
+    <Content Include="Scripts\app\templates\Editor\segments\vtarnovo\PropertyAddressCertificateApplication.html">
+    </Content>
+    <Content Include="Scripts\app\templates\ViewModel.html">
+    </Content>
+    <Content Include="Scripts\app\Utils.js">
+    </Content>
+    <Content Include="Scripts\app\validation\ko.validation.custom.js">
+    </Content>
+    <Content Include="Scripts\libs\breeze.js">
+    </Content>
+    <Content Include="Scripts\libs\breeze.min.js">
+    </Content>
+    <Content Include="Scripts\libs\datajs-1.1.0.js">
+    </Content>
+    <Content Include="Scripts\libs\datajs-1.1.0.min.js">
+    </Content>
+    <Content Include="Scripts\libs\downloadify.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\activator.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\app.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\binder.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\composition.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\events.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\dialog.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\history.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\http.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\observable.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\router.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\serializer.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\plugins\widget.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\system.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\text.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\transitions\entrance.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\viewEngine.js">
+    </Content>
+    <Content Include="Scripts\libs\durandal\viewLocator.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery-1.10.0.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery-1.10.0.min.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery.FileReader.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery.FileReader.min.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery.xdomainrequest.js">
+    </Content>
+    <Content Include="Scripts\libs\jquery.xdomainrequest.min.js">
+    </Content>
+    <Content Include="Scripts\libs\knockout-2.2.1.js">
+    </Content>
+    <Content Include="Scripts\libs\knockout.validation.debug.js">
+    </Content>
+    <Content Include="Scripts\libs\knockout.validation.js">
+    </Content>
+    <Content Include="Scripts\libs\ko.debug.helpers.js">
+    </Content>
+    <Content Include="Scripts\libs\q.js">
+    </Content>
+    <Content Include="Scripts\libs\q.min.js">
+    </Content>
+    <Content Include="Scripts\libs\require.js">
+    </Content>
+    <Content Include="Scripts\libs\swfobject.js">
+    </Content>
+    <Content Include="Scripts\libs\xml2json.js">
+    </Content>
+    <Content Include="Scripts\libs\XMLSigning\launch.html">
+    </Content>
+    <Content Include="Scripts\libs\XMLSigning\lib\xmlsec-2.0.jar">
+    </Content>
+    <Content Include="Scripts\libs\XMLSigning\README.TXT">
+    </Content>
+    <Content Include="Scripts\libs\XMLSigning\xml.singer.v2.jar">
+    </Content>
+    <Content Include="Content\bootstrap\css\bootstrap-glyphicons.css" />
+    <Content Include="Content\bootstrap\css\bootstrap-responsive.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings-white.png" />
+    <Content Include="Content\bootstrap\img\glyphicons-halflings.png" />
+    <Content Include="Content\bootstrap\img\top-bg-reverse.png" />
+    <Content Include="Content\bootstrap\img\top-bg.png" />
+    <Content Include="Content\bootstrap\js\bootstrap-tooltip.min.js" />
+    <Content Include="Content\Theme.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\libs\jquery-1.10.0.min.js.map">
+    </Content>
+    <Content Include="Scripts\libs\jquery.FileReader.min.js.map">
+    </Content>
+    <Content Include="Content\bootstrap\js\bootstrap-datetimepicker.min.js.map">
+    </Content>
+    <Content Include="Scripts\libs\XMLSigning\launch.jnlp">
+    </Content>
+    <None Include="Properties\PublishProfiles\PUBLIC_BABH.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\PublishProfiles\PUBLIC_IAMA.pubxml">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Scripts\jquery-1.7.1.intellisense.js" />
+    <Content Include="Images\ESF.png" />
+    <Content Include="Images\EU.png" />
+    <Content Include="Images\HelpPage\e_service_details_button.png" />
+    <Content Include="Images\HelpPage\e_service_start_button.png" />
+    <Content Include="Images\HelpPage\menu_home_button.png" />
+    <Content Include="Images\lion.png" />
+    <Content Include="Images\logo.jpg" />
+    <Content Include="Images\OPAC.png" />
+    <Content Include="Content\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\bootstrap-tooltip.js" />
+    <Content Include="Scripts\ElectronicService\listServices.js" />
+    <Content Include="Scripts\jquery-1.7.1.js" />
+    <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.js" />
+    <Content Include="Scripts\jquery-ui-1.8.20.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\knockout-2.1.0.debug.js" />
+    <Content Include="Scripts\knockout-2.1.0.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\Request\SubmitDocument.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Administration\GetAdministrationInfo.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\AccessibilityPolicy.cshtml" />
+    <Content Include="Views\Home\SiteMap.cshtml" />
+    <Content Include="Views\Service\GetServiceDetails.cshtml" />
+    <Content Include="Views\Service\ListServices.cshtml" />
+    <Content Include="Views\ElectronicService\SearchElectronicService.cshtml" />
+    <Content Include="Views\ElectronicService\GetEServiceDetails.cshtml" />
+    <Content Include="Views\Shared\_LayoutAdministrationInfo.cshtml" />
+    <Content Include="Views\Shared\_LayoutHeader.cshtml" />
+    <Content Include="Views\Request\ManageInitiatingDocument.cshtml" />
+    <Content Include="Views\Shared\DocumentEditor.cshtml" />
+    <Content Include="Views\ElectronicService\ShowDocumentContent.cshtml" />
+    <Content Include="Views\Shared\_splash.cshtml" />
+    <Content Include="Views\Request\SignInitiatingDocument.cshtml" />
+    <Content Include="Views\Request\_splash.cshtml" />
+    <Content Include="Views\Request\ResultDocument.cshtml" />
+    <Content Include="Views\Request\ManageAdditionalDocument.cshtml" />
+    <Content Include="Views\Request\SignAdditionalDocument.cshtml" />
+    <Content Include="Views\Shared\SubmitInvalidDocumentConfirmation.cshtml" />
+    <Content Include="Views\Home\Help.cshtml" />
+    <None Include="Web.PUBLIC_BABH.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.PUBLIC_IAMA.config">
+      <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\css\" />
+    <Folder Include="Content\img\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Administration.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Administration.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\AlternativeDescriptions.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>AlternativeDescriptions.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Buttons.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Buttons.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Common.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ElectronicService.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ElectronicService.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ErrorMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\Service.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Service.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\ViewTitles.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ViewTitles.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eservices.AISClient\Eservices.AISClient.csproj">
+      <Project>{edc23599-a01b-42ef-b68d-fb2931b4b936}</Project>
+      <Name>Eservices.AISClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.Common\Eservices.Common.csproj">
+      <Project>{7BBDF37F-5732-4A8A-A4AD-A8117D4E97A4}</Project>
+      <Name>Eservices.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.DocumentEditor.Infrastructure\Eservices.DocumentEditor.Infrastructure.csproj">
+      <Project>{b9b8ae12-c2c1-4d9a-a4e0-4fbc31ac98e5}</Project>
+      <Name>Eservices.DocumentEditor.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.InformationObjects.Xml\Eservices.InformationObjects.Xml.csproj">
+      <Project>{ab5c3ed1-c5ed-4071-a932-7dbfe2453f86}</Project>
+      <Name>Eservices.InformationObjects.Xml</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.InformationObjects\Eservices.InformationObjects.csproj">
+      <Project>{e210f09a-61ed-47bf-a365-e670b148cdc8}</Project>
+      <Name>Eservices.InformationObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.Public.Core\Eservices.Public.Core.csproj">
+      <Project>{7ecae726-57c1-41f4-999c-15d298cbb8c0}</Project>
+      <Name>Eservices.Public.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.Public.DataAccess\Eservices.Public.DataAccess.csproj">
+      <Project>{19de9b2b-77b2-4f2b-b5ef-0363b127c502}</Project>
+      <Name>Eservices.Public.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Eservices.Public.Infrastructure\Eservices.Public.Infrastructure.csproj">
+      <Project>{8dd94735-e4a0-4d98-8774-dc03cdf6f9e5}</Project>
+      <Name>Eservices.Public.Infrastructure</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v12.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\nuget.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.-->
+  <PropertyGroup>
+    <Dest>$(MSBuildProjectDirectory)\Scripts\libs\XMLSigning\</Dest>
+    <DestDeploy>$(MSBuildProjectDirectory)\$(publishUrl)\Scripts\libs\XMLSigning\</DestDeploy>
+  </PropertyGroup>
+  <Target Name="BeforeBuild">
+    <Copy SourceFiles="%(Content.Identity)" DestinationFiles="%(Content.Link)" SkipUnchangedFiles="true" OverwriteReadOnlyFiles="true" Condition="'%(Content.Link)' != ''" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="@(SourceFiles)" DestinationFiles="@(SourceFiles->'$(Dest)%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+  <Target Name="AfterWebPublish" BeforeTargets="WebPublish">
+    <Copy SourceFiles="@(SourceFiles)" DestinationFiles="@(SourceFiles->'$(DestDeploy)%(RecursiveDir)%(Filename)%(Extension)')" />
+  </Target>
+</Project>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1014" xmlns="http://ereg.egov.bg/segment/R-1014" xmlns:dc="http://ereg.egov.bg/value/0008-000200" xmlns:dn="http://ereg.egov.bg/value/0008-000201" xmlns:mc="http://ereg.egov.bg/value/0008-000209" xmlns:mn="http://ereg.egov.bg/value/0008-000202" xmlns:tuekattec="http://ereg.egov.bg/value/0008-000270" xmlns:tuekatten="http://ereg.egov.bg/value/0008-000271" xmlns:pc="http://ereg.egov.bg/value/0008-000128" xmlns:ad="http://ereg.egov.bg/value/0008-000194" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000200" schemaLocation="0008-000200_DistrictCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000201" schemaLocation="0008-000201_DistrictName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000209" schemaLocation="0008-000209_MunicipalityCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000202" schemaLocation="0008-000202_MunicipalityName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000270" schemaLocation="0008-000270_TerritorialUnitEKATTECode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000271" schemaLocation="0008-000271_TerritorialUnitEKATTEName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000128" schemaLocation="0008-000128_PostCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000194" schemaLocation="0008-000194_AddressDescription.xsd" />
+  <xsd:complexType name="CROZParticipantAddressData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за адрес на лице в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DistrictCode" type="dc:DistrictCode" minOccurs="0" />
+      <xsd:element name="DistrictName" type="dn:DistrictName" minOccurs="0" />
+      <xsd:element name="MunicipalityCode" type="mc:MunicipalityCode" minOccurs="0" />
+      <xsd:element name="MunicipalityName" type="mn:MunicipalityName" minOccurs="0" />
+      <xsd:element name="TerritorialUnitEKATTECode" type="tuekattec:TerritorialUnitEKATTECode" minOccurs="0" />
+      <xsd:element name="TerritorialUnitEKATTEName" type="tuekatten:TerritorialUnitEKATTEName" minOccurs="0" />
+      <xsd:element name="PostCode" type="pc:PostCode" minOccurs="0" />
+      <xsd:element name="AddressDescription" type="ad:AddressDescription" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

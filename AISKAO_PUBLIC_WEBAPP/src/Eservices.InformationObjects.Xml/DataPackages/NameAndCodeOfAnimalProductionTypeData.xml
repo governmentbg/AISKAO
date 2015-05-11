@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NameAndCodeOfAnimalProductionTypeData xmlns="http://ereg.egov.bg/segment/R-1324" versionDate="2013-10-25">
+	<NameAndCodeOfAnimalProductionTypes>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>1</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Мед</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>2</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Приплоди</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>3</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Месо</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>4</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Мляко</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>5</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Яйца</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>6</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Гъши дроб</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>7</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Вълна</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>8</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Отводки</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>
+		<NameAndCodeOfAnimalProductionType>
+			<AnimalProductionTypeCode>9</AnimalProductionTypeCode>
+			<AnimalProductionTypeName>Слуз(охлюви)</AnimalProductionTypeName>
+		</NameAndCodeOfAnimalProductionType>		
+	</NameAndCodeOfAnimalProductionTypes>
+</NameAndCodeOfAnimalProductionTypeData>

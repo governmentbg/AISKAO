@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1152" xmlns="http://ereg.egov.bg/segment/R-1152" xmlns:iamacicc="http://ereg.egov.bg/value/R-1148" xmlns:iamacicn="http://ereg.egov.bg/value/R-1150" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1148" schemaLocation="R-1148_IAMACertificateIssuingCityCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1150" schemaLocation="R-1150_IAMACertificateIssuingCityName.xsd" />
+  <xsd:element name="IAMACertificateIssuingCityData" type="IAMACertificateIssuingCityData" />
+  <xsd:complexType name="IAMACertificateIssuingCityData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Градове, в който се издават свидетелства от ИАМА</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="IAMACertificateIssuingCitys">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="IAMACertificateIssuingCity" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="IAMACertificateIssuingCityCode" type="iamacicc:IAMACertificateIssuingCityCode" />
+                  <xsd:element name="IAMACertificateIssuingCityName" type="iamacicn:IAMACertificateIssuingCityName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

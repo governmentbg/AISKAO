@@ -1,0 +1,59 @@
+﻿@model TechnoLogica.Eservices.Public.Site.Models.ElectronicService.GetEServiceAccessViewModel
+
+@using TechnoLogica.Eservices.Public.Site.Resources
+@{
+    ViewBag.Title = ElectronicService.AccessTitle;
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        @TempData["ErrorMessage"]
+    </div>
+}
+<br />
+@using (Html.BeginForm("SearchElectronicService", "ElectronicService", FormMethod.Post, new { autocomplete="off" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(false, ErrorMessages.ValidationSummaryTitle, new { @class = "validation-summary-container" })
+    <div id="searchEService" class="span4">
+        <div class="row">
+            <div class="span4">
+                @Html.LabelFor(model => model.URI, new { @class = "searchField" })
+                @Html.TextBoxFor(model => model.URI, new { @class = "span4 tooltipField", data_placement = "right", data_trigger = "focus", data_content = ElectronicService.TooltipURI })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                @Html.LabelFor(model => model.Identifier, new { @class = "searchField" })
+                @Html.TextBoxFor(model => model.Identifier, new { @class = "span4 tooltipField", data_placement = "right", data_trigger = "focus", data_content = ElectronicService.TooltipAccessKey })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span4">
+                @Html.Label(ElectronicService.LabelCaptcha, new { @class = "searchField" })
+                <div>@Html.GenerateCaptcha()</div>
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="span4">
+                <div>
+                    <button class="btn btn-primary btn-inverse" type="submit">@ElectronicService.BtnStatus</button>
+                </div>               
+            </div>
+        </div>
+    </div>
+   
+}
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".tooltipField").popover();
+        });
+    </script>
+}

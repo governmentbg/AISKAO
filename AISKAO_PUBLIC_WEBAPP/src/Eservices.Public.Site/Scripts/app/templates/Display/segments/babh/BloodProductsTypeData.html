@@ -1,0 +1,31 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: bloodProductsTypes -->
+            <div class="span12" data-bind="foreach: bloodProductsType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getBloodProductsTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+
+    <!-- ko with: otherBloodProducts -->
+    <!-- ko if: otherBloodProduct().length > 0 -->
+    Списък с кръвни продукти:
+                <!-- /ko -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span6" data-bind="foreach: otherBloodProduct">
+                    <span class="span3 text-left">Кръвен продукт #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span3 uneditable-input" data-bind="text: $data"></span>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

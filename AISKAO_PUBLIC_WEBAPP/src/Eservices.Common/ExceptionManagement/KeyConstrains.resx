@@ -1,0 +1,804 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="CK_ADM_BODIES" xml:space="preserve">
+    <value>CK_ADM_BODIES</value>
+  </data>
+  <data name="CK_ADM_DEPARTMENTS" xml:space="preserve">
+    <value>CK_ADM_DEPARTMENTS</value>
+  </data>
+  <data name="CK_ADM_DEPARTMENT_POSITIONS" xml:space="preserve">
+    <value>CK_ADM_DEPARTMENT_POSITIONS</value>
+  </data>
+  <data name="CK_ADM_POSITIONS" xml:space="preserve">
+    <value>CK_ADM_POSITIONS</value>
+  </data>
+  <data name="CK_CLASS_SCHEME_ACCESS_GRANTS" xml:space="preserve">
+    <value>CK_CLASS_SCHEME_ACCESS_GRANTS</value>
+  </data>
+  <data name="CK_CLASS_SCHEME_ACCESS_GRNTS_G" xml:space="preserve">
+    <value>CK_CLASS_SCHEME_ACCESS_GRNTS_G</value>
+  </data>
+  <data name="CK_DOCUMENTS" xml:space="preserve">
+    <value>CK_DOCUMENTS</value>
+  </data>
+  <data name="CK_EMPOWERED_PERSONS" xml:space="preserve">
+    <value>За овластени лица трябва да е въведен или Позиция или Потребител</value>
+  </data>
+  <data name="CK_ENTITIES" xml:space="preserve">
+    <value>CK_ENTITIES</value>
+  </data>
+  <data name="CK_FOREIGN_CITIZENS_IND_TYPE" xml:space="preserve">
+    <value>CK_FOREIGN_CITIZENS_IND_TYPE</value>
+  </data>
+  <data name="CK_FOREIGN_CITIZENS_LATIN_NAMES" xml:space="preserve">
+    <value>CK_FOREIGN_CITIZENS_LATIN_NAMES</value>
+  </data>
+  <data name="CK_FOREIGN_ENTITIES" xml:space="preserve">
+    <value>CK_FOREIGN_ENTITIES</value>
+  </data>
+  <data name="CK_FOREIGN_ENT_IDENTIFIER" xml:space="preserve">
+    <value>CK_FOREIGN_ENT_IDENTIFIER</value>
+  </data>
+  <data name="CK_INDIVIDUALS_NAMES" xml:space="preserve">
+    <value>CK_INDIVIDUALS_NAMES</value>
+  </data>
+  <data name="CK_INDIVIDUALS_OBJ_TYPE" xml:space="preserve">
+    <value>CK_INDIVIDUALS_OBJ_TYPE</value>
+  </data>
+  <data name="CK_INDIVIDUALS_TYPE" xml:space="preserve">
+    <value>CK_INDIVIDUALS_TYPE</value>
+  </data>
+  <data name="CK_LEGAL_ENTITIES" xml:space="preserve">
+    <value>CK_LEGAL_ENTITIES</value>
+  </data>
+  <data name="CK_PERSONS" xml:space="preserve">
+    <value>CK_PERSONS</value>
+  </data>
+  <data name="CK_REGISTERED_DOCUMENTS_TYPES" xml:space="preserve">
+    <value>CK_REGISTERED_DOCUMENTS_TYPES</value>
+  </data>
+  <data name="CK_REGISTERED_FOREIGN_PERSONS" xml:space="preserve">
+    <value>CK_REGISTERED_FOREIGN_PERSONS</value>
+  </data>
+  <data name="CK_REGISTERS" xml:space="preserve">
+    <value>CK_REGISTERS</value>
+  </data>
+  <data name="CK_REGISTERS_INDEX" xml:space="preserve">
+    <value>CK_REGISTERS_INDEX</value>
+  </data>
+  <data name="CK_SERVICE_TYPES" xml:space="preserve">
+    <value>CK_SERVICE_TYPES</value>
+  </data>
+  <data name="CK_SERVICE_TYPES_URI" xml:space="preserve">
+    <value>CK_SERVICE_TYPES_URI</value>
+  </data>
+  <data name="CK_SOLE_TRADERS" xml:space="preserve">
+    <value>CK_SOLE_TRADERS</value>
+  </data>
+  <data name="CK_STAGE_EXECUTORS" xml:space="preserve">
+    <value>CK_STAGE_EXECUTORS</value>
+  </data>
+  <data name="CK_STAGE_EXECUTORS_MANAGER" xml:space="preserve">
+    <value>CK_STAGE_EXECUTORS_MANAGER</value>
+  </data>
+  <data name="CK_TASKS" xml:space="preserve">
+    <value>CK_TASKS</value>
+  </data>
+  <data name="CK_TASKS_STATUS" xml:space="preserve">
+    <value>CK_TASKS_STATUS</value>
+  </data>
+  <data name="CK_USERS_INDIVIDUAL" xml:space="preserve">
+    <value>CK_USERS_INDIVIDUAL</value>
+  </data>
+  <data name="CK_USERS_OBJ_TYPE" xml:space="preserve">
+    <value>CK_USERS_OBJ_TYPE</value>
+  </data>
+  <data name="FK_ABROAD_SETTLEMNTS_COUNTRIES" xml:space="preserve">
+    <value>FK_ABROAD_SETTLEMNTS_COUNTRIES</value>
+  </data>
+  <data name="FK_ADAPTER_OP_ADAPTER" xml:space="preserve">
+    <value>FK_ADAPTER_OP_ADAPTER</value>
+  </data>
+  <data name="FK_ADAPTER_OP_INPUT_DOC_TYPES" xml:space="preserve">
+    <value>FK_ADAPTER_OP_INPUT_DOC_TYPES</value>
+  </data>
+  <data name="FK_ADAPTER_OP_OUT_DOC_TYPES" xml:space="preserve">
+    <value>FK_ADAPTER_OP_OUT_DOC_TYPES</value>
+  </data>
+  <data name="FK_ADM_BODIES_ADM_REGIONS" xml:space="preserve">
+    <value>В този регион работи административен орган.</value>
+  </data>
+  <data name="FK_ADM_BODIES_POSITIONS" xml:space="preserve">
+    <value>FK_ADM_BODIES_POSITIONS</value>
+  </data>
+  <data name="FK_ADM_DEPARTMENTS_ADM_REGIONS" xml:space="preserve">
+    <value>В този регион работи административно звено.</value>
+  </data>
+  <data name="FK_ADM_DEPT_ADM_DEPT" xml:space="preserve">
+    <value>Съществува връзка между административни звена</value>
+  </data>
+  <data name="FK_ADM_DEPT_POS" xml:space="preserve">
+    <value>FK_ADM_DEPT_POS</value>
+  </data>
+  <data name="FK_ADM_DEPT_POSITIONS_ADM_DEPT" xml:space="preserve">
+    <value>Съществува връзка между позиция и административно звено</value>
+  </data>
+  <data name="FK_ADM_DEPT_POSITIONS_ADM_POS" xml:space="preserve">
+    <value>Избраната позиция е част от позициите в административно звено.</value>
+  </data>
+  <data name="FK_ADM_DEPT_POSITIONS_POSITION" xml:space="preserve">
+    <value>FK_ADM_DEPT_POSITIONS_POSITION</value>
+  </data>
+  <data name="FK_ADM_DEPT_USERS" xml:space="preserve">
+    <value>Избраният потребител е ръководител на административно звено.</value>
+  </data>
+  <data name="FK_ADM_INFORMATIONS_USERS" xml:space="preserve">
+    <value>FK_ADM_INFORMATIONS_USERS</value>
+  </data>
+  <data name="FK_ADM_POS_POS" xml:space="preserve">
+    <value>FK_ADM_POS_POS</value>
+  </data>
+  <data name="FK_AUDIT_COLUMNS_TABLES" xml:space="preserve">
+    <value>FK_AUDIT_COLUMNS_TABLES</value>
+  </data>
+  <data name="FK_AUDIT_VALUES_AUDIT_RECORDS" xml:space="preserve">
+    <value>FK_AUDIT_VALUES_AUDIT_RECORDS</value>
+  </data>
+  <data name="FK_CASES_DOCUMENTS" xml:space="preserve">
+    <value>FK_CASES_DOCUMENTS</value>
+  </data>
+  <data name="FK_CASE_SECTION_ELEM_EXCLD_BY" xml:space="preserve">
+    <value>FK_CASE_SECTION_ELEM_EXCLD_BY</value>
+  </data>
+  <data name="FK_CASE_SECTION_ELEM_INCLD_BY" xml:space="preserve">
+    <value>FK_CASE_SECTION_ELEM_INCLD_BY</value>
+  </data>
+  <data name="FK_CASE_SEC_ELEMENTS_CASES" xml:space="preserve">
+    <value>FK_CASE_SEC_ELEMENTS_CASES</value>
+  </data>
+  <data name="FK_CASE_SEC_ELEMENTS_DOCUMENTS" xml:space="preserve">
+    <value>FK_CASE_SEC_ELEMENTS_DOCUMENTS</value>
+  </data>
+  <data name="FK_CASE_SEC_ELEMENTS_REF_CASES" xml:space="preserve">
+    <value>FK_CASE_SEC_ELEMENTS_REF_CASES</value>
+  </data>
+  <data name="FK_CASE_SEC_ELEMENTS_TASKS" xml:space="preserve">
+    <value>FK_CASE_SEC_ELEMENTS_TASKS</value>
+  </data>
+  <data name="FK_CLASS_SCHEME_GRNTS_POSITION" xml:space="preserve">
+    <value>FK_CLASS_SCHEME_GRNTS_POSITION</value>
+  </data>
+  <data name="FK_CLASS_SCHEME_GRNTS_SCHEMES" xml:space="preserve">
+    <value>FK_CLASS_SCHEME_GRNTS_SCHEMES</value>
+  </data>
+  <data name="FK_CLASS_SCHEME_GRNTS_SECTIONS" xml:space="preserve">
+    <value>FK_CLASS_SCHEME_GRNTS_SECTIONS</value>
+  </data>
+  <data name="FK_CLASS_SCHEME_GRNTS_USERS" xml:space="preserve">
+    <value>FK_CLASS_SCHEME_GRNTS_USERS</value>
+  </data>
+  <data name="FK_CLASS_SCHEME_SECTION_TYPE" xml:space="preserve">
+    <value>FK_CLASS_SCHEME_SECTION_TYPE</value>
+  </data>
+  <data name="FK_DOCUMENTS_DOC_TYPES" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото съществуват документи от избрания документен тип</value>
+  </data>
+  <data name="FK_DOCUMENTS_INF_OBJECTS" xml:space="preserve">
+    <value>FK_DOCUMENTS_INF_OBJECTS</value>
+  </data>
+  <data name="FK_DOCUMENTS_PROCESS_TYPES" xml:space="preserve">
+    <value>Този вид документ по отношение на процеса се използва в системата.</value>
+  </data>
+  <data name="FK_DOCUMENTS_TASKS" xml:space="preserve">
+    <value>FK_DOCUMENTS_TASKS</value>
+  </data>
+  <data name="FK_DOC_ATTACHMENTS_ATTACHMENT" xml:space="preserve">
+    <value>FK_DOC_ATTACHMENTS_ATTACHMENT</value>
+  </data>
+  <data name="FK_DOC_ATTACHMENTS_DOCUMENTS" xml:space="preserve">
+    <value>FK_DOC_ATTACHMENTS_DOCUMENTS</value>
+  </data>
+  <data name="FK_DOC_CONTENTS_DOCUMENTS" xml:space="preserve">
+    <value>FK_DOC_CONTENTS_DOCUMENTS</value>
+  </data>
+  <data name="FK_DOC_CONTENTS_SIGNER_USERS" xml:space="preserve">
+    <value>FK_DOC_CONTENTS_SIGNER_USERS</value>
+  </data>
+  <data name="FK_DOC_DISCREPANCIES_DOCUMENTS" xml:space="preserve">
+    <value>FK_DOC_DISCREPANCIES_DOCUMENTS</value>
+  </data>
+  <data name="FK_DOC_DISCREPANCIES_TYPES" xml:space="preserve">
+    <value>FK_DOC_DISCREPANCIES_TYPES</value>
+  </data>
+  <data name="FK_DOC_OPINION_AUTHOR" xml:space="preserve">
+    <value>FK_DOC_OPINION_AUTHOR</value>
+  </data>
+  <data name="FK_DOC_OPINION_DOCUMENTS" xml:space="preserve">
+    <value>FK_DOC_OPINION_DOCUMENTS</value>
+  </data>
+  <data name="FK_DOC_OPINION_REF" xml:space="preserve">
+    <value>FK_DOC_OPINION_REF</value>
+  </data>
+  <data name="FK_DOC_OPINION_TYPES" xml:space="preserve">
+    <value>Този вид становище по документ се използва в системата.</value>
+  </data>
+  <data name="FK_DOC_TYPES_ARCHIVAL_TYPES" xml:space="preserve">
+    <value>Тази архивна стойност на документи се използва в системата.</value>
+  </data>
+  <data name="FK_DOC_TYPES_CLASS_SCHEME_SEC" xml:space="preserve">
+    <value>FK_DOC_TYPES_CLASS_SCHEME_SEC</value>
+  </data>
+  <data name="FK_DOC_TYPES_PROCESSING_TYPES" xml:space="preserve">
+    <value>Този начин на обработка на документи се използва в системата.</value>
+  </data>
+  <data name="FK_DOC_TYPE_SW_APPL_DOC_TYPES" xml:space="preserve">
+    <value>FK_DOC_TYPE_SW_APPL_DOC_TYPES</value>
+  </data>
+  <data name="FK_DOC_TYPE_TEMPLATES_DOC_TYPE" xml:space="preserve">
+    <value>FK_DOC_TYPE_TEMPLATES_DOC_TYPE</value>
+  </data>
+  <data name="FK_DOC_TYPE_XML_SCHEMA_DOC_T" xml:space="preserve">
+    <value>FK_DOC_TYPE_XML_SCHEMA_DOC_T</value>
+  </data>
+  <data name="FK_EMPOWERED_PERSONS_DOC_TYPES" xml:space="preserve">
+    <value>FK_EMPOWERED_PERSONS_DOC_TYPES</value>
+  </data>
+  <data name="FK_EMPOWERED_PERSONS_POSITIONS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраната позиция е дефинирана като овластено лице за тип документ</value>
+  </data>
+  <data name="FK_EMPOWERED_PERSONS_USERS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраният потребител е дефиниран като овластено лице за тип документ</value>
+  </data>
+  <data name="FK_EMPOWERING_DOCS_PERSONS" xml:space="preserve">
+    <value>FK_EMPOWERING_DOCS_PERSONS</value>
+  </data>
+  <data name="FK_EMPOWERING_DOCS_REG_DOCS" xml:space="preserve">
+    <value>FK_EMPOWERING_DOCS_REG_DOCS</value>
+  </data>
+  <data name="FK_ENTITIES_INF_OBJECTS" xml:space="preserve">
+    <value>FK_ENTITIES_INF_OBJECTS</value>
+  </data>
+  <data name="FK_ESOED_MESSAGES_E_SERVICES" xml:space="preserve">
+    <value>FK_ESOED_MESSAGES_E_SERVICES</value>
+  </data>
+  <data name="FK_ESOED_MESSAGES_MSG_TYPES" xml:space="preserve">
+    <value>FK_ESOED_MESSAGES_MSG_TYPES</value>
+  </data>
+  <data name="FK_ESOED_MESSAGES_RECIPIENT" xml:space="preserve">
+    <value>FK_ESOED_MESSAGES_RECIPIENT</value>
+  </data>
+  <data name="FK_ESOED_MESSAGES_REG_DOCS" xml:space="preserve">
+    <value>FK_ESOED_MESSAGES_REG_DOCS</value>
+  </data>
+  <data name="FK_ESOED_MESSAGES_SENDER" xml:space="preserve">
+    <value>FK_ESOED_MESSAGES_SENDER</value>
+  </data>
+  <data name="FK_ESOED_MSG_CONTENTS_MSG" xml:space="preserve">
+    <value>FK_ESOED_MSG_CONTENTS_MSG</value>
+  </data>
+  <data name="FK_ESOED_MSG_REPEATS_MSG" xml:space="preserve">
+    <value>FK_ESOED_MSG_REPEATS_MSG</value>
+  </data>
+  <data name="FK_EXPR_DEFS_DOC_TYPES" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото съществуват дефинирани условия към избрания вид документ</value>
+  </data>
+  <data name="FK_EXPR_VALUES_COND_DEF" xml:space="preserve">
+    <value>FK_EXPR_VALUES_COND_DEF</value>
+  </data>
+  <data name="FK_EXPR_VALUES_DOCUMENTS" xml:space="preserve">
+    <value>FK_EXPR_VALUES_DOCUMENTS</value>
+  </data>
+  <data name="FK_EXPR_VALUES_E_SERVICES" xml:space="preserve">
+    <value>FK_EXPR_VALUES_E_SERVICES</value>
+  </data>
+  <data name="FK_E_SERVICE_APPLICANTS_GROUPS" xml:space="preserve">
+    <value>FK_E_SERVICE_APPLICANTS_GROUPS</value>
+  </data>
+  <data name="FK_E_SERVICE_APPLICANT_INDIVID" xml:space="preserve">
+    <value>FK_E_SERVICE_APPLICANT_INDIVID</value>
+  </data>
+  <data name="FK_E_SERVICE_RECIP_ENTITIES" xml:space="preserve">
+    <value>FK_E_SERVICE_RECIP_ENTITIES</value>
+  </data>
+  <data name="FK_E_SERVICE_RECIP_GROUPS" xml:space="preserve">
+    <value>FK_E_SERVICE_RECIP_GROUPS</value>
+  </data>
+  <data name="FK_E_SERVICE_RECIP_GROUPS_SRV" xml:space="preserve">
+    <value>FK_E_SERVICE_RECIP_GROUPS_SRV</value>
+  </data>
+  <data name="FK_E_SERVICE_RECIP_INDIVIDUALS" xml:space="preserve">
+    <value>FK_E_SERVICE_RECIP_INDIVIDUALS</value>
+  </data>
+  <data name="FK_E_SERVICE_REGISTRED_DOCS" xml:space="preserve">
+    <value>FK_E_SERVICE_REGISTRED_DOCS</value>
+  </data>
+  <data name="FK_E_SERVICE_SERVICE_TYPES" xml:space="preserve">
+    <value>Съществуват електронни услуги от избрания вид.</value>
+  </data>
+  <data name="FK_E_SERVICE_TAXES_E_SERVICE" xml:space="preserve">
+    <value>FK_E_SERVICE_TAXES_E_SERVICE</value>
+  </data>
+  <data name="FK_FOREIGN_CITIZENS_ABR_SETTLE" xml:space="preserve">
+    <value>Съществува нерегистриран чуждестранен гражданин с избраното място на раждане</value>
+  </data>
+  <data name="FK_FOREIGN_ENTITIES_COUNTRIES" xml:space="preserve">
+    <value>Съществува чуждестранно юридическо лице от избраната държава</value>
+  </data>
+  <data name="FK_INF_OBJECT_ACCESS_INF_OBJ" xml:space="preserve">
+    <value>FK_INF_OBJECT_ACCESS_INF_OBJ</value>
+  </data>
+  <data name="FK_INF_OBJECT_ACCESS_USERS" xml:space="preserve">
+    <value>FK_INF_OBJECT_ACCESS_USERS</value>
+  </data>
+  <data name="FK_INF_OBJECT_CLASSIF_INF_OBJ" xml:space="preserve">
+    <value>FK_INF_OBJECT_CLASSIF_INF_OBJ</value>
+  </data>
+  <data name="FK_INF_OBJECT_CLASSIF_SCH_SECT" xml:space="preserve">
+    <value>FK_INF_OBJECT_CLASSIF_SCH_SECT</value>
+  </data>
+  <data name="FK_LOG_RECORDS_USERS" xml:space="preserve">
+    <value>FK_LOG_RECORDS_USERS</value>
+  </data>
+  <data name="FK_POSITION_ROLES_POSITIONS" xml:space="preserve">
+    <value>Съществува връзка между роля и административен орган, длъжност или позиция</value>
+  </data>
+  <data name="FK_POSITION_ROLES_ROLES" xml:space="preserve">
+    <value>Съществува връзка между административен орган, длъжност или позиция и роля</value>
+  </data>
+  <data name="FK_REDEF_EXEC_PREV_SRVC_T_STG" xml:space="preserve">
+    <value>FK_REDEF_EXEC_PREV_SRVC_T_STG</value>
+  </data>
+  <data name="FK_REDEF_EXEC_SRVC_TYPE_STG" xml:space="preserve">
+    <value>FK_REDEF_EXEC_SRVC_TYPE_STG</value>
+  </data>
+  <data name="FK_REGISTERED_DOCS_DOCUMENTS" xml:space="preserve">
+    <value>FK_REGISTERED_DOCS_DOCUMENTS</value>
+  </data>
+  <data name="FK_REGISTERED_DOCS_REGISTER" xml:space="preserve">
+    <value>FK_REGISTERED_DOCS_REGISTER</value>
+  </data>
+  <data name="FK_REGISTERED_DOCS_TRANSP_TYPE" xml:space="preserve">
+    <value>Този вид пренос по електронен път се използва в системата.</value>
+  </data>
+  <data name="FK_ROLE_PERMISSIONS_OPERATIONS" xml:space="preserve">
+    <value>FK_ROLE_PERMISSIONS_OPERATIONS</value>
+  </data>
+  <data name="FK_ROLE_PERMISSIONS_ROLES" xml:space="preserve">
+    <value>Дадената роля има операции свързани с нея</value>
+  </data>
+  <data name="FK_SCHEME_SECTIONS_SCHEMES" xml:space="preserve">
+    <value>FK_SCHEME_SECTIONS_SCHEMES</value>
+  </data>
+  <data name="FK_SCHEME_SECTIONS_SCHEMES_SEC" xml:space="preserve">
+    <value>FK_SCHEME_SECTIONS_SCHEMES_SEC</value>
+  </data>
+  <data name="FK_SEC_SUB_SEC_SECTIONS" xml:space="preserve">
+    <value>FK_SEC_SUB_SEC_SECTIONS</value>
+  </data>
+  <data name="FK_SEC_SUB_SEC_SUB_SECTIONS" xml:space="preserve">
+    <value>FK_SEC_SUB_SEC_SUB_SECTIONS</value>
+  </data>
+  <data name="FK_SERVICE_STG_END_RESULT_RES" xml:space="preserve">
+    <value>FK_SERVICE_STG_END_RESULT_RES</value>
+  </data>
+  <data name="FK_SERVICE_STG_END_RESULT_STG" xml:space="preserve">
+    <value>FK_SERVICE_STG_END_RESULT_STG</value>
+  </data>
+  <data name="FK_SERVICE_TYPES_DOCUMENT_TYPE" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото съществува услуга, чийто иницииращ вид документ е избрания.</value>
+  </data>
+  <data name="FK_SERVICE_TYPES_POSITIONS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраната позиция е дефинирана като отговорно лице за вид услуга.</value>
+  </data>
+  <data name="FK_SERVICE_TYPES_REG_DOCS" xml:space="preserve">
+    <value>FK_SERVICE_TYPES_REG_DOCS</value>
+  </data>
+  <data name="FK_SERVICE_TYPES_USERS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраният потребител е дефиниран като отговорно лице за вид услуга.</value>
+  </data>
+  <data name="FK_SERVICE_TYPE_STAGE_SRV_STG" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраният етап от услуга е част от етапите на изпълнение на съществуващ вид услуга.</value>
+  </data>
+  <data name="FK_SERVICE_TYPE_STAGE_SRV_TYPE" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото са дефинирани етапи за изпълнение на избрания вид услуга.</value>
+  </data>
+  <data name="FK_SERV_FLOW_ROUTE_EXPR_DEF" xml:space="preserve">
+    <value>Това дефинирано условие участва в граф за изпълнение на услуга.</value>
+  </data>
+  <data name="FK_SOLE_TRADERS_INDIVIDUALS" xml:space="preserve">
+    <value>FK_SOLE_TRADERS_INDIVIDUALS</value>
+  </data>
+  <data name="FK_SRVC_STG_DOC_OR_RES_DOC_TYP" xml:space="preserve">
+    <value>FK_SRVC_STG_DOC_OR_RES_DOC_TYP</value>
+  </data>
+  <data name="FK_SRVC_STG_OPER_ADAPTER_OPER" xml:space="preserve">
+    <value>Тази операция на адаптер е част от операциите на съществуващ етап от услуга. </value>
+  </data>
+  <data name="FK_SRVC_STG_OPER_EXPR_DEF" xml:space="preserve">
+    <value>Това дефинирано условие е част от условията, дефинирани за съществуваща операция на адаптер към етап от услуга.</value>
+  </data>
+  <data name="FK_SRVC_STG_OPER_SRVC_STAGES" xml:space="preserve">
+    <value>FK_SRVC_STG_OPER_SRVC_STAGES</value>
+  </data>
+  <data name="FK_SRV_FLOW_ROUTE_CRRNT_STAGE" xml:space="preserve">
+    <value>Този етап участва в граф за изпълнение на услуга.</value>
+  </data>
+  <data name="FK_SRV_FLOW_ROUTE_NEXT_STAGE" xml:space="preserve">
+    <value>Този етап участва в граф за изпълнение на услуга.</value>
+  </data>
+  <data name="FK_SRV_TYPE_INF_BITS_BIT_TYPES" xml:space="preserve">
+    <value>Този вид информация, която може да се придава към публичната информация за вид услуга, се използва в системата.</value>
+  </data>
+  <data name="FK_SRV_TYPE_INF_BITS_TYPES" xml:space="preserve">
+    <value>Дефинирана е публична информация за този вид услуга.</value>
+  </data>
+  <data name="FK_SRV_TYPE_PUB_INFO_TYPES" xml:space="preserve">
+    <value>FK_SRV_TYPE_PUB_INFO_TYPES</value>
+  </data>
+  <data name="FK_SRV_TYPE_STG_GROUP_TYPES" xml:space="preserve">
+    <value>FK_SRV_TYPE_STG_GROUP_TYPES</value>
+  </data>
+  <data name="FK_SRV_TYPE_TERM_TYPE_TERM_TYP" xml:space="preserve">
+    <value>Този срок за предоставяне на услуга се използва в системата.</value>
+  </data>
+  <data name="FK_SRV_TYPE_TERM_TYPE_TYPES" xml:space="preserve">
+    <value>FK_SRV_TYPE_TERM_TYPE_TYPES</value>
+  </data>
+  <data name="FK_SRV_TYP_RES_RCPT_M_RCPT_MET" xml:space="preserve">
+    <value>FK_SRV_TYP_RES_RCPT_M_RCPT_MET</value>
+  </data>
+  <data name="FK_SRV_TYP_RES_RCPT_M_SRV_TYPE" xml:space="preserve">
+    <value>FK_SRV_TYP_RES_RCPT_M_SRV_TYPE</value>
+  </data>
+  <data name="FK_STAGE_EXECUTORS_POSITIONS" xml:space="preserve">
+    <value>Тази позиция е зададена като изпълнител на съществуващ етап в рамките на услуга</value>
+  </data>
+  <data name="FK_STAGE_EXECUTORS_TYPE_STAGES" xml:space="preserve">
+    <value>FK_STAGE_EXECUTORS_TYPE_STAGES</value>
+  </data>
+  <data name="FK_STAGE_EXECUTORS_USERS" xml:space="preserve">
+    <value>Този потребител е зададен като изпълнител на съществуващ етап в рамките на услуга</value>
+  </data>
+  <data name="FK_STORED_DOCS_REGISTERED_BY" xml:space="preserve">
+    <value>FK_STORED_DOCS_REGISTERED_BY</value>
+  </data>
+  <data name="FK_STORED_DOCS_REG_DOCS" xml:space="preserve">
+    <value>FK_STORED_DOCS_REG_DOCS</value>
+  </data>
+  <data name="FK_STORED_DOC_ACT_CREATED_BY" xml:space="preserve">
+    <value>FK_STORED_DOC_ACT_CREATED_BY</value>
+  </data>
+  <data name="FK_STORED_DOC_ACT_INDIVIDUAL" xml:space="preserve">
+    <value>FK_STORED_DOC_ACT_INDIVIDUAL</value>
+  </data>
+  <data name="FK_STORED_DOC_ACT_STORED_DOCS" xml:space="preserve">
+    <value>FK_STORED_DOC_ACT_STORED_DOCS</value>
+  </data>
+  <data name="FK_TASKS_EXECUTED_BY" xml:space="preserve">
+    <value>FK_TASKS_EXECUTED_BY</value>
+  </data>
+  <data name="FK_TASKS_E_SERVICES" xml:space="preserve">
+    <value>FK_TASKS_E_SERVICES</value>
+  </data>
+  <data name="FK_TASKS_SERVICE_STAGES" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото избраният етап от услуга е в процес на изпълнение в рамките на текуща задача.</value>
+  </data>
+  <data name="FK_TASKS_STATUS_TYPES" xml:space="preserve">
+    <value>Този статус на задача се използва в системата.</value>
+  </data>
+  <data name="FK_TASKS_TASKS" xml:space="preserve">
+    <value>FK_TASKS_TASKS</value>
+  </data>
+  <data name="FK_TASK_ASSESS_EXECUTION_TYPES" xml:space="preserve">
+    <value>FK_TASK_ASSESS_EXECUTION_TYPES</value>
+  </data>
+  <data name="FK_TASK_ASSESS_PROT_ITEM_PROT" xml:space="preserve">
+    <value>FK_TASK_ASSESS_PROT_ITEM_PROT</value>
+  </data>
+  <data name="FK_TASK_ASSESS_PRT_ITEM_ASSESS" xml:space="preserve">
+    <value>FK_TASK_ASSESS_PRT_ITEM_ASSESS</value>
+  </data>
+  <data name="FK_TASK_ASSESS_TASKS" xml:space="preserve">
+    <value>FK_TASK_ASSESS_TASKS</value>
+  </data>
+  <data name="FK_TASK_INITIAL_DOCS_DOCUMENTS" xml:space="preserve">
+    <value>FK_TASK_INITIAL_DOCS_DOCUMENTS</value>
+  </data>
+  <data name="FK_TASK_INITIAL_DOCS_TASKS" xml:space="preserve">
+    <value>FK_TASK_INITIAL_DOCS_TASKS</value>
+  </data>
+  <data name="FK_TASK_INIT_DOC_TYPE_DOC_TYPE" xml:space="preserve">
+    <value>FK_TASK_INIT_DOC_TYPE_DOC_TYPE</value>
+  </data>
+  <data name="FK_TASK_INIT_DOC_TYPE_TASKS" xml:space="preserve">
+    <value>FK_TASK_INIT_DOC_TYPE_TASKS</value>
+  </data>
+  <data name="FK_TASK_POSSIBLE_EXEC_POSITION" xml:space="preserve">
+    <value>Тази позиция е зададена като възможен изпълнител на съществуваща задача.</value>
+  </data>
+  <data name="FK_TASK_POSSIBLE_EXEC_TASKS" xml:space="preserve">
+    <value>FK_TASK_POSSIBLE_EXEC_TASKS</value>
+  </data>
+  <data name="FK_TASK_POSSIBLE_EXEC_USERS" xml:space="preserve">
+    <value>Този потребител е зададен като възможен изпълнител на съществуваща задача.</value>
+  </data>
+  <data name="FK_TASK_RESP_PERSONS_TASKS" xml:space="preserve">
+    <value>FK_TASK_RESP_PERSONS_TASKS</value>
+  </data>
+  <data name="FK_TASK_RESP_PERSONS_USERS" xml:space="preserve">
+    <value>Този потребител е член на екип по изпълнението на съществуваща задача.</value>
+  </data>
+  <data name="FK_TASK_STATUSES_STATUS_TYPES" xml:space="preserve">
+    <value>FK_TASK_STATUSES_STATUS_TYPES</value>
+  </data>
+  <data name="FK_TASK_STATUSES_TASKS" xml:space="preserve">
+    <value>FK_TASK_STATUSES_TASKS</value>
+  </data>
+  <data name="FK_TRANSFORMATION_DOC_TYPES" xml:space="preserve">
+    <value>Този вид документ е изходен вид документ за съществуваща трансформация.</value>
+  </data>
+  <data name="FK_TRANSFORMATION_STAGES" xml:space="preserve">
+    <value>За текущия етап в рамките на услуга са дефинирани трансформации.</value>
+  </data>
+  <data name="FK_TRANSFORM_EXPR_DEFINITIONS" xml:space="preserve">
+    <value>Това дефинирано условие е част от съществуваща трансформация.</value>
+  </data>
+  <data name="FK_TRANSF_DOC_TYPES_TRANSF" xml:space="preserve">
+    <value>FK_TRANSF_DOC_TYPES_TRANSF</value>
+  </data>
+  <data name="FK_USERS_INDIVIDUALS" xml:space="preserve">
+    <value>Съществува потребител, на когото съответства това физическо лице </value>
+  </data>
+  <data name="FK_USERS_INFORMATION_OBJECTS" xml:space="preserve">
+    <value>FK_USERS_INFORMATION_OBJECTS</value>
+  </data>
+  <data name="FK_USERS_POSITIONS" xml:space="preserve">
+    <value>Съществуват потребители, заемащи тази позиция.</value>
+  </data>
+  <data name="FK_USER_ROLES_ROLES" xml:space="preserve">
+    <value>Съществува потребител на текущата роля</value>
+  </data>
+  <data name="FK_USER_ROLES_USERS" xml:space="preserve">
+    <value>Потребителят е свързан с роля</value>
+  </data>
+  <data name="FK_USER_SIGNATURES_USERS" xml:space="preserve">
+    <value>FK_USER_SIGNATURES_USERS</value>
+  </data>
+  <data name="UK_ADAPTER_OPERATIONS" xml:space="preserve">
+    <value>Вече съществува такава операция за текущия адаптер.</value>
+  </data>
+  <data name="UK_ADM_DEPARTMENT_POSITIONS" xml:space="preserve">
+    <value>Уникалност по административно звено и ЕКДА</value>
+  </data>
+  <data name="UK_CLASS_SCHEMES" xml:space="preserve">
+    <value>UK_CLASS_SCHEMES</value>
+  </data>
+  <data name="UK_CLASS_SCHEME_SECTIONS" xml:space="preserve">
+    <value>Уникалност по код и идентификатор</value>
+  </data>
+  <data name="UK_CLASS_SCHEME_SECTION_TYPES" xml:space="preserve">
+    <value>Уникалност по код</value>
+  </data>
+  <data name="UK_CONDITION_DEFINITIONS" xml:space="preserve">
+    <value>UK_CONDITION_DEFINITIONS</value>
+  </data>
+  <data name="UK_COUNTRIES" xml:space="preserve">
+    <value>UK_COUNTRIES</value>
+  </data>
+  <data name="UK_DOC_ATTACHMENTS" xml:space="preserve">
+    <value>UK_DOC_ATTACHMENTS</value>
+  </data>
+  <data name="UK_DOC_DISCREPANCIES" xml:space="preserve">
+    <value>UK_DOC_DISCREPANCIES</value>
+  </data>
+  <data name="PK_DOC_DISCREPANCY_TYPES" xml:space="preserve">
+    <value>Такъв вид неуспешна проверка вече съществува. </value>
+  </data>
+  <data name="PK_DOC_E_TRANSPORT_TYPES" xml:space="preserve">
+    <value>Такъв вид пренос по електронен път вече съществува.</value>
+  </data>
+  <data name="PK_DOC_OPINION_TYPES" xml:space="preserve">
+    <value>Такъв вид становище относно документ вече съществува.</value>
+  </data>
+  <data name="PK_DOC_PROCESS_TYPES" xml:space="preserve">
+    <value>Такъв вид документ по отношение на процеса вече съществува.</value>
+  </data>
+  <data name="PK_DOC_TYPE_ARCHIVAL_TYPES" xml:space="preserve">
+    <value>Такава архивна стойност на документи вече съществува.</value>
+  </data>
+  <data name="PK_DOC_TYPE_PROCESSING_TYPES" xml:space="preserve">
+    <value>Такъв вид начин на обработка на документи вече съществува.</value>
+  </data>
+  <data name="UK_DOC_TYPE_XML_SCHEMAS" xml:space="preserve">
+    <value>UK_DOC_TYPE_XML_SCHEMAS</value>
+  </data>
+  <data name="UK_ENTITIES" xml:space="preserve">
+    <value>UK_ENTITIES</value>
+  </data>
+  <data name="PK_ESOED_MESSAGE_TYPES" xml:space="preserve">
+    <value>Такъв вид ЕСОЕД съобщение вече съществува.</value>
+  </data>
+  <data name="UK_INDIVIDUALS" xml:space="preserve">
+    <value>UK_INDIVIDUALS</value>
+  </data>
+  <data name="UK_INF_OBJECTS" xml:space="preserve">
+    <value>UK_INF_OBJECTS</value>
+  </data>
+  <data name="UK_POSITIONS" xml:space="preserve">
+    <value>UK_POSITIONS</value>
+  </data>
+  <data name="UK_principal_name" xml:space="preserve">
+    <value>UK_principal_name</value>
+  </data>
+  <data name="UK_REGISTERS_INDEX" xml:space="preserve">
+    <value>Този регистров индекс вече се използва! Моля, въведете нов.</value>
+  </data>
+  <data name="UK_SCHEME_SECTIONS" xml:space="preserve">
+    <value>UK_SCHEME_SECTIONS</value>
+  </data>
+  <data name="UK_SECTION_SUB_SECTIONS" xml:space="preserve">
+    <value>UK_SECTION_SUB_SECTIONS</value>
+  </data>
+  <data name="UK_SERVICE_FLOW_ROUTE" xml:space="preserve">
+    <value>Вече има създаден преход между избраните етапи</value>
+  </data>
+  <data name="UK_SERVICE_STAGE_END_RESULTS" xml:space="preserve">
+    <value>UK_SERVICE_STAGE_END_RESULTS</value>
+  </data>
+  <data name="UK_SERVICE_STAGE_GROUP_TYPES" xml:space="preserve">
+    <value>UK_SERVICE_STAGE_GROUP_TYPES</value>
+  </data>
+  <data name="UK_SERVICE_STAGE_OPERATIONS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото вече е дефинирана такава операция на адаптер за текущия етап на услуга.</value>
+  </data>
+  <data name="UK_SERVICE_TYPE_STAGES" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото вече съществува такъв етап в рамките на текущата услуга.</value>
+  </data>
+  <data name="PK_SERVICE_RES_RCPT_METHODS" xml:space="preserve">
+    <value>Такъв начин на получаване на резултат от услуга вече съществува.</value>
+  </data>
+  <data name="PK_SERVICE_TERM_TYPES" xml:space="preserve">
+    <value>Такъв срок за предоставяне на услуга вече съществува.</value>
+  </data>
+  <data name="UK_SYSTEM_PARAMETERS" xml:space="preserve">
+    <value>Този системен параметър вече съществува! Моля, въведете нов.</value>
+  </data>
+  <data name="PK_TASK_EXECUTION_ASSESS_TYPES" xml:space="preserve">
+    <value>Такъв вид оценка на изпълнение на задача вече съществува.</value>
+  </data>
+  <data name="UK_TASK_RESPONSIBLE_PERSONS" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото вече съществува такъв служител в екипа по изпълнение.</value>
+  </data>
+  <data name="PK_TASK_STATUS_TYPES" xml:space="preserve">
+    <value>Такъв статус на задача вече съществува.</value>
+  </data>
+  <data name="PK_SERVICE_INF_BIT_TYPES" xml:space="preserve">
+    <value>Вече съществува такъв вид информация, която може да се придава към публичната информация за вид услуга.</value>
+  </data>
+  <data name="UK_WEB_SRVC_TYPE_TERM_TYPES" xml:space="preserve">
+    <value>Действието не може да бъде извършено, защото вече съществува такъв срок за предоставяне на услугата.</value>
+  </data>
+  <data name="PK_CLASS_SCHEME_SECTION_TYPES" xml:space="preserve">
+    <value>Такъв раздел от класификационна схема вече съществува.</value>
+  </data>
+  <data name="FK_TRANSF_DOC_TYPES_DOC_TYPES" xml:space="preserve">
+    <value>Този вид документ е входен вид документ за съществуваща трансформация.</value>
+  </data>
+</root>

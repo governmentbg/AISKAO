@@ -1,0 +1,22 @@
+﻿<div>
+    
+        <!-- ko if: competency.isLoading()=== true -->
+            <div class="page-splash"></div>
+                <div class="page-splash-message">
+                    Инициализиране на данните. Моля изчакайте...
+                </div>
+                <div class="progress progress-striped active 
+                    page-progress-bar">
+                    <div class="bar" style="width: 100%;"></div>
+            </div>
+        <!-- /ko -->
+
+        <!-- ko if: competency.isLoading()== false -->
+            <div class="span10" data-bind="foreach: competency.nomCompetencies">
+                <label class="span12 checkbox">
+                    <input type="checkbox" data-bind="click: $root.changeCompetency.bind($root, $parent), clickBubble: false, checked: $data.selectedCompetency() !== null && $data.selectedCompetency() !== undefined" />
+                    <span class="span10" data-bind="text: name"></span>
+                </label>
+            </div>
+        <!-- /ko -->
+</div>

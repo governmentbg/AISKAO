@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1263" xmlns="http://ereg.egov.bg/segment/R-1263" xmlns:opt="http://ereg.egov.bg/value/R-1259" xmlns:oopt="http://ereg.egov.bg/value/R-1261" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1259" schemaLocation="R-1259_OtherProductType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1261" schemaLocation="R-1261_OtherOtherProductType.xsd" />
+  <xsd:complexType name="OtherAnimalOrRevisedProducts">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за други странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="OtherProductTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OtherProductType" type="opt:OtherProductType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="OtherOtherProductTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OtherOtherProductType" type="oopt:OtherOtherProductType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

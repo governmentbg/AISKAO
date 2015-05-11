@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000005"
+      xmlns="http://ereg.egov.bg/value/0008-000005"
+      xmlns:nom="http://ereg.egov.bg/nomenclature/0007-000001"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+  <xsd:import schemaLocation="0007-000001_DocumentElectronicTransportTypeNomenclature.xsd" namespace="http://ereg.egov.bg/nomenclature/0007-000001"/>
+
+
+  <xsd:simpleType name="DocumentElectronicTransportType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид на пренос по електронен път</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="nom:DocumentElectronicTransportTypeNomenclature" />
+  </xsd:simpleType>
+
+
+</xsd:schema>

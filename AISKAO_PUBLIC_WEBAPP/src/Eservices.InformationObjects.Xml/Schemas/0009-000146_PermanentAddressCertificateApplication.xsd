@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000146"
+            xmlns="http://ereg.egov.bg/segment/0009-000146"
+            xmlns:eash="http://ereg.egov.bg/segment/0009-000152"
+            xmlns:stbt="http://ereg.egov.bg/value/0008-000143"
+            xmlns:sard="http://ereg.egov.bg/segment/0009-000141"
+            xmlns:easf="http://ereg.egov.bg/segment/0009-000153"
+            xmlns:ad="http://ereg.egov.bg/segment/0009-000139"
+            xmlns:pbd="http://ereg.egov.bg/segment/0009-000008"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000008" schemaLocation="0009-000008_PersonBasicData.xsd"/>
+
+	<xsd:element name="PermanentAddressCertificateApplication" type="PermanentAddressCertificateApplication"/>
+    <xsd:complexType name="PermanentAddressCertificateApplication">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Заявление за издаване на удостоверение за постоянен адрес</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0"/>
+            <xsd:element name="ServiceTermType" type="stbt:ServiceTermType" minOccurs="0"/>
+            <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0"/>
+            <xsd:element name="ApplicationSubject" type="pbd:PersonBasicData" minOccurs="0"/>
+            <xsd:element name="AttachedDocuments" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="AttachedDocument" type="ad:AttachedDocument"  maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1012" xmlns="http://ereg.egov.bg/segment/R-1012" xmlns:psd="http://ereg.egov.bg/value/R-1008" xmlns:ped="http://ereg.egov.bg/value/R-1010" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1008" schemaLocation="R-1008_PeriodStartDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1010" schemaLocation="R-1010_PeriodEndDate.xsd" />
+  <xsd:complexType name="CROZResultInformationPeriodData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Период за включване на информация в резултат от ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="PeriodStartDate" type="psd:PeriodStartDate" minOccurs="0" />
+      <xsd:element name="PeriodEndDate" type="ped:PeriodEndDate" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

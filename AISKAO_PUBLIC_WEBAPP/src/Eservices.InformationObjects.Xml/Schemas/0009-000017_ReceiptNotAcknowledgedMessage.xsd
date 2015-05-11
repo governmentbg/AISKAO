@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000017"
+      xmlns="http://ereg.egov.bg/segment/0009-000017"
+      xmlns:duri="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:espbd="http://ereg.egov.bg/segment/0009-000002"
+      xmlns:dett="http://ereg.egov.bg/value/0008-000005"
+      xmlns:eddt="http://ereg.egov.bg/value/0008-000006"
+      xmlns:esa="http://ereg.egov.bg/segment/0009-000016"
+      xmlns:dturi="http://ereg.egov.bg/segment/0009-000003"
+      xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+      xmlns:xdsig="http://ereg.egov.bg/segment/0009-000004"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import schemaLocation="0009-000001_DocumentURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000001"/>
+    <xsd:import schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd" namespace="http://ereg.egov.bg/segment/0009-000002"/>
+    <xsd:import schemaLocation="0008-000005_DocumentElectronicTransportType.xsd" namespace="http://ereg.egov.bg/value/0008-000005"/>
+    <xsd:import schemaLocation="0008-000006_ElectronicDocumentDiscrepancyType.xsd" namespace="http://ereg.egov.bg/value/0008-000006"/>
+    <xsd:import schemaLocation="0009-000016_ElectronicServiceApplicant.xsd" namespace="http://ereg.egov.bg/segment/0009-000016"/>
+    <xsd:import schemaLocation="0009-000003_DocumentTypeURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000003"/>
+    <xsd:import schemaLocation="0008-000007_DocumentTypeName.xsd" namespace="http://ereg.egov.bg/value/0008-000007"/>
+    <xsd:import schemaLocation="0009-000004_XMLDigitalSignature.xsd" namespace="http://ereg.egov.bg/segment/0009-000004"/>
+
+
+    <xsd:element name="ReceiptNotAcknowledgedMessage" type="ReceiptNotAcknowledgedMessage"/>
+
+    <xsd:complexType name="ReceiptNotAcknowledgedMessage">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Съобщение, че получаването не се потвърждава</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="MessageURI" type="duri:DocumentURI" minOccurs="0"/>
+            <xsd:element name="ElectronicServiceProvider" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0"/>
+            <xsd:element name="TransportType" type="dett:DocumentElectronicTransportType" minOccurs="0"/>
+            <xsd:element name="Discrepancies" minOccurs="0">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Discrepancy" type="eddt:ElectronicDocumentDiscrepancyType" maxOccurs="unbounded"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Applicant" type="esa:ElectronicServiceApplicant" minOccurs="0"/>
+            <xsd:element name="DocumentTypeURI" type="dturi:DocumentTypeURI" minOccurs="0" />
+            <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0" />
+            <xsd:element name="MessageCreationTime" type="xsd:dateTime" minOccurs="0"/>
+            <xsd:element name="Signature" type="xdsig:XMLDigitalSignature" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema> 

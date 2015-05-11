@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1211" xmlns="http://ereg.egov.bg/nomenclature/R-1211" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageTradingTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове фуражи за търговия</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове фуражи за търговия - Фуражни суровини-->
+      <xsd:enumeration value="R-1207" />
+      <!--Видове фуражи за търговия - Фуражни добавки и премикси на основата на фуражни добавки-->
+      <xsd:enumeration value="R-1208" />
+      <!--Видове фуражи за търговия - Комбинирани фуражи-->
+      <xsd:enumeration value="R-1209" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

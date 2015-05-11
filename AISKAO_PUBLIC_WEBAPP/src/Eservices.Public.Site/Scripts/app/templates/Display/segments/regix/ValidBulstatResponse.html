@@ -1,0 +1,15 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Статус</legend>
+        <!--ko compose: { model: bulstatStatus, view: 'segments/regix/BulstatStatusType', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Справка за валидност на БУЛСТАТ/ ЕИК номер</legend>
+        <!--ko compose: { model: validBulstatInfo, view: 'segments/regix/ValidBulstatInfoType', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+</div>

@@ -1,0 +1,50 @@
+﻿<div>
+    <!--ko compose: { model: names, view: 'segments/common/ForeignCitizenNames', area: 'Display' }-->
+    <!--/ko-->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Дата на раждане:</span>
+                <span class="uneditable-input span9" data-bind="formattedDate: birthDate"></span>
+            </label>
+        </div>
+    </div>
+    <br />
+
+    <!-- ko with: placeOfBirth -->
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Държава:</span>
+            <span class="uneditable-input span9">
+                <span data-bind="text: countryCode"></span>
+                &nbsp;
+            <span data-bind="text: countryName"></span>
+            </span>
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Населено място:</span>
+            <span class="uneditable-input span9" title="Населено място" data-bind="text: settlementName"></span>
+        </label>
+    </div>
+    <!-- /ko -->
+    <br />
+    <!-- ko with: identityDocument -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Документ за самоличност:</span>
+                <span class="uneditable-input span3" title="Номер на документ за самоличност" data-bind="text: documentNumber"></span>
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Вид на документ за самоличност:</span>
+                <span class="uneditable-input span3" title="Вид на документ за самоличност" data-bind="text: documentType"></span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

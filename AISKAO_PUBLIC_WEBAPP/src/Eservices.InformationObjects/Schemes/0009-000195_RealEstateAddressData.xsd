@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000195"
+      xmlns="http://ereg.egov.bg/segment/0009-000195"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:arn="http://ereg.egov.bg/value/0008-000269"
+      xmlns:tuec="http://ereg.egov.bg/value/0008-000270"
+      xmlns:tuen="http://ereg.egov.bg/value/0008-000271"
+      xmlns:sbufdc="http://ereg.egov.bg/value/0008-000272"
+      xmlns:sbufdn="http://ereg.egov.bg/value/0008-000273"
+      xmlns:sbun="http://ereg.egov.bg/value/0008-000274"
+      xmlns:e="http://ereg.egov.bg/value/0008-000126"
+      xmlns:f="http://ereg.egov.bg/value/0008-000127"
+      xmlns:dc="http://ereg.egov.bg/value/0008-000200"
+      xmlns:dn="http://ereg.egov.bg/value/0008-000201"
+      xmlns:mn="http://ereg.egov.bg/value/0008-000202"
+      xmlns:mc="http://ereg.egov.bg/value/0008-000209"
+      xmlns:sbsn="http://ereg.egov.bg/value/0008-000228"
+      xmlns:sbs="http://ereg.egov.bg/value/0008-000227"
+      xmlns:rc="http://ereg.egov.bg/value/0008-000226"
+      xmlns:bn="http://ereg.egov.bg/value/0008-000125"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000228" schemaLocation="0008-000228_StreetBoulevardSquareNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000227" schemaLocation="0008-000227_StreetBoulevardSquare.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000226" schemaLocation="0008-000226_ResidentialComplex.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000125" schemaLocation="0008-000125_BuildingNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000126" schemaLocation="0008-000126_Entrance.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000127" schemaLocation="0008-000127_Floor.xsd"/>
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000269" schemaLocation="0008-000269_ArealName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000270" schemaLocation="0008-000270_TerritorialUnitEKATTECode.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000271" schemaLocation="0008-000271_TerritorialUnitEKATTEName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000272" schemaLocation="0008-000272_SeparateBuildingUnitFunctionalDesignationCode.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000273" schemaLocation="0008-000273_SeparateBuildingUnitFunctionalDesignationName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000274" schemaLocation="0008-000274_SeparateBuildingUnitNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000200" schemaLocation="0008-000200_DistrictCode.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000201" schemaLocation="0008-000201_DistrictName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000202" schemaLocation="0008-000202_MunicipalityName.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000209" schemaLocation="0008-000209_MunicipalityCode.xsd"/>
+
+  <xsd:complexType name="RealEstateAddressData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за адрес на недвижим имот</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DistrictCode" type="dc:DistrictCode" minOccurs="0" />
+      <xsd:element name="DistrictName" type="dn:DistrictName" minOccurs="0" />
+      <xsd:element name="MunicipalityCode" type="mc:MunicipalityCode" minOccurs="0" />
+      <xsd:element name="MunicipalityName" type="mn:MunicipalityName" minOccurs="0" />
+      <xsd:element name="TerritorialUnitEKATTECode" type="tuec:TerritorialUnitEKATTECode" minOccurs="0" />
+      <xsd:element name="TerritorialUnitEKATTEName" type="tuen:TerritorialUnitEKATTEName" minOccurs="0" />
+      <xsd:element name="LandOrUrbanPropertyAddress" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:sequence>
+              <xsd:element name="StreetBoulevardSquare" type="sbs:StreetBoulevardSquare" minOccurs="0" />
+              <xsd:element name="StreetBoulevardSquareNumber" type="sbsn:StreetBoulevardSquareNumber" minOccurs="0" />
+              <xsd:element name="ResidentialComplex" type="rc:ResidentialComplex" minOccurs="0" />
+              <xsd:element name="BuildingNumber" type="bn:BuildingNumber" minOccurs="0" />
+              <xsd:element name="Entrance" type="e:Entrance" minOccurs="0" />
+              <xsd:element name="Floor" type="f:Floor" minOccurs="0" />
+              <xsd:element name="SeparateBuildingUnitFunctionalDesignationCode" type="sbufdc:SeparateBuildingUnitFunctionalDesignationCode" minOccurs="0" />
+              <xsd:element name="SeparateBuildingUnitFunctionalDesignationName" type="sbufdn:SeparateBuildingUnitFunctionalDesignationName" minOccurs="0" />
+              <xsd:element name="SeparateBuildingUnitNumber" type="sbun:SeparateBuildingUnitNumber" minOccurs="0" />
+            </xsd:sequence>
+            <xsd:element name="LandPropertyArealName" type="arn:ArealName" minOccurs="0" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence> 
+  </xsd:complexType>
+
+</xsd:schema>

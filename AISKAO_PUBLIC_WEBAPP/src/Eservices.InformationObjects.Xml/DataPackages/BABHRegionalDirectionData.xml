@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BABHRegionalDirectionData xmlns="http://ereg.egov.bg/segment/R-1006" versionDate="2013-10-25">
+  <BABHRegionalDirections>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>BLG</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Благоевград</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>BGS</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Бургас</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>VAR</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Варна</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>VTR</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Велико Търново</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>VID</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Видин</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>VRC</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Враца</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>GAB</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Габрово</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>DOB</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Добрич</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>KRZ</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Кърджали</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>KNL</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Кюстендил</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>LOV</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Ловеч</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>MON</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Монтана</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>PAZ</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName> Областна дирекция по безопасност на храните – Пазарджик</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>PER</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Перник</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>PVN</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Плевен</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>PDV</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Пловдив</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>RAZ</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Разград</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>RSE</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Русе</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SLS</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Силистра</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SLV</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Сливен</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SML</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Смолян</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SOF</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – София-град</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SFO</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Софийска област</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SZR</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Стара Загора</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>TGV</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Търговище</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>HKV</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Хасково</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>SHU</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Шумен</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+    <BABHRegionalDirection>
+      <BABHRegionalDirectionCode>JAM</BABHRegionalDirectionCode>
+      <BABHRegionalDirectionName>Областна дирекция по безопасност на храните – Ямбол</BABHRegionalDirectionName>
+    </BABHRegionalDirection>
+  </BABHRegionalDirections>
+</BABHRegionalDirectionData>

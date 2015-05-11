@@ -1,0 +1,15 @@
+﻿<div>
+    <!-- ko with: foodItems -->
+    <div class="span10" data-bind="foreach: foodItem.nomFoodItems">
+        <label class="span12 checkbox">
+            <span class="span10" data-bind="text: name"></span>
+        </label>
+        <!-- ko if: canAddFreeText === 'true' -->
+        <!-- ko with: $data.selectedFoodItem -->
+        <!-- ko compose: { model: $data , view: 'segments/babh/FoodItem', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </div>
+    <!-- /ko -->
+</div>

@@ -1,0 +1,23 @@
+﻿<div>
+    <div class="row">
+        <div class="control-group span12">
+            <label class="checkbox">
+                <span>Чужденец</span>
+                <input type="checkbox" disabled data-bind="unchecked: isForeigner"/>
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <span class="span3">ЕГН:</span>
+        <span class="span9 uneditable-input" data-bind="text: egn"></span>
+    </div>
+
+    <div class="row">
+        <span class="span3">ЛНЧ:</span>
+        <span class="span9 uneditable-input" data-bind="text: lnch"></span>
+    </div>
+
+    <!--ko compose: { model: personNames, view: 'segments/regix/PersonNames', area: 'Display' } -->
+    <!-- /ko-->
+</div>

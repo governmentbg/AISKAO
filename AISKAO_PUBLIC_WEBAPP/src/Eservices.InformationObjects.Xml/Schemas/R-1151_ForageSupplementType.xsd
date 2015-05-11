@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1151" xmlns="http://ereg.egov.bg/value/R-1151" xmlns:fstn="http://ereg.egov.bg/nomenclature/R-1149" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1149" schemaLocation="R-1149_ForageSupplementTypeNomenclature.xsd" />
+  <xsd:simpleType name="ForageSupplementType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид фуражни добавки</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fstn:ForageSupplementTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1122" xmlns="http://ereg.egov.bg/segment/R-1122" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:drsd="http://ereg.egov.bg/value/0008-000004" xmlns:dtn="http://ereg.egov.bg/value/0008-000007" xmlns:du="http://ereg.egov.bg/segment/0009-000001" xmlns:espbd="http://ereg.egov.bg/segment/0009-000002" xmlns:dtu="http://ereg.egov.bg/segment/0009-000003" xmlns:xds="http://ereg.egov.bg/segment/0009-000004" xmlns:pn="http://ereg.egov.bg/segment/0009-000005" xmlns:fcn="http://ereg.egov.bg/segment/0009-000007" xmlns:esa="http://ereg.egov.bg/segment/0009-000016" xmlns:iamadneng="http://ereg.egov.bg/value/R-1006" xmlns:plfn="http://ereg.egov.bg/value/R-1109" xmlns:pls="http://ereg.egov.bg/value/R-1111" xmlns:plln="http://ereg.egov.bg/value/R-1113" xmlns:nebveng="http://ereg.egov.bg/segment/R-1093" xmlns:netyc="http://ereg.egov.bg/value/R-1095" xmlns:netmc="http://ereg.egov.bg/value/R-1097" xmlns:netdc="http://ereg.egov.bg/value/R-1099" xmlns:net="http://ereg.egov.bg/value/R-1192" xmlns:spn="http://ereg.egov.bg/value/R-1101" xmlns:spid="http://ereg.egov.bg/value/R-1103" xmlns:sped="http://ereg.egov.bg/value/R-1105" xmlns:hmeng="http://ereg.egov.bg/value/R-1117" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000004" schemaLocation="0008-000004_DocumentReceiptOrSigningDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000005" schemaLocation="0009-000005_PersonNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000007" schemaLocation="0009-000007_ForeignCitizenNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000016" schemaLocation="0009-000016_ElectronicServiceApplicant.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1006" schemaLocation="R-1006_IAMADirectorateNameENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1109" schemaLocation="R-1109_PersonLatinFirstName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1111" schemaLocation="R-1111_PersonLatinSurname.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1113" schemaLocation="R-1113_PersonLatinLastName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1093" schemaLocation="R-1093_NavigableExperienceByVesselENG.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1095" schemaLocation="R-1095_NavigableExperienceTotalYearCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1097" schemaLocation="R-1097_NavigableExperienceTotalMonthCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1099" schemaLocation="R-1099_NavigableExperienceTotalDayCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1192" schemaLocation="R-1192_NavigableExperienceTotal.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1101" schemaLocation="R-1101_SeafarerPassportNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1103" schemaLocation="R-1103_SeafarerPassportIssueDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1105" schemaLocation="R-1105_SeafarerPassportExpireDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1117" schemaLocation="R-1117_HarbourMasterENG.xsd" />
+  <xsd:element name="IAMANavigableExperienceCertificateENG" type="IAMANavigableExperienceCertificateENG" />
+  <xsd:complexType name="IAMANavigableExperienceCertificateENG">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Удостоверение за плавателен стаж на английски език</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DocumentTypeURI" type="dtu:DocumentTypeURI" minOccurs="0" />
+      <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0" />
+      <xsd:element name="DocumentURI" type="du:DocumentURI" minOccurs="0" />
+      <xsd:element name="DocumentReceiptOrSigningDate" type="drsd:DocumentReceiptOrSigningDate" minOccurs="0" />
+      <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0" />
+      <xsd:element name="ElectronicServiceApplicant" type="esa:ElectronicServiceApplicant" minOccurs="0" />
+      <xsd:element name="IAMADirectorateNameENG" type="iamadneng:IAMADirectorateNameENG" minOccurs="0" />
+      <xsd:element name="PersonLatinFirstName" type="plfn:PersonLatinFirstName" minOccurs="0" />
+      <xsd:element name="PersonLatinSurname" type="pls:PersonLatinSurname" minOccurs="0" />
+      <xsd:element name="PersonLatinLastName" type="plln:PersonLatinLastName" minOccurs="0" />
+      <xsd:element name="NavigableExperienceByVesselENGs" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="NavigableExperienceByVesselENG" type="nebveng:NavigableExperienceByVesselENG" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="NavigableExperienceTotalYearCount" type="netyc:NavigableExperienceTotalYearCount" minOccurs="0" />
+      <xsd:element name="NavigableExperienceTotalMonthCount" type="netmc:NavigableExperienceTotalMonthCount" minOccurs="0" />
+      <xsd:element name="NavigableExperienceTotalDayCount" type="netdc:NavigableExperienceTotalDayCount" minOccurs="0" />
+      <xsd:element name="NavigableExperienceTotal" type="net:NavigableExperienceTotal" minOccurs="0" />
+      <xsd:element name="SeafarerPassportNumber" type="spn:SeafarerPassportNumber" minOccurs="0" />
+      <xsd:element name="SeafarerPassportIssueDate" type="spid:SeafarerPassportIssueDate" minOccurs="0" />
+      <xsd:element name="SeafarerPassportExpireDate" type="sped:SeafarerPassportExpireDate" minOccurs="0" />
+      <xsd:element name="HarbourMasterENG" type="hmeng:HarbourMasterENG" minOccurs="0" />
+      <xsd:element name="Official" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="PersonNames" type="pn:PersonNames" />
+            <xsd:element name="ForeignCitizenNames" type="fcn:ForeignCitizenNames" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="XMLDigitalSignature" type="xds:XMLDigitalSignature" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

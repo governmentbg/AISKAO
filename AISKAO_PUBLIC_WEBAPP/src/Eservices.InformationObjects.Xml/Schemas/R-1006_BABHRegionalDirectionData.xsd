@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1006" xmlns="http://ereg.egov.bg/segment/R-1006" xmlns:babhrdc="http://ereg.egov.bg/value/R-1002" xmlns:babhrdn="http://ereg.egov.bg/value/R-1004" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_BABHRegionalDirectionCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_BABHRegionalDirectionName.xsd" />
+  <xsd:element name="BABHRegionalDirectionData" type="BABHRegionalDirectionData" />
+  <xsd:complexType name="BABHRegionalDirectionData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Областни дирекции по безопасност на храните</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="BABHRegionalDirections">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="BABHRegionalDirection" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="BABHRegionalDirectionCode" type="babhrdc:BABHRegionalDirectionCode" />
+                  <xsd:element name="BABHRegionalDirectionName" type="babhrdn:BABHRegionalDirectionName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

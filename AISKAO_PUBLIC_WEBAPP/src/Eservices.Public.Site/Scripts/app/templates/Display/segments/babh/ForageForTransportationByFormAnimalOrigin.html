@@ -1,0 +1,87 @@
+﻿<div>
+<div class="row">
+        <div class="span10">
+            <!-- ko if: forageMaterialAnimalOriginMilkProduct.isChecked -->
+            <label class="span12 checkbox">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginMilkProduct.isChecked" />
+                <u>мляко и млечни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginMilkProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginMilkProduct, view: 'segments/babh/ForageMaterialAnimalOriginMilkProduct', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginEggProduct.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginEggProduct.isChecked" />
+                <u>яйчни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginEggProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginEggProduct, view: 'segments/babh/ForageMaterialAnimalOriginEggProduct', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginFishFlour.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginFishFlour.isChecked" />
+                <u>рибно брашно</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginFishFlour.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginFishFlour, view: 'segments/babh/ForageMaterialAnimalOriginFishFlour', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginBloodProduct.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginBloodProduct.isChecked" />
+                <u>кръвни продукти</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginBloodProduct.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginBloodProduct, view: 'segments/babh/ForageMaterialAnimalOriginBloodProduct', area: 'Display',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginBloodFlour.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginBloodFlour.isChecked" />
+                <u>кръвно брашно</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginBloodFlour.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginBloodFlour, view: 'segments/babh/ForageMaterialAnimalOriginBloodFlour', area: 'Display',transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginCalciumPhosphate.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginCalciumPhosphate.isChecked" />
+                <u>дикалциев/трикалциев фосфат от животински произход</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginCalciumPhosphate.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginCalciumPhosphate, view: 'segments/babh/ForageMaterialAnimalOriginCalciumPhosphate', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginLiquidFishOil -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginLiquidFishOil" />
+                рибно масло (течно)</label>
+            <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginLiquidMeltedFat -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginLiquidMeltedFat" />
+                топени мазнини (течни)</label>
+             <!-- /ko-->
+
+            <!-- ko if: forageMaterialAnimalOriginOther.isChecked -->
+            <label class="checkbox span12">
+                <input type="checkbox" disabled data-bind="checked: forageMaterialAnimalOriginOther.isChecked" />
+                <u>други</u></label>
+            <div data-bind="if: forageMaterialAnimalOriginOther.isChecked">
+                <!-- ko compose: { model: forageMaterialAnimalOriginOther, view: 'segments/babh/ForageMaterialAnimalOriginOther', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+            <!-- /ko-->
+        </div>
+    </div>
+</div>

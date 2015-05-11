@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <!-- ko with: forageTradingTypes -->
+            <div class="span12" data-bind="foreach: forageTradingType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getForageTradingTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+

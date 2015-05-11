@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1213" xmlns="http://ereg.egov.bg/value/R-1213" xmlns:fttn="http://ereg.egov.bg/nomenclature/R-1211" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1211" schemaLocation="R-1211_ForageTradingTypeNomenclature.xsd" />
+  <xsd:simpleType name="ForageTradingType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид фуражи за търговия</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fttn:ForageTradingTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1019" xmlns="http://ereg.egov.bg/value/R-1019" xmlns:fopn="http://ereg.egov.bg/nomenclature/R-1017" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1017" schemaLocation="R-1017_FoodObjectPurposeNomenclature.xsd" />
+  <xsd:simpleType name="FoodObjectPurpose">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид дейност за производство и търговия с храни</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="fopn:FoodObjectPurposeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

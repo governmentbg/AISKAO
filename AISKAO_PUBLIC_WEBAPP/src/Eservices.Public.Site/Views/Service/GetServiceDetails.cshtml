@@ -1,0 +1,130 @@
+﻿@model TechnoLogica.Eservices.Public.Site.Models.Service.GetServiceDetailsViewModel
+@using System.Web.Razor.Parser.SyntaxTree
+@using StructureMap.Query
+
+@using TechnoLogica.Eservices.Public.Site.Resources
+@{
+    ViewBag.Title = Service.GetServiceDetailsTitle;
+    ViewBag.Subtitle = Model.Name;
+}
+
+<ol class="romanStyle">
+    <li><span class="listTitle">@Service.ServiceName</span></li>
+    @Html.DisplayFor(model => model.Name)
+
+    <li><span class="listTitle">@Service.LegalBasis</span></li>
+
+    <ul class="crl">
+        @if (Model.LegalBasis.Count() != 0)
+        {
+            foreach (var bullet in Model.LegalBasis)
+            {
+            <li>@bullet.Description</li>
+            }
+
+        }
+    </ul>
+
+    <li><span class="listTitle">@Service.ServiceDescription</span></li>
+    @Html.DisplayFor(model => model.PublicInformationDescription)
+
+    <li><span class="listTitle">@Service.Procedure</span></li>
+</ol>
+<ol>
+    <li><span class="listTitle">@Service.CompetentAuthority</span></li>
+    @Html.DisplayFor(model => model.PublicInformationCompetentAuthority)
+
+    <li><span class="listTitle">@Service.Applicant</span></li>
+    @Html.DisplayFor(model => model.PublicInformationApplicant)
+
+    <li><span class="listTitle">@Service.RequiredDocument</span>
+        <ul class="crl">
+            @if (Model.RequiredDocument.Count() != 0)
+            {
+                foreach (var bullet in Model.RequiredDocument)
+                {
+                <li>@bullet.Description</li>
+                }
+
+            }
+        </ul>
+    </li>
+
+    <li><span class="listTitle">@Service.DocumentRequirement</span>
+        <ul class="crl">
+            @if (Model.DocumentRequirement.Count() != 0)
+            {
+                foreach (var bullet in Model.DocumentRequirement)
+                {
+                <li>@bullet.Description</li>
+                }
+
+            }
+        </ul>
+    </li>
+
+
+    <li><span class="listTitle">@Service.PaymentAndTermDescription</span>
+        <ul class="crl">
+            @if (Model.PaymentInformation.Count() != 0)
+            {
+                foreach (var bullet in Model.PaymentInformation)
+                {
+                <li>@bullet.Description</li>
+                }
+
+            }
+        </ul>
+         <p>@Html.DisplayFor(model => model.PublicInformationPaymentAndTermDescription)</p>
+    </li>
+    <li><span class="listTitle">@Service.RequestMethod</span>
+        <ul>
+            @if (Model.RequestMethod.Count() != 0)
+            {
+                foreach (var bullet in Model.RequestMethod)
+                {
+                <li>@bullet.Description</li>
+                }
+            }
+        </ul>
+    </li>
+
+    <li><span class="listTitle">@Service.ServiceResponsible</span></li>
+    @Html.DisplayFor(model => model.PublicInformationServiceResponsible)
+
+
+    <li><span class="listTitle">@Service.InternalStep</span>
+        <ul class="crl">
+            @if (Model.InternalStep.Count() != 0)
+            {
+                foreach (var bullet in Model.InternalStep)
+                {
+                <li>@bullet.Description</li>
+                }
+            }
+        </ul>
+    </li>
+
+    <li><span class="listTitle">@Service.RefusalAppealProcedureDescription</span></li>
+    @Html.DisplayFor(model => model.PublicInformationRefusalAppealProcedureDescription)
+
+    <li><span class="listTitle">@Service.ResultDesription</span></li>
+    @Html.DisplayFor(model => model.PublicInformationResultDesription)
+
+</ol>
+
+@*@foreach (var group in Model.ServiceTypeBits.GroupBy(item => item.Name))
+{
+
+    <dt>@Html.Encode(group.Key)
+
+
+        @foreach (var item in group)
+        {
+            <dd>@Html.Encode(item.Description)</dd>
+        }
+
+
+    </dt>
+
+}*@

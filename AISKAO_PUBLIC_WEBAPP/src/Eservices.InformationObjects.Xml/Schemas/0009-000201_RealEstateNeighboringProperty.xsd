@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000201"
+      xmlns="http://ereg.egov.bg/segment/0009-000201"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:c="http://ereg.egov.bg/segment/0009-000198"
+      xmlns:d="http://ereg.egov.bg/value/0008-000293"
+      xmlns:o="http://ereg.egov.bg/value/0008-000294"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000293" schemaLocation="0008-000293_NeighboringPropertyDirection.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000198" schemaLocation="0009-000198_RealEstateCadastreIdentifier.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000294" schemaLocation="0008-000294_NeighboringPropertyDescription.xsd"/>
+
+  <xsd:complexType name="RealEstateNeighboringProperty">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за съседен недвижим имот</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="NeighboringPropertyDirection" type="d:NeighboringPropertyDirection" minOccurs="0" />
+      <xsd:element name="RealEstateCadastreIdentifier" type="c:RealEstateCadastreIdentifier" minOccurs="0" />
+      <xsd:element name="NeighboringPropertyDescription" type="o:NeighboringPropertyDescription" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

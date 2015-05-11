@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/AV/BULSTAT" targetNamespace="http://egov.bg/RegiX/AV/BULSTAT">
+	<xs:complexType name="BulstatStatusType">
+		<xs:sequence>
+			<xs:element name="Bulstat" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>БУЛСТАТ ЕИК</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="State" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус  - (валиден/невалиден ЕИК,фирмата е закрита, преобразувана т.н.)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ValidBulstatInfoType">
+		<xs:annotation>
+			<xs:documentation>Допълнителна информация, ако подаденият БУЛСТАТ ЕИК номер е валиден</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FullName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пълно наименование</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Address" type="AddressesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Седалище / адрес на управление</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Managers" type="ManagersType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Управляващ(и)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonType">
+		<xs:sequence>
+			<xs:element name="IsForeigner" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Чужденец</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EGN" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕГН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LNCh" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЛНЧ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PersonNames" type="PersonNames" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentType">
+		<xs:sequence>
+			<xs:element name="DocumentRole" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Роля на документ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentKind" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид на документа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentNumber" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер на документ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на документа</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentDeed" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фирмено дело</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DeedYear" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Година на ФД</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentRegister" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистър</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Tom" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Том</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Lot" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Партида номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Page" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Страница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип документ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonNames">
+		<xs:annotation>
+			<xs:documentation>Имена</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SurName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Презиме</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ForeignerCyrillicName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена на чуждестранен гражданин на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ForeignerLatinName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена на чуждестранен гражданин на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipationInCompanyType">
+		<xs:annotation>
+			<xs:documentation>Участие в дружество</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CompanyInfo" type="CompanyType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация за нефизическо лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParticipationRoles" type="ParticipationRolesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Полета, в коото е въведен подаденият ЕГН – (управител, собственик, директор, прокурист …)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressType">
+		<xs:annotation>
+			<xs:documentation>Адрес</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид адрес</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistrictCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на област</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistrictName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име на област</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunicipalityCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на обшина</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunicipalityName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име на обшина</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementEkkate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на населено място </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Населено място</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RegionCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на район</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="RegionName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име на район</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TVM" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Гр./с.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Street" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Улица/ж.к.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BuildingNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер на сграда</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StreetNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Entrance" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вход</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Floor" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Етаж</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Apartment" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Апартамент</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PostCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пощенски код</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PostBox" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пощенска кутия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TelecommunicationType">
+		<xs:annotation>
+			<xs:documentation>Телекомуникация</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип телекомуникация</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Number" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TelecommunicationKind" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид: домашен.служебен</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AmountOfCapital">
+		<xs:annotation>
+			<xs:documentation>Размер на капитала</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Amount" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Размер общо</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Shares" type="SharesType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дялове/акции/вноски</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShareType">
+		<xs:annotation>
+			<xs:documentation>Дял/акция/вноскa</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Count" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Брой</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Value" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номинална стойност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DistributionItemType">
+		<xs:annotation>
+			<xs:documentation>Разпределение</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Percent" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Процент</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManagersType">
+		<xs:annotation>
+			<xs:documentation>Управляващи</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name=" Manager" type="ManagerType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SharesType">
+		<xs:annotation>
+			<xs:documentation>Дялове/акции</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Share" type="ShareType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Дял/акция/вноскa</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TelecommunicationsType">
+		<xs:annotation>
+			<xs:documentation>Телекомуникации</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Telecommunication" type="TelecommunicationType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressesType">
+		<xs:annotation>
+			<xs:documentation>Адреси</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Address" type="AddressType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DocumentsType">
+		<xs:annotation>
+			<xs:documentation>Документи</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Document" type="DocumentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Документ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CapitalDistributionType">
+		<xs:annotation>
+			<xs:documentation>Разпределение на капитала по видове</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CapitalDistributionItem" type="DistributionItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OwnersType">
+		<xs:annotation>
+			<xs:documentation>Собственици</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Owner" type="OwnerType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipationInCompaniesType">
+		<xs:annotation>
+			<xs:documentation>Участие в дружества</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ParticipationInCompany" type="ParticipationInCompanyType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="YearsAndMonthsType">
+		<xs:sequence>
+			<xs:element name="Months" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Месеци</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Years" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Години</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OwnerType">
+		<xs:sequence>
+			<xs:element name="IsPerson" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дали е физическо лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PersonInfo" type="PersonType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация за лице, в случай че е физическо лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CompanyInfo" type="CompanyType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация за нефизическо лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Role" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Роля</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParticipationKind" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид участие</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParticipationAmount" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>участие в капитала</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ParticipationPercent" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>% участие</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Ownership" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Право на собственост</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FundingSourcesType">
+		<xs:annotation>
+			<xs:documentation>Източници на финансиране</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FundingSourceDistributionItem" type="DistributionItemType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CapitalType">
+		<xs:sequence>
+			<xs:element name="CapitalAmount" type="AmountOfCapital" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ParticipationRolesType">
+		<xs:sequence>
+			<xs:element name="ParticipatoinRole" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Поле, в което е въведен подаденият ЕГН – (управител, собственик, директор, прокурист …)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ManagerType">
+		<xs:sequence>
+			<xs:element name="PersonInfo" type="PersonType" minOccurs="0"/>
+			<xs:element name="Role" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Роля</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Position" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Длъжност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CompanyType">
+		<xs:sequence>
+			<xs:element name="BULSTAT" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Булстат</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FullName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пълно наименование</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LegalForm" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Правна форма</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="State" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Статус</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

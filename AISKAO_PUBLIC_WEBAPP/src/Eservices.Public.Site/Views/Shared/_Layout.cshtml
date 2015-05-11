@@ -1,0 +1,195 @@
+﻿@using TechnoLogica.Eservices.Public.Site.Resources
+
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <style>#logo{width:auto !important;}</style> <![endif]-->
+
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>@ViewBag.Title</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+
+    @*@Styles.Render("~/bundles/bootstrapcss")*@
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap/css/bootstrap-responsive.css" rel="stylesheet" media="screen">
+    @Styles.Render("~/bundles/css")
+
+    <meta charset="utf-8" />
+    <!--[if lt IE 9]> <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script> <![endif]-->
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/knockout")
+</head>
+
+<body>
+
+    <header id="header">
+        <div class="container">
+            <div>
+                @{ Html.RenderAction("GetAdministrationName", "Administration", null); }
+            </div>
+        </div>
+    </header>
+
+    <div class="container container-style" id="mainContent">
+        @*Освновно съдържание на страницата*@
+
+        <div id="menu-container">
+            <div class="row">
+                <div class="span11">
+
+                    <nav class="pull-right">
+                        <ul class="nav nav-tabs" id="menu">
+                            <li>
+                                @Html.MenuLink("Заявяване на услуга", "ListServices", "Service", new { iconClass = "icon-file" })
+                            </li>
+                            <li>
+                                @Html.MenuLink("Проверка на статус", "SearchElectronicService", "ElectronicService", new { iconClass = "icon-check" })
+                            </li>
+                            <li>
+                                @Html.MenuLink("Информация за ползване", "Help", "Home", new { iconClass = "icon-info-sign" })
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+
+       @* <div class="main-container">*@
+        <div>
+            @*Тази заглавна част е налична за всяка страница и носи информация за специфичното й предназначение*@
+            <hgroup class="title">
+                @*Предназначение на страницата*@
+                <h1>@ViewBag.Title</h1>
+                @*Подзаглавие с допълнителна информация*@
+                <h2><span id="header-main">@ViewBag.Subtitle</span></h2>
+            </hgroup>
+            @RenderSection("pagedescription", required: false)
+
+            @*Освновно съдържание на страницата*@
+
+            <script type="text/javascript">
+                $("#menu a").hover(
+                    function () {
+                        var self = $(this);                        
+                        if (!self.hasClass("active")) {
+                            var iconElem = $(this).children("i").first();
+                            iconElem.addClass("icon-white");
+                        }                           
+                    },
+                    function () {
+                        var self = $(this);
+                        
+                        if (!self.hasClass("active")) {
+                            var iconElem = $(this).children("i").first();
+                            iconElem.removeClass("icon-white");
+                        }
+                    })
+            </script>
+
+            <section >
+                @RenderBody()
+            </section>
+        </div>
+
+    </div>
+    @* </div>*@
+
+
+    <footer id="firstfooter" class="container footer-style">
+        <div class="container clearfix">
+            @*  <div class="container-narrow">*@
+            <nav id="site-map">
+                @*Данни за текущата администрация*@
+
+
+
+
+                @*Карта на сайта*@
+
+
+
+                <div class="row">
+                   @* <div class="span11">*@
+                        <div class="row">
+                            <div class="span3">@Html.ActionLink("Информация за приложението", "About", "Home")</div>
+                            <div class="span3">@Html.ActionLink("Политика за достъпност", "AccessibilityPolicy", "Home")</div>
+                            <div class="span3">@Html.ActionLink("Карта на приложението", "SiteMap", "Home")</div>
+                            <div class="span2">@Html.ActionLink("Доставчик на услуги", "GetAdministrationInfo", "Administration")</div>
+                        </div>
+                    @*</div>*@
+                </div>
+                @*                    <div class="row">
+                        <div class="row">
+                            <div class="site-map-title">Административна информация</div>
+                        </div>*@
+                @* @{ Html.RenderAction("GetDetailInfo", "Administration", null); }*@
+                @*                        <div class="span3">@Html.ActionLink("Доставчик на услуги", "GetAdministrationInfo", "Administration")</div>
+
+
+                    </div>*@
+
+            </nav>
+        </div>
+        @*</div>*@
+    </footer>
+    <footer id="secondfooter" class="container footer-style footerContent">
+        <div class="container">
+            @* <div class="container-narrow">*@
+            @*Изискване за представяне на проекта*@
+            <div id="site-info">
+                <div class="row">
+                    @* <div class="span11">*@
+
+                    @* <div class="row">*@
+                    <div class="span1 pull-left">
+                        <a href="http://europa.eu/">
+                            <img src="~/Images/EU.png" alt="@AlternativeDescriptions.LogoEU" class="site-info-logo" />
+                        </a>
+                    </div>
+                    <div class="span1 pull-left">
+                        <a href="http://www.opac.government.bg/">
+                            <img src="~/Images/OPAC.png" alt="@AlternativeDescriptions.LogoOPAC" class="site-info-logo" />
+                        </a>
+                    </div>
+                    <div class="span1 pull-left">
+                        <a href="http://ec.europa.eu/esf/">
+                            <img src="~/Images/ESF.png" alt="@AlternativeDescriptions.LogoESF" class="site-info-logo" />
+                        </a>
+                    </div>
+                    <div class="span7">
+                        <div class="site-info-text">
+                            <span>Това уеб приложение е разработено по проект</span>
+                            <span>
+                                <b>"Въвеждане на комплексно административно обслужване за предоставяне на качествени услуги на гражданите и бизнеса",</b>
+                            </span>
+                            <span>
+                                финансиран по Оперативна програма "Административен капацитет" 2007-2013 г.,
+                                съфинансирана от Европейския съюз чрез Европейския социален фонд.
+                            </span>
+                        </div>
+                    </div>
+                    @* </div>*@
+
+                    @*</div>*@
+                </div>
+            </div>
+        </div>
+
+    </footer>
+        
+    @Scripts.Render("~/bundles/bootstrapjs")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

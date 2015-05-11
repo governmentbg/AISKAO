@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1129" xmlns="http://ereg.egov.bg/value/R-1129" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="SeaWorkCompetencyName">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Наименование на правоспособност за плаване по море</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <xsd:minLength value="1" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

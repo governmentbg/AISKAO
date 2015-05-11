@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="0006-000001" xml:space="preserve">
+    <value>Чрез уеб базирано приложение</value>
+    <comment>Когато се визуализира в потребителския интерфейс в състава на елементи за избор, като падащи менюта, група от радио бутони и други, терминът се визуализира като „Чрез уеб базирано приложение”.</comment>
+  </data>
+  <data name="0006-000002" xml:space="preserve">
+    <value>Чрез електронна поща</value>
+    <comment>Когато се визуализира в потребителския интерфейс в състава на елементи за избор, като падащи менюта, група от радио бутони и други, терминът се визуализира като „Чрез електронна поща”.</comment>
+  </data>
+  <data name="0006-000003" xml:space="preserve">
+    <value>Чрез физически носител</value>
+    <comment>Когато се визуализира в потребителския интерфейс в състава на елементи за избор, като падащи менюта, група от радио бутони и други, терминът се визуализира като „Чрез физически носител”.</comment>
+  </data>
+  <data name="0006-000004" xml:space="preserve">
+    <value>Чрез ЕСОЕД</value>
+    <comment>Когато се визуализира в потребителския интерфейс в състава на елементи за избор, като падащи менюта, група от радио бутони и други, терминът се визуализира като „Чрез ЕСОЕД”.</comment>
+  </data>
+  <data name="0006-000005" xml:space="preserve">
+    <value>Подаваното заявление не е в нормативно установения формат</value>
+  </data>
+  <data name="0006-000006" xml:space="preserve">
+    <value>Размерът на заявлението заедно с приложенията надвишава определения от административния орган размер за електронните административни услуги, предоставяни от съответната администрация</value>
+  </data>
+  <data name="0006-000007" xml:space="preserve">
+    <value>Приложените към заявлението документи не са в нормативно установения формат</value>
+  </data>
+  <data name="0006-000008" xml:space="preserve">
+    <value>Подаденото заявление и приложенията към него съдържат вируси или друг нежелан софтуер</value>
+  </data>
+  <data name="0006-000009" xml:space="preserve">
+    <value>Подаденото заявление не съдържа уникален идентификатор на заявителя и на получателя на електронната административна услуга при законово изискване за идентификация</value>
+  </data>
+  <data name="0006-000010" xml:space="preserve">
+    <value>Заявителят не е посочил електронен пощенски адрес</value>
+  </data>
+  <data name="0006-000011" xml:space="preserve">
+    <value>Не е налице техническа възможност за достъп до съдържанието на подадения на физически носител електронен документ</value>
+  </data>
+  <data name="0006-000012" xml:space="preserve">
+    <value>Полето „{0}” трябва да съдържа цяло число.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000013" xml:space="preserve">
+    <value>Полето „{0}” трябва да съдържа число, по-голямо от {1}.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката. &lt;MinBoundary&gt; се замества с числото, зададено в указанията за валидация на обекта.</comment>
+  </data>
+  <data name="0006-000014" xml:space="preserve">
+    <value>Полето {0} не съдържа валидна дата. Дата трябва да е във формат {1}.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката. &lt;DateFormat&gt; се замества с формата за дата, зададен в указанията за валидация на обекта.</comment>
+  </data>
+  <data name="0006-000015" xml:space="preserve">
+    <value>Полето „{0}” от секцията „{1}” трябва да е попълнено.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", а &lt;Section&gt; се замества с наименованието на информационния обект от вид "сегмент", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000016" xml:space="preserve">
+    <value>Полето „{0}” може да заема само валидни стойности от {1}.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", а &lt;Nomenclature&gt; се замества с наименованието на информационния обект от вид "номенклатура", за които се отнася грешката.</comment>
+  </data>
+  <data name="0006-000017" xml:space="preserve">
+    <value>Полето „{0}” не може да съдържа повече от {1} символа.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност, за който се отнася грешката. &lt;CharNumber&gt; се замества с максималния брой символи, които може да съдържа обекта.</comment>
+  </data>
+  <data name="0006-000018" xml:space="preserve">
+    <value>В полето „{0}” може да се съдържат само {1}.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката. &lt;CharsAllowed&gt; се замества с описанието на символите, които може да съдържа обекта, описани в указанията за валидация на обекта.</comment>
+  </data>
+  <data name="0006-000019" xml:space="preserve">
+    <value>Поне едно от полетата „{0}” в секцията „{1}” трябва да бъде попълнено.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като във &lt;Fields&gt; се изброяват разделени със запетая наименованията на информационните обекти от вид "стойност", поне един от които е задължителен за попълване. &lt;Section&gt; се замества с наименованието на информационния обект от вид "сегмент", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000020" xml:space="preserve">
+    <value>Полето „{0}” трябва да съдържа точно {1} символа</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност, за който се отнася грешката. &lt;CharNumber&gt; се замества с точния брой символи, които може да съдържа обекта.</comment>
+  </data>
+  <data name="0006-000021" xml:space="preserve">
+    <value>Невалиден "ЕГН".</value>
+  </data>
+  <data name="0006-000022" xml:space="preserve">
+    <value>Невалиден "ЛНЧ".</value>
+  </data>
+  <data name="0006-000023" xml:space="preserve">
+    <value>Попълването на секцията „{0}” е задължително.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Section&gt; се замества с наименованието на информационния обект от вид "сегмент", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000024" xml:space="preserve">
+    <value>Невалиден "ЕИК/БУЛСТАТ".</value>
+  </data>
+  <data name="0006-000025" xml:space="preserve">
+    <value>Полето „{0}” трябва да съдържа валиден адрес на електронна поща.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000026" xml:space="preserve">
+    <value>„{0}” трябва да е от тип base64Binary.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", за който се отнася грешката.</comment>
+  </data>
+  <data name="0006-000027" xml:space="preserve">
+    <value>В "Контейнер за пренос" трябва да се включи поне един пренасян документ.</value>
+  </data>
+  <data name="0006-000028" xml:space="preserve">
+    <value>Документът "Грешки в съдържание на документ" трябва да съдържа поне една регистрирана грешка в съдържанието на проверявания документ.</value>
+  </data>
+  <data name="0006-000029" xml:space="preserve">
+    <value>Документът "Съобщение, че получаването не се потвърждава" трябва да включва поне една неуспешна проверка.</value>
+  </data>
+  <data name="0006-000030" xml:space="preserve">
+    <value>Полето „{0}” може да заема само валидни стойности от стандарта „{1}”.</value>
+    <comment>Терминът се визуализира с пълното си наименование, като &lt;Field&gt; се заменя с наименованието на информационния обект от вид "стойност", а &lt;Standard&gt; се замества с наименованието на приложимия в случая стандарт</comment>
+  </data>
+  <data name="0006-000031" xml:space="preserve">
+    <value>Административен орган</value>
+    <comment>Използва се за обозначаване на вид доставчик на електронни административни услуги. "Административен орган" е органът, който принадлежи към системата на изпълнителната власт, както и всеки носител на административни правомощия, овластен въз основа на закон.</comment>
+  </data>
+  <data name="0006-000032" xml:space="preserve">
+    <value>Лице, осъществяващо публични функции</value>
+    <comment>Използва се за обозначаване на вид доставчик на електронни административни услуги. "Лица, осъществяващи публични функции" са нотариусите, частните съдебни изпълнители, държавните и общинските учебни заведения, държавните и общинските лечебни заведения и други лица и организации, чрез които държавата упражнява своите функции и на които това е възложено със закон</comment>
+  </data>
+  <data name="0006-000033" xml:space="preserve">
+    <value>Организация, предоставящи обществени услуги</value>
+    <comment>Използва се за обозначаване на вид доставчик на електронни административни услуги. "Организация, предоставяща обществени услуги" е всяка организация, независимо от правната форма на учредяването й, която предоставя една или повече от следните услуги - образователни, здравни, водоснабдителни, канализационни, топлоснабдителни, електроснабдителни, газоснабдителни, телекомуникационни, пощенски или други подобни услуги, предоставени за задоволяване на обществени потребности, включително като търговска дейност, по повод на чието предоставяне могат да се извършват административни услуги.</comment>
+  </data>
+  <data name="0006-000035" xml:space="preserve">
+    <value>Започване предоставяне на услуга или изпълнението на процедура</value>
+  </data>
+  <data name="0006-000036" xml:space="preserve">
+    <value>Продължаване предоставянето на услугата или изпълнението на процедурата</value>
+  </data>
+  <data name="0006-000037" xml:space="preserve">
+    <value>Документ, постъпил във връзка с услугата или процедура, който не е отговор на запитване или друг документ от страна на администрацията</value>
+  </data>
+  <data name="0006-000038" xml:space="preserve">
+    <value>С архивна стойност</value>
+  </data>
+  <data name="0006-000039" xml:space="preserve">
+    <value>без архивна стойност</value>
+  </data>
+  <data name="0006-000040" xml:space="preserve">
+    <value>за оценка от експертна комисия</value>
+  </data>
+  <data name="0006-000041" xml:space="preserve">
+    <value>От постоянен тип</value>
+  </data>
+  <data name="0006-000042" xml:space="preserve">
+    <value>от променлив тип</value>
+  </data>
+  <data name="0006-000043" xml:space="preserve">
+    <value>Чрез потребителско име и парола</value>
+  </data>
+  <data name="0006-000044" xml:space="preserve">
+    <value>Чрез удостоверение за електронен подпис</value>
+  </data>
+  <data name="0006-000045" xml:space="preserve">
+    <value>Чрез директориен LDAP сървър</value>
+  </data>
+  <data name="0006-000046" xml:space="preserve">
+    <value>По друг начин</value>
+  </data>
+  <data name="0006-000047" xml:space="preserve">
+    <value>Изпълнена</value>
+    <comment>Обозначава "Изпълнен" статус на задача</comment>
+  </data>
+  <data name="0006-000048" xml:space="preserve">
+    <value>Неизпълнена</value>
+    <comment>Обозначава "Неизпълнен" статус на задача</comment>
+  </data>
+  <data name="0006-000049" xml:space="preserve">
+    <value>В изпълнение</value>
+    <comment>Обозначава "В изпълнение" статус на задача</comment>
+  </data>
+  <data name="0006-000050" xml:space="preserve">
+    <value>Документ, инициирал услуга или процедура в процес на изпълнение</value>
+    <comment>Означава видовете документи по отношение на процеса</comment>
+  </data>
+  <data name="0006-000051" xml:space="preserve">
+    <value>Документ, инициирал приключила услуга или процедура</value>
+    <comment>Означава видовете документи по отношение на процеса</comment>
+  </data>
+  <data name="0006-000052" xml:space="preserve">
+    <value>Изпратен документ в изчакване на отговор</value>
+    <comment>Означава видовете документи по отношение на процеса</comment>
+  </data>
+  <data name="0006-000053" xml:space="preserve">
+    <value>Документ с получен отговор</value>
+    <comment>Означава видовете документи по отношение на процеса</comment>
+  </data>
+  <data name="0006-000054" xml:space="preserve">
+    <value>Екземпляр за подписване</value>
+    <comment>Означава видовете документи по отношение на процеса</comment>
+  </data>
+  <data name="0006-000055" xml:space="preserve">
+    <value>Съгласен</value>
+  </data>
+  <data name="0006-000056" xml:space="preserve">
+    <value>Несъгласен</value>
+  </data>
+  <data name="0006-000057" xml:space="preserve">
+    <value>Прекратявам процедурата</value>
+  </data>
+  <data name="0006-000058" xml:space="preserve">
+    <value>За доработка</value>
+  </data>
+  <data name="0006-000059" xml:space="preserve">
+    <value>Липса на проблеми</value>
+  </data>
+  <data name="0006-000060" xml:space="preserve">
+    <value>Недостиг на ресурс</value>
+  </data>
+  <data name="0006-000061" xml:space="preserve">
+    <value>Външноведомствен проблем</value>
+  </data>
+  <data name="0006-000062" xml:space="preserve">
+    <value>Невъзможност за изпълнение</value>
+  </data>
+  <data name="0006-000063" xml:space="preserve">
+    <value>Върната за доработване</value>
+  </data>
+  <data name="0006-000072" xml:space="preserve">
+    <value>Не са посочени данни,  еднозначно идентифициращи чуждестранно юридическо лице.</value>
+  </data>
+  <data name="0006-000076" xml:space="preserve">
+    <value>Чрез електронна поща/уеб базирано приложение</value>
+  </data>
+  <data name="0006-000077" xml:space="preserve">
+    <value>На гише</value>
+  </data>
+  <data name="0006-000078" xml:space="preserve">
+    <value>На гише в общинска администрация</value>
+  </data>
+  <data name="0006-000079" xml:space="preserve">
+    <value>Чрез пощенски куриерски служби, на посочения адрес за кореспонденция</value>
+  </data>
+  <data name="0006-000080" xml:space="preserve">
+    <value>Чрез пощенски куриерски служби, на друг адрес</value>
+  </data>
+  <data name="0006-000081" xml:space="preserve">
+    <value>Чрез пощенски куриерски служби, пощенска кутия</value>
+  </data>
+  <data name="0006-000083" xml:space="preserve">
+    <value>Обикновена услуга</value>
+  </data>
+  <data name="0006-000084" xml:space="preserve">
+    <value>Бърза услуга</value>
+  </data>
+  <data name="0006-000085" xml:space="preserve">
+    <value>Експресна услуга</value>
+  </data>
+  <data name="0006-000086" xml:space="preserve">
+    <value>Полето „Вход” може да съдържа или максимум две цифри или една буква на кирилица.</value>
+  </data>
+  <data name="0006-000121" xml:space="preserve">
+    <value>Първоначално заявление за предоставяне на електронна административна услуга</value>
+  </data>
+  <data name="0006-000122" xml:space="preserve">
+    <value>Заявление за промяна или допълване на данни в първоначално подадено заявление</value>
+  </data>
+  <data name="0006-000123" xml:space="preserve">
+    <value>Заявление за отстраняване на нередовности или предоставяне на информация</value>
+  </data>
+  <data name="0006-000139" xml:space="preserve">
+    <value>Полето {0} трябва да съдържа число в интервала от  {1} до {2}.</value>
+  </data>
+  <data name="0006-000141" xml:space="preserve">
+    <value>Полето „{0}” може да заема само валидни стойности от полето „{1}” от пакета от данни „{2}”</value>
+    <comment>{0} - &lt;Field&gt; {1} - &lt;Data Pack Field&gt; {2} - &lt;Data Pack&gt;</comment>
+  </data>
+  <data name="0006-000158" xml:space="preserve">
+    <value>Поземлен имот</value>
+    <comment>Обозначава един от трите вида имот по смисъла на Закона за кадастъра</comment>
+  </data>
+  <data name="0006-000159" xml:space="preserve">
+    <value>Сграда, включително изградена в груб строеж</value>
+    <comment>Обозначава един от трите вида имот по смисъла на Закона за кадастъра</comment>
+  </data>
+  <data name="0006-000160" xml:space="preserve">
+    <value>Самостоятелен обект в сграда</value>
+    <comment>Обозначава един от трите вида имот по смисъла на Закона за кадастъра</comment>
+  </data>
+  <data name="R0492" xml:space="preserve">
+    <value>&lt;Field&gt; трябва да е от тип &lt;DataType&gt;.</value>
+  </data>
+  <data name="R0493" xml:space="preserve">
+    <value>Списъкът с елементи от тип &lt;ElementType&gt; трябва да съдържа поне един елемент.</value>
+  </data>
+  <data name="R0494" xml:space="preserve">
+    <value>В данните за класифициране на обект в раздел от класификационна схема трябва да се включи информация за извършилия класификация .</value>
+  </data>
+  <data name="R0495" xml:space="preserve">
+    <value>Не е посочен извършилият вписването на документ в официалния документен регистър</value>
+  </data>
+  <data name="R0496" xml:space="preserve">
+    <value>Полето &lt;Field&gt; не съдържа валидна дата. Дата трябва да е във формат &lt;DateFormat&gt;.</value>
+  </data>
+  <data name="R0736" xml:space="preserve">
+    <value>Невалидна структура на обекта съгласно XML дефиницията му, вписана в регистъра на информационните обекти</value>
+  </data>
+  <data name="R1214" xml:space="preserve">
+    <value>Заповед, представляваща административен акт, с която съответният едноличен компетентен административен орган, изрично и мотивирано отказва да издаде искания акт</value>
+  </data>
+  <data name="R1215" xml:space="preserve">
+    <value>Решение, представляващо административен акт, с който съответният колективен компетентен административен орган, изрично и мотивирано отказва да издаде искания акт</value>
+  </data>
+  <data name="R9072" xml:space="preserve">
+    <value>Нормална</value>
+    <comment>Обозначава тип обработка на услуга - нормална</comment>
+  </data>
+  <data name="R9073" xml:space="preserve">
+    <value>Бърза</value>
+    <comment>Обозначава тип обработка на услуга - бърза</comment>
+  </data>
+  <data name="R9074" xml:space="preserve">
+    <value>Експресна</value>
+    <comment>Обозначава  тип обработка на услуга - експресна</comment>
+  </data>
+</root>

@@ -1,0 +1,113 @@
+﻿Генерацията на класове от XSD дефинициите им с Xсд2Code се извършва по следния начин:
+
+1. Ако не е инсталиран плъгинът XSD2Code, той може да се свали от: <http://xsd2code.codeplex.com/>.
+	Да се използва версията описана във файла - XSD2CodeVersion.txt!
+2. Има възможност за изпълнението на генерацията само за един xsd файл чрез извикване на контекстното му меню и избор на "Run Xsd2Code generation".
+3. За автоматично генериране за всички xsd файлове може да се използва Power Shell скрипта - GenerateClasses.ps1. 
+Ако файл не е check-out-нат, то няма да се презапише! 
+	Необходимо е да се направи следната промяна преди изпълнението на скрипт, с цел ограничаване на грешките:
+		R-0035 - променя се schemaLocation на xmldsig-core-schema.xsd
+4. При генерацията се вземат настройките за генерация по следния метод:
+
+	Modified the Param Loading process to search for the Auto-generated Tag.
+	Added the concept of a defaults.xsd2code parameter file.
+	Added the concept of a <schemaName>.xsd.xsd2code parameter file per schema ( <schemaName>.xsd ).
+	Parameter loading process was modified as follows (all paths are local to the xsd file being processed):
+
+	If a <schemaName>.xsd.xsd2code parameter file for the schema named <schemaName>.xsd exists.
+		Then it is loaded and used for parameters. This in effect is a per schema override.
+	Else if an <output>.<languageExtension> such as <output>.cs or <output>.vb exists.
+		Then read its parameters. This is current behavior.
+	Else if a defaults.xsd2code file exist then use its parameters. This allows quick defaults per directory.
+	Else use the internal defaults.
+
+	This search order will only happen on the command line if a schema file is the single argument. 
+	Thus the behavior of the prior releases are preserved.
+
+	Added default defaults.xsd2code template named defaults.xsd2code.template which contains current default values.
+
+	В генерирания файл инструментът добява в коментар настройките, с които е бил генериран изхода. Тези настройки се имат предвид за <output>.cs. 
+
+5. Обяснение на някои параметри:
+		ExcludeIncludedTypes	: True
+			-- в изходния файл не се включват типовете от import директивите (те ще се генерират от собствените си xsd описания в отделни файлове)
+		GenerateXMLAttributes	: True
+			-- генерира атрибути за контрол на XML сериализацията на обект от класа
+		IncludeSerializeMethod	: True
+			-- генерира метод за сериализация на обект от класа
+		UseGenericBaseClass		: True
+			-- генерира класовете с директива за наследяване от базов клас 
+			-- (този клас се генерира във всеки файл и трябва да се премахне от всички без един, след което обновената дефиниция да се приложи във файла InformationObject.cs)
+			-- (във файла InformationObjectCustom.cs е частта от базовия клас, която е писана ръчно)
+		NameSpace				: TechnoLogica.Eservices.InformationObjects
+			-- всички генерирани класове за информационни обекти трябва да са в едно пространоство от имена (заради това, че се реферират и че са частични (partial) класове)
+		BaseClassName			: InformationObject
+			-- име на базовия клас. Трябва да е InformationObject 
+			-- (тъй като плъгина не си запомня стойността може да се остави стойността по подразбиране и с "Replace In Files" функцията на VS2010 да се коригира)
+		TargetFramework			: Net40
+			-- не е тествано с други платформи
+		CollectionObjectType	: List / Array
+			-- по подразбиране се използва стойността List, но в някои случаи, когато има полета byte[] не се генерира коректен код, тогава се използва Array
+			-- (за xmldsig-core-schema.xsd и 0009-000195_RealEstateAddressData.xsd се използва Array)
+		DisableDebug			: Тrue
+			-- действието е обратно (така се позволява дебъгването на кода)
+		EnableDataBinding		: True
+			-- базовият клас изпълнява System.ComponentModel.INotifyPropertyChanged, и всеки от класовете използва функционалността
+		EnableSummaryComment	: True
+			-- използват се коментари от xsd схемата за коментари на генерираните класове
+		GenerateCloneMethod		: True
+			-- генерира метод за клониране на обект от класа
+
+6. Възможно е да са се генерират няколко класове с едно и също име - ItemsChoiceType{n}, където n е число.
+	-- Това се случва за xmldsig-core-schema.designer.cs и segment_R-0162.designer.cs файловете. Коригира се като се зададат уникални имена 
+	-- (в xmldsig-core-schema.designer.cs класа се именува ItemsChoiceType3)
+7. След генерация на код файловете се правят следните промени:
+	R-0035 - променя се schemaLocation на xmldsig-core-schema.xsd
+	R-0051 - Променя се enum ItemChoiceType на ItemChoiceTypeIdentificationNum
+	R-0162 - Променя се enum ItemChoiceType на ItemChoiceTypeForeignEntityData
+	R-0296 - променя се името от ClassificationSchemeSection на ClassificationSchemeSectionBase
+	R-0332 - Променя се enum ItemChoiceType на ItemChoiceTypeSchemeAttr
+	R-0395 - Променя се enum ItemChoiceType на ItemChoiceTypeRegister
+	R-0491 - преименува се ClassificationSchemeSection1 към ClassificationSchemeSection
+	R-0729 - Променя се enum ItemChoiceType на ItemChoiceTypeCase
+	xmldsig-core-schema.designer.cs - променя се атрибутйт XmlTextAttribute SignatureValueType.Value на XmlElementAttribute
+
+8. Подменя се всяко срещане на: 
+				if ((itemsElementNameField.Equals(value) != true))
+                {
+                    this.itemsElementNameField = value;
+                    this.OnPropertyChanged("ItemsElementName");
+                }
+  с:
+                if ((this.itemsElementNameField != null))
+                {
+                    if ((itemsElementNameField.Equals(value) != true))
+                    {
+                        this.itemsElementNameField = value;
+                        this.OnPropertyChanged("ItemsElementName");
+                    }
+                }
+                else
+                {
+                    this.itemsElementNameField = value;
+                    this.OnPropertyChanged("ItemsElementName");
+                }
+Файловете, в които се среща са: 
+	xmldsig-core-schema.designer.cs  4 пъти
+    R-0162_ForeignEntityBasicData.designer.cs 1 път
+	EsoedDocument.designer.cs 3 пъти
+	RealEstateAddressDataLandOrUrbanPropertyAddress - 1 път
+
+
+9. Добавена е номерация в Enum-а ItemsChoiceTypeAddressData ( в противен случай потенциално може да бъде
+генериран невалиден XML):
+BuildingNumber = 4
+Entrance = 5,
+Floor = 6,
+LandPropertyArealName = 10,
+ResidentialComplex = 3,
+SeparateBuildingUnitFunctionalDesignationCode = 7,
+SeparateBuildingUnitFunctionalDesignationName = 8,
+SeparateBuildingUnitNumber = 9,
+StreetBoulevardSquare = 1,
+StreetBoulevardSquareNumber =2

@@ -1,0 +1,25 @@
+﻿<div>
+
+ <div>
+     <div class="span10 groups" data-bind="foreach: foodGroup.nomFoodGroups">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="checked: $data.selectedFoodGroup() !== null && $data.selectedFoodGroup() !== undefined" disabled/>
+                
+                <span class="span10" data-bind="text: code"></span>
+                <span class="span10" data-bind="text: shortName"></span>
+                <span class="span10" data-bind="text: name"></span>
+            </label>
+            <!-- ko with: $data.selectedFoodGroup -->
+                <!-- ko compose: { model: foodSubGroups , view: 'segments/babh/FoodSubGroups', area: 'Display'} -->
+                <!-- /ko -->
+         
+                <!-- ko compose: { model: foodItems , view: 'segments/babh/FoodItems', area: 'Display' } -->
+                <!-- /ko -->
+
+            <!-- /ko -->
+        </div>
+
+</div>
+
+</div>
+

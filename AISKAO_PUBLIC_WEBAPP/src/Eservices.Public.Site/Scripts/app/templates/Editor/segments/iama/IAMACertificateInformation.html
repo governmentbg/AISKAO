@@ -1,0 +1,29 @@
+﻿<div>
+    <div class="row">
+        <span class="span3 text-left">Номер на свидетелство:</span>
+        <input class="span9" type="text" data-bind="value: certificateNumber" />
+    </div>
+
+    <div class="row">
+        <span class="span3 text-left">Дата на издаване на свидетелство от ИАМА:</span>
+        <span class="input-append" data-bind="datepicker: certificateIssuedDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+            <input class="span3" data-format="dd.MM.yyyy" type="text" />
+            <span class="add-on btn btn-info">
+                <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+            </span>
+        </span>
+    </div>
+
+    <div class="row">
+        <span class="span3 text-left">Град на издаване:</span>
+        <span data-bind="attr: { 'class': certificateIssuingCityCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+            <select class="span9"
+                data-bind="options: certificateIssuingCityCode.nomCertificateIssuingCities,
+                        optionsText: 'name',
+                        value: certificateIssuingCityCode.selectedCertificateIssuingCity,
+                        attr: { 'class':  certificateIssuingCityCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                        enable: certificateIssuingCityCode.isLoaded()">
+            </select>
+        </span>
+    </div>
+</div>

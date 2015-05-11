@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1420" xmlns="http://ereg.egov.bg/segment/R-1420" xmlns:babhaogd="http://ereg.egov.bg/segment/R-1416" xmlns:babhaoat="http://ereg.egov.bg/segment/R-1418" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1416" schemaLocation="R-1416_BABHAnimalObjectGeneralData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1418" schemaLocation="R-1418_BABHAnimalObjectAnimalType.xsd" />
+  <xsd:complexType name="BABHAnimalObjectData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Характеристика на животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="BABHAnimalObjectGeneralData" type="babhaogd:BABHAnimalObjectGeneralData" minOccurs="0" />
+      <xsd:element name="BABHAnimalObjectAnimalTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="BABHAnimalObjectAnimalType" type="babhaoat:BABHAnimalObjectAnimalType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1114" xmlns="http://ereg.egov.bg/value/R-1114" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="ForageOperatorRegulationFulfillmentDeclaration">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Декларация на оператор във фуражния сектор за изпълнение на условията на Регламент (ЕО) № 183/2005</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:boolean" />
+  </xsd:simpleType>
+</xsd:schema>

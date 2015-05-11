@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000198"
+      xmlns="http://ereg.egov.bg/value/0008-000198"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+     <xsd:simpleType name="SendApplicationWithReceiptAcknowledgedMessage">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Изпращане на електронния документ и приложените към него документи заедно с документа „Потвърждаване за получаване”</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:boolean"/>
+    </xsd:simpleType>
+
+</xsd:schema>

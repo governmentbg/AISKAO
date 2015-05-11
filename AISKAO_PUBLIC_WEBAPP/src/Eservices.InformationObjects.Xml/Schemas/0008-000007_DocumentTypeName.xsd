@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000007"
+      xmlns="http://ereg.egov.bg/value/0008-000007"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="DocumentTypeName">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Наименование на документ, вписан в регистъра на информационните обекти</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:minLength value="1"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

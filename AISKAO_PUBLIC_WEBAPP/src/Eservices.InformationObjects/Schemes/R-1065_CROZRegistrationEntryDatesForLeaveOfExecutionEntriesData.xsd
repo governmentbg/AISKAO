@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1065" xmlns="http://ereg.egov.bg/segment/R-1065" xmlns:crozrecd="http://ereg.egov.bg/value/R-1061" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1061" schemaLocation="R-1061_CROZRegistrationEntryCreationDate.xsd" />
+  <xsd:complexType name="CROZRegistrationEntryDatesForLeaveOfExecutionEntriesData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за датите на регистрация на неархивираните вписвания за изоставяне на изпълнение</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZRegistrationEntryCreationDates" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CROZRegistrationEntryCreationDate" type="crozrecd:CROZRegistrationEntryCreationDate" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

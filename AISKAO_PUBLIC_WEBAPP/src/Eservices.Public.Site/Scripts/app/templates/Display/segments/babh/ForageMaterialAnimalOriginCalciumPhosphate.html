@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: forageFormBulkOrPackeds -->
+            <div class="span12" data-bind="foreach: forageFormBulkOrPacked">
+                <div class="row span12">
+                    <span class="span5 uneditable-input" data-bind="text: $parent.getForageFormBulkOrPackedName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+

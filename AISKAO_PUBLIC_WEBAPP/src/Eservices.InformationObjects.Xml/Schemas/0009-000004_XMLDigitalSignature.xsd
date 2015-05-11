@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000004"
+      xmlns="http://ereg.egov.bg/segment/0009-000004"
+      xmlns:ds="http://www.w3.org/2000/09/xmldsig#"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://www.w3.org/2000/09/xmldsig#" schemaLocation="xmldsig-core-schema.xsd"/>
+
+    <xsd:complexType name="XMLDigitalSignature">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Електронен подпис</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element ref="ds:Signature" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

@@ -1,0 +1,39 @@
+﻿<div>
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span>Промени тип на автор</span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" data-bind="foreach: authors.authorTypes">
+            <li>
+                <a href="#" data-bind="click: $parent.addAuthor.bind($parent), text: name"></a>
+            </li>
+        </ul>
+    </div>
+    <div data-bind="with: authors()[0]">
+        <!-- ko compose: { model: $data, view: 'segments/common/ElectronicStatementAuthor', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    </div>
+
+    <div class="btn-group">
+        <button class="btn dropdown-toggle" data-toggle="dropdown">
+            <span>Промени тип на получател</span>
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" data-bind="foreach: recipients.recipientTypes">
+            <li>
+                <a href="#" data-bind="click: $parent.addRecipient.bind($parent), text: name"></a>
+            </li>
+        </ul>
+    </div>
+    <div data-bind="with: recipients()[0]">
+        <!-- ko compose: { model: $data, view: 'segments/common/ElectronicServiceRecipient', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">В качеството на (на заявител спрямо получател):</span>
+            <input class="span9" type="text" data-bind="value: authorQuality" />
+        </label>
+    </div>
+</div>

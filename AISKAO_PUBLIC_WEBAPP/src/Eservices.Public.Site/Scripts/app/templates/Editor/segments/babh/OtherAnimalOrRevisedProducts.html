@@ -1,0 +1,36 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: otherProductTypes -->
+            <div class="controls-row">
+                <div class="span10" data-bind="foreach: otherProductType.nomOtherProductType">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.key, checked: $parent.otherProductType" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- /ko -->
+
+            <div class="span12" data-bind="with: otherOtherProductTypes">
+                <span class="span3 text-left">Други видове други странични животински продукти:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: otherOtherProductType.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addOtherOtherProductType, attr: { 'class': (otherOtherProductType.itemToAdd() && ko.utils.arrayIndexOf(otherOtherProductType(), otherOtherProductType.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }" class="btn btn-success disabled">Добави</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- ko with: otherOtherProductTypes -->
+    <!-- ko if: otherOtherProductType().length > 0 -->
+    Списък с други видове други странични животински продукти:
+    <!-- /ko -->
+    <div class="span6" data-bind="foreach: otherOtherProductType">
+        <span class="span3 text-left">Друг вид друг страничен животински продукт #<span data-bind="text: 1 + $index()"></span>:</span>
+        <span class="input-append">
+            <span class="span2 uneditable-input" data-bind="text: $data"></span>
+            <button class="btn btn-danger" data-bind="click: $parent.removeOtherOtherProductType.bind($parent)"><i class="icon-remove icon-white"></i></button>
+        </span>
+    </div>
+    <!-- /ko -->
+</div>

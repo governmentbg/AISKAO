@@ -1,0 +1,58 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за физическо лице</legend>
+
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Трите имена:</span>
+                    <span class="span3 uneditable-input" data-bind="text: firstName"></span>
+                </label>
+            </div>
+            <div class="controls-row">
+                <span class="span3 uneditable-input" data-bind="text: surname"></span>
+                <span class="span3 uneditable-input" data-bind="text: familyName"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Имена на латиница:</span>
+                    <span class="span3 uneditable-input" data-bind="text: firstNameLatin"></span>
+                </label>
+            </div>
+            <div class="controls-row">
+                <span class="span3 uneditable-input" data-bind="text: surnameLatin"></span>
+                <span class="span3 uneditable-input" data-bind="text: lastNameLatin"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Дата на раждане:</span>
+                    <span class="span uneditable-input" data-bind="formattedDate: birthDate">
+                    </span>
+                </label>
+            </div>
+            <div class="row">
+                <span class="span1 text-left">ЕГН:</span>
+                <span class="span5 uneditable-input" data-bind="text: egn"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Наименование на пол:</span>
+                    <span class="span3 uneditable-input" data-bind="text: genderName"></span>
+                </label>
+            </div>
+            <div class="row">
+                <span class="span3 text-left">Наименование на пол на латиница:</span>
+                <span class="span3 uneditable-input" data-bind="text: genderNameLatin"></span>
+            </div>
+        </div>
+    </fieldset>
+</div>

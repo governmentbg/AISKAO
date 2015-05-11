@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000289"
+      xmlns="http://ereg.egov.bg/value/0008-000289"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:stp="http://ereg.egov.bg/nomenclature/0007-000022"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/nomenclature/0007-000022" schemaLocation="0007-000022_RealEstateTypeNomenclature.xsd"/>
+
+    <xsd:simpleType name="RealEstateType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Вид на недвижим имот по чл. 23 ЗКИР</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="stp:RealEstateTypeNomenclature" />
+    </xsd:simpleType>
+
+</xsd:schema>

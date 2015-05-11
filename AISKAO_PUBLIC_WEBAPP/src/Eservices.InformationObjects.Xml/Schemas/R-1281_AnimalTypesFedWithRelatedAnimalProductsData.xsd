@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1281" xmlns="http://ereg.egov.bg/segment/R-1281" xmlns:atfwrap="http://ereg.egov.bg/value/R-1277" xmlns:oatfwrap="http://ereg.egov.bg/value/R-1279" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1277" schemaLocation="R-1277_AnimalTypeFedWithRelatedAnimalProduct.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1279" schemaLocation="R-1279_OtherAnimalTypeFedWithRelatedAnimalProduct.xsd" />
+  <xsd:complexType name="AnimalTypesFedWithRelatedAnimalProductsData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за видове животни, за изхранването на които са предназначени страничните животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 или фуражите, които ги съдържат</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="AnimalTypeFedWithRelatedAnimalProducts" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="AnimalTypeFedWithRelatedAnimalProduct" type="atfwrap:AnimalTypeFedWithRelatedAnimalProduct" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="OtherAnimalTypeFedWithRelatedAnimalProducts" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OtherAnimalTypeFedWithRelatedAnimalProduct" type="oatfwrap:OtherAnimalTypeFedWithRelatedAnimalProduct" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

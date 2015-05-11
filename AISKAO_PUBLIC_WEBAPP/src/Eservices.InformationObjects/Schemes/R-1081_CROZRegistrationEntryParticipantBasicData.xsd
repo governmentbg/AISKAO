@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1081" xmlns="http://ereg.egov.bg/segment/R-1081" xmlns:crozpic="http://ereg.egov.bg/value/R-1002" xmlns:crozpn="http://ereg.egov.bg/value/R-1004" xmlns:crozcn="http://ereg.egov.bg/value/R-1035" xmlns:pc="http://ereg.egov.bg/value/0008-000128" xmlns:ad="http://ereg.egov.bg/value/0008-000194" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_CROZParticipantIdentificationCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_CROZParticipantName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1035" schemaLocation="R-1035_CROZCityName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000128" schemaLocation="0008-000128_PostCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000194" schemaLocation="0008-000194_AddressDescription.xsd" />
+  <xsd:complexType name="CROZRegistrationEntryParticipantBasicData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Основни данни за участник във вписване в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZParticipantIdentificationCode" type="crozpic:CROZParticipantIdentificationCode" minOccurs="0" />
+      <xsd:element name="CROZParticipantName" type="crozpn:CROZParticipantName" minOccurs="0" />
+      <xsd:element name="CROZCityName" type="crozcn:CROZCityName" minOccurs="0" />
+      <xsd:element name="PostCode" type="pc:PostCode" minOccurs="0" />
+      <xsd:element name="AddressDescription" type="ad:AddressDescription" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

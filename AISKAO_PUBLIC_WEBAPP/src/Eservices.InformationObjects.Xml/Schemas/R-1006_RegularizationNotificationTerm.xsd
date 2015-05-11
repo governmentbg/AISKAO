@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1006" xmlns="http://ereg.egov.bg/value/R-1006" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="RegularizationNotificationTerm">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Срок за отстраняване на нередовност към заявена административна услуга</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:duration" />
+  </xsd:simpleType>
+</xsd:schema>

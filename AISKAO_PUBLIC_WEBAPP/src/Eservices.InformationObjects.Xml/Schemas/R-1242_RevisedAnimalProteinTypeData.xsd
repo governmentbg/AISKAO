@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1242" xmlns="http://ereg.egov.bg/segment/R-1242" xmlns:rapt="http://ereg.egov.bg/value/R-1240" xmlns:orap="http://ereg.egov.bg/value/R-1238" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1240" schemaLocation="R-1240_RevisedAnimalProteinType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1238" schemaLocation="R-1238_OtherRevisedAnimalProtein.xsd" />
+  <xsd:complexType name="RevisedAnimalProteinTypeData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за вид преработени животински протеини като странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="RevisedAnimalProteinTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="RevisedAnimalProteinType" type="rapt:RevisedAnimalProteinType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="OtherRevisedAnimalProteins" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="OtherRevisedAnimalProtein" type="orap:OtherRevisedAnimalProtein" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

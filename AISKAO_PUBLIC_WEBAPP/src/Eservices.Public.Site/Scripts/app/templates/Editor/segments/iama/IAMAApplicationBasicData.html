@@ -1,0 +1,23 @@
+﻿<div>
+    <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Editor', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за дирекция</legend>
+            <label class="row">
+                <span class="span3 text-left">Дирекция:</span>
+                <span data-bind="attr: { 'class': directorateCode.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                    <select class="span9"
+                        data-bind="options: directorateCode.nomDirectorates(),
+                                optionsText: 'nameBG',
+                                value: directorateCode.selectedDirectorate,
+                                attr: { 'class': directorateCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                                enable: directorateCode.nomDirectorates().length != 0">
+                    </select>
+                </span>
+            </label>
+    </fieldset>
+</div>

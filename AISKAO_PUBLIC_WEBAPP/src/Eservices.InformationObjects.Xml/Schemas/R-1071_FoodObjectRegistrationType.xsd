@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1071" xmlns="http://ereg.egov.bg/value/R-1071" xmlns:forn="http://ereg.egov.bg/nomenclature/R-1069" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1069" schemaLocation="R-1069_FoodObjectRegistrationNomenclature.xsd" />
+  <xsd:simpleType name="FoodObjectRegistrationType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид регистрация на обект за производство и търговия с храни</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="forn:FoodObjectRegistrationNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,13 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <!-- ko with: forageFormTypes -->
+            <div class="span12" data-bind="foreach: forageFormType">
+                <div class="row span12">
+                    <span class="span5 uneditable-input" data-bind="text: $parent.getForageFormTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

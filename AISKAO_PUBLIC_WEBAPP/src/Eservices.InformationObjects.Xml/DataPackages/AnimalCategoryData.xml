@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AnimalCategoryData xmlns="http://ereg.egov.bg/segment/R-1290" versionDate="2013-09-25">
+	<AnimalCategories>
+		<AnimalCategory>
+			<AnimalCategoryCode>1</AnimalCategoryCode>
+			<AnimalCategoryName>Първа група</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>2</AnimalCategoryCode>
+			<AnimalCategoryName>Втора група</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>3</AnimalCategoryCode>
+			<AnimalCategoryName>Трета група</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>4</AnimalCategoryCode>
+			<AnimalCategoryName>Промишлена</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>5</AnimalCategoryCode>
+			<AnimalCategoryName>Тип А</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>6</AnimalCategoryCode>
+			<AnimalCategoryName>Тип В</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>7</AnimalCategoryCode>
+			<AnimalCategoryName>Агроекологична</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>8</AnimalCategoryCode>
+			<AnimalCategoryName>Заден двор (лично стопанство)</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>9</AnimalCategoryCode>
+			<AnimalCategoryName>ИБС</AnimalCategoryName>
+		</AnimalCategory>
+		<AnimalCategory>
+			<AnimalCategoryCode>10</AnimalCategoryCode>
+			<AnimalCategoryName>ОЕЗ не подлежи на категоризация</AnimalCategoryName>
+		</AnimalCategory>
+	</AnimalCategories>
+</AnimalCategoryData>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000006"
+      xmlns="http://ereg.egov.bg/segment/0009-000006"
+      xmlns:egn="http://ereg.egov.bg/value/0008-000012"
+      xmlns:lnch="http://ereg.egov.bg/value/0008-000013"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000012" schemaLocation="0008-000012_EGN.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000013" schemaLocation="0008-000013_LNCh.xsd"/>
+
+
+    <xsd:complexType name="PersonIdentifier">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Идентификатор на физическо лице</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="EGN" type="egn:EGN"/>
+            <xsd:element name="LNCh" type="lnch:LNCh"/>
+        </xsd:choice>
+    </xsd:complexType>
+
+
+</xsd:schema>

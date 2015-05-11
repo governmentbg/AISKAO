@@ -1,0 +1,104 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ, вписан в РОС:</legend>
+        <div class="row">
+            <div class="span3">
+                <label class="row">
+                    <span class="span3 text-left">УРИ в регистъра на информационните обекти:</span>
+                </label>
+            </div>
+            <!--ko with: documentTypeURI-->
+            <div class="controls-row">
+                <input class="span4" type="text" data-bind="value: registerIndex" />
+                <input class="span5" type="text" data-bind="value: batchNumber" />
+            </div>
+            <!-- /ko -->
+        </div>
+
+        <div class="row">
+            <span class="span3 text-left">Тип на документ:</span>
+            <div class="row">
+                <input class="span9" type="text" data-bind="value: documentTypeName,  valueUpdate: 'afterkeydown'" />
+            </div>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Дата на получаване или подписване на документ:</span>
+                <span class="input-append" data-bind="datepicker: documentReceiptOrSigningDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+                    <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                    <span class="add-on btn btn-info">
+                        <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Детайли за административен адрес:</span>
+            <textarea name="textarea" class="span9" data-bind="value: propertyDetailData" />
+        </label>
+    </div>
+
+    <fieldset>
+        <legend>Длъжностно лице:</legend>
+        <div class="row">
+            <span class="span3">Тип длъжностно лице:</span>
+            <select class="span9" data-bind="options: official.nomOfficial,
+                                             optionsText: 'name',
+                                             value: official.selectedOfficial">
+            </select>
+        </div>
+        <div>
+            <!--ko if: official.selectedOfficial().key === "PersonNames" -->
+            <!-- ko with: official().personNames -->
+            <!-- ko compose: { model: $data, view: 'segments/common/PersonNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+            <!-- /ko -->
+            <!--/ko-->
+            <!--/ko-->
+        </div>
+
+        <div>
+            <!--ko if: official.selectedOfficial().key === "ForeignCitizenNames" -->
+            <!-- ko with: official().foreignCitizenNames -->
+            <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenNames', area: 'Editor', transition: 'entrance', keepScrollPosition: true} -->
+            <!-- /ko -->
+            <!-- /ko -->
+            <!--/ko-->
+        </div>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Електронен подпис</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Електронен подпис:</span>
+                <span class="uneditable-input span9" data-bind="text: xmlDigitalSignature"></span>
+            </label>
+        </div>
+    </fieldset>
+
+</div>

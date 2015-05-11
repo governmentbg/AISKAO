@@ -1,0 +1,74 @@
+﻿<div>
+    <!-- ko if: forageForTransportationByFormPlantOrigin.isChecked -->
+    <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormPlantOrigin.isChecked" />
+        <u>фуражни суровини от растителен произход</u></label>
+    <div data-bind="if: forageForTransportationByFormPlantOrigin.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormPlantOrigin, view: 'segments/babh/ForageForTransportationByFormPlantOrigin', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormAnimalOrigin.isChecked -->
+    <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormAnimalOrigin.isChecked" />
+        <u>Фуражни суровини от животински произход (категория 3 от Регламент (ЕО) № 1069/2009)</u></label>
+    <div data-bind="if: forageForTransportationByFormAnimalOrigin.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormAnimalOrigin, view: 'segments/babh/ForageForTransportationByFormAnimalOrigin', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormSupplement.isChecked -->
+     <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormSupplement.isChecked" />
+        <u>фуражни добавки</u></label>
+    <div data-bind="if: forageForTransportationByFormSupplement.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormSupplement, view: 'segments/babh/ForageForTransportationByFormSupplement', area: 'Display',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormPremix.isChecked -->
+    <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormPremix.isChecked" />
+        <u>премикси, изготвени на основата на фуражни добавки</u></label>
+    <div data-bind="if: forageForTransportationByFormPremix.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormPremix, view: 'segments/babh/ForageForTransportationByFormPremix', area: 'Display',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormCombined.isChecked -->
+    <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormCombined.isChecked" />
+        <u>комбинирани фуражи</u></label>
+    <div data-bind="if: forageForTransportationByFormCombined.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormCombined, view: 'segments/babh/ForageForTransportationByFormCombined', area: 'Display',transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormSpecialUse.isChecked -->
+    <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormSpecialUse.isChecked" />
+        <u>фуражи със специално предназначение</u></label>
+    <div data-bind="if: forageForTransportationByFormSpecialUse.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormSpecialUse, view: 'segments/babh/ForageForTransportationByFormSpecialUse', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+
+    <!-- ko if: forageForTransportationByFormMedical.isChecked -->
+     <label class="checkbox">
+        <input type="checkbox" disabled data-bind="checked: forageForTransportationByFormMedical.isChecked" />
+        <u>медикаментозни фуражи</u></label>
+    <div data-bind="if: forageForTransportationByFormMedical.isChecked">
+        <!-- ko compose: { model: forageForTransportationByFormMedical, view: 'segments/babh/ForageForTransportationByFormMedical', area: 'Display', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko-->
+    </div>
+    <!-- /ko-->
+</div>
+
+
+

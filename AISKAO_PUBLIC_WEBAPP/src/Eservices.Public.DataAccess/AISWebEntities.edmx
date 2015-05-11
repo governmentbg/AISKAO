@@ -1,0 +1,611 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="TechnoLogica.Eservices.Public.DataAccess.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="TechnoLogicaEservicesPublicDataAccessStoreContainer">
+          <EntitySet Name="WEB_ADM_INFORMATIONS" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_ADM_INFORMATIONS" store:Type="Tables" store:Schema="dbo" store:Name="WEB_ADM_INFORMATIONS">
+            <DefiningQuery>SELECT 
+      [WEB_ADM_INFORMATIONS].[ID] AS [ID], 
+      [WEB_ADM_INFORMATIONS].[CODE] AS [CODE], 
+      [WEB_ADM_INFORMATIONS].[NAME] AS [NAME], 
+      [WEB_ADM_INFORMATIONS].[ADDRESS] AS [ADDRESS], 
+      [WEB_ADM_INFORMATIONS].[EMAIL] AS [EMAIL], 
+      [WEB_ADM_INFORMATIONS].[WEB_SITE] AS [WEB_SITE], 
+      [WEB_ADM_INFORMATIONS].[PHONE] AS [PHONE], 
+      [WEB_ADM_INFORMATIONS].[MOBILE] AS [MOBILE], 
+      [WEB_ADM_INFORMATIONS].[FAX] AS [FAX], 
+      [WEB_ADM_INFORMATIONS].[LOGO_CONTENT_TYPE] AS [LOGO_CONTENT_TYPE], 
+      [WEB_ADM_INFORMATIONS].[LOGO] AS [LOGO], 
+      [WEB_ADM_INFORMATIONS].[BULSTAT] AS [BULSTAT], 
+      [WEB_ADM_INFORMATIONS].[USER_ID] AS [USER_ID]
+      FROM [dbo].[WEB_ADM_INFORMATIONS] AS [WEB_ADM_INFORMATIONS]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_SRVC_INF_BIT_TYPES" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_INF_BIT_TYPES" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WEB_SRVC_TYPE_INF_BITS" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_INF_BITS" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WEB_SRVC_TYPE_PUBLIC_INFO" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_PUBLIC_INFO" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="WEB_CASE_OFFICIAL_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_CASE_OFFICIAL_DOCUMENTS_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+            <DefiningQuery>SELECT 
+      [WEB_CASE_OFFICIAL_DOCUMENTS_V].[ID] AS [ID], 
+      [WEB_CASE_OFFICIAL_DOCUMENTS_V].[DOCUMENT_ID] AS [DOCUMENT_ID], 
+      [WEB_CASE_OFFICIAL_DOCUMENTS_V].[INITIAL_DOCUMENT_ID] AS [INITIAL_DOCUMENT_ID], 
+      [WEB_CASE_OFFICIAL_DOCUMENTS_V].[SEQUENCE_NUMBER] AS [SEQUENCE_NUMBER]
+      FROM [dbo].[WEB_CASE_OFFICIAL_DOCUMENTS_V] AS [WEB_CASE_OFFICIAL_DOCUMENTS_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_E_SERVICE_STATUS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_E_SERVICE_STATUS_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_E_SERVICE_STATUS_V">
+            <DefiningQuery>SELECT 
+      [WEB_E_SERVICE_STATUS_V].[SERVICE_ID] AS [SERVICE_ID], 
+      [WEB_E_SERVICE_STATUS_V].[ACTUAL_START_DATE] AS [ACTUAL_START_DATE], 
+      [WEB_E_SERVICE_STATUS_V].[ACTUAL_COMPLETION_DATE] AS [ACTUAL_COMPLETION_DATE], 
+      [WEB_E_SERVICE_STATUS_V].[STAGE_NAME] AS [STAGE_NAME], 
+      [WEB_E_SERVICE_STATUS_V].[STAGE_STATUS] AS [STAGE_STATUS], 
+      [WEB_E_SERVICE_STATUS_V].[ORDER_SEQ] AS [ORDER_SEQ]
+      FROM [dbo].[WEB_E_SERVICE_STATUS_V] AS [WEB_E_SERVICE_STATUS_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_REGISTERED_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_REGISTERED_DOCUMENTS_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_REGISTERED_DOCUMENTS_V">
+            <DefiningQuery>SELECT 
+      [WEB_REGISTERED_DOCUMENTS_V].[ID] AS [ID], 
+      [WEB_REGISTERED_DOCUMENTS_V].[NAME] AS [NAME], 
+      [WEB_REGISTERED_DOCUMENTS_V].[DOCUMENT_TYPE_ID] AS [DOCUMENT_TYPE_ID], 
+      [WEB_REGISTERED_DOCUMENTS_V].[DOCUMENT_TYPE] AS [DOCUMENT_TYPE], 
+      [WEB_REGISTERED_DOCUMENTS_V].[CONTENT_ID] AS [CONTENT_ID], 
+      [WEB_REGISTERED_DOCUMENTS_V].[CONTENT_TYPE] AS [CONTENT_TYPE], 
+      [WEB_REGISTERED_DOCUMENTS_V].[CONTENT_MIME_TYPE] AS [CONTENT_MIME_TYPE], 
+      [WEB_REGISTERED_DOCUMENTS_V].[IS_XML_DOC] AS [IS_XML_DOC], 
+      [WEB_REGISTERED_DOCUMENTS_V].[TRANSPORT_TYPE] AS [TRANSPORT_TYPE], 
+      [WEB_REGISTERED_DOCUMENTS_V].[CREATED_ON] AS [CREATED_ON], 
+      [WEB_REGISTERED_DOCUMENTS_V].[CREATED_BY] AS [CREATED_BY], 
+      [WEB_REGISTERED_DOCUMENTS_V].[REGISTERED_ON] AS [REGISTERED_ON], 
+      [WEB_REGISTERED_DOCUMENTS_V].[REGISTERED_BY] AS [REGISTERED_BY], 
+      [WEB_REGISTERED_DOCUMENTS_V].[URI] AS [URI], 
+      [WEB_REGISTERED_DOCUMENTS_V].[ACCESS_IDENTIFIER] AS [ACCESS_IDENTIFIER], 
+      [WEB_REGISTERED_DOCUMENTS_V].[SERVICE_TYPE_ID] AS [SERVICE_TYPE_ID]
+      FROM [dbo].[WEB_REGISTERED_DOCUMENTS_V] AS [WEB_REGISTERED_DOCUMENTS_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_SERVICE_STAGES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SERVICE_STAGES_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_SERVICE_STAGES_V">
+            <DefiningQuery>SELECT 
+      [WEB_SERVICE_STAGES_V].[SERVICE_ID] AS [SERVICE_ID], 
+      [WEB_SERVICE_STAGES_V].[TASK_NAME] AS [TASK_NAME], 
+      [WEB_SERVICE_STAGES_V].[ACTUAL_START_DATE] AS [ACTUAL_START_DATE], 
+      [WEB_SERVICE_STAGES_V].[ACTUAL_COMPLETION_DATE] AS [ACTUAL_COMPLETION_DATE], 
+      [WEB_SERVICE_STAGES_V].[STAGE_NAME] AS [STAGE_NAME], 
+      [WEB_SERVICE_STAGES_V].[INCLUDED_ON] AS [INCLUDED_ON], 
+      [WEB_SERVICE_STAGES_V].[STAGE_STATUS] AS [STAGE_STATUS]
+      FROM [dbo].[WEB_SERVICE_STAGES_V] AS [WEB_SERVICE_STAGES_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_SERVICE_TYPES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SERVICE_TYPES_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_SERVICE_TYPES_V">
+            <DefiningQuery>SELECT 
+      [WEB_SERVICE_TYPES_V].[ID] AS [ID], 
+      [WEB_SERVICE_TYPES_V].[URI] AS [URI], 
+      [WEB_SERVICE_TYPES_V].[NAME] AS [NAME], 
+      [WEB_SERVICE_TYPES_V].[TERM] AS [TERM], 
+      [WEB_SERVICE_TYPES_V].[DESCRIPTION] AS [DESCRIPTION], 
+      [WEB_SERVICE_TYPES_V].[RESPONSIBLE] AS [RESPONSIBLE], 
+      [WEB_SERVICE_TYPES_V].[INIT_DOCUMENT_TYPE_URI] AS [INIT_DOCUMENT_TYPE_URI], 
+      [WEB_SERVICE_TYPES_V].[INITIATING_DOC_TYPE] AS [INITIATING_DOC_TYPE], 
+      [WEB_SERVICE_TYPES_V].[ROOT_XSD_ELEMENT_NAME] AS [ROOT_XSD_ELEMENT_NAME]
+      FROM [dbo].[WEB_SERVICE_TYPES_V] AS [WEB_SERVICE_TYPES_V]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="WEB_USERS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_USERS_V" store:Type="Views" store:Schema="dbo" store:Name="WEB_USERS_V">
+            <DefiningQuery>SELECT 
+      [WEB_USERS_V].[ID] AS [ID], 
+      [WEB_USERS_V].[NAME] AS [NAME]
+      FROM [dbo].[WEB_USERS_V] AS [WEB_USERS_V]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES" Association="TechnoLogica.Eservices.Public.DataAccess.Store.FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+            <End Role="WEB_SRVC_INF_BIT_TYPES" EntitySet="WEB_SRVC_INF_BIT_TYPES" />
+            <End Role="WEB_SRVC_TYPE_INF_BITS" EntitySet="WEB_SRVC_TYPE_INF_BITS" />
+          </AssociationSet>
+        </EntityContainer>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_ADM_INFORMATIONS' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_ADM_INFORMATIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NAME" Type="nvarchar" MaxLength="500" />
+          <Property Name="ADDRESS" Type="nvarchar" MaxLength="250" />
+          <Property Name="EMAIL" Type="nvarchar" MaxLength="250" />
+          <Property Name="WEB_SITE" Type="nvarchar" MaxLength="250" />
+          <Property Name="PHONE" Type="nvarchar" MaxLength="50" />
+          <Property Name="MOBILE" Type="nvarchar" MaxLength="50" />
+          <Property Name="FAX" Type="nvarchar" MaxLength="50" />
+          <Property Name="LOGO_CONTENT_TYPE" Type="nvarchar" MaxLength="50" />
+          <Property Name="LOGO" Type="varbinary(max)" />
+          <Property Name="BULSTAT" Type="nchar" MaxLength="10" />
+          <Property Name="USER_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_INF_BIT_TYPES">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Name="CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="NAME" Type="nvarchar" Nullable="false" MaxLength="250" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_TYPE_INF_BITS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="SERVICE_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="SERVICE_INF_BIT_TYPE_CODE" Type="nvarchar" Nullable="false" MaxLength="100" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="APPEARANCE_ORDER" Type="int" Nullable="false" />
+          <Property Name="CREATED_ON" Type="datetime" Nullable="false" />
+          <Property Name="CREATED_BY" Type="int" Nullable="false" />
+          <Property Name="LAST_MODIFIED_ON" Type="datetime" />
+          <Property Name="LAST_MODIFIED_BY" Type="int" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_TYPE_PUBLIC_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="COMPETENT_AUTHORITY" Type="nvarchar(max)" />
+          <Property Name="APPLICANT" Type="nvarchar(max)" />
+          <Property Name="PAYMENT_AND_TERM_DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="SERVICE_RESPONSIBLE" Type="nvarchar(max)" />
+          <Property Name="REFUSAL_APPEAL_PROCEDURE_DESCR" Type="nvarchar(max)" />
+          <Property Name="RESULT_DESCRIPTION" Type="nvarchar(max)" />
+          <Property Name="IS_PUBLIC" Type="bit" Nullable="false" />
+          <Property Name="CREATED_ON" Type="datetime" Nullable="false" />
+          <Property Name="CREATED_BY" Type="int" Nullable="false" />
+          <Property Name="LAST_MODIFIED_ON" Type="datetime" />
+          <Property Name="LAST_MODIFIED_BY" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_CASE_OFFICIAL_DOCUMENTS_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="DOCUMENT_ID" Type="int" />
+          <Property Name="INITIAL_DOCUMENT_ID" Type="int" Nullable="false" />
+          <Property Name="SEQUENCE_NUMBER" Type="int" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_E_SERVICE_STATUS_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_E_SERVICE_STATUS_V">
+          <Key>
+            <PropertyRef Name="SERVICE_ID" />
+            <PropertyRef Name="STAGE_NAME" />
+          </Key>
+          <Property Name="SERVICE_ID" Type="int" Nullable="false" />
+          <Property Name="ACTUAL_START_DATE" Type="datetime" />
+          <Property Name="ACTUAL_COMPLETION_DATE" Type="datetime" />
+          <Property Name="STAGE_NAME" Type="nvarchar" MaxLength="500" Nullable="false" />
+          <Property Name="STAGE_STATUS" Type="int" Nullable="false" />
+          <Property Name="ORDER_SEQ" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_REGISTERED_DOCUMENTS_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_REGISTERED_DOCUMENTS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="DOCUMENT_TYPE_ID" Type="int" Nullable="false" />
+          <Property Name="DOCUMENT_TYPE" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="CONTENT_ID" Type="int" Nullable="false" />
+          <Property Name="CONTENT_TYPE" Type="int" Nullable="false" />
+          <Property Name="CONTENT_MIME_TYPE" Type="varchar" MaxLength="100" />
+          <Property Name="IS_XML_DOC" Type="int" Nullable="false" />
+          <Property Name="TRANSPORT_TYPE" Type="nvarchar" MaxLength="500" />
+          <Property Name="CREATED_ON" Type="datetime2" Nullable="false" />
+          <Property Name="CREATED_BY" Type="nvarchar(max)" />
+          <Property Name="REGISTERED_ON" Type="datetime2" Nullable="false" />
+          <Property Name="REGISTERED_BY" Type="nvarchar(max)" />
+          <Property Name="URI" Type="varchar" MaxLength="72" />
+          <Property Name="ACCESS_IDENTIFIER" Type="nvarchar(max)" />
+          <Property Name="SERVICE_TYPE_ID" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_SERVICE_STAGES_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_SERVICE_STAGES_V">
+          <Key>
+            <PropertyRef Name="SERVICE_ID" />
+            <PropertyRef Name="STAGE_NAME" />
+          </Key>
+          <Property Name="SERVICE_ID" Type="int" Nullable="false" />
+          <Property Name="TASK_NAME" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="ACTUAL_START_DATE" Type="datetime" />
+          <Property Name="ACTUAL_COMPLETION_DATE" Type="datetime" />
+          <Property Name="STAGE_NAME" Type="nvarchar" Nullable="false" MaxLength="500" />
+          <Property Name="INCLUDED_ON" Type="datetime" Nullable="false" />
+          <Property Name="STAGE_STATUS" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_SERVICE_TYPES_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_SERVICE_TYPES_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="URI" Type="nvarchar(max)" />
+          <Property Name="NAME" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="TERM" Type="int" Nullable="false" />
+          <Property Name="DESCRIPTION" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="RESPONSIBLE" Type="nvarchar(max)" />
+          <Property Name="INIT_DOCUMENT_TYPE_URI" Type="nvarchar" MaxLength="201" />
+          <Property Name="INITIATING_DOC_TYPE" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ROOT_XSD_ELEMENT_NAME" Type="nvarchar(max)" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'AISKAO.dbo.WEB_USERS_V' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="WEB_USERS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="NAME" Type="nvarchar(max)" />
+        </EntityType>
+        <Association Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+          <End Role="WEB_SRVC_INF_BIT_TYPES" Type="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_INF_BIT_TYPES" Multiplicity="1" />
+          <End Role="WEB_SRVC_TYPE_INF_BITS" Type="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_SRVC_TYPE_INF_BITS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WEB_SRVC_INF_BIT_TYPES">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="WEB_SRVC_TYPE_INF_BITS">
+              <PropertyRef Name="SERVICE_INF_BIT_TYPE_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="WEB_GET_DOC_CONTENT" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CONTENT_ID" Type="int" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="TechnoLogica.Eservices.Public.DataAccess" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="AISWebEntities" p1:LazyLoadingEnabled="true">
+          <FunctionImport Name="WEB_GET_DOC_CONTENT" ReturnType="Collection(String)">
+          <Parameter Name="CONTENT_ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="WEB_ADM_INFORMATIONS" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_ADM_INFORMATIONS" />
+          <EntitySet Name="WEB_SRVC_INF_BIT_TYPES" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_INF_BIT_TYPES" />
+          <EntitySet Name="WEB_SRVC_TYPE_INF_BITS" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_INF_BITS" />
+          <EntitySet Name="WEB_SRVC_TYPE_PUBLIC_INFO" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_PUBLIC_INFO" />
+          <EntitySet Name="WEB_CASE_OFFICIAL_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_CASE_OFFICIAL_DOCUMENTS_V" />
+          <EntitySet Name="WEB_E_SERVICE_STATUS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_E_SERVICE_STATUS_V" />
+          <EntitySet Name="WEB_REGISTERED_DOCUMENTS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_REGISTERED_DOCUMENTS_V" />
+          <EntitySet Name="WEB_SERVICE_STAGES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_STAGES_V" />
+          <EntitySet Name="WEB_SERVICE_TYPES_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_TYPES_V" />
+          <EntitySet Name="WEB_USERS_V" EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_USERS_V" />
+          <AssociationSet Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES" Association="TechnoLogica.Eservices.Public.DataAccess.FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+            <End Role="WEB_SRVC_INF_BIT_TYPES" EntitySet="WEB_SRVC_INF_BIT_TYPES" />
+            <End Role="WEB_SRVC_TYPE_INF_BITS" EntitySet="WEB_SRVC_TYPE_INF_BITS" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="WEB_ADM_INFORMATIONS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="CODE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ADDRESS" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="EMAIL" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="WEB_SITE" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PHONE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="MOBILE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="FAX" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LOGO_CONTENT_TYPE" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="Binary" Name="LOGO" MaxLength="Max" FixedLength="false" />
+          <Property Type="String" Name="BULSTAT" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="Int32" Name="USER_ID" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_INF_BIT_TYPES">
+          <Key>
+            <PropertyRef Name="CODE" />
+          </Key>
+          <Property Type="String" Name="CODE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WEB_SRVC_TYPE_INF_BITS" Relationship="TechnoLogica.Eservices.Public.DataAccess.FK_SRV_TYPE_INF_BITS_BIT_TYPES" FromRole="WEB_SRVC_INF_BIT_TYPES" ToRole="WEB_SRVC_TYPE_INF_BITS" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_TYPE_INF_BITS">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="SERVICE_TYPE_ID" Nullable="false" />
+          <Property Type="String" Name="SERVICE_INF_BIT_TYPE_CODE" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="APPEARANCE_ORDER" Nullable="false" />
+          <Property Type="DateTime" Name="CREATED_ON" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CREATED_BY" Nullable="false" />
+          <Property Type="DateTime" Name="LAST_MODIFIED_ON" Precision="3" />
+          <Property Type="Int32" Name="LAST_MODIFIED_BY" />
+          <NavigationProperty Name="WEB_SRVC_INF_BIT_TYPES" Relationship="TechnoLogica.Eservices.Public.DataAccess.FK_SRV_TYPE_INF_BITS_BIT_TYPES" FromRole="WEB_SRVC_TYPE_INF_BITS" ToRole="WEB_SRVC_INF_BIT_TYPES" />
+        </EntityType>
+        <EntityType Name="WEB_SRVC_TYPE_PUBLIC_INFO">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="COMPETENT_AUTHORITY" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="APPLICANT" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PAYMENT_AND_TERM_DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SERVICE_RESPONSIBLE" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="REFUSAL_APPEAL_PROCEDURE_DESCR" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RESULT_DESCRIPTION" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="IS_PUBLIC" Nullable="false" />
+          <Property Type="DateTime" Name="CREATED_ON" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="CREATED_BY" Nullable="false" />
+          <Property Type="DateTime" Name="LAST_MODIFIED_ON" Precision="3" />
+          <Property Type="Int32" Name="LAST_MODIFIED_BY" />
+        </EntityType>
+        <EntityType Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="Int32" Name="DOCUMENT_ID" />
+          <Property Type="Int32" Name="INITIAL_DOCUMENT_ID" Nullable="false" />
+          <Property Type="Int32" Name="SEQUENCE_NUMBER" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WEB_E_SERVICE_STATUS_V">
+          <Key>
+            <PropertyRef Name="SERVICE_ID" />
+            <PropertyRef Name="STAGE_NAME" />
+          </Key>
+          <Property Type="Int32" Name="SERVICE_ID" Nullable="false" />
+          <Property Type="DateTime" Name="ACTUAL_START_DATE" Precision="3" />
+          <Property Type="DateTime" Name="ACTUAL_COMPLETION_DATE" Precision="3" />
+          <Property Type="String" Name="STAGE_NAME" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Type="Int32" Name="STAGE_STATUS" Nullable="false" />
+          <Property Type="Int32" Name="ORDER_SEQ" />
+        </EntityType>
+        <EntityType Name="WEB_REGISTERED_DOCUMENTS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="DOCUMENT_TYPE_ID" Nullable="false" />
+          <Property Type="String" Name="DOCUMENT_TYPE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CONTENT_ID" Nullable="false" />
+          <Property Type="Int32" Name="CONTENT_TYPE" Nullable="false" />
+          <Property Type="String" Name="CONTENT_MIME_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="IS_XML_DOC" Nullable="false" />
+          <Property Type="String" Name="TRANSPORT_TYPE" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="CREATED_ON" Nullable="false" Precision="7" />
+          <Property Type="String" Name="CREATED_BY" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="REGISTERED_ON" Nullable="false" Precision="7" />
+          <Property Type="String" Name="REGISTERED_BY" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="URI" MaxLength="72" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ACCESS_IDENTIFIER" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="SERVICE_TYPE_ID" />
+        </EntityType>
+        <EntityType Name="WEB_SERVICE_STAGES_V">
+          <Key>
+            <PropertyRef Name="SERVICE_ID" />
+            <PropertyRef Name="STAGE_NAME" />
+          </Key>
+          <Property Type="Int32" Name="SERVICE_ID" Nullable="false" />
+          <Property Type="String" Name="TASK_NAME" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="ACTUAL_START_DATE" Precision="3" />
+          <Property Type="DateTime" Name="ACTUAL_COMPLETION_DATE" Precision="3" />
+          <Property Type="String" Name="STAGE_NAME" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="INCLUDED_ON" Nullable="false" Precision="3" />
+          <Property Type="Int32" Name="STAGE_STATUS" />
+        </EntityType>
+        <EntityType Name="WEB_SERVICE_TYPES_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="URI" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="NAME" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="TERM" Nullable="false" />
+          <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="RESPONSIBLE" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="INIT_DOCUMENT_TYPE_URI" MaxLength="201" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="INITIATING_DOC_TYPE" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ROOT_XSD_ELEMENT_NAME" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="WEB_USERS_V">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="NAME" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <Association Name="FK_SRV_TYPE_INF_BITS_BIT_TYPES">
+          <End Type="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_INF_BIT_TYPES" Role="WEB_SRVC_INF_BIT_TYPES" Multiplicity="1" />
+          <End Type="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_INF_BITS" Role="WEB_SRVC_TYPE_INF_BITS" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WEB_SRVC_INF_BIT_TYPES">
+              <PropertyRef Name="CODE" />
+            </Principal>
+            <Dependent Role="WEB_SRVC_TYPE_INF_BITS">
+              <PropertyRef Name="SERVICE_INF_BIT_TYPE_CODE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="TechnoLogicaEservicesPublicDataAccessStoreContainer" CdmEntityContainer="AISWebEntities">
+          <FunctionImportMapping FunctionImportName="WEB_GET_DOC_CONTENT" FunctionName="TechnoLogica.Eservices.Public.DataAccess.Store.WEB_GET_DOC_CONTENT" />
+          <EntitySetMapping Name="WEB_ADM_INFORMATIONS">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_ADM_INFORMATIONS">
+              <MappingFragment StoreEntitySet="WEB_ADM_INFORMATIONS">
+                <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+                <ScalarProperty Name="BULSTAT" ColumnName="BULSTAT" />
+                <ScalarProperty Name="LOGO" ColumnName="LOGO" />
+                <ScalarProperty Name="LOGO_CONTENT_TYPE" ColumnName="LOGO_CONTENT_TYPE" />
+                <ScalarProperty Name="FAX" ColumnName="FAX" />
+                <ScalarProperty Name="MOBILE" ColumnName="MOBILE" />
+                <ScalarProperty Name="PHONE" ColumnName="PHONE" />
+                <ScalarProperty Name="WEB_SITE" ColumnName="WEB_SITE" />
+                <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+                <ScalarProperty Name="ADDRESS" ColumnName="ADDRESS" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_SRVC_INF_BIT_TYPES">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_INF_BIT_TYPES">
+              <MappingFragment StoreEntitySet="WEB_SRVC_INF_BIT_TYPES">
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_SRVC_TYPE_INF_BITS">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_INF_BITS">
+              <MappingFragment StoreEntitySet="WEB_SRVC_TYPE_INF_BITS">
+                <ScalarProperty Name="LAST_MODIFIED_BY" ColumnName="LAST_MODIFIED_BY" />
+                <ScalarProperty Name="LAST_MODIFIED_ON" ColumnName="LAST_MODIFIED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="APPEARANCE_ORDER" ColumnName="APPEARANCE_ORDER" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="SERVICE_INF_BIT_TYPE_CODE" ColumnName="SERVICE_INF_BIT_TYPE_CODE" />
+                <ScalarProperty Name="SERVICE_TYPE_ID" ColumnName="SERVICE_TYPE_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_SRVC_TYPE_PUBLIC_INFO">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_PUBLIC_INFO">
+              <MappingFragment StoreEntitySet="WEB_SRVC_TYPE_PUBLIC_INFO">
+                <ScalarProperty Name="LAST_MODIFIED_BY" ColumnName="LAST_MODIFIED_BY" />
+                <ScalarProperty Name="LAST_MODIFIED_ON" ColumnName="LAST_MODIFIED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="IS_PUBLIC" ColumnName="IS_PUBLIC" />
+                <ScalarProperty Name="RESULT_DESCRIPTION" ColumnName="RESULT_DESCRIPTION" />
+                <ScalarProperty Name="REFUSAL_APPEAL_PROCEDURE_DESCR" ColumnName="REFUSAL_APPEAL_PROCEDURE_DESCR" />
+                <ScalarProperty Name="SERVICE_RESPONSIBLE" ColumnName="SERVICE_RESPONSIBLE" />
+                <ScalarProperty Name="PAYMENT_AND_TERM_DESCRIPTION" ColumnName="PAYMENT_AND_TERM_DESCRIPTION" />
+                <ScalarProperty Name="APPLICANT" ColumnName="APPLICANT" />
+                <ScalarProperty Name="COMPETENT_AUTHORITY" ColumnName="COMPETENT_AUTHORITY" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_CASE_OFFICIAL_DOCUMENTS_V">
+              <MappingFragment StoreEntitySet="WEB_CASE_OFFICIAL_DOCUMENTS_V">
+                <ScalarProperty Name="SEQUENCE_NUMBER" ColumnName="SEQUENCE_NUMBER" />
+                <ScalarProperty Name="INITIAL_DOCUMENT_ID" ColumnName="INITIAL_DOCUMENT_ID" />
+                <ScalarProperty Name="DOCUMENT_ID" ColumnName="DOCUMENT_ID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_E_SERVICE_STATUS_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_E_SERVICE_STATUS_V">
+              <MappingFragment StoreEntitySet="WEB_E_SERVICE_STATUS_V">
+                <ScalarProperty Name="ORDER_SEQ" ColumnName="ORDER_SEQ" />
+                <ScalarProperty Name="STAGE_STATUS" ColumnName="STAGE_STATUS" />
+                <ScalarProperty Name="STAGE_NAME" ColumnName="STAGE_NAME" />
+                <ScalarProperty Name="ACTUAL_COMPLETION_DATE" ColumnName="ACTUAL_COMPLETION_DATE" />
+                <ScalarProperty Name="ACTUAL_START_DATE" ColumnName="ACTUAL_START_DATE" />
+                <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_REGISTERED_DOCUMENTS_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_REGISTERED_DOCUMENTS_V">
+              <MappingFragment StoreEntitySet="WEB_REGISTERED_DOCUMENTS_V">
+                <ScalarProperty Name="SERVICE_TYPE_ID" ColumnName="SERVICE_TYPE_ID" />
+                <ScalarProperty Name="ACCESS_IDENTIFIER" ColumnName="ACCESS_IDENTIFIER" />
+                <ScalarProperty Name="URI" ColumnName="URI" />
+                <ScalarProperty Name="REGISTERED_BY" ColumnName="REGISTERED_BY" />
+                <ScalarProperty Name="REGISTERED_ON" ColumnName="REGISTERED_ON" />
+                <ScalarProperty Name="CREATED_BY" ColumnName="CREATED_BY" />
+                <ScalarProperty Name="CREATED_ON" ColumnName="CREATED_ON" />
+                <ScalarProperty Name="TRANSPORT_TYPE" ColumnName="TRANSPORT_TYPE" />
+                <ScalarProperty Name="IS_XML_DOC" ColumnName="IS_XML_DOC" />
+                <ScalarProperty Name="CONTENT_MIME_TYPE" ColumnName="CONTENT_MIME_TYPE" />
+                <ScalarProperty Name="CONTENT_TYPE" ColumnName="CONTENT_TYPE" />
+                <ScalarProperty Name="CONTENT_ID" ColumnName="CONTENT_ID" />
+                <ScalarProperty Name="DOCUMENT_TYPE" ColumnName="DOCUMENT_TYPE" />
+                <ScalarProperty Name="DOCUMENT_TYPE_ID" ColumnName="DOCUMENT_TYPE_ID" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_SERVICE_STAGES_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_STAGES_V">
+              <MappingFragment StoreEntitySet="WEB_SERVICE_STAGES_V">
+                <ScalarProperty Name="STAGE_STATUS" ColumnName="STAGE_STATUS" />
+                <ScalarProperty Name="INCLUDED_ON" ColumnName="INCLUDED_ON" />
+                <ScalarProperty Name="STAGE_NAME" ColumnName="STAGE_NAME" />
+                <ScalarProperty Name="ACTUAL_COMPLETION_DATE" ColumnName="ACTUAL_COMPLETION_DATE" />
+                <ScalarProperty Name="ACTUAL_START_DATE" ColumnName="ACTUAL_START_DATE" />
+                <ScalarProperty Name="TASK_NAME" ColumnName="TASK_NAME" />
+                <ScalarProperty Name="SERVICE_ID" ColumnName="SERVICE_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_SERVICE_TYPES_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_TYPES_V">
+              <MappingFragment StoreEntitySet="WEB_SERVICE_TYPES_V">
+                <ScalarProperty Name="ROOT_XSD_ELEMENT_NAME" ColumnName="ROOT_XSD_ELEMENT_NAME" />
+                <ScalarProperty Name="INITIATING_DOC_TYPE" ColumnName="INITIATING_DOC_TYPE" />
+                <ScalarProperty Name="INIT_DOCUMENT_TYPE_URI" ColumnName="INIT_DOCUMENT_TYPE_URI" />
+                <ScalarProperty Name="RESPONSIBLE" ColumnName="RESPONSIBLE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="TERM" ColumnName="TERM" />
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="URI" ColumnName="URI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WEB_USERS_V">
+            <EntityTypeMapping TypeName="TechnoLogica.Eservices.Public.DataAccess.WEB_USERS_V">
+              <MappingFragment StoreEntitySet="WEB_USERS_V">
+                <ScalarProperty Name="NAME" ColumnName="NAME" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

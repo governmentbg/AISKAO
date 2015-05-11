@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1188" xmlns="http://ereg.egov.bg/segment/R-1188" xmlns:fmbpt="http://ereg.egov.bg/value/R-1186" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1186" schemaLocation="R-1186_ForageMaterialByProductionType.xsd" />
+  <xsd:complexType name="ForageMaterialByProductionData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Търговия с фуражни суровини съгласно Каталога на фуражните суровини, изготвен в съответствие с чл. 24 на Регламент (ЕО) № 767/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageMaterialByProductionTypes" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageMaterialByProductionType" type="fmbpt:ForageMaterialByProductionType" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

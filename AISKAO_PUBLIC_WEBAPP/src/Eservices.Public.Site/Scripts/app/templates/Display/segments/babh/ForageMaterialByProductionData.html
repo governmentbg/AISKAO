@@ -1,0 +1,13 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <!-- ko with: forageMaterialByProductionTypes -->
+            <div class="span12" data-bind="foreach: forageMaterialByProductionType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getForageMaterialByProductionTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>

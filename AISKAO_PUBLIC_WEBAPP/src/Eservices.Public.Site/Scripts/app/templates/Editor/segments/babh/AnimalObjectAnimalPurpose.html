@@ -1,0 +1,14 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span10" data-bind="foreach: animalPurposeCode.nomAnimalPurposes">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.code, checked: $parent.animalPurposeCode" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </span>
+            </label>
+        </div>
+    </div>
+</div>

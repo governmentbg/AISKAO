@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000144"
+      xmlns="http://ereg.egov.bg/value/0008-000144"
+      xmlns:atn="http://ereg.egov.bg/nomenclature/0007-000015"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/nomenclature/0007-000015" schemaLocation="0007-000015_ApplicationTypeNomenclature.xsd"/>
+
+    <xsd:simpleType name="ApplicationType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Вид на заявлението според обстоятелството дали се подава за първи път или е последващ документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="atn:ApplicationTypeNomenclature"/>
+    </xsd:simpleType>
+
+</xsd:schema>

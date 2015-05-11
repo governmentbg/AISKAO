@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://esoed.egov.bg/2008/05/Timestamp/v1" targetNamespace="http://esoed.egov.bg/2008/05/Timestamp/v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Timestamp">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:base64Binary"/>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

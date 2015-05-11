@@ -1,0 +1,24 @@
+﻿@using TechnoLogica.Eservices.Public.Site.Resources
+@model TechnoLogica.Eservices.Public.Site.Models.Administration.GetAdministrationInfoViewModel
+
+@{
+    ViewBag.Title = ViewTitles.AdministrativeInfo;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*
+<h2>@ViewTitles.AdministrativeInfo</h2>*@
+
+  <address>
+  <strong>@Html.DisplayFor(model => Model.Name)</strong><br>
+  @Html.DisplayFor(model => Model.Address)<br>
+  <abbr title="Phone">@Administration.Phone</abbr> @Html.DisplayFor(model => Model.Phone)<br>
+      <abbr title="Mobile">@Administration.Mobile</abbr> @Html.DisplayFor(model => Model.Mobile)<br>
+      <abbr title="Fax">@Html.Label(Administration.Fax)</abbr> @Html.DisplayFor(model => Model.Fax)<br>
+  @Administration.WebSiteAddress <a href="@Model.WebSiteAddress">@Html.DisplayFor(model => Model.WebSiteAddress)</a><br>
+ @* <strong>@Administration.Bulstat</strong>@Html.DisplayFor(model => Model.Bulstat)<br>*@
+  @Administration.Email<a href="mailto:#">@Html.DisplayFor(model => Model.Email)</a>
+</address>
+   
+
+  

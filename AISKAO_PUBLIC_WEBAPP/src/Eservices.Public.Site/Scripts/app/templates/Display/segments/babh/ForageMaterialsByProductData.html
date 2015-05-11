@@ -1,0 +1,30 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за фуражни суровини по вид продукт</legend>
+        <div class="row">
+            <div class="span12">
+                <span class="span3 text-left">Вид продукт при производство на фуражни суровини:</span>
+                <span class="span8 uneditable-input" data-bind="text: forageMaterialProduct.displayValue().name"></span>
+            </div>
+        </div>
+        <!-- ko with: forageMaterialNames -->
+        <!-- ko if: forageMaterialName().length > 0 -->
+        Списък с добавени фуражни суровини:
+                <!-- /ko -->
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span6" data-bind="foreach: forageMaterialName">
+                        <span class="row">
+                            <span class="span3 text-left">Наименование на фуражна суровина #<span data-bind="text: 1 + $index()"></span>:</span>
+                            <span class="input-append">
+                                <span class="span3 uneditable-input" data-bind="text: $data"></span>
+                            </span>
+                        </span>
+                    </span>
+                </label>
+            </div>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+</div>

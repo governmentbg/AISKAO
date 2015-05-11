@@ -1,0 +1,28 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Editor' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Език на удостоверение за плавателен стаж</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Език на удостоверение за плавателен стаж:</span>
+                <select class="span9"
+                    data-bind="options: navigableExperienceLanguage.nomIAMANavigableExperienceLanguageTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: navigableExperienceLanguage">
+                </select>
+            </label>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko-->
+</div>
+

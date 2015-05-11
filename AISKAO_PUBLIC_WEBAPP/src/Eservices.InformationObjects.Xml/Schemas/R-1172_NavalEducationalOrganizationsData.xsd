@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1172" xmlns="http://ereg.egov.bg/segment/R-1172" xmlns:neoc="http://ereg.egov.bg/value/R-1168" xmlns:neon="http://ereg.egov.bg/value/R-1170" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1168" schemaLocation="R-1168_NavalEducationalOrganizationCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1170" schemaLocation="R-1170_NavalEducationalOrganizationName.xsd" />
+  <xsd:element name="NavalEducationalOrganizationsData" type="NavalEducationalOrganizationsData" />
+  <xsd:complexType name="NavalEducationalOrganizationsData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Учебни заведения и центрове, провеждащи обучение и подготовка на морски лица</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="NavalEducationalOrganizations">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="NavalEducationalOrganization" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="NavalEducationalOrganizationCode" type="neoc:NavalEducationalOrganizationCode" />
+                  <xsd:element name="NavalEducationalOrganizationName" type="neon:NavalEducationalOrganizationName" />
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+    <xsd:attribute name="versionDate" type="xsd:date" use="required" />
+  </xsd:complexType>
+</xsd:schema>

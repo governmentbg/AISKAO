@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000001"
+      xmlns="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:ri="http://ereg.egov.bg/value/0008-000002"
+      xmlns:dsn="http://ereg.egov.bg/value/0008-000003"
+      xmlns:drsd="http://ereg.egov.bg/value/0008-000004"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000002" schemaLocation="0008-000002_RegisterIndex.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000003" schemaLocation="0008-000003_DocumentSequenceNumber.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000004" schemaLocation="0008-000004_DocumentReceiptOrSigningDate.xsd"/>
+
+
+    <xsd:complexType name="DocumentURI">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">УРИ на регистриран документ в официален документен регистър</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="RegisterIndex" type="ri:RegisterIndex" minOccurs="0"/>
+            <xsd:element name="SequenceNumber" type="dsn:DocumentSequenceNumber" minOccurs="0"/>
+            <xsd:element name="ReceiptOrSigningDate" type="drsd:DocumentReceiptOrSigningDate" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

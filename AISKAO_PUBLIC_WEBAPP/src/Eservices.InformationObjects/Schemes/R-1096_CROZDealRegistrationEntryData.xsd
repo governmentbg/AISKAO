@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1096" xmlns="http://ereg.egov.bg/segment/R-1096" xmlns:crozrebd="http://ereg.egov.bg/segment/R-1085" xmlns:crozrecd="http://ereg.egov.bg/segment/R-1092" xmlns:crozredd="http://ereg.egov.bg/segment/R-1094" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1085" schemaLocation="R-1085_CROZRegistrationEntryBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1092" schemaLocation="R-1092_CROZRegistrationEntryCreditorsData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1094" schemaLocation="R-1094_CROZRegistrationEntryDebtorsData.xsd" />
+  <xsd:complexType name="CROZDealRegistrationEntryData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за вписване по сделка, запор на имущество или решение на съда по несъстоятелността в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="crozrebd:CROZRegistrationEntryBasicData">
+        <xsd:sequence>
+          <xsd:element name="CROZRegistrationEntryCreditorsData" type="crozrecd:CROZRegistrationEntryCreditorsData" minOccurs="0" />
+          <xsd:element name="CROZRegistrationEntryDebtorsData" type="crozredd:CROZRegistrationEntryDebtorsData" minOccurs="0" />
+        </xsd:sequence>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="27f2324efd784dc28264245a4013c2d9" Name="Diagram1" ZoomLevel="94">
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_ADM_INFORMATIONS" Width="2.5" PointX="11.75" PointY="11.75" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_INF_BIT_TYPES" Width="1.5" PointX="7.375" PointY="14.125" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_INF_BITS" Width="1.5" PointX="4.8087987866293638" PointY="26.794238281806109" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SRVC_TYPE_PUBLIC_INFO" Width="2.5" PointX="8" PointY="9.125" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_CASE_OFFICIAL_DOCUMENTS_V" Width="1.5" PointX="10.682914455739276" PointY="3.124788539076591" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_E_SERVICE_STATUS_V" Width="2.75" PointX="4.5" PointY="6.125" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_REGISTERED_DOCUMENTS_V" Width="2.75" PointX="6.125" PointY="0.5" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_STAGES_V" Width="2.125" PointX="2.5" PointY="1.25" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_SERVICE_TYPES_V" Width="2.375" PointX="3" PointY="12.125" />
+        <EntityTypeShape EntityType="TechnoLogica.Eservices.Public.DataAccess.WEB_USERS_V" Width="1.5" PointX="1.0531803560690864" PointY="13.732401332693362" />
+        <AssociationConnector Association="TechnoLogica.Eservices.Public.DataAccess.FK_SRV_TYPE_INF_BITS_BIT_TYPES" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

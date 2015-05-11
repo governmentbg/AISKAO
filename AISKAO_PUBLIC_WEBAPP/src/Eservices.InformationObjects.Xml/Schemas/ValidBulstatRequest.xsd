@@ -1,0 +1,16 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/AV/BULSTAT/ValidBulstatRequest" targetNamespace="http://egov.bg/RegiX/AV/BULSTAT/ValidBulstatRequest">
+	<xs:complexType name="ValidBulstatRequestType">
+		<xs:sequence>
+			<xs:element name="Bulstat" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>БУЛСТАТ ЕИК</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ValidBulstatRequest" type="ValidBulstatRequestType">
+		<xs:annotation>
+			<xs:documentation>Справка за валидност на БУЛСТАТ ЕИК номер</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+</xs:schema>

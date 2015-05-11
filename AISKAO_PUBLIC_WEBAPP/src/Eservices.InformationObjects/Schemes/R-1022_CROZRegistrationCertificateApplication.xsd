@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1022" xmlns="http://ereg.egov.bg/segment/R-1022" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:stt="http://ereg.egov.bg/value/0008-000143" xmlns:edx="http://ereg.egov.bg/segment/0009-000092" xmlns:ad="http://ereg.egov.bg/segment/0009-000139" xmlns:sard="http://ereg.egov.bg/segment/0009-000141" xmlns:eash="http://ereg.egov.bg/segment/0009-000152" xmlns:easf="http://ereg.egov.bg/segment/0009-000153" xmlns:crozpic="http://ereg.egov.bg/value/R-1002" xmlns:crozrn="http://ereg.egov.bg/value/R-1006" xmlns:crozbid="http://ereg.egov.bg/segment/R-1016" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000143" schemaLocation="0008-000143_ServiceTermType.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000139" schemaLocation="0009-000139_AttachedDocument.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000141" schemaLocation="0009-000141_ServiceApplicantReceiptData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000152" schemaLocation="0009-000152_ElectronicAdministrativeServiceHeader.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000153" schemaLocation="0009-000153_ElectronicAdministrativeServiceFooter.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_CROZParticipantIdentificationCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1006" schemaLocation="R-1006_CROZRegistrationNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1016" schemaLocation="R-1016_CROZBatchIdentifyingData.xsd" />
+  <xsd:element name="CROZRegistrationCertificateApplication" type="CROZRegistrationCertificateApplication" />
+  <xsd:complexType name="CROZRegistrationCertificateApplication">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Заявление за издаване на удостоверение за вписванията в Централния регистър на особените залози във връзка с определена сделка, запор на имущество или решение на съда по несъстоятелността</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ElectronicAdministrativeServiceHeader" type="eash:ElectronicAdministrativeServiceHeader" minOccurs="0" />
+      <xsd:element name="ServiceTermType" type="stt:ServiceTermType" minOccurs="0" />
+      <xsd:element name="ServiceApplicantReceiptData" type="sard:ServiceApplicantReceiptData" minOccurs="0" />
+      <xsd:element name="CROZParticipantIdentificationCode" type="crozpic:CROZParticipantIdentificationCode" minOccurs="0" />
+      <xsd:element name="CROZRegistrationNumber" type="crozrn:CROZRegistrationNumber" minOccurs="0" />
+      <xsd:element name="CROZBatchIdentifyingData" type="crozbid:CROZBatchIdentifyingData" minOccurs="0" />
+      <xsd:element name="AttachedDocuments" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice maxOccurs="unbounded">
+            <xsd:element name="AttachedXmlDocument" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="AttachedDocument" type="ad:AttachedDocument" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ElectronicAdministrativeServiceFooter" type="easf:ElectronicAdministrativeServiceFooter" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,2 @@
+"%ProgramFiles(x86)%\Microsoft SQL Server\120\DAC\bin\SqlPackage.exe" /Action:Publish /SourceFile:AISKAO_WEB.dacpac /TargetServerName:(LocalDb)\v11.0 /TargetDatabaseName:AISKAO_WEB
+"%ProgramFiles%\Microsoft SQL Server\110\Tools\Binn\sqlcmd.exe" -S (LocalDb)\v11.0 -E -d AISKAO_WEB -i DataUpdate_AISKAO_WEB_1.sql

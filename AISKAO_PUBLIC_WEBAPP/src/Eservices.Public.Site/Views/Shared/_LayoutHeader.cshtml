@@ -1,0 +1,23 @@
+﻿@model TechnoLogica.Eservices.Public.Site.Models.Administration.GetAdministrationInfoViewModel
+
+<div class="header-container">
+    <div class="row">
+        <div class="span11">
+
+            @*Герб на текущата администрация или общ, ако не е избрана*@
+            @*В описанието трябва да се включи и името на администрацията*@
+           
+            <div class="pull-left">
+                <a href="@Url.Content("~")" role="link">
+                    <img src="@Url.Content("~/Images/logo.jpg")" id="logo" />
+                </a>
+            </div>
+            <div class="span8">
+                <h2 id="app-heading">@Model.Name.ToUpper()</h2>
+                <div id="header-main">
+                    <h3>Портал за електронни административни услуги</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/AV/TR" targetNamespace="http://egov.bg/RegiX/AV/TR" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="StatusType">
+		<xs:annotation>
+			<xs:documentation>Статус на партида</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Нова партида"/>
+			<xs:enumeration value="Пререгистрирана партида"/>
+			<xs:enumeration value="Нова закрита партида"/>
+			<xs:enumeration value="Пререгистрирана закрита партида"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="TestStatusType" type="StatusType"/>
+	<xs:simpleType name="IndentTypeType">
+		<xs:annotation>
+			<xs:documentation>Тип индентификатор</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="EGN"/>
+			<xs:enumeration value="UIC"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Persons">
+		<xs:sequence>
+			<xs:element name="Person" type="SubjectType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonInformationType">
+		<xs:sequence>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Surname" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Презиме</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Family" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EGN" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CompanyParticipationType">
+		<xs:sequence>
+			<xs:element name="Company" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Търговско дружество</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="EIK" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>ЕИК</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CompanyName" type="xs:string" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Фирма (Наименование)</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="LegalForm" type="LegalFormType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Правна форма</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="Fields" type="FieldsType" minOccurs="0">
+							<xs:annotation>
+								<xs:documentation>Полета, в което е въведен подаденият ЕГН</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FieldsType">
+		<xs:sequence>
+			<xs:element name="Field" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="LegalFormType">
+		<xs:sequence>
+			<xs:element name="LegalFormAbbr" type="xs:string" minOccurs="0"/>
+			<xs:element name="LegalFormName" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SeatType">
+		<xs:sequence>
+			<xs:element name="Address" type="AddressType" minOccurs="0"/>
+			<xs:element name="Contacts" type="ContactsType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ContactsType">
+		<xs:sequence>
+			<xs:element name="Phone" type="xs:string" minOccurs="0"/>
+			<xs:element name="Fax" type="xs:string" minOccurs="0"/>
+			<xs:element name="EMail" type="xs:string" minOccurs="0"/>
+			<xs:element name="URL" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressType">
+		<xs:sequence>
+			<xs:element name="CountryCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="Country" type="xs:string" minOccurs="0"/>
+			<xs:element name="IsForeign" type="xs:string" minOccurs="0"/>
+			<xs:element name="DistrictEkatte" type="xs:string" minOccurs="0"/>
+			<xs:element name="District" type="xs:string" minOccurs="0"/>
+			<xs:element name="MunicipalityEkatte" type="xs:string" minOccurs="0"/>
+			<xs:element name="Municipality" type="xs:string" minOccurs="0"/>
+			<xs:element name="SettlementEKATTE" type="xs:string" minOccurs="0"/>
+			<xs:element name="Settlement" type="xs:string" minOccurs="0"/>
+			<xs:element name="Area" type="xs:string" minOccurs="0"/>
+			<xs:element name="AreaEkatte" type="xs:string" minOccurs="0"/>
+			<xs:element name="PostCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="ForeignPlace" type="xs:string" minOccurs="0"/>
+			<xs:element name="HousingEstate" type="xs:string" minOccurs="0"/>
+			<xs:element name="Street" type="xs:string" minOccurs="0"/>
+			<xs:element name="StreetNumber" type="xs:string" minOccurs="0"/>
+			<xs:element name="Block" type="xs:string" minOccurs="0"/>
+			<xs:element name="Entrance" type="xs:string" minOccurs="0"/>
+			<xs:element name="Floor" type="xs:string" minOccurs="0"/>
+			<xs:element name="Apartment" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubjectOfActivityType">
+		<xs:sequence>
+			<xs:element name="Subject" type="xs:string" minOccurs="0"/>
+			<xs:element name="IsBank" type="xs:boolean" minOccurs="0"/>
+			<xs:element name="IsInsurer" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NKIDType">
+		<xs:sequence>
+			<xs:element name="NKIDcode" type="xs:string" minOccurs="0"/>
+			<xs:element name="NKIDname" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SubjectType">
+		<xs:sequence>
+			<xs:element name="Indent" type="xs:string" minOccurs="0"/>
+			<xs:element name="Name" type="xs:string" minOccurs="0"/>
+			<xs:element name="IndentType" type="IndentTypeType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MandateType">
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="MandateValue" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SharesType">
+		<xs:sequence>
+			<xs:element name="Share" type="ShareType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ShareType">
+		<xs:sequence>
+			<xs:element name="Type" type="xs:string" minOccurs="0"/>
+			<xs:element name="Count" type="xs:string" minOccurs="0"/>
+			<xs:element name="NominalValue" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CapitalAmountType">
+		<xs:sequence>
+			<xs:element name="Value" type="xs:string" minOccurs="0"/>
+			<xs:element name="Euro" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NonMonetaryDepositsType">
+		<xs:sequence>
+			<xs:element name="NonMonetaryDeposit" type="NonMonetaryDepositType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="NonMonetaryDepositType">
+		<xs:sequence>
+			<xs:element name="Description" type="xs:string" minOccurs="0"/>
+			<xs:element name="Value" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DetailsType">
+		<xs:sequence>
+			<xs:element name="Detail" type="DetailType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DetailType">
+		<xs:sequence>
+			<xs:element name="FieldName" type="xs:string" minOccurs="0"/>
+			<xs:element name="FieldCode" type="xs:string" minOccurs="0"/>
+			<xs:element name="FieldOrder" type="xs:string" minOccurs="0"/>
+			<xs:element name="Subject" type="SubjectType" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddemptionOfTraderType">
+		<xs:sequence>
+			<xs:element name="Address" type="AddressType" minOccurs="0"/>
+			<xs:element name="Contacts" type="ContactsType" minOccurs="0"/>
+			<xs:element name="CompetentAuthorityForRegistration" type="xs:string" minOccurs="0"/>
+			<xs:element name="RegistrationNumber" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1087" xmlns="http://ereg.egov.bg/value/R-1087" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="NavigableExperienceDayCount">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Брой дни плавателен стаж</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:integer" />
+  </xsd:simpleType>
+</xsd:schema>

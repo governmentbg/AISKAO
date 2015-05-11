@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1236" xmlns="http://ereg.egov.bg/nomenclature/R-1236" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="RevisedAnimalProteinTypesNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за видове преработени животински протеини като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Видове преработени животински протеини като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - рибно брашно-->
+      <xsd:enumeration value="R-1233" />
+      <!--Видове преработени животински протеини като част от странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 - кръвно брашно-->
+      <xsd:enumeration value="R-1234" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

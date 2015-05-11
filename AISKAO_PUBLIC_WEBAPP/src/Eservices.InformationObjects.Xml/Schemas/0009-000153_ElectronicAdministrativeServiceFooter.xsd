@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000153"
+            xmlns="http://ereg.egov.bg/segment/0009-000153"
+            xmlns:ast="http://ereg.egov.bg/value/0008-000199"
+            xmlns:xdsig="http://ereg.egov.bg/segment/0009-000004"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000199" schemaLocation="0008-000199_ApplicationSigningTime.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd"/>
+
+    
+    <xsd:complexType name="ElectronicAdministrativeServiceFooter">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Данни за подписване на заявление за предоставяне на електронна административна услуга, подадено по електронен път</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ApplicationSigningTime" type="ast:ApplicationSigningTime" minOccurs="0"/>
+            <xsd:element name="XMLDigitalSignature" type="xdsig:XMLDigitalSignature" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BuildingAndSeparateBuildingUnitFunctionalDesignationData
+      xmlns="http://ereg.egov.bg/segment/R-9012"
+      versionDate="2011-08-09">
+
+  <FunctionalDesignationTypes>
+    <FunctionalDesignationType>
+      <Code>1</Code>
+      <Name>Сгради за постоянно и временно обитаване</Name>
+    </FunctionalDesignationType>
+    <FunctionalDesignationType>
+      <Code>2</Code>
+      <Name>Обществени сгради</Name>
+    </FunctionalDesignationType>
+    <FunctionalDesignationType>
+      <Code>3</Code>
+      <Name>Производствени, складови и инфраструктурни сгради</Name>
+    </FunctionalDesignationType>
+    <FunctionalDesignationType>
+      <Code>4</Code>
+      <Name>Самостоятелни обекти в сгради</Name>
+    </FunctionalDesignationType>
+  </FunctionalDesignationTypes>
+  <FunctionalDesignations>
+    <FunctionalDesignation>
+      <Code>100</Code>
+      <Name>Жилищна сграда - еднофамилна</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>110</Code>
+      <Name>Жилищна сграда - многофамилна</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>120</Code>
+      <Name>Жилищна сграда със смесено предназначение</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>130</Code>
+      <Name>Вилна сграда - еднофамилна</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>140</Code>
+      <Name>Вилна сграда - многофамилна</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>150</Code>
+      <Name>Общежитие</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>160</Code>
+      <Name>Хотел</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>170</Code>
+      <Name>Апартаментен хотел</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>180</Code>
+      <Name>Постройка на допълващото застрояване</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>190</Code>
+      <Name>Друг вид сграда за обитаване</Name>
+      <FunctionalDesignationTypeCode>1</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>200</Code>
+      <Name>Сграда за търговия</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>210</Code>
+      <Name>Сграда за обществено хранене</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>220</Code>
+      <Name>Сграда за битови услуги</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>230</Code>
+      <Name>Сграда за детско заведение</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>240</Code>
+      <Name>Сграда за образование</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>250</Code>
+      <Name>Здравно заведение</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>260</Code>
+      <Name>Заведение за социални грижи</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>270</Code>
+      <Name>Сграда за научна и проектантска дейност</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>280</Code>
+      <Name>Сграда за култура и изкуство</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>290</Code>
+      <Name>Спортна сграда, база</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>300</Code>
+      <Name>Административна, делова сграда</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>310</Code>
+      <Name>Курортна, туристическа сграда</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>320</Code>
+      <Name>Сграда на транспорта</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>330</Code>
+      <Name>Сграда на съобщенията</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>340</Code>
+      <Name>Култова, религиозна сграда</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>350</Code>
+      <Name>Сграда - паметник на културата</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>360</Code>
+      <Name>Друг вид обществена сграда</Name>
+      <FunctionalDesignationTypeCode>2</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>400</Code>
+      <Name>Промишлена сграда</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>410</Code>
+      <Name>Сграда за енергопроизводство</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>420</Code>
+      <Name>Селскостопанска сграда</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>430</Code>
+      <Name>Горскостопанска сграда</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>440</Code>
+      <Name>Сграда за водоснабдяване и/или канализация</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>450</Code>
+      <Name>Сграда със специално предназначение</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>460</Code>
+      <Name>Складова база, склад</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>470</Code>
+      <Name>Хангар, депо, гараж</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>480</Code>
+      <Name>Друг вид производствена, складова, инфраструктурна сграда</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>490</Code>
+      <Name>Сграда със смесено предназначение</Name>
+      <FunctionalDesignationTypeCode>3</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>500</Code>
+      <Name>Жилище, апартамент</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>510</Code>
+      <Name>Ателие за творческа дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>530</Code>
+      <Name>Гараж в сграда</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>540</Code>
+      <Name>Инфраструктурен обект в сграда</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>550</Code>
+      <Name>За търговска дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>560</Code>
+      <Name>За обслужваща дейност за битови услуги</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>570</Code>
+      <Name>За обществено хранене</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>580</Code>
+      <Name>За детско заведение</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>590</Code>
+      <Name>За здравни и социални услуги</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>600</Code>
+      <Name>За културна и обществена дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>610</Code>
+      <Name>За учебна дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>620</Code>
+      <Name>За научна и проектантска дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>630</Code>
+      <Name>За култова и ритуална дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>640</Code>
+      <Name>За спортна и развлекателна дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>650</Code>
+      <Name>За делова и административна дейност</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>660</Code>
+      <Name>За офис</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>670</Code>
+      <Name>За склад</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>680</Code>
+      <Name>Обекти със специално предназначение</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+    <FunctionalDesignation>
+      <Code>690</Code>
+      <Name>Друг вид самостоятелен обект в сграда</Name>
+      <FunctionalDesignationTypeCode>4</FunctionalDesignationTypeCode>
+    </FunctionalDesignation>
+  </FunctionalDesignations>
+
+</BuildingAndSeparateBuildingUnitFunctionalDesignationData>

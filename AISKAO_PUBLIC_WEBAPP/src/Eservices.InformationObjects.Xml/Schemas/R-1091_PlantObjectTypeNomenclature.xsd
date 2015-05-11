@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1091" xmlns="http://ereg.egov.bg/nomenclature/R-1091" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="PlantObjectTypeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за вид обект за растителна защита</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Вид обект за растителна защита - склад-->
+      <xsd:enumeration value="R-1087" />
+      <!--Вид обект за растителна защита - селскостопанска аптека-->
+      <xsd:enumeration value="R-1088" />
+      <!--Вид обект за растителна защита - цех-->
+      <xsd:enumeration value="R-1089" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

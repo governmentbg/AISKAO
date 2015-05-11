@@ -1,0 +1,40 @@
+﻿<div>
+    <div class="row">
+        <!-- ko with: animalTypeFedWithRelatedAnimalProducts -->
+        <div class="controls-row">
+            <div class="span10" data-bind="foreach: animalTypeFedWithRelatedAnimalProduct.nomAnimalTypeFedWithRelatedAnimalProducts">
+                <label class="span12 checkbox">
+                    <input type="checkbox" data-bind="value: $data.key, checked: $parent.animalTypeFedWithRelatedAnimalProduct" />
+                    <span class="span10" data-bind="text: name"></span>
+                </label>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <div class="span12" data-bind="with: otherAnimalTypeFedWithRelatedAnimalProducts">
+            <span class="span3 text-left">Друг вид животни:</span>
+            <span class="input-append">
+                <input class="span2" type="text" data-bind="value: otherAnimalTypeFedWithRelatedAnimalProduct.itemToAdd, valueUpdate: 'afterkeydown'" />
+                <button data-bind="click: addOtherAnimalTypeFedWithRelatedAnimalProduct, attr: { 'class': (otherAnimalTypeFedWithRelatedAnimalProduct.itemToAdd() && ko.utils.arrayIndexOf(otherAnimalTypeFedWithRelatedAnimalProduct(), otherAnimalTypeFedWithRelatedAnimalProduct.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }" class="btn btn-success disabled">Добави</button>
+            </span>
+        </div>
+    </div>
+    <!-- ko with: otherAnimalTypeFedWithRelatedAnimalProducts -->
+    <!-- ko if: otherAnimalTypeFedWithRelatedAnimalProduct().length > 0 -->
+    Списък с друг вид животни:
+        <!-- /ko -->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span6" data-bind="foreach: otherAnimalTypeFedWithRelatedAnimalProduct">
+                    <span class="span3 text-left">Друг вид животно #<span data-bind="text: 1 + $index()"></span>:</span>
+                    <span class="input-append">
+                        <span class="span2 uneditable-input" data-bind="text: $data"></span>
+                        <button class="btn btn-danger" data-bind="click: $parent.removeOtherAnimalTypeFedWithRelatedAnimalProduct.bind($parent)"><i class="icon-remove icon-white"></i></button>
+                    </span>
+                </span>
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

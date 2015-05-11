@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1008" xmlns="http://ereg.egov.bg/segment/R-1008" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:drsd="http://ereg.egov.bg/value/0008-000004" xmlns:dtn="http://ereg.egov.bg/value/0008-000007" xmlns:du="http://ereg.egov.bg/segment/0009-000001" xmlns:espbd="http://ereg.egov.bg/segment/0009-000002" xmlns:dtu="http://ereg.egov.bg/segment/0009-000003" xmlns:xds="http://ereg.egov.bg/segment/0009-000004" xmlns:pn="http://ereg.egov.bg/segment/0009-000005" xmlns:fcn="http://ereg.egov.bg/segment/0009-000007" xmlns:esa="http://ereg.egov.bg/segment/0009-000016" xmlns:aiscuri="http://ereg.egov.bg/segment/0009-000073" xmlns:rnlg="http://ereg.egov.bg/value/R-1002" xmlns:rnfg="http://ereg.egov.bg/value/R-1004" xmlns:rnt="http://ereg.egov.bg/value/R-1006" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000004" schemaLocation="0008-000004_DocumentReceiptOrSigningDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000005" schemaLocation="0009-000005_PersonNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000007" schemaLocation="0009-000007_ForeignCitizenNames.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000016" schemaLocation="0009-000016_ElectronicServiceApplicant.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000073" schemaLocation="0009-000073_AISCaseURI.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1002" schemaLocation="R-1002_RegularizationNotificationLegalGround.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1004" schemaLocation="R-1004_RegularizationNotificationFactualGround.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1006" schemaLocation="R-1006_RegularizationNotificationTerm.xsd" />
+  <xsd:element name="RegularizationNotification" type="RegularizationNotification" />
+  <xsd:complexType name="RegularizationNotification">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Уведомление за отстраняване на нередовност</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="DocumentTypeURI" type="dtu:DocumentTypeURI" minOccurs="0" />
+      <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0" />
+      <xsd:element name="DocumentURI" type="du:DocumentURI" minOccurs="0" />
+      <xsd:element name="DocumentReceiptOrSigningDate" type="drsd:DocumentReceiptOrSigningDate" minOccurs="0" />
+      <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" minOccurs="0" />
+      <xsd:element name="ElectronicServiceApplicant" type="esa:ElectronicServiceApplicant" minOccurs="0" />
+      <xsd:element name="AISCaseURI" type="aiscuri:AISCaseURI" minOccurs="0" />
+      <xsd:element name="RegularizationNotificationLegalGround" type="rnlg:RegularizationNotificationLegalGround" minOccurs="0" />
+      <xsd:element name="RegularizationNotificationFactualGround" type="rnfg:RegularizationNotificationFactualGround" minOccurs="0" />
+      <xsd:element name="RegularizationNotificationTerm" type="rnt:RegularizationNotificationTerm" minOccurs="0" />
+      <xsd:element name="Official" minOccurs="0">
+        <xsd:complexType>
+          <xsd:choice>
+            <xsd:element name="PersonNames" type="pn:PersonNames" />
+            <xsd:element name="ForeignCitizenNames" type="fcn:ForeignCitizenNames" />
+          </xsd:choice>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="XMLDigitalSignature" type="xds:XMLDigitalSignature" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

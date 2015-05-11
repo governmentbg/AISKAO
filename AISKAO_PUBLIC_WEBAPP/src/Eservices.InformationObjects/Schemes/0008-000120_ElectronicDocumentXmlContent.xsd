@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000120"
+      xmlns="http://ereg.egov.bg/value/0008-000120"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:complexType name="ElectronicDocumentXmlContent">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">XML съдържание на електронен документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:any processContents="lax" />
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

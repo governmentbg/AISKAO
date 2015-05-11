@@ -1,0 +1,21 @@
+﻿<div>
+    <!-- ko with: person -->
+        <fieldset>
+            <legend>
+                <span>Данни за заявител - Физическо лице</span>
+            </legend>
+            <!-- ko compose: { model: $data, view: 'segments/common/PersonBasicData', area: 'Display' } -->
+            <!-- /ko -->
+        </fieldset>
+    <!-- /ko -->
+
+    <!-- ko with: foreignCitizen -->
+        <fieldset>
+            <legend>
+                <span>Данни за заявител - Физическо лице, нерегистрирано по българското законодателство</span>
+            </legend>
+            <!-- ko compose: { model: $data, view: 'segments/common/ForeignCitizenBasicData', area: 'Display' } -->
+            <!-- /ko -->
+        </fieldset>
+    <!-- /ko -->
+</div>

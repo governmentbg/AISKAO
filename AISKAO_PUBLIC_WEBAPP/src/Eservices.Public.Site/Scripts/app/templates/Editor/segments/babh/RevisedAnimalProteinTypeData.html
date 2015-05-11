@@ -1,0 +1,36 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: revisedAnimalProteinTypes -->
+            <div class="controls-row">
+                <div class="span10" data-bind="foreach: revisedAnimalProteinType.nomRevisedAnimalProteinTypes">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.key, checked: $parent.revisedAnimalProteinType" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- /ko -->
+
+            <div class="span12" data-bind="with: otherRevisedAnimalProteins">
+                <span class="span3 text-left">Други преработени животински протеини:</span>
+                <span class="input-append">
+                    <input class="span2" type="text" data-bind="value: otherRevisedAnimalProtein.itemToAdd, valueUpdate: 'afterkeydown'" />
+                    <button data-bind="click: addOtherRevisedAnimalProtein, attr: { 'class': (otherRevisedAnimalProtein.itemToAdd() && ko.utils.arrayIndexOf(otherRevisedAnimalProtein(), otherRevisedAnimalProtein.itemToAdd()) < 0) ? 'btn btn-success' : 'btn btn-success disabled' }" class="btn btn-success disabled">Добави</button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <!-- ko with: otherRevisedAnimalProteins -->
+    <!-- ko if: otherRevisedAnimalProtein().length > 0 -->
+    Списък с други преработени животински протеини:
+    <!-- /ko -->
+    <div class="span6" data-bind="foreach: otherRevisedAnimalProtein">
+        <span class="span3 text-left">Преработени животински протеин #<span data-bind="text: 1 + $index()"></span>:</span>
+        <span class="input-append">
+            <span class="span2 uneditable-input" data-bind="text: $data"></span>
+            <button class="btn btn-danger" data-bind="click: $parent.removeOtherRevisedAnimalProtein.bind($parent)"><i class="icon-remove icon-white"></i></button>
+        </span>
+    </div>
+    <!-- /ko -->
+</div>

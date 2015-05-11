@@ -1,0 +1,100 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Регистрация на обект</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид регистрация на обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectRegistrationType.displayValue().name"></span>
+        </div>
+        <!-- ko if: foodObjectRegistrationType() === 'R-1066'-->
+        <div class="row">
+            <div class="span6">
+                <label class="row">
+                    <span class="span3 text-left">Начална дата:</span>
+                    <span class="span3 uneditable-input" data-bind="formattedDate: foodObjectRegistrationTemporaryStartDate"></span>
+                </label>
+            </div>
+            <div class="controls-row">
+                <span class="span2">Крайна дата:</span>
+                <span class="span3 uneditable-input" data-bind="formattedDate: foodObjectRegistrationTemporaryEndDate"></span>
+            </div>
+        </div>
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <label class="row">
+            <span class="span3 text-left">Дирекция:</span>
+            <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Седалище</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристика на обект за производство и търговия с храни</legend>
+        <div class="row">
+            <span class="span3 text-left">Вид обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectPurpose.displayValue().name"></span>
+        </div>
+        <div class="row">
+            <span class="span3">Категория обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectCategory"></span>
+        </div>
+        <div class="row">
+            <span class="span3">Наименование на обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectName"></span>
+        </div>
+        <div class="row">
+            <span class="span3">Изисквания за обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectRequirementsMetDescription"></span>
+        </div>
+        <div class="row">
+            <span class="span3">Регистрационен номер на обект:</span>
+            <span class="span9 uneditable-input" data-bind="text: foodObjectRegistrationNumber"></span>
+        </div>
+    </fieldset>
+
+    <fieldset>
+        <legend>Адрес на обект за производство и търговия с храни</legend>
+        <!-- ko compose: { model: foodObjectRealAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Списък на групите храни в обекта</legend>
+        <!-- ko compose: { model: foodGroupsList, view: 'segments/babh/FoodGroupsList', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+</div>
+

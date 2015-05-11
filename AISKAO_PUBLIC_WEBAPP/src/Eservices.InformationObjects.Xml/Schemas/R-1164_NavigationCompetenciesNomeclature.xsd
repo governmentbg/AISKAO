@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1164" xmlns="http://ereg.egov.bg/nomenclature/R-1164" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="NavigationCompetenciesNomeclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на правоспособности за плаване по ВВПЕ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Капитан вътрешно плаване-->
+      <xsd:enumeration value="R-1157" />
+      <!--Щурман-->
+      <xsd:enumeration value="R-1158" />
+      <!--Щурман обща категория-->
+      <xsd:enumeration value="R-1159" />
+      <!--Водач на малък кораб-->
+      <xsd:enumeration value="R-1021" />
+      <!--Механик вътрешно плаване-->
+      <xsd:enumeration value="R-1160" />
+      <!--Електромеханик вътрешно плаване-->
+      <xsd:enumeration value="R-1161" />
+      <!--Моряк - моторист-->
+      <xsd:enumeration value="R-1162" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000012"
+      xmlns="http://ereg.egov.bg/segment/0009-000012"
+      xmlns:pbd="http://ereg.egov.bg/segment/0009-000008"
+      xmlns:fcbd="http://ereg.egov.bg/segment/0009-000011"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000008" schemaLocation="0009-000008_PersonBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000011" schemaLocation="0009-000011_ForeignCitizenBasicData.xsd"/>
+
+
+    <xsd:complexType name="ElectronicStatementAuthor">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Автор на електронно изявление</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+            <xsd:element name="Person" type="pbd:PersonBasicData" />
+            <xsd:element name="ForeignCitizen" type="fcbd:ForeignCitizenBasicData" />
+        </xsd:choice>
+    </xsd:complexType>
+
+
+</xsd:schema>

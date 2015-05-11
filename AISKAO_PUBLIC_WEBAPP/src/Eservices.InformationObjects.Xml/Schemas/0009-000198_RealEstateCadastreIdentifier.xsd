@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000198"
+      xmlns="http://ereg.egov.bg/segment/0009-000198"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:ec="http://ereg.egov.bg/value/0008-000270"
+      xmlns:can="http://ereg.egov.bg/value/0008-000280"
+      xmlns:lpcn="http://ereg.egov.bg/value/0008-000281"
+      xmlns:lpbcn="http://ereg.egov.bg/value/0008-000282"
+      xmlns:sbucn="http://ereg.egov.bg/value/0008-000283"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000270" schemaLocation="0008-000270_TerritorialUnitEKATTECode.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000280" schemaLocation="0008-000280_CadastralAreaNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000281" schemaLocation="0008-000281_LandPropertyCadastralNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000282" schemaLocation="0008-000282_LandPropertyBuildingCadastralNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000283" schemaLocation="0008-000283_SeparateBuildingUnitCadastralNumber.xsd"/>
+
+  <xsd:complexType name="RealEstateCadastreIdentifier">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Кадастрален идентификатор на недвижим имот</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="TerritorialUnitEKATTECode" type="ec:TerritorialUnitEKATTECode" minOccurs="0" />
+      <xsd:element name="CadastralAreaNumber" type="can:CadastralAreaNumber" minOccurs="0" />
+      <xsd:element name="LandPropertyCadastralNumber" type="lpcn:LandPropertyCadastralNumber" minOccurs="0" />
+      <xsd:element name="LandPropertyBuildingCadastralNumber" type="lpbcn:LandPropertyBuildingCadastralNumber" minOccurs="0" />
+      <xsd:element name="SeparateBuildingUnitCadastralNumber" type="sbucn:SeparateBuildingUnitCadastralNumber" minOccurs="0" />      
+    </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

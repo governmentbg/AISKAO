@@ -1,0 +1,30 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: status, view: 'segments/regix/StatusType', area: 'Display' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend></legend>
+        <div class="row">
+            <span class="span3">ЕИК:</span>
+            <span class="span9 uneditable-input" data-bind="text: uic"></span>
+        </div>
+        <div class="row">
+            <span class="span3">Фирма:</span>
+            <span class="span9 uneditable-input" data-bind="text: company"></span>
+        </div>
+    </fieldset>
+
+    <!--ko compose: { model: legalForm, view: 'segments/regix/LegalFormType', area: 'Display' } -->
+    <!-- /ko-->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Дата на валидност на данните:</span>
+                <span class="span9 uneditable-input" data-bind="formattedDateTime: dataValidForDate"></span>
+            </label>
+        </div>
+    </div>
+</div>

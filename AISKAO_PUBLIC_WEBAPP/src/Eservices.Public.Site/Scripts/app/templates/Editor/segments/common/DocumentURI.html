@@ -1,0 +1,19 @@
+﻿<div>
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">УРИ на документ:</span>
+                <input class="span3" type="text" data-bind="value: registerIndex, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+        <div class="controls-row">
+            <input class="span3" type="text" data-bind="value: sequenceNumber, valueUpdate: 'afterkeydown'" />
+            <span class="input-append span3" data-bind="datepicker: receiptOrSigningDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: receiptOrSigningDate.isRequired">
+                <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                <span class="add-on btn btn-info">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>

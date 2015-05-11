@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1267" xmlns="http://ereg.egov.bg/segment/R-1267" xmlns:raptd="http://ereg.egov.bg/segment/R-1242" xmlns:bptd="http://ereg.egov.bg/segment/R-1252" xmlns:oaorp="http://ereg.egov.bg/segment/R-1263" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1242" schemaLocation="R-1242_RevisedAnimalProteinTypeData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1252" schemaLocation="R-1252_BloodProductsTypeData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1263" schemaLocation="R-1263_OtherAnimalOrRevisedProducts.xsd" />
+  <xsd:complexType name="ForageOtherAnimalProductsTradingData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Търговия на странични животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="RevisedAnimalProteinTypeData" type="raptd:RevisedAnimalProteinTypeData" minOccurs="0" />
+      <xsd:element name="BloodProductsTypeData" type="bptd:BloodProductsTypeData" minOccurs="0" />
+      <xsd:element name="OtherAnimalOrRevisedProducts" type="oaorp:OtherAnimalOrRevisedProducts" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

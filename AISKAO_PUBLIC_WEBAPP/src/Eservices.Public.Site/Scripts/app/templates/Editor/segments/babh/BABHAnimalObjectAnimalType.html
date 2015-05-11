@@ -1,0 +1,107 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Вид животни:</span>
+                <span data-bind="attr: { 'class': animalTypeCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select class="span3"
+                        data-bind="options: animalTypeCode.nomAnimalTypes(),
+    optionsText: 'name',
+    value: animalTypeCode.selectedAnimalType,
+    attr: { 'class': animalTypeCode.isLoading() === true ? 'span4 bar fullwidth' : 'span4' },
+    enable: animalTypeCode.nomAnimalTypes().length != 0">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- ko if: animalTypeCode() === '32'-->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друг вид животно:</span>
+                <input class="span9" type="text" data-bind="value: otherAnimalTypeName, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Допълнителна информация за вид животни:</span>
+                <input class="span9" type="text" data-bind="value: animalTypeAdditionalInfo, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+
+    <!-- ko with: animalObjectAnimalPurposes -->
+    <div class="row">
+        <span class="span3 text-left">Предназначение на животните:</span>
+        <span class="span2" data-bind="foreach: animalObjectAnimalPurpose.nomAnimalPurposes">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="click: $parent.addAnimalObjectAnimalPurpose.bind($parents[1], $parent), clickBubble: false, checked: $data.selectedAnimalPurpose() !== null && $data.selectedAnimalPurpose() !== undefined" />
+                <span class="span10" data-bind="text: name"></span>
+            </label>
+        </span>
+    </div>
+    <!-- /ko -->
+
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друго предназначение:</span>
+                <input class="span9" type="text" data-bind="value: otherAnimalPurpose, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Технология на отглеждане:</span>
+                <span data-bind="attr: { 'class': animalRisingTechnologyCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                    <select class="span3"
+                        data-bind="options: animalRisingTechnologyCode.nomAnimalRisingTechnologies(),
+    optionsText: 'name',
+    value: animalRisingTechnologyCode.selectedAnimalRisingTechnology,
+    attr: { 'class': animalRisingTechnologyCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+    enable: animalRisingTechnologyCode.nomAnimalRisingTechnologies().length != 0">
+                    </select>
+                </span>
+            </label>
+        </div>
+    </div>
+
+    <!-- ko if: animalRisingTechnologyCode() === '3'-->
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Друга технология:</span>
+                <input class="span9" type="text" data-bind="value: otherAnimalRisingTechnology, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Капацитет за отглеждане на вида животни:</span>
+                <input class="span9" type="text" data-bind="value: farmCapacityByAnimalType, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Брой отглеждани животни:</span>
+                <input class="span9" type="text" data-bind="value: farmAnimalsCount, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+
+</div>

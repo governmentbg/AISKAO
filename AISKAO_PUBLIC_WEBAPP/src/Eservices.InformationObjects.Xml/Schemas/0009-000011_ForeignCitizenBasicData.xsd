@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000011"
+      xmlns="http://ereg.egov.bg/segment/0009-000011"
+      xmlns:fcn="http://ereg.egov.bg/segment/0009-000007"
+      xmlns:bd="http://ereg.egov.bg/value/0008-000022"
+      xmlns:fcpb="http://ereg.egov.bg/segment/0009-000009"
+      xmlns:fcid="http://ereg.egov.bg/segment/0009-000010"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000007" schemaLocation="0009-000007_ForeignCitizenNames.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000022" schemaLocation="0008-000022_BirthDate.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000009" schemaLocation="0009-000009_ForeignCitizenPlaceOfBirth.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000010" schemaLocation="0009-000010_ForeignCitizenIdentityDocument.xsd"/>
+
+
+    <xsd:complexType name="ForeignCitizenBasicData">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Основни данни за физическо лице, нерегистрирано по българското законодателство</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="Names" type="fcn:ForeignCitizenNames" minOccurs="0"/>
+            <xsd:element name="BirthDate" type="bd:BirthDate" minOccurs="0"/>
+            <xsd:element name="PlaceOfBirth" type="fcpb:ForeignCitizenPlaceOfBirth" minOccurs="0" />
+            <xsd:element name="IdentityDocument" type="fcid:ForeignCitizenIdentityDocument" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

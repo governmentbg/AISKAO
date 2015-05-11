@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000007"
+      xmlns="http://ereg.egov.bg/segment/0009-000007"
+      xmlns:fcfnc="http://ereg.egov.bg/value/0008-000014"
+      xmlns:fclnc="http://ereg.egov.bg/value/0008-000015"
+      xmlns:fconc="http://ereg.egov.bg/value/0008-000016"
+      xmlns:fcpc="http://ereg.egov.bg/value/0008-000017"
+      xmlns:fcfnl="http://ereg.egov.bg/value/0008-000018"
+      xmlns:fclnl="http://ereg.egov.bg/value/0008-000019"
+      xmlns:fconl="http://ereg.egov.bg/value/0008-000020"
+      xmlns:fcpl="http://ereg.egov.bg/value/0008-000021"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000014" schemaLocation="0008-000014_ForeignCitizenFirstNameCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000015" schemaLocation="0008-000015_ForeignCitizenLastNameCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000016" schemaLocation="0008-000016_ForeignCitizenOtherNameCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000017" schemaLocation="0008-000017_ForeignCitizenPseudonimCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000018" schemaLocation="0008-000018_ForeignCitizenFirstNameLatin.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000019" schemaLocation="0008-000019_ForeignCitizenLastNameLatin.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000020" schemaLocation="0008-000020_ForeignCitizenOtherNameLatin.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000021" schemaLocation="0008-000021_ForeignCitizenPseudonimLatin.xsd"/>
+
+
+    <xsd:complexType name="ForeignCitizenNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Имена на физическо лице, нерегистрирано по българското законодателство</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="FirstCyrillic" type="fcfnc:ForeignCitizenFirstNameCyrillic" minOccurs="0"/>
+            <xsd:element name="LastCyrillic" type="fclnc:ForeignCitizenLastNameCyrillic" minOccurs="0"/>
+            <xsd:element name="OtherCyrillic" type="fconc:ForeignCitizenOtherNameCyrillic" minOccurs="0"/>
+            <xsd:element name="PseudonimCyrillic" type="fcpc:ForeignCitizenPseudonimCyrillic" minOccurs="0"/>
+            <xsd:element name="FirstLatin" type="fcfnl:ForeignCitizenFirstNameLatin" minOccurs="0"/>
+            <xsd:element name="LastLatin" type="fclnl:ForeignCitizenLastNameLatin" minOccurs="0"/>
+            <xsd:element name="OtherLatin" type="fconl:ForeignCitizenOtherNameLatin" minOccurs="0"/>
+            <xsd:element name="PseudonimLatin" type="fcpl:ForeignCitizenPseudonimLatin" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

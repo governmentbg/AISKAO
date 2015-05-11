@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1362" xmlns="http://ereg.egov.bg/value/R-1362" xmlns:esapn="http://ereg.egov.bg/value/0008-000129" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000129" schemaLocation="0008-000129_ElectronicServiceApplicantPhoneNumber.xsd" />
+  <xsd:simpleType name="AnimalHoldingPhone">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Телефонен номер за контакт с животновъден обект</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="esapn:ElectronicServiceApplicantPhoneNumber" />
+  </xsd:simpleType>
+</xsd:schema>

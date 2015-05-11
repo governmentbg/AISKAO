@@ -1,0 +1,30 @@
+﻿<div>
+    <fieldset>
+        <legend>Личен подпис</legend>
+        <div class="row">
+            <div class="span10 files">
+                <span data-bind="downloadFile: identitySignatureFileContent, downloadFileName: identitySignatureFileName"></span>
+                <a class="btn btn-info" data-bind="attr: { href: identitySignatureFileContent.downloadLink, download: identitySignatureFileName }" title="Запази"><i class="icon-download-alt icon-white"></i></a>
+            </div>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Име на избрания файл:</span>
+                <span class="uneditable-input span9" data-bind="text: identitySignatureFileName"></span>
+            </label>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Тип на избрания файл:</span>
+                <span class="uneditable-input span9" data-bind="text: fileType"></span>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Описание:</span>
+                <span class="uneditable-input span9" data-bind="text: identitySignatureDescription"></span>
+            </label>
+        </div>
+    </fieldset>
+</div>

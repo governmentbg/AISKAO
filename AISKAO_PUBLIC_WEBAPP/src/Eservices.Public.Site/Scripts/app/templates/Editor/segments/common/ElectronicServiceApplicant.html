@@ -1,0 +1,45 @@
+﻿<div>
+    <div class="row">
+        <label>
+            <span class="span3">Електронна поща:</span>
+            <input class="span9" type="text" data-bind="value: emailAddress, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+
+    <div class="row">
+        <div class="control-group span12">
+        <label class="checkbox">
+            <span class="label label-info">Авторът съвпада с получателя</span>
+            <input type="checkbox" data-bind="checked: recipientGroups.isAuthorEqualsRecipient" />
+        </label>
+        </div>
+    </div>
+
+        <!-- ko if: recipientGroups.isAuthorEqualsRecipient -->
+            <!-- ko foreach: recipientGroups -->
+
+            <div class="row">
+                <label>
+                    <span class="span3">Изберете тип на автор:</span>
+                    <select class="span9" data-bind="options: authors.authorTypes,
+                                                    optionsText: 'name',
+                                                    value: authors.selectedAuthorType">
+                    </select>
+                </label>
+            </div>
+    
+                <div data-bind="with: authors()[0]">
+                    <!-- ko compose: { model: $data, view: 'segments/common/ElectronicStatementAuthorEqualsRecepient', area: 'Editor' , transition: 'entrance', keepScrollPosition: true } -->
+                    <!-- /ko -->
+                </div>
+
+            <!-- /ko -->
+        <!-- /ko -->
+
+    <!-- ko ifnot: recipientGroups.isAuthorEqualsRecipient -->
+        <div data-bind="with: recipientGroups()[0]">
+            <!-- ko compose: { model: $data, view: 'segments/common/RecipientGroup', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+            <!-- /ko -->
+        </div>
+    <!-- /ko -->
+</div>

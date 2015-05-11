@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1093" xmlns="http://ereg.egov.bg/value/R-1093" xmlns:potn="http://ereg.egov.bg/nomenclature/R-1091" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1091" schemaLocation="R-1091_PlantObjectTypeNomenclature.xsd" />
+  <xsd:simpleType name="PlantObjectType">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид обект за растителна защита</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="potn:PlantObjectTypeNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>

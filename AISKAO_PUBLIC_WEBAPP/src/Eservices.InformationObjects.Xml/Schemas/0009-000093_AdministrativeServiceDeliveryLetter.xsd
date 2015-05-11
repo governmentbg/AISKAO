@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000093"
+      xmlns="http://ereg.egov.bg/segment/0009-000093"
+      xmlns:easuri="http://ereg.egov.bg/segment/0009-000091"
+      xmlns:edx="http://ereg.egov.bg/segment/0009-000092"
+      xmlns:acai="http://ereg.egov.bg/value/0008-000121"
+      xmlns:espbd="http://ereg.egov.bg/segment/0009-000002"
+      xmlns:du="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:ais="http://ereg.egov.bg/value/0008-000037"
+      xmlns:xdsig="http://ereg.egov.bg/segment/0009-000004"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000091" schemaLocation="0009-000091_ElectronicAdministrativeServiceURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000092" schemaLocation="0009-000092_ElectronicDocumentXml.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000121" schemaLocation="0008-000121_AISCorrespondenceAccessIdentifier.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000002" schemaLocation="0009-000002_ElectronicServiceProviderBasicData.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000001" schemaLocation="0009-000001_DocumentURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000037" schemaLocation="0008-000037_AISCaseAccessIdentifier.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000004" schemaLocation="0009-000004_XMLDigitalSignature.xsd"/>
+
+    <xsd:element name="AdministrativeServiceDeliveryLetter" type="AdministrativeServiceDeliveryLetter"/>
+    <xsd:complexType name="AdministrativeServiceDeliveryLetter">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Писмо за предаване на заявление между две АИС на една администрация</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="ElectronicAdministrativeServiceURI" type="easuri:ElectronicAdministrativeServiceURI" />
+            <xsd:element name="ElectronicServiceProviderBasicData" type="espbd:ElectronicServiceProviderBasicData" />			
+            <xsd:element name="DocumentURI" type="du:DocumentURI" />
+            <xsd:element name="AISCorrespondenceAccessIdentifier" type="acai:AISCorrespondenceAccessIdentifier" />
+            <xsd:element name="AISCaseAccessIdentifier" type="ais:AISCaseAccessIdentifier" minOccurs="0"/>
+            <xsd:element name="ElectronicAdministrativeServiceApplicationXml" type="edx:ElectronicDocumentXml" />
+            <xsd:element name="ReceiptAcknowledgedMessageXml" type="edx:ElectronicDocumentXml"/>
+            <xsd:element name="PaymentRequestXml" type="edx:ElectronicDocumentXml" minOccurs="0"/>
+            <xsd:element name="MessageCreationTime" type="xsd:dateTime" />
+            <xsd:element name="XMLDigitalSignature" type="xdsig:XMLDigitalSignature" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>

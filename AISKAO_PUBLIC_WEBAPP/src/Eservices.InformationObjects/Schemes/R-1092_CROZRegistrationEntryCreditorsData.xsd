@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1092" xmlns="http://ereg.egov.bg/segment/R-1092" xmlns:crozrepbd="http://ereg.egov.bg/segment/R-1081" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1081" schemaLocation="R-1081_CROZRegistrationEntryParticipantBasicData.xsd" />
+  <xsd:complexType name="CROZRegistrationEntryCreditorsData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за участници, за които са вписани права по вписване в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZRegistrationEntryParticipantBasicDatas" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CROZRegistrationEntryParticipantBasicData" type="crozrepbd:CROZRegistrationEntryParticipantBasicData" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

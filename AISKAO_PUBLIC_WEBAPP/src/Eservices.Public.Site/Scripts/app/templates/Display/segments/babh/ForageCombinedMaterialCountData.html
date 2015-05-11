@@ -1,0 +1,15 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <!-- ko with: forageCombinedMaterialCountTypes -->
+            <div class="span12" data-bind="foreach: forageCombinedMaterialCountType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getForageCombinedMaterialCountTypeName($data)"></span>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+
+

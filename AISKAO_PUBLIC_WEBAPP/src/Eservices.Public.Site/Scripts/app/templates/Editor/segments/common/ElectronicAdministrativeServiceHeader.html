@@ -1,0 +1,75 @@
+﻿<div>
+    <fieldset>
+        <legend>Данни за услуга</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Административна услуга:</span>
+                <span class="uneditable-input span9" data-bind="text: sunauServiceName"></span>
+            </label>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Наименование на тип документ:</span>
+                <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+            </label>
+        </div>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Вид на заявлението:</span>
+                <select class="span9"
+                    data-bind="options: applicationType.applicationTypes,
+                            optionsText: 'name',
+                            optionsValue: 'key',
+                            value: applicationType">
+                </select>
+            </label>
+        </div>
+
+        <!-- ko if: applicationType() !== '0006-000121' -->
+            <!-- ko with: documentURI()-->
+                <!-- ko compose: { model: $data, view: 'segments/common/DocumentURI', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko -->
+            <!-- /ko -->
+        <!-- /ko -->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+          <!-- ko ifnot: electronicServiceProviderBasicData.isLoading() === false -->
+            <div class="progress progress-striped active 
+                page-progress-bar">
+                <div class="bar" style="width: 100%;"></div>
+            </div>
+         <!-- /ko -->
+          <!-- ko if: electronicServiceProviderBasicData.isLoading() === false -->
+            <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Editor' } -->
+            <!-- /ko -->
+         <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронна административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Editor'} -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за контакт</legend>
+        <!-- ko compose: { model: electronicServiceApplicantContactData, view: 'segments/common/ElectronicServiceApplicantContactData', area: 'Editor'  } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Изпращане на „Потвърждаване за получаване”</legend>
+        <div class="row">
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Изпращане на електронния документ и приложените към него документи заедно с документа „Потвърждаване за получаване”</span>
+                    <input type="checkbox" data-bind="checked: sendApplicationWithReceiptAcknowledgedMessage" />
+                </label>
+            </div>
+        </div>
+    </fieldset>
+</div>

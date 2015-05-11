@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1138" xmlns="http://ereg.egov.bg/nomenclature/R-1138" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="SeaWorkRestrictionsNomenlcature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на видове ограничение за работа на определен тип кораб</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Нефтени танкери-->
+      <xsd:enumeration value="R-1134" />
+      <!--Танкери газовози-->
+      <xsd:enumeration value="R-1135" />
+      <!--Танкери химикаловози-->
+      <xsd:enumeration value="R-1136" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

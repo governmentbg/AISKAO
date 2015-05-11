@@ -1,0 +1,58 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!-- ko compose: { model: electronicServiceProvider, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+    <div class="row">
+        <span class="span3 text-left">Вид на пренос по електронен път:</span>
+        <span class="span9 uneditable-input" data-bind="text: transportType.displayValue().name"></span>
+    </div>
+
+    <fieldset>
+        <legend></legend>
+        <!--ko compose: { model:documentURI, view: 'segments/common/DocumentURI', area: 'Display' }-->
+        <!--/ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на Електронна услуга</legend>
+        <!-- ko compose: { model: applicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!--ko with: documentTypeURI-->
+    <fieldset>
+        <legend>УРИ на документ, вписан в регистъра на информационните обекти</legend>
+        <div class="row">
+            <span class="span3 text-left">Регистров индекс:</span>
+            <span class="span9 uneditable-input" data-bind="text: registerIndex"></span>
+        </div>
+        <div class="row">
+            <span class="span3 text-left">Уникален номер:</span>
+            <span class="span9 uneditable-input" data-bind="text: batchNumber"></span>
+        </div>
+    </fieldset>
+    <!--/ko-->
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Тип на документ:</span>
+            <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+        </label>
+    </div>
+
+
+    <!--ko with: registeredBy-->
+    <div class="row">
+        <span class="span3 text-left">УРИ на АИС: </span>
+        <span class="span9 uneditable-input" data-bind="text: aisuri"></span>
+    </div>
+    <!--/ko-->
+    <div class="row">
+        <span class="span3 text-left">Уникален идентификационен ключ:</span>
+        <span class="span9 uneditable-input" data-bind="text: caseAccessIdentifier"></span>
+    </div>
+</div>

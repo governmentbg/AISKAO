@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1017" xmlns="http://ereg.egov.bg/nomenclature/R-1017" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="FoodObjectPurposeNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура за вид на обект за производство и търговия с храни</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Вид обект за производство и търговия с храни - производство на храни-->
+      <xsd:enumeration value="R-1009" />
+      <!--Вид обект за производство и търговия с храни - търговия на едро с храни-->
+      <xsd:enumeration value="R-1010" />
+      <!--Вид обект за производство и търговия с храни - търговия на дребно с храни-->
+      <xsd:enumeration value="R-1011" />
+      <!--Вид обект за производство и търговия с храни - търговия на дребно с храни с производство-->
+      <xsd:enumeration value="R-1015" />
+      <!--Вид обект за производство и търговия с храни - търговия на дребно с храни на територията на училища /съгласно Наредба № 37 за здравословно хранене на учениците от 21 юли 2009 год./-->
+      <xsd:enumeration value="R-1012" />
+      <!--Вид обект за производство и търговия с храни - заведение за обществено хранене-->
+      <xsd:enumeration value="R-1013" />
+      <!--Вид обект за производство и търговия с храни - заведение за организирано хранене на територията на училища-->
+      <xsd:enumeration value="R-1014" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

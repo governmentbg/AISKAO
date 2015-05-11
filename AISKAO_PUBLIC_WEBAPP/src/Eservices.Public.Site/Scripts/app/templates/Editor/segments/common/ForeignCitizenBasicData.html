@@ -1,0 +1,56 @@
+﻿<div>
+    <!-- ko compose: { model: names , view: 'segments/common/ForeignCitizenNames', area: 'Editor'  } -->
+    <!-- /ko -->
+
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Дата на раждане:</span>
+            <span class="input-append" data-bind="datepicker: birthDate, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: birthDate.isRequired">
+                <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                <span class="add-on btn btn-info">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                </span>
+            </span>
+        </label>
+    </div>
+
+    <!-- ko with: placeOfBirth -->
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Държава:</span>
+            <span data-bind="attr: { 'class': countryCode.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                <select class="span9"
+                    data-bind="options: countryCode.nomCountries(),
+                        optionsText: 'name',
+                        value: countryCode.selectedCountry,
+                        attr: { 'class':  countryCode.isLoading() === true ? 'span9 bar fullwidth' : 'span9' },
+                        enable: countryCode.nomCountries().length != 0">
+                </select>
+            </span>
+        </label>
+    </div>
+    <div class="row">
+        <label>
+            <span class="span3 text-left">Населено място:</span>
+            <input class="span9 input-append" placeholder="Населено място" type="text" data-bind="value: settlementName, valueUpdate: 'afterkeydown'" />
+        </label>
+    </div>
+    <!-- /ko -->
+
+    <!-- ko with: identityDocument -->
+    <div class="row">
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Документ за самоличност:</span>
+                <input class="span3 input-append" placeholder="Номер на документ за самоличност" type="text" data-bind="value: documentNumber, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+        <div class="span6">
+            <label class="row">
+                <span class="span3 text-left">Вид на документ за самоличност:</span>
+                <input class="span3 input-append" placeholder="Вид на документ за самоличност" type="text" data-bind="value: documentType, valueUpdate: 'afterkeydown'" />
+            </label>
+        </div>
+    </div>
+    <!-- /ko -->
+</div>

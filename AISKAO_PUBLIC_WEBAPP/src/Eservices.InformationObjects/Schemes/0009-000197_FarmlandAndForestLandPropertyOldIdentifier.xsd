@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000197"
+      xmlns="http://ereg.egov.bg/segment/0009-000197"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      xmlns:fflpoipn="http://ereg.egov.bg/value/0008-000278"
+      xmlns:fflpoian="http://ereg.egov.bg/value/0008-000279"
+      elementFormDefault="qualified">
+
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000278" schemaLocation="0008-000278_FarmlandAndForestLandPropertyOldIdentifierParcelNumber.xsd"/>
+  <xsd:import namespace="http://ereg.egov.bg/value/0008-000279" schemaLocation="0008-000279_FarmlandAndForestLandPropertyOldIdentifierArrayNumber.xsd"/>
+
+  <xsd:complexType name="FarmlandAndForestLandPropertyOldIdentifier">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Стар идентификатор на поземлен имот в земеделска или горска територия</xsd:documentation>
+    </xsd:annotation>
+      <xsd:sequence>
+        <xsd:element name="Parcel" type="fflpoipn:FarmlandAndForestLandPropertyOldIdentifierParcelNumber" minOccurs="0" />
+        <xsd:element name="Array" type="fflpoian:FarmlandAndForestLandPropertyOldIdentifierArrayNumber" minOccurs="0" />
+      </xsd:sequence>
+  </xsd:complexType>
+
+</xsd:schema>

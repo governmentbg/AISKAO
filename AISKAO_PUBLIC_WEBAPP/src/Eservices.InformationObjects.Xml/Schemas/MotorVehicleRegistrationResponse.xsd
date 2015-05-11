@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2008 rel. 2 (http://www.altova.com) by mazuki (darksiderg) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/MVR/MPS/MotorVehicleRegistrationResponse" targetNamespace="http://egov.bg/RegiX/MVR/MPS/MotorVehicleRegistrationResponse" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="EntityData">
+		<xs:annotation>
+			<xs:documentation>Данни за юридическо лице</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Identifier" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕИК/БУЛСТАТ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Name" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фирмено име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фирмено име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonData">
+		<xs:annotation>
+			<xs:documentation>Данни за физическо лице</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EGN" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕГН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собствено име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Surname" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Бащино име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилно име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собствено име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SurnameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Бащино име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилно име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на раждане</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ForeignerPersonData">
+		<xs:annotation>
+			<xs:documentation>Данни за физическо лице - чужденец</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="EGN" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕГН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LNCh" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЛНЧ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Names" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NamesLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена, изписани на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MotorVehicleRegistrationResponseType">
+		<xs:annotation>
+			<xs:documentation>Данни за справка на данни от свидетелство за регистрация на МПС (част 2) </xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ReturnInformation" type="ReturnInformation" minOccurs="0"/>
+			<xs:element name="Vehicles" type="Vehicles" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ReturnInformation">
+		<xs:annotation>
+			<xs:documentation>Данни за резултат</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ReturnCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>0000-успешна операция;0100-няма данни отговарящи на условието.Други значения означават възникване на грешка - подлежат на допълнително уточняване.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Info" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание на грешката</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="MotorVehicleRegistrationResponse" type="MotorVehicleRegistrationResponseType">
+		<xs:annotation>
+			<xs:documentation>Справка на данни от свидетелство за регистрация на МПС (част 2) </xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="Vehicle">
+		<xs:annotation>
+			<xs:documentation>Данни за МПС</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="VehicleRegistrationNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(A) Регистрационен номер на МПС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstRegistrationDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(B) Дата нa първа регистрация</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleRegistrationCertificateNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер на документа </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OwnerPersonData" type="PersonData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(C.2) Собственик на МПС -  физическо лице </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OwnerEntityData" type="EntityData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(C.2) Собственик на МПС -  юридическо лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OwnerForeignerPersonData" type="ForeignerPersonData" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(C.2) Собственик на МПС -  чужденец</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D) Вид МПС на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleTypeLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D) Вид МПС на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleModel" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D.1) Марка (модел) на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleModelLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D.1) Марка (модел) на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MotorVehicleModelType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D.2) Тип, вариант и версия на МПС на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TradeDescription" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D.3) Търговско описание на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TradeDescriptionLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(D.3) Търговско описание на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VINNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(Е) Идентификационен номер на МПС (VIN)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssueDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(I) Дата на издаване на свидетелството</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Category" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(J) Категория на превозното средство</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Color" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(R) Цвят на МПС на кирилица</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColorLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>(R) Цвят на МПС на латиница </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EngineNumber" minOccurs="0" type="xs:string">
+				<xs:annotation>
+					<xs:documentation>(P.5) Номер на двигател</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColorSecondary" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Допълнителен цвят на МПС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ColorSecondaryLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Допълнителен цвят на МПС на латиница </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Vehicles">
+		<xs:annotation>
+			<xs:documentation>Данни за МПС-ва</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Vehicle" type="Vehicle" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

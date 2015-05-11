@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000041"
+      xmlns="http://ereg.egov.bg/value/0008-000041"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="FileType">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">MIME тип на файл</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[a-z]+/[-+\.a-zA-Z0-9]+"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

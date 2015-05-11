@@ -1,0 +1,26 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Display' } -->
+    <!-- /ko-->
+
+    <!--ko compose: { model: $data, view: 'segments/iama/IAMAApplicationBasicData', area: 'Display' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Номер на документ за самоличност</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Език на удостоверение за плавателен стаж:</span>
+                <span class="span9 uneditable-input" data-bind="text: navigableExperienceLanguage.displayValue().name"></span>
+            </label>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceFooter, view: 'segments/common/ElectronicAdministrativeServiceFooter', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Display' } -->
+    <!-- /ko-->
+</div>
+

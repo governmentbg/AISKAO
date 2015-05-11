@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+   <head>
+      <title>Test page</title>
+   </head>
+   <body>
+      <script type="text/javascript">
+         function afterSigningFunction(flag) {
+            alert('[from javascript]status=' + flag);
+         }
+      </script>
+      <h3>Test page for xml-signer</h3>
+      <textarea id="ELEMENT_TO_SIGN_ID">
+<a>
+    <i>tsanko-0</i>
+    <i>tsanko-1</i>
+    <i>tsanko-2</i>
+</a>
+      </textarea>
+      <hr>
+      <center>
+         <applet 
+            code="main.GoApplet" 
+            archive="xml.singer.v2.jar, lib/junit-4.10.jar, lib/xmlsec-2.0.jar"
+            width="300" 
+            height="300">
+            Can't use applets in Your browser!? O-oops!
+         </applet>
+      </center>
+   </body>
+</html>

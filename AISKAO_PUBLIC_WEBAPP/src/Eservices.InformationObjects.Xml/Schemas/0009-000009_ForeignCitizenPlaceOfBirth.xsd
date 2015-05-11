@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000009"
+      xmlns="http://ereg.egov.bg/segment/0009-000009"
+      xmlns:ctlc="http://ereg.egov.bg/value/0008-000024"
+      xmlns:cnc="http://ereg.egov.bg/value/0008-000025"
+      xmlns:san="http://ereg.egov.bg/value/0008-000023"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000024" schemaLocation="0008-000024_CountryISO3166TwoLetterCode.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000025" schemaLocation="0008-000025_CountryNameCyrillic.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000023" schemaLocation="0008-000023_SettlementAbroadName.xsd"/>
+
+
+	<xsd:complexType name="ForeignCitizenPlaceOfBirth">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Място на раждане на физическо лице, нерегистрирано по българското законодателство</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="CountryCode" type="ctlc:CountryISO3166TwoLetterCode" minOccurs="0"/>
+            <xsd:element name="CountryName" type="cnc:CountryNameCyrillic" minOccurs="0"/>
+            <xsd:element name="SettlementName" type="san:SettlementAbroadName" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema>

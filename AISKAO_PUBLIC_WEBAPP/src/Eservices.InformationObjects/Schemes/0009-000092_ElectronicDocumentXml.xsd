@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000092"
+      xmlns="http://ereg.egov.bg/segment/0009-000092"
+      xmlns:edxc="http://ereg.egov.bg/value/0008-000120"
+      xmlns:dtn="http://ereg.egov.bg/value/0008-000007"
+      xmlns:dturi="http://ereg.egov.bg/segment/0009-000003"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000007" schemaLocation="0008-000007_DocumentTypeName.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/segment/0009-000003" schemaLocation="0009-000003_DocumentTypeURI.xsd"/>
+    <xsd:import namespace="http://ereg.egov.bg/value/0008-000120" schemaLocation="0008-000120_ElectronicDocumentXmlContent.xsd"/>
+
+    <xsd:complexType name="ElectronicDocumentXml">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Приложен електронен документ в XML формат</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentTypeURI" type="dturi:DocumentTypeURI" minOccurs="0"/>
+            <xsd:element name="DocumentTypeName" type="dtn:DocumentTypeName" minOccurs="0"/>
+            <xsd:element name="ElectronicDocumentXmlContent" type="edxc:ElectronicDocumentXmlContent" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+</xsd:schema>

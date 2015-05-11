@@ -1,0 +1,99 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Editor' } -->
+    <!-- /ko -->
+
+    <fieldset>
+        <legend>Седалище и адрес на управление</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Editor' } -->
+        <!-- /ko -->
+    </fieldset>
+
+     <fieldset>
+        <legend>Начин на получаване на резултат от услуга</legend>
+        <!-- ko compose: { model: serviceApplicantReceiptData, view: 'segments/common/ServiceApplicantReceiptData', area: 'Editor', transition: 'entrance' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <div class="row">
+            <div class="span12">
+                <label class="row">
+                    <span class="span3 text-left">Дирекция:</span>
+                    <span data-bind="attr: { 'class': regionalDirectionCode.isLoading() === true ? 'span9 progress progress-striped active fullheight progressPadding' : 'span9 fullheight' }">
+                        <select class="span9"
+                            data-bind="options: regionalDirectionCode.nomDirections,
+                        optionsText: 'name',
+                        optionsValue: 'code',
+                        optionsCaption: '--Изберете Дирекция--',
+                        value: regionalDirectionCode,
+                        css: { 'span3 bar fullwidth': regionalDirectionCode.isLoading() === true, 'span9': regionalDirectionCode.isLoading() === false },
+                        enable: regionalDirectionCode.nomDirections().length != 0">
+                        </select>
+                    </span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: forageForTransportationData, view: 'segments/babh/ForageForTransportationData', area: 'Editor' } -->
+    <!-- /ko -->
+
+    <fieldset>
+        <legend>Данни за транспортна дейност
+            <!-- ko with: forageTransportActivityDatas -->
+            <button type="button" class="btn btn-default" data-bind="click: addForageTransportActivityData">Добави</button>
+            <!-- /ko-->
+        </legend>
+        <div class="row">
+            <div data-bind="with: forageTransportActivityDatas">
+                <div class="span11" data-bind="foreach: forageTransportActivityData">
+                    <fieldset>
+                        <legend>Данни за дейност
+                              <button data-bind="click: $parent.removeForageTransportActivityData.bind($parent), attr: { 'class': $parent.forageTransportActivityData().length > 1 ? 'btn btn-danger' : 'btn btn-danger disabled' }">Изтрий</button>
+                        </legend>
+                        <!-- ko compose: { model: $data, view: 'segments/babh/ForageTransportActivityData', area: 'Editor' } -->
+                        <!-- /ko -->
+                        <hr />
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="row">
+        <div class="control-group span12">
+            <label class="checkbox">
+                <span>Декларирам, че:</span>
+                <input type="checkbox" disabled data-bind="checked: forageTransporterDeclaration" /></label>
+            <span class="uneditable-input span12">1.Транспортирам фуражи само от лица, които са регистрирани и/или одобрени по Закона за фуражите, 
+                  съгласно чл. 33 от Закона.<br>
+                2. При промяна в заявените обстоятелства в тридневен срок от настъпването им ще уведомя писмено 
+                  директора на Областната дирекция по безопасност на храните, съгласно чл. 17в, ал. 1 от 
+                  Закона за фуражите.<br>
+                3. Спазвам изискванията за хигиена на фуражите на Приложение ІІ към Регламент (ЕО) № 183/2005 
+                  относно определяне на изискванията за хигиена на фуражите.<br>
+                4. Известно ми е, че данните, които предоставям са лични данни по смисъла на 
+                  Закона за защита на личните данни. Предоставям личните си данни доброволно и 
+                  давам съгласието си Българската агенция по безопасност на храните да ги обработва, 
+                  съхранява и използва за изпълнение на законните интереси на Агенцията, при условие, 
+                  че са спазени разпоредбите на Закона за защита на личните данни.</span>
+        </div>
+        <div class="control-group span12">
+            <label class="checkbox">
+                <span>Декларирам, че:</span>
+                <input type="checkbox" disabled data-bind="checked: forageOperatorRegulationFulfillmentDeclaration" /></label>
+            <span class="uneditable-input span12">Декларирам, че: са изпълнени всички условия на 
+                Регламент (ЕО) № 183/2005. В съответствие с член 6 
+                „Система за анализ на риска и критичните точки за контрол (НАССР)” на 
+                Регламента са създадени и се поддържат писмени процедури, 
+                основани на принципите на НАССР.</span>
+        </div>
+    </div>
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Editor' } -->
+    <!-- /ko -->
+</div>
+

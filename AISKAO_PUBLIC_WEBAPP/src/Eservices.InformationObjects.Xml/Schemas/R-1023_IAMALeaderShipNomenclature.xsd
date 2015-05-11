@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/nomenclature/R-1023" xmlns="http://ereg.egov.bg/nomenclature/R-1023" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:simpleType name="IAMALeaderShipNomenclature">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Номенклатура на правоспособностите за водач на кораб</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="xsd:string">
+      <!--Водач на кораб до 40 БТ по море-->
+      <xsd:enumeration value="R-1020" />
+      <!--Водач на малък кораб-->
+      <xsd:enumeration value="R-1021" />
+    </xsd:restriction>
+  </xsd:simpleType>
+</xsd:schema>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000020"
+      xmlns="http://ereg.egov.bg/segment/0009-000020"
+      xmlns:duri="http://ereg.egov.bg/segment/0009-000001"
+      xmlns:std="http://ereg.egov.bg/value/0008-000042"
+      xmlns:etd="http://ereg.egov.bg/value/0008-000043"
+      xmlns:ft="http://ereg.egov.bg/value/0008-000041"
+      xmlns:fc="http://ereg.egov.bg/value/0008-000040"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import schemaLocation="0009-000001_DocumentURI.xsd" namespace="http://ereg.egov.bg/segment/0009-000001"/>
+    <xsd:import schemaLocation="0008-000042_ShortTransferDescription.xsd" namespace="http://ereg.egov.bg/value/0008-000042"/>
+    <xsd:import schemaLocation="0008-000043_ExpandedTransferDescription.xsd" namespace="http://ereg.egov.bg/value/0008-000043"/>
+    <xsd:import schemaLocation="0008-000041_FileType.xsd" namespace="http://ereg.egov.bg/value/0008-000041"/>
+    <xsd:import schemaLocation="0008-000040_FileContent.xsd" namespace="http://ereg.egov.bg/value/0008-000040"/>
+
+
+    <xsd:complexType name="TransferredDocument">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Пренасян документ</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+            <xsd:element name="DocumentURI" type="duri:DocumentURI" minOccurs="0"/>
+            <xsd:element name="ShortTransferDescription" type="std:ShortTransferDescription" minOccurs="0"/>
+            <xsd:element name="ExpandedTransferDescription" type="etd:ExpandedTransferDescription" minOccurs="0"/>
+            <xsd:element name="FileType" type="ft:FileType" minOccurs="0"/>
+            <xsd:element name="FileContent" type="fc:FileContent" minOccurs="0"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+
+</xsd:schema> 

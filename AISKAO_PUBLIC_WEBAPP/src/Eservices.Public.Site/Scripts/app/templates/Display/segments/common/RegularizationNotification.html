@@ -1,0 +1,67 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <div class="row">
+        <span class="span3 text-left">Издаден документ:</span>
+        <span class="uneditable-input span9" data-bind="text: documentTypeName"></span>
+    </div>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!-- ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за преписка</legend>
+        <!-- ko with: aisCaseURI -->
+        <!-- ko with: documentInInternalRegisterURI()-->
+        <div class="row">
+            <span class="span3">УРИ на регистриран документ във вътрешен документен регистър</span>
+            <span class="span9 uneditable-input" data-bind="text: $data"></span>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko with: documentURI()-->
+        <!-- ko compose: { view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+        <!-- /ko -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Нормативни изисквания</legend>
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Правно основание:</span>
+                <span class="span9 uneditable-input" data-bind="text: regularizationNotificationLegalGround"></span>
+            </label>
+        </div>
+
+        <div class="row">
+            <label>
+                <span class="span3 text-left">Фактически основания:</span>
+                <span class="span9 uneditable-input" data-bind="text: regularizationNotificationFactualGround"></span>
+            </label>
+        </div>
+
+        <div class="row">
+            <span class="span3 text-left">Срок за отстраняване на нередовност (брой дни):</span>
+            <div class="controls-row">
+                <span class="span9 uneditable-input" data-bind="text: regularizationNotificationTerm"></span>
+            </div>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+</div>

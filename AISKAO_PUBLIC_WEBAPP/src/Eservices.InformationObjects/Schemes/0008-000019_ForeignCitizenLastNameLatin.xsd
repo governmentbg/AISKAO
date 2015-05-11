@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/0008-000019"
+      xmlns="http://ereg.egov.bg/value/0008-000019"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:simpleType name="ForeignCitizenLastNameLatin">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Фамилно име на латиница на физическо лице, нерегистрирано по българското законодателство</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Za-z]+([' -][A-Za-z]+)*"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+
+</xsd:schema>

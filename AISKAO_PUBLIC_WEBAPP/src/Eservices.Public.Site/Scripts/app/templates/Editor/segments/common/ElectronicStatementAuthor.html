@@ -1,0 +1,21 @@
+﻿<div>
+    <!-- ko if: person -->
+    <fieldset>
+        <legend>
+            <span>Данни за заявител - Физическо лице</span>
+        </legend>
+        <!-- ko compose: { model: person, view: 'segments/common/PersonBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+
+    <!-- ko if: foreignCitizen -->
+    <fieldset>
+        <legend>
+            <span>Данни за заявител - Физическо лице, нерегистрирано по българското законодателство</span>
+        </legend>
+        <!-- ko compose: { model: foreignCitizen, view: 'segments/common/ForeignCitizenBasicData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+        <!-- /ko -->
+    </fieldset>
+    <!-- /ko -->
+</div>

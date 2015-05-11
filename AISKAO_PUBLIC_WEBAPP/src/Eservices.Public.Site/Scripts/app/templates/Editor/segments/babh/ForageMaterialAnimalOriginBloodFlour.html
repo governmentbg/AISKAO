@@ -1,0 +1,17 @@
+﻿<div>
+    <div class="row">
+        <div class="span12">
+            <!-- ko with: forageFormBulkOrPackeds -->
+            <div class="controls-row">
+                <div class="span10" data-bind="foreach: forageFormBulkOrPacked.nomForageFormBulkOrPackeds">
+                    <label class="span12 checkbox">
+                        <input type="checkbox" data-bind="value: $data.key, checked: $parent.forageFormBulkOrPacked" />
+                        <span class="span10" data-bind="text: name"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- /ko -->
+        </div>
+    </div>
+</div>
+

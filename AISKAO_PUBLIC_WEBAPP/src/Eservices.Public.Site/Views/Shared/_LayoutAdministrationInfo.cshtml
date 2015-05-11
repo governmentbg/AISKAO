@@ -1,0 +1,19 @@
+﻿@model TechnoLogica.Eservices.Public.Site.Models.Administration.GetAdministrationInfoViewModel
+@using TechnoLogica.Eservices.Public.Site.Resources
+<div id="administration-info">
+    <address>
+       @* <strong>@Html.DisplayFor(model => Model.Name)</strong><br>*@
+        @Html.DisplayFor(model => Model.Address)<br>
+        <abbr title="Phone">@Administration.Phone</abbr>
+        @Html.DisplayFor(model => Model.Phone)<br>
+        @*<abbr title="Mobile">@Administration.Mobile</abbr>
+        @Html.DisplayFor(model => Model.Mobile)<br>*@
+        @*<abbr>@Html.Label(Administration.Fax)</abbr>
+        @Html.DisplayFor(model => Model.Fax)<br>*@
+       @* @Administration.WebSiteAddress <span>- </span>@Html.DisplayFor(model => Model.WebSiteAddress)<br>*@
+        @* <strong>@Administration.Bulstat</strong>@Html.DisplayFor(model => Model.Bulstat)<br>*@
+       @Html.DisplayFor(model => Model.Email)
+
+    </address>
+
+</div>

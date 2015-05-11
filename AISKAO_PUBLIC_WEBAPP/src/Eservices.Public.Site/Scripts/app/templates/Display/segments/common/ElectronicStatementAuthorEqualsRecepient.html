@@ -1,0 +1,11 @@
+﻿<div>
+    <!-- ko if: person -->
+        <!-- ko compose: { model: person, view: 'segments/common/PersonBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    <!-- /ko -->
+
+    <!-- ko if: foreignCitizen -->
+        <!-- ko compose: { model: foreignCitizen, view: 'segments/common/ForeignCitizenBasicData', area: 'Display' } -->
+        <!-- /ko -->
+    <!-- /ko -->
+</div>

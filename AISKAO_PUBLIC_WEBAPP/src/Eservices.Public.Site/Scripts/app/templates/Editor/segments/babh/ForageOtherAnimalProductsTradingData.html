@@ -1,0 +1,29 @@
+﻿<div>
+    <div class="row">
+        <div class="span10">
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="checked: revisedAnimalProteinTypeData.isChecked" />
+                Преработени животински протеини</label>
+            <div data-bind="if: revisedAnimalProteinTypeData.isChecked">
+                <!-- ko compose: { model: revisedAnimalProteinTypeData, view: 'segments/babh/RevisedAnimalProteinTypeData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="checked: bloodProductsTypeData.isChecked" />
+               Кръвни продукти</label>
+            <div data-bind="if: bloodProductsTypeData.isChecked">
+                <!-- ko compose: { model: bloodProductsTypeData, view: 'segments/babh/BloodProductsTypeData', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+
+            <label class="span12 checkbox">
+                <input type="checkbox" data-bind="checked: otherAnimalOrRevisedProducts.isChecked" />
+               Други</label>
+            <div data-bind="if: otherAnimalOrRevisedProducts.isChecked">
+                <!-- ko compose: { model: otherAnimalOrRevisedProducts, view: 'segments/babh/OtherAnimalOrRevisedProducts', area: 'Editor', transition: 'entrance', keepScrollPosition: true } -->
+                <!-- /ko-->
+            </div>
+        </div>
+    </div>
+</div>

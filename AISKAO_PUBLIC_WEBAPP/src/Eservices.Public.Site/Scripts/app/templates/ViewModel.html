@@ -1,0 +1,20 @@
+﻿<div>
+        <!-- ko if: _settings.showErrors() === true -->
+            <span class="lead text-error">Грешки</span>
+            <ul data-bind="foreach: _settings.validartionErrors">
+                <li class="text-error" data-bind="text: $data"></li>
+            </ul>
+        <!-- /ko -->
+
+        <div>
+            <!-- ko ifnot: _settings.xmlContent-->
+                <!-- ko compose: { model: doc, area: 'Editor' } -->
+                <!-- /ko -->
+            <!-- /ko -->
+            <!-- ko if: _settings.xmlContent -->
+                <!-- ko compose: { model: doc, area: 'Display' } -->
+                <!-- /ko -->
+            <!-- /ko -->
+        </div>
+        <span class="text-error" data-bind="text: _settings.documentNotFoundMessage"></span>
+</div>

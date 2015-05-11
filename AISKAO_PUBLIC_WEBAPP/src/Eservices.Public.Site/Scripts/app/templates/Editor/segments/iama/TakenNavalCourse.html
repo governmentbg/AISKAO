@@ -1,0 +1,61 @@
+﻿<div>
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Учебно заведение или център:</span>
+            <span data-bind="attr: { 'class': navalEducationalOrganizationCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                <select class="span8"
+                    data-bind="options: navalEducationalOrganizationCode.nomNavalEducationalOrganizations,
+                        optionsText: 'name',
+                        value: navalEducationalOrganizationCode.selectedNavalEducationalOrganization,
+                        attr: { 'class':  navalEducationalOrganizationCode.isLoading() === true ? 'span8 bar fullwidth' : 'span8' },
+                        enable: navalEducationalOrganizationCode.isLoaded()">
+                </select>
+            </span>
+        </div>
+    </div>
+
+    <!-- ko if: navalEducationalOrganizationCode() === '13' -->
+    <div class="row">
+        <div class="span12">
+            <span class="span3 text-left">Друго учебно заведение или център:</span>
+            <input class="span8" type="text" data-bind="value: otherNavalEducationalOrganization" />
+        </div>
+    </div>    
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Наименование на курс:</span>
+            <span data-bind="attr: { 'class': navalCompetencyCourseCode.isLoading() === true ? 'span3 progress progress-striped active fullheight progressPadding' : 'span3 fullheight' }">
+                <select class="span8"
+                    data-bind="options: navalCompetencyCourseCode.nomNavalCompetencyCourses,
+                        optionsText: 'name',
+                        value: navalCompetencyCourseCode.selectedNavalCompetencyCourse,
+                        attr: { 'class':  navalCompetencyCourseCode.isLoading() === true ? 'span8 bar fullwidth' : 'span8' },
+                        enable: navalCompetencyCourseCode.isLoaded()">
+                </select>
+            </span>
+        </div>
+    </div>
+
+    <!-- ko if: navalCompetencyCourseCode() === '60'-->
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Друг курс:</span>
+            <input class="span8" type="text" data-bind="value: otherNavalCompetencyCourse" />
+        </div>
+    </div>
+    <!-- /ko -->
+
+    <div class="row">
+        <div class="span11">
+            <span class="span3 text-left">Дата на завършване на курс:</span>
+            <span class="input-append" data-bind="datepicker: navalCompetencyCourseDateTaken, datepickerOptions: { pickTime: false, format: 'dd.MM.yyyy', language: 'bg' }, dateIsRequired: false">
+                <input class="span2" data-format="dd.MM.yyyy" type="text" />
+                <span class="add-on btn btn-info">
+                    <i data-time-icon="icon-time" data-date-icon="icon-calendar" class="icon-calendar icon-white"></i>
+                </span>
+            </span>
+        </div>
+    </div>
+</div>

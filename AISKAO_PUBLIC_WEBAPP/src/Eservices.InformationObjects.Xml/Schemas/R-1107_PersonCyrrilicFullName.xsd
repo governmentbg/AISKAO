@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1107" xmlns="http://ereg.egov.bg/segment/R-1107" xmlns:pn="http://ereg.egov.bg/segment/0009-000005" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/segment/0009-000005" schemaLocation="0009-000005_PersonNames.xsd" />
+  <xsd:complexType name="PersonCyrrilicFullName">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Имена на физическо лице на кирилица</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexContent>
+      <xsd:extension base="pn:PersonNames" />
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>

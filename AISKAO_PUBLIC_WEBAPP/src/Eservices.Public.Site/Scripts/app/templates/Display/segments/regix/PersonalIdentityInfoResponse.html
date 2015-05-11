@@ -1,0 +1,25 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Информация на резултат</legend>
+        <!--ko compose: { model: returnInformations, view: 'segments/regix/ReturnInformation', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend></legend>
+        <div class="row">
+            <span class="span3">ЕГН:</span>
+            <span class="span9 uneditable-input" data-bind="text: egn"></span>
+        </div>
+        <!--ko compose: { model: personNames, view: 'segments/regix/PersonNamesMVR', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <!--ko compose: { model: picture, view: 'segments/regix/Picture', area: 'Display' } -->
+    <!-- /ko-->
+
+    <!--ko compose: { model: identitySignature, view: 'segments/regix/IdentitySignature', area: 'Display' } -->
+    <!-- /ko-->
+</div>

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1277" xmlns="http://ereg.egov.bg/value/R-1277" xmlns:atfwrapn="http://ereg.egov.bg/nomenclature/R-1275" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1275" schemaLocation="R-1275_AnimalTypeFedWithRelatedAnimalProductsNomenlcature.xsd" />
+  <xsd:simpleType name="AnimalTypeFedWithRelatedAnimalProduct">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид животни, за изхранването на които са предназначени страничните животински продукти и/или производни продукти от категория 3, попадащи в обхвата на Регламент (ЕО) № 1069/2009 или фуражите, които ги съдържат</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="atfwrapn:AnimalTypeFedWithRelatedAnimalProductsNomenlcature" />
+  </xsd:simpleType>
+</xsd:schema>

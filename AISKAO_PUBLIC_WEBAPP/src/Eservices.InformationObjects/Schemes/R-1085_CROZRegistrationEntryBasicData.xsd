@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1085" xmlns="http://ereg.egov.bg/segment/R-1085" xmlns:crozrn="http://ereg.egov.bg/value/R-1006" xmlns:crozreiics="http://ereg.egov.bg/value/R-1039" xmlns:crozreia="http://ereg.egov.bg/value/R-1043" xmlns:crozretc="http://ereg.egov.bg/value/R-1045" xmlns:crozretn="http://ereg.egov.bg/value/R-1047" xmlns:crozcrdt="http://ereg.egov.bg/value/R-1037" xmlns:crozretd="http://ereg.egov.bg/value/R-1053" xmlns:crozreoapc="http://ereg.egov.bg/value/R-1055" xmlns:crozrepic="http://ereg.egov.bg/value/R-1041" xmlns:crozoafsid="http://ereg.egov.bg/segment/R-1079" xmlns:crozpocren="http://ereg.egov.bg/value/R-1071" xmlns:crozdscrend="http://ereg.egov.bg/segment/R-1073" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1006" schemaLocation="R-1006_CROZRegistrationNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1039" schemaLocation="R-1039_CROZRegisterEntryIsInConditionalStatus.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1043" schemaLocation="R-1043_CROZRegisterEntryIsArchived.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1045" schemaLocation="R-1045_CROZRegistrationEntryTypeCode.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1047" schemaLocation="R-1047_CROZRegistrationEntryTypeName.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1037" schemaLocation="R-1037_CROZConsignmentRegistrationDateTime.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1053" schemaLocation="R-1053_CROZRegistrationEntryTerminationDate.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1055" schemaLocation="R-1055_CROZRegistrationEntryOpticleArchivePagesCount.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1041" schemaLocation="R-1041_CROZRegisterEntryProcedureIsCompleted.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1079" schemaLocation="R-1079_CROZOpticalArchiveFieldSeventeenImageData.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1071" schemaLocation="R-1071_CROZPledgeOnClaimsRegistrationEntryNumber.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/segment/R-1073" schemaLocation="R-1073_CROZDistrainSecuredClaimsRegistrationEntryNumbersData.xsd" />
+  <xsd:complexType name="CROZRegistrationEntryBasicData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Основни данни за вписване в ЦРОЗ</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="CROZRegistrationNumber" type="crozrn:CROZRegistrationNumber" minOccurs="0" />
+      <xsd:element name="CROZRegisterEntryIsInConditionalStatus" type="crozreiics:CROZRegisterEntryIsInConditionalStatus" minOccurs="0" />
+      <xsd:element name="CROZRegisterEntryIsArchived" type="crozreia:CROZRegisterEntryIsArchived" minOccurs="0" />
+      <xsd:element name="CROZRegistrationEntryTypeCode" type="crozretc:CROZRegistrationEntryTypeCode" minOccurs="0" />
+      <xsd:element name="CROZRegistrationEntryTypeName" type="crozretn:CROZRegistrationEntryTypeName" minOccurs="0" />
+      <xsd:element name="CROZConsignmentRegistrationDateTime" type="crozcrdt:CROZConsignmentRegistrationDateTime" minOccurs="0" />
+      <xsd:element name="CROZRegistrationEntryTerminationDate" type="crozretd:CROZRegistrationEntryTerminationDate" minOccurs="0" />
+      <xsd:element name="CROZRegistrationEntryOpticleArchivePagesCount" type="crozreoapc:CROZRegistrationEntryOpticleArchivePagesCount" minOccurs="0" />
+      <xsd:element name="CROZRegisterEntryProcedureIsCompleted" type="crozrepic:CROZRegisterEntryProcedureIsCompleted" minOccurs="0" />
+      <xsd:element name="CROZOpticalArchiveFieldSeventeenImageDatas" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="CROZOpticalArchiveFieldSeventeenImageData" type="crozoafsid:CROZOpticalArchiveFieldSeventeenImageData" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CROZPledgeOnClaimsRegistrationEntryNumber" type="crozpocren:CROZPledgeOnClaimsRegistrationEntryNumber" minOccurs="0" />
+      <xsd:element name="CROZDistrainSecuredClaimsRegistrationEntryNumbersData" type="crozdscrend:CROZDistrainSecuredClaimsRegistrationEntryNumbersData" minOccurs="0" />
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

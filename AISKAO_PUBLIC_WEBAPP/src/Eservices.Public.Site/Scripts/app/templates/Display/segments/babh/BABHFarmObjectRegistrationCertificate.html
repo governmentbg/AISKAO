@@ -1,0 +1,84 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <fieldset>
+        <legend>Доставчик на електронни административни услуги</legend>
+        <!--ko compose: { model: electronicServiceProviderBasicData, view: 'segments/common/ElectronicServiceProviderBasicData', area: 'Display' } -->
+        <!-- /ko-->
+    </fieldset>
+
+    <fieldset>
+        <legend>УРИ на документ:</legend>
+        <!-- ko compose: { model: documentURI, view: 'segments/common/DocumentURI', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Заявител на електронната административна услуга</legend>
+        <!-- ko compose: { model: electronicServiceApplicant, view: 'segments/common/ElectronicServiceApplicant', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <div class="span12">
+            <label class="row">
+                <span class="span3 text-left">Качество на получателя на услугата по отношение на животновъдния обект:</span>
+                <span class="span9 uneditable-input" data-bind="text: farmObjectRecipientActing"></span>
+            </label>
+        </div>
+    </div>
+
+    <fieldset>
+        <legend>Областна дирекция по безопасност на храните</legend>
+        <label class="row">
+            <span class="span3 text-left">Дирекция:</span>
+            <span class="span9 uneditable-input" data-bind="text: regionalDirectionName"></span>
+        </label>
+    </fieldset>
+
+    <fieldset>
+        <legend>Характеристика на животновъден обект</legend>
+        <fieldset>
+            <legend>Предназначение на обект</legend>
+            <div class="row">
+                <div class="span12">
+                    <label class="row">
+                        <span class="span3 text-left">Вид животновъден обект:</span>
+                        <span class="span9 uneditable-input" data-bind="text: farmObjectName, valueUpdate: 'afterkeydown'"></span>
+                    </label>
+                </div>
+            </div>
+            <!-- ko compose: { model: animalObjectData, view: 'segments/babh/BABHAnimalObjectData', area: 'Display' } -->
+            <!-- /ko -->
+        </fieldset>
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за местонахождение на животновъден обект</legend>
+        <!-- ko compose: { model: animalHoldingAddressData, view: 'segments/babh/AnimalHoldingAddressData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <fieldset>
+        <legend>Данни за полученото одобрение на заявление за регистрация на животновъден обект</legend>
+        <!-- ko compose: { model: farmObjectApprovalData, view: 'segments/babh/BABHFarmObjectApprovalData', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <div class="row">
+        <div class="span12">
+            <span class="uneditable-input span11 text-center">Обектът е вписан в регистъра на животновъдните обекти на  
+            "<em data-bind="text: regionalDirectionName"></em>" с ветеринарен регистрационен номер 
+            <strong data-bind="text: farmObjectApprovalData().vetRegistrationNumber"></strong>
+            </span>
+        </div>
+    </div>
+
+    <!-- ko compose: { model: $data, view: 'segments/common/OfficialData', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: xmlDigitalSignature, view: 'segments/common/XMLDigitalSignature', area: 'Display' } -->
+    <!-- /ko -->
+
+</div>
+

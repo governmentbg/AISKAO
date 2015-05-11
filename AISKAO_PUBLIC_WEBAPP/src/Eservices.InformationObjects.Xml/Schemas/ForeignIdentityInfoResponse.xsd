@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://egov.bg/RegiX/MVR/RCH//ForeignIdentityInfoResponse" targetNamespace="http://egov.bg/RegiX/MVR/RCH//ForeignIdentityInfoResponse" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="NationalityList">
+		<xs:annotation>
+			<xs:documentation>Списък гражданство</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Nationality" type="Nationality" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Nationality">
+		<xs:annotation>
+			<xs:documentation>Гражданство</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NationalityCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NationalityName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NationalityNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="BirthPlace">
+		<xs:annotation>
+			<xs:documentation>Данни за място на раждане</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="CountryCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="CountryNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TerritorialUnitName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на населено място</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistrictName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на област</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunicipalityName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на община</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PersonNames">
+		<xs:annotation>
+			<xs:documentation>Име на физическо лице, изписано на кирилица и латиница</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="FirstName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собствено име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Surname" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Бащино име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FamilyName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилно име</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="FirstNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Собствено име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SurnameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Бащино име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LastNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилно име, изписано на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressAbroad">
+		<xs:annotation>
+			<xs:documentation>Aдрес в чужбина</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="NationalityCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NationalityName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NationalityNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на държава на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на населено място</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Street" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данни за адресс</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="AddressBG">
+		<xs:annotation>
+			<xs:documentation>Aдрес в РБ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DistrictName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на област</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DistrictNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на област на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunicipalityName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на община</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="MunicipalityNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на община на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на населено място</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на населено място</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="SettlementNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на населено място на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LocationCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код на локализационна единица (улица)</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LocationName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на локализационна единица (улица) </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LocationNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на локализационна единица (улица) на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BuildingNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Entrance" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вход </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Floor" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Етаж</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Apartment" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Апартамент </xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TravelDocument">
+		<xs:annotation>
+			<xs:documentation>Документ за задгранично пътуване</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DocumentType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид документ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentTypeLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид документ на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TravelDocumentSeries" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Серия</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TravelDocumentNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssueDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на издаване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuePlace" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Място на издаване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuePlaceLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Място на издаване на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuerName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Издаващ орган</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuerNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Издаващ орган на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на валидност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IdentityDocument">
+		<xs:annotation>
+			<xs:documentation>Документ за самоличност и пребиваване</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="DocumentType" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид документ за самоличност и пребиваване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DocumentTypeLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Вид документ за самоличност и пребиваване на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IdentityDocumentNumber" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер на документ за самоличност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssueDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на издаване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuePlace" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Място на издаване</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuePlaceLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Място на издаване на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuerName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Издаващ орган</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IssuerNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Издаващ орган на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ValidDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на валидност</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ForeignIdentityInfoResponseType">
+		<xs:annotation>
+			<xs:documentation>Данни за чуждестранно физическо лице от Единния регистър за чужденци</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ReturnInformations" type="ReturnInformation" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация на резултат</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EGN" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЕГН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="LNCh" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ЛНЧ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PersonNames" type="PersonNames" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имена</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthDate" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата на раждане</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="BirthPlace" type="BirthPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Място на раждане</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="GenderNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на пол на латиница</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="NationalityList" type="NationalityList" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Списък други гражданства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Statuses" type="Statuses" minOccurs="0"/>
+			<xs:element name="PermanentAddress" type="AddressBG" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Постоянен адрес</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="TemporaryAddress" type="AddressBG" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Временен адрес</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="PermanentAddressAbroad" type="AddressAbroad" minOccurs="0"/>
+			<xs:element name="IdentityDocument" type="IdentityDocument" minOccurs="0"/>
+			<xs:element name="TravelDocument" type="TravelDocument" minOccurs="0"/>
+			<xs:element name="Height" type="xs:double" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Височина в см.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="EyesColor" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цвят на очите</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+      <xs:element name="EyesColorLatin" type="xs:string" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>Цвят на очите на латиница</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+			<xs:element name="Picture" type="xs:base64Binary" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Снимка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="IdentitySignature" type="xs:base64Binary" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Личен подпис</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="ForeignIdentityInfoResponse" type="ForeignIdentityInfoResponseType">
+		<xs:annotation>
+			<xs:documentation>Справка с данни за чуждестранно физическо лице от Единния регистър за чужденци</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="ReturnInformation">
+		<xs:annotation>
+			<xs:documentation>Данни за резултат</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ReturnCode" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>0000-успешна операция;0100-няма данни отговарящи на условието.Други значения означават възникване на грешка - подлежат на допълнително уточняване.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Info" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание на грешката</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Status">
+		<xs:annotation>
+			<xs:documentation>Статус</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="StatusName" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на статут на пребиваване в РБ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="StatusNameLatin" type="xs:string" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование на статут на пребиваване в РБ на латиница език</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateFrom" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Срок на пребиваване в РБ - начална дата</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DateTo" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Срок на пребиваване в РБ - крайна дата</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Statuses">
+		<xs:annotation>
+			<xs:documentation>Статуси на пребиваване</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Status" type="Status" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

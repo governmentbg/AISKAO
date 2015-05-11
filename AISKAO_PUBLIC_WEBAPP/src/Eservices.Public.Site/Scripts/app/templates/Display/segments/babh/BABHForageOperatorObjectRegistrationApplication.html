@@ -1,0 +1,96 @@
+﻿<div>
+    <h1 class="text-center" data-bind="text: _settings.sectionTitle"></h1>
+
+    <!--ko compose: { model: electronicAdministrativeServiceHeader, view: 'segments/common/ElectronicAdministrativeServiceHeader', area: 'Display' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Седалище и адрес на управление</legend>
+        <!-- ko compose: { model: residence, view: 'segments/common/Residence', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: $data, view: 'segments/babh/BABHApplicationBasicData', area: 'Display' } -->
+    <!-- /ko-->
+
+    <fieldset>
+        <legend>Адрес на обект на оператор във фуражния сектор</legend>
+        <!-- ko compose: { model: forageObjectAddress, view: 'segments/common/EKATTEAddress', area: 'Display' } -->
+        <!-- /ko -->
+    </fieldset>
+
+    <!-- ko compose: { model: forageOperatorActivitiesData, view: 'segments/babh/ForageOperatorActivitiesData', area: 'Display'} -->
+    <!-- /ko -->
+
+    <!-- ko compose: { model: forageCombinedProducesQTYMonthlyAnimalTypeData, view: 'segments/babh/ForageCombinedProducesQTYMonthlyAnimalTypeData', area: 'Display',transition: 'entrance',keepScrollPosition: true } -->
+    <!-- /ko -->
+
+    <!-- ko with: forageObjectVechicleTypes -->
+    <fieldset>
+        <legend>Вид транспортни средства за осъществяване на дейност</legend>
+        <div class="row">
+            <div class="span12" data-bind="foreach: forageObjectVechicleType">
+                <div class="row span12">
+                    <span class="span11 uneditable-input" data-bind="text: $parent.getForageObjectVechicleTypeName($data)"></span>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+    <!-- /ko -->
+
+    <fieldset>
+        <legend></legend>
+        <div class="row">
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Декларирам, че:</span>
+                    <input type="checkbox" disabled data-bind="checked: forageOperatorNoWarehouseDeclaration" checked="checked" />
+                </label>
+                <span class="uneditable-input span11">При осъществяване на търговия с фуражи, 
+                    не задържам фуражите на склад, а търгувам директно от складовете 
+                    на производителите и/или търговците директно до склада на потребителите</span>
+            </div>
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Декларирам, че:</span>
+                    <input type="checkbox" disabled data-bind="checked: forageOperatorDeclaration" checked="checked" />
+                </label>
+                <span class="uneditable-input span11">1.Закупувам и използвам фуражи само от лица, които са регистрирани 
+                и/или одобрени по Закона за фуражите, съгласно чл. 33 от Закона.<br>
+                    2. При промяна в заявените обстоятелства в тридневен срок от настъпването им ще уведомя
+                 писмено директора на Областната дирекция по безопасност на храните, съгласно чл. 16, ал. 7 от Закона за фуражите.<br>
+                    3. Спазвам изискванията за хигиена на фуражите на Приложение ІІ към 
+                    Регламент (ЕО) № 183/2005 относно определяне на изискванията за хигиена на фуражите.<br>
+                    4. Известно ми е, че данните, които предоставям са лични данни по смисъла на
+                     Закона за защита на личните данни. Предоставям личните си данни доброволно и 
+                    давам съгласието си Българската агенция по безопасност на храните да ги 
+                    обработва, съхранява и използва за изпълнение на законните интереси на Агенцията, 
+                    при условие, че са спазени разпоредбите на Закона за защита на личните данни.</span>
+            </div>
+            <div class="control-group span12">
+                <label class="checkbox">
+                    <span>Декларирам, че:</span>
+                    <input type="checkbox" disabled data-bind="checked: forageOperatorRegulationFulfillmentDeclaration" checked="checked" />
+                </label>
+                <span class="uneditable-input span11">Декларирам, че: са изпълнени всички условия
+                     на Регламент (ЕО) № 183/2005. В съответствие с член 6 
+                    „Система за анализ на риска и критичните точки за контрол (НАССР)” 
+                    на Регламента са създадени и се поддържат писмени процедури, 
+                    основани на принципите на НАССР</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <span class="span3 text-left">Данни от удостоверение за въвеждане в експлоатация:</span>
+            <span class="span9 uneditable-input" data-bind="text: commissioningCertificateData"></span>
+        </div>
+    </fieldset>
+
+    <!-- ko compose: { model: electronicAdministrativeServiceFooter, view: 'segments/common/ElectronicAdministrativeServiceFooter', area: 'Display' } -->
+    <!-- /ko -->
+
+    <!--ko compose: { model: attachedDocuments, view: 'segments/common/AttachedDocuments', area: 'Display' } -->
+    <!-- /ko-->
+</div>
+

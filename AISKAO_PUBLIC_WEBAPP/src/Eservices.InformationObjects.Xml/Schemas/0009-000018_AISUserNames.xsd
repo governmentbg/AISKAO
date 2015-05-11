@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/0009-000018"
+      xmlns="http://ereg.egov.bg/segment/0009-000018"
+      xmlns:pn="http://ereg.egov.bg/segment/0009-000005"
+      xmlns:fn="http://ereg.egov.bg/segment/0009-000007"
+      xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+      elementFormDefault="qualified">
+
+
+    <xsd:import schemaLocation="0009-000005_PersonNames.xsd" namespace="http://ereg.egov.bg/segment/0009-000005"/>
+    <xsd:import schemaLocation="0009-000007_ForeignCitizenNames.xsd" namespace="http://ereg.egov.bg/segment/0009-000007"/>
+
+
+    <xsd:complexType name="AISUserNames">
+        <xsd:annotation>
+            <xsd:documentation xml:lang="bg">Имена на потребител на АИС</xsd:documentation>
+        </xsd:annotation>
+        <xsd:choice>
+			<xsd:element name="PersonNames" type="pn:PersonNames"/>
+			<xsd:element name="ForeignCitizenNames" type="fn:ForeignCitizenNames"/>
+        </xsd:choice>
+    </xsd:complexType>
+
+
+</xsd:schema> 

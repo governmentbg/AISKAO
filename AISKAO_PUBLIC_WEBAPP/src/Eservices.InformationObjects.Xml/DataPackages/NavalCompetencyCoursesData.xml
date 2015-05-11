@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<NavalCompetencyCoursesData versionDate="1967-08-13" xsi:schemaLocation="http://ereg.egov.bg/segment/R-1180 R-1180_NavalCompetencyCoursesData.xsd" xmlns="http://ereg.egov.bg/segment/R-1180" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<NavalCompetencyCourses>
+		<NavalCompetencyCourse>
+			<Code>1</Code>
+			<Name>HAZMAT</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>2</Code>
+			<Name>Водач на бързоходна дежурна лодка /STCW Пр.VI/2; А-VI/2, т.7-9/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>4</Code>
+			<Name>Водач на спасително средство и дежурна лодка /STCW Пр.VI/2; А-VI/2, т.1-4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>5</Code>
+			<Name>Експлоатация  и подръжка на системи с напрежение над 1000V /STCW, Ch.III, A-III/6, F-l, p.2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>6</Code>
+			<Name>Експлоатация на съвременни системи за управление на главни и спомагателни двигатели /STCW, Ch. III; A-III/1, F-l, p.1/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>7</Code>
+			<Name>Елементарна първа помощ /STCW Пр.VI/1; А-V/1, т.2.1.3/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>8</Code>
+			<Name>Елементарни познания за сигурноста на кораба /STCW Пр.VI/6; A-VI/6-1/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>9</Code>
+			<Name>Използване на ръководни и управленски умения</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>10</Code>
+			<Name>Инструктори (IMO Model Course 6.09)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>11</Code>
+			<Name>Компетентност на морски лица изпълняващи задължения, свързани със сигурноста на кораба /STCW, Пр.VI/6; А-VI/6-2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>12</Code>
+			<Name>Корабен готвач</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>13</Code>
+			<Name>Корабен моторист /STCW Пр.III/4; A-III/4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>14</Code>
+			<Name>Корабен радиооператор в местно плаване</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>15</Code>
+			<Name>Корабен радиооператор обща категория за „СМСББ” /STCW Пр.IV; А-IV/2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>16</Code>
+			<Name>Корабен радиооператор ограничена категория за „СМСББ” /STCW Пр.IV; Раздел А-IV/2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>17</Code>
+			<Name>Корабен рулеви /STCW Пр.II/4; A-II/4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>18</Code>
+			<Name>Корабоводене с използване  ECDIS&amp;AIS /STCW, Ch.II, A-II/1, F-l, p.11/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>19</Code>
+			<Name>Лична безопасност и социални отговорности /STCW Пр.VI/1; А-VI/1, т.2.1.4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>20</Code>
+			<Name>Моделен курс IMO 7.01 (след бакалавър)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>21</Code>
+			<Name>Моделен курс IMO 7.01 (след трета степен на проф. квалификация)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>22</Code>
+			<Name>Моделен курс IMO 7.02</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>23</Code>
+			<Name>Обучене по съвременни методи за борба с пожарите по разширена програма /STCW Пр.VI/3; А-VI/3 /</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>24</Code>
+			<Name>Оказване на медицински грижи на борда /Пр.VI/4;А-VI/4, т.4-6/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>25</Code>
+			<Name>Оказване на първа медицинска помощ /STCW Пр.VI/4; А-VI/4, т.1-3/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>26</Code>
+			<Name>Операции на нефтен танкер /STCW Пр. V/1-1, т.3; A-V/1-1 т.2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>27</Code>
+			<Name>Операции на танкер газовоз /STCW Пр. V/1-2, т.3; A-V/1-2, т.2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>28</Code>
+			<Name>Операции на танкер химикаловоз /STCW Пр.V/1-1, т.5; A-V/1-1, т.3/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>29</Code>
+			<Name>Офицер по сигурноста на компанията</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>30</Code>
+			<Name>Офицер по сигурноста на кораба /STCW Пр.VI/5;A-VI/5, т.1-4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>31</Code>
+			<Name>Офицер по сигурноста на пристанището</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>32</Code>
+			<Name>Оценяване, изпитване и освидетелстване на морски лица. (IMO model course 3.12)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>33</Code>
+			<Name>Палубен боцман /STCW Пр.II/5; A-II/5/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>34</Code>
+			<Name>Персонал на пристанищата и пристанищните съоръжения, който не е пряко свързан със сигурноста.</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>35</Code>
+			<Name>Подготвителен курс за капитан на кораб до 500 БТ в местно плаване</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>36</Code>
+			<Name>Подготвителен курс за капитан на плаващо техническо средство</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>37</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност "Машинен боцман" /STCW, Reg. III/5; A-III/5/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>38</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност гл.механик над 3000 KW, гл.мех. от 750 до 3000 KW, 2 мех. над 3000 KW, 2 мех. от 750 KW до 3000 kW.</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>39</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност КДП на кораб от 500 до 3000БТ от лица, които притежават плавателен стаж като СПК до или над 3000БТ (Наредба №6, чл.36, т.2, буква Д)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>40</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност КДП на кораб от 500 до 3000БТ от лица, които притежават плавателен стаж само като вахтен помощник капитан над 500БТ (Наредба №6, чл.36, т.2, буква Д)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>41</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност КДП от лица, който притежават плавателен стаж като СПК( Наредба №6, чл.36, т.1, буква Г)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>42</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност КДП от лица, които притежават плавателен стаж само като вахтен помощник капитан (Наредба №6, чл.36, т.1, буква Г)</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>43</Code>
+			<Name>Подготвителен курс за придобиване на правоспособност СПК на кораб над 3000БТ и СПК на кораб от 500 до 3000БТ (Наредба №6, чл.36, т.5, буква.Д; чл.36, т.6, буква.Д )</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>44</Code>
+			<Name>Подготовка за работа на борда на нефтен танкер и танкери химикаловоз /STCW Пр V/1; A-V/1, т.1-7/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>45</Code>
+			<Name>Подготовка за работа на борда на танкер газовоз /STCW Пр V/1-2 т.2; А-V/1-1 т.1-2-1/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>46</Code>
+			<Name>Познания по опазване на морската среда /STCW Ch. II, Ch.III/ </Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>47</Code>
+			<Name>Превоз на опасни, вредни и рискови товари по море - за брегови персонал</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>48</Code>
+			<Name>Превоз на опасни, вредни и рискови товари по море - за персонал от пристанища и терминали</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>49</Code>
+			<Name>Прилагане на ръководни и за работа в екип умения</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>50</Code>
+			<Name>Противопожарна безопасност и борба с пожари /STCW Пр.VI/1;А-VI/1, т.2.1.2/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>51</Code>
+			<Name>Специализирано обучение за екипажа на пътнически кораби (включително и ро-ро пътнически кораби)  /STCW Пр.V/2, А-V/2, т.1-4/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>52</Code>
+			<Name>Техники за лично оцеляване /STCW, Пр.VI/1; А-VI/1, т.2.1.1/</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>53</Code>
+			<Name>Тренажорно обучение за капитан на влекач</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>54</Code>
+			<Name>Тренажорно обучение по управление маневрите на кораба</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>55</Code>
+			<Name>Трета степен професионална квалификация  - Корабоводене морско</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>56</Code>
+			<Name>Управление ресурсите в машинно отделение и работа в екип /STCW Ch.III; A-III/, F-l, p.7/ ETRM</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>57</Code>
+			<Name>Управление ресурсите на мостика и работа в екип /STCW Ch.II; A-II/1, F-l, p.9/ BTRM</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>58</Code>
+			<Name>Шкипер на кораб за спорт и развлечение</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>59</Code>
+			<Name>Шкипер на кораб за спорт и развлечение в местно плаване</Name>
+		</NavalCompetencyCourse>
+		<NavalCompetencyCourse>
+			<Code>60</Code>
+			<Name>Друг курс</Name>
+		</NavalCompetencyCourse>
+	</NavalCompetencyCourses>
+</NavalCompetencyCoursesData>

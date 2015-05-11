@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/segment/R-1143" xmlns="http://ereg.egov.bg/segment/R-1143" xmlns:fmp="http://ereg.egov.bg/value/R-1139" xmlns:fmn="http://ereg.egov.bg/value/R-1141" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1139" schemaLocation="R-1139_ForageMaterialProduct.xsd" />
+  <xsd:import namespace="http://ereg.egov.bg/value/R-1141" schemaLocation="R-1141_ForageMaterialName.xsd" />
+  <xsd:complexType name="ForageMaterialsByProductData">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Данни за фуражни суровини по вид продукт</xsd:documentation>
+    </xsd:annotation>
+    <xsd:sequence>
+      <xsd:element name="ForageMaterialProduct" type="fmp:ForageMaterialProduct" minOccurs="0" />
+      <xsd:element name="ForageMaterialNames" minOccurs="0">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ForageMaterialName" type="fmn:ForageMaterialName" maxOccurs="unbounded" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+</xsd:schema>

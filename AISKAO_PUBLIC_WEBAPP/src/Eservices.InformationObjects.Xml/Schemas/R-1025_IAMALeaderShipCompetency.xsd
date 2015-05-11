@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema targetNamespace="http://ereg.egov.bg/value/R-1025" xmlns="http://ereg.egov.bg/value/R-1025" xmlns:iamalsn="http://ereg.egov.bg/nomenclature/R-1023" xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xsd:import namespace="http://ereg.egov.bg/nomenclature/R-1023" schemaLocation="R-1023_IAMALeaderShipNomenclature.xsd" />
+  <xsd:simpleType name="IAMALeaderShipCompetency">
+    <xsd:annotation>
+      <xsd:documentation xml:lang="bg">Вид правоспособност за водач на кораб</xsd:documentation>
+    </xsd:annotation>
+    <xsd:restriction base="iamalsn:IAMALeaderShipNomenclature" />
+  </xsd:simpleType>
+</xsd:schema>
