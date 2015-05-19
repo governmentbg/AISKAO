@@ -9,8 +9,7 @@ install:
   #- git submodule -q update --init
 
 before_build:
-  - nuget install NLog
-  - nuget install EntityFramework -Version 5.0.0
+  - nuget install NLog -Souce AISKAO_PUBLIC_WEBAPP\src\packages\
   #- mkdir projects\build
 
 build:
