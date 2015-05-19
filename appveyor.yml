@@ -1,9 +1,9 @@
 version: 2.1.{build}
 
-branches:
+#branches:
 # whitelist
-  only:
-    - master
+#  only:
+#    - master
 
 install:
   #- git submodule -q update --init
