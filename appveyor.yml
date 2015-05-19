@@ -9,7 +9,7 @@ install:
   #- git submodule -q update --init
 
 before_build:
-  - nuget install NLog -Souce AISKAO_PUBLIC_WEBAPP\src\packages\
+  - nuget install NLog -Source AISKAO_PUBLIC_WEBAPP\src\packages\
   #- mkdir projects\build
 
 build:
