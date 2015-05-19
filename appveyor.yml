@@ -9,13 +9,7 @@ install:
   #- git submodule -q update --init
 
 before_build:
-  - nuget install NLog -Version 2.1.0 -OutputDirectory AISKAO_PUBLIC_WEBAPP\src\packages\
-  - nuget install EnterpriseLibrary.Common -OutputDirectory AISKAO_PUBLIC_WEBAPP\src\packages\
-  - cd AISKAO_PUBLIC_WEBAPP\src\packages\
-  - dir
-  - tree /f
-  - cd ..\..\..\
-  #- mkdir projects\build
+  #- dir
 
 build:
   # To enable parallel build, please add the "/m" switch
