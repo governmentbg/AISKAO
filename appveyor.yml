@@ -14,6 +14,7 @@ before_build:
   #- mkdir projects\build
 
 build:
+  # To enable parallel build, please add the "/m" switch
   project: AISKAO_PUBLIC_WEBAPP\src\Eservices.Public.SiteSln.sln
 
 #notifications:
