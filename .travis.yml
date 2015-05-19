@@ -1,0 +1,27 @@
+language: csharp
+
+before_install:
+  - echo $LANG
+  - echo $LC_ALL
+
+before_script:
+  - pwd
+
+script:
+  - xbuild AISKAO_PUBLIC_WEBAPP\src\Eservices.Public.SiteSln.sln
+
+#branches:
+#  only:
+#    - master
+
+# Notify developers when build passed/failed.
+#notifications:
+#  recipients:
+#  email:
+#    on_success: change
+#    on_failure: always
+  #irc:
+    #channels:
+    #- "chat.freenode.net#rubinius"
+#    template:
+#      - "%{repository}/%{branch} (%{commit} - %{author}): %{message}"
