@@ -10,6 +10,7 @@ install:
 
 before_build:
   - nuget install NLog
+  - nuget install EntityFramework -Version 5.0.0
   #- mkdir projects\build
 
 build:
