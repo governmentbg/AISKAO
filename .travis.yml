@@ -9,6 +9,7 @@ before_script:
 
 script:
   - xbuild AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
+  - mdtool AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
 
 #branches:
 #  only:
