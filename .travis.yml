@@ -8,7 +8,7 @@ before_script:
   - pwd
 
 script:
-  - xbuild AISKAO_PUBLIC_WEBAPP\src\Eservices.Public.SiteSln.sln
+  - xbuild AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
 
 #branches:
 #  only:
