@@ -14,7 +14,7 @@ before_build:
   - cd AISKAO_PUBLIC_WEBAPP\src\packages\
   - dir
   - tree /f
-  - ..\..\..\
+  - cd ..\..\..\
   #- mkdir projects\build
 
 build:
