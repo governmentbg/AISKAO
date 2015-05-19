@@ -143,7 +143,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>LoggingContext.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <None Include="ExceptionManagement\LoggingContext.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LoggingContext.edmx</DependentUpon>

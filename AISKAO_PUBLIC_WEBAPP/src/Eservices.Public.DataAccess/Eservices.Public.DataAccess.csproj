@@ -120,7 +120,7 @@
       <DependentUpon>AISWebEntities.edmx</DependentUpon>
       <LastGenOutput>AISWebEntities.cs</LastGenOutput>
     </None>
-    <None Include="App.Config" />
+    <None Include="App.config" />
     <EmbeddedResource Include="Oracle.ssdl" />
     <None Include="packages.config" />
   </ItemGroup>
