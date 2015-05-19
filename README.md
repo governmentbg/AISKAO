@@ -1,3 +1,8 @@
+# Build Status
+Windows: [![Windows Status](http://img.shields.io/appveyor/ci/kirkshoop/RxCpp-446.svg?style=flat-square)](https://ci.appveyor.com/project/vgvassilev/aiskao)
+
+Linux & OSX: [![Linux & Osx Status](http://img.shields.io/travis/Reactive-Extensions/RxCpp.svg?style=flat-square)](https://travis-ci.org/vgvassilev/aiskao)
+
 # АИСКАО
 
 АИСКАО е съкращение от "Автоматизирана информационна система за комплексно административно обслужване".
