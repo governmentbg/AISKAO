@@ -9,7 +9,8 @@ before_script:
   - pwd
 
 script:
-  - xbuild AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
+  # Force lower required VS version due to current mono limitations.
+  - xbuild AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln /p:VisualStudioVersion=10.0
   - mdtool AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
 
 #branches:
