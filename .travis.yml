@@ -3,6 +3,7 @@ language: csharp
 before_install:
   - echo $LANG
   - echo $LC_ALL
+  - sudo apt-get install mdtool
 
 before_script:
   - pwd
