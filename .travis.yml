@@ -3,7 +3,6 @@ language: csharp
 before_install:
   - echo $LANG
   - echo $LC_ALL
-  - sudo apt-get install mdtool
 
 before_script:
   - pwd
@@ -11,7 +10,6 @@ before_script:
 script:
   # Force lower required VS version due to current mono limitations.
   - xbuild AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln /p:VisualStudioVersion=10.0
-  - mdtool AISKAO_PUBLIC_WEBAPP/src/Eservices.Public.SiteSln.sln
 
 #branches:
 #  only:
