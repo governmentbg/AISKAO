@@ -103,44 +103,43 @@
     <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
     </Reference>
-    <Reference Include="Recaptcha, Version=1.0.5.0, Culture=neutral, PublicKeyToken=9afc4d65b28c38c2, processorArchitecture=MSIL">
+    <Reference Include="Recaptcha">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\Recaptcha.dll</HintPath>
-      <Private>True</Private>
+      <HintPath>..\packages\recaptcha.1.0.5.0\lib\.NetFramework 4.0\Recaptcha.dll</HintPath>
     </Reference>
     <Reference Include="Eservices.AIS.Core" />
     <Reference Include="Eservices.AIS.Infrastructure" />
-    <Reference Include="SecureBlackbox, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.HTTP, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.HTTP">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.HTTP.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.HTTP.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.HTTPCommon, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.HTTPCommon">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.HTTPCommon.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.HTTPCommon.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.PGP, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.PGP">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.PGP.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.PGP.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.SSLClient, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.SSLClient">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.SSLClient.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.SSLClient.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.SSLCommon, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.SSLCommon">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.SSLCommon.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.SSLCommon.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.XML, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.XML">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.XML.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.XML.dll</HintPath>
     </Reference>
-    <Reference Include="SecureBlackbox.XMLSecurity, Version=12.0.260.0, Culture=neutral, PublicKeyToken=47aa36a947686fb6, processorArchitecture=MSIL">
+    <Reference Include="SecureBlackbox.XMLSecurity">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\SecureBlackbox.XMLSecurity.dll</HintPath>
+      <HintPath>..\packages\SecureBlackbox.12.0.269\lib\net45\SecureBlackbox.XMLSecurity.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
